@@ -1,9 +1,15 @@
-# HoloDB participation at InnOtdk 2025
+# HoloDB Participation at InnOtdk 2025
 
-Here you can find all the material that will be presented
-at the final of the 2025 InnOtdk innovation competition.
+**Author**: Dávid Horváth
+**Event**: InnOtdk 2025 Innovation Competition, Final Round
 
-This is a monorepo, you can find the following materials here:
+This repository contains all materials presented at the final round of the
+2025 InnOtdk Innovation Competition.
+All content in this repository is dedicated to the public domain under the
+[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode)
+license.
+
+This is a monorepo containing the following materials:
 
 | Part | Description |
 | --- | --- |
