@@ -17,4 +17,5 @@ This is a monorepo containing the following materials:
 | :stars: [HoloSky](holosky/) | Simple planetarium app using synthetic data provided by HoloDB |
 | :loop: [Local REPL Setup](local-repl-setup/) | Local live demo of YAML editing and REPL |
 | :link: [REST API Demo](rest-demo/) | Java-based REST API project with data mocked by HoloDB |
+| :blue_book: [Brochure](brochure/) | Brochure for printing |
 | :computer: [Screen Switcher](screen-switcher/) | Starter screen for choosing a demo app |
