@@ -1,4 +1,4 @@
-package hu.webarticum.inno.restdemo.misc;
+package hu.webarticum.inno.restdemo.model.util;
 
 import java.io.Serializable;
 import java.util.Random;
