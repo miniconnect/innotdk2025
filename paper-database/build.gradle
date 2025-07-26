@@ -1,0 +1,45 @@
+plugins {
+    id 'java-library'
+    id 'application'
+    id 'io.micronaut.application' version '3.2.2'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+description "HoloDB JPA mocking demo"
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation 'hu.webarticum.holodb:jpa:0.6.1-SNAPSHOT'
+    
+    implementation 'io.micronaut:micronaut-http-client'
+    implementation 'io.micronaut:micronaut-jackson-databind'
+    implementation 'io.micronaut:micronaut-validation'
+    implementation 'io.micronaut.data:micronaut-data-hibernate-jpa'
+    implementation 'io.micronaut.sql:micronaut-jdbc-hikari'
+    implementation 'jakarta.annotation:jakarta.annotation-api'
+    implementation 'io.micronaut.views:micronaut-views-freemarker'
+    
+    annotationProcessor 'io.micronaut.data:micronaut-data-processor'
+    annotationProcessor 'io.micronaut:micronaut-http-validation'
+}
+
+application {
+    mainClass = "hu.webarticum.inno.paperdatabase.Application"
+}
+
+graalvmNative.toolchainDetection = false
+micronaut {
+    version '3.2.2'
+    runtime("netty")
+    testRuntime("junit5")
+    processing {
+        incremental(true)
+        annotations("com.example.*")
+    }
+}
