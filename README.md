@@ -20,3 +20,7 @@ This is a monorepo containing the following materials:
 | :link: [REST API Demo](rest-demo/) | Java-based REST API project with data mocked by HoloDB |
 | :blue_book: [Brochure](brochure/) | Brochure for printing |
 | :computer: [Screen Switcher](screen-switcher/) | Starter screen for choosing a demo app |
+
+This is where the planned milestones with their current status can be reviewed:
+
+[MILESTONES.md](MILESTONES.md)
