@@ -4,8 +4,7 @@ selfDir="$( dirname -- "$( realpath -- "$0" )" )"
 workspaceDir="${selfDir}/workspace"
 
 rm -rf "${workspaceDir}/"  &&
-mkdir "$workspaceDir" &&
-cp "${selfDir}/config-sample.yaml" "${workspaceDir}/config.yaml" &&
+cp -r "${selfDir}/sample" "$workspaceDir" &&
 git clone -b develop 'https://github.com/miniconnect/holodb' "${workspaceDir}/holodb" && # FIXME: develop?
 ( cd "${workspaceDir}/holodb" && ./gradlew config:generateSchema ) &&
 
