@@ -24,6 +24,9 @@ dependencies {
     implementation 'io.micronaut.sql:micronaut-jdbc-hikari'
     implementation 'jakarta.annotation:jakarta.annotation-api'
     implementation 'io.micronaut.views:micronaut-views-freemarker'
+    implementation('uk.ac.abdn:SimpleNLG:4.5.0') {
+        exclude group: 'gov.nih.nlm.nls.lexaccess', module: 'lexaccess-dist'
+    }
     
     annotationProcessor 'io.micronaut.data:micronaut-data-processor'
     annotationProcessor 'io.micronaut:micronaut-http-validation'
