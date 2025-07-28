@@ -1,6 +1,6 @@
 package hu.webarticum.inno.paperdatabase;
 
-import javax.inject.Singleton;
+import jakarta.inject.Singleton;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 

@@ -4,10 +4,12 @@ plugins {
     id 'io.micronaut.application' version '3.2.2'
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+description = "HoloDB JPA mocking demo"
 
-description "HoloDB JPA mocking demo"
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
 
 repositories {
     mavenCentral()
@@ -43,6 +45,6 @@ micronaut {
     testRuntime("junit5")
     processing {
         incremental(true)
-        annotations("com.example.*")
+        annotations("hu.webarticum.inno.paperdatabase.*")
     }
 }

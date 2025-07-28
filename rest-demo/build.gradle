@@ -1,13 +1,16 @@
 plugins {
     id 'java-library'
     id 'application'
-    id 'io.micronaut.application' version '3.2.2'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'io.micronaut.application' version '3.7.10'
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+description = "HoloDB JPA mocking demo"
 
-description "HoloDB JPA mocking demo"
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
 
 repositories {
     mavenCentral()
@@ -23,6 +26,8 @@ dependencies {
     implementation 'io.micronaut.data:micronaut-data-hibernate-jpa'
     implementation 'io.micronaut.sql:micronaut-jdbc-hikari'
     implementation 'jakarta.annotation:jakarta.annotation-api'
+    implementation 'info.picocli:picocli'
+    implementation 'io.micronaut.picocli:micronaut-picocli:4.2.1'
     
     annotationProcessor 'io.micronaut.data:micronaut-data-processor'
     annotationProcessor 'io.micronaut:micronaut-http-validation'
@@ -34,11 +39,10 @@ application {
 
 graalvmNative.toolchainDetection = false
 micronaut {
-    version '3.2.2'
     runtime("netty")
     testRuntime("junit5")
     processing {
         incremental(true)
-        annotations("com.example.*")
+        annotations("hu.webarticum.inno.restdemo.*")
     }
 }
