@@ -10,8 +10,8 @@
 | Paper web app basics | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
 | Paper web app design | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![TODO](https://img.shields.io/badge/TODO-gray) |
 | Paper web app constraints | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![TODO](https://img.shields.io/badge/TODO-gray) |
-| Abstract generator | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![TODO](https://img.shields.io/badge/TODO-gray) |
-| Face image generator | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![TODO](https://img.shields.io/badge/TODO-gray) |
+| Abstract generator | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
+| Face image generator | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
 | SaaS platform demo | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![TODO](https://img.shields.io/badge/TODO-gray) |
 | Customer coupon system | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![TODO](https://img.shields.io/badge/TODO-gray) |
 | Screen switcher | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
