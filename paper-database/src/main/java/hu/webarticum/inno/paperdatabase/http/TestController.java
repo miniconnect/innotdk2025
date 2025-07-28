@@ -11,7 +11,7 @@ import javax.imageio.ImageIO;
 import javax.transaction.Transactional;
 
 import hu.webarticum.inno.paperdatabase.abstractgenerator.AbstractGenerator;
-import hu.webarticum.inno.paperdatabase.facegenerator.FaceGeneratorService;
+import hu.webarticum.inno.paperdatabase.facegenerator.RenderingExperimentsService;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
@@ -20,10 +20,10 @@ import io.micronaut.http.annotation.Get;
 @Controller("/test")
 public class TestController {
     
-    private final FaceGeneratorService faceGeneratorService;
+    private final RenderingExperimentsService renderingExperimentsService;;
     
-    public TestController(FaceGeneratorService faceGeneratorService) {
-        this.faceGeneratorService = faceGeneratorService;
+    public TestController(RenderingExperimentsService renderingExperimentsService) {
+        this.renderingExperimentsService = renderingExperimentsService;
     }
 
     @Get("/abstract")
@@ -37,13 +37,13 @@ public class TestController {
     @Get("/face")
     @Transactional
     public HttpResponse<byte[]> demoFace() throws IOException, InterruptedException, ExecutionException {
-        BufferedImage image = faceGeneratorService.renderFace().get();
+        BufferedImage image = renderingExperimentsService.renderSomething().get();
         
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         ImageIO.write(image, "png", out);
         byte[] pngBytes = out.toByteArray();
 
-        return HttpResponse.ok(pngBytes).contentType(MediaType.IMAGE_PNG);
+        return HttpResponse.ok(pngBytes).contentType(MediaType.IMAGE_PNG_TYPE);
     }
     
 }
