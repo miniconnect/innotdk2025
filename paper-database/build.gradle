@@ -1,7 +1,8 @@
 plugins {
     id 'java-library'
     id 'application'
-    id 'io.micronaut.application' version '3.2.2'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'io.micronaut.application' version '3.7.10'
 }
 
 description = "HoloDB JPA mocking demo"
@@ -16,6 +17,10 @@ repositories {
     mavenLocal()
 }
 
+def lwjglVersion = '3.3.3'
+def lwjglModules = [ 'lwjgl', 'lwjgl-opengl', 'lwjgl-glfw', 'lwjgl-stb' ]
+def lwjglnativeVariants = [ 'natives-linux', 'natives-windows', 'natives-macos' ]
+
 dependencies {
     implementation 'hu.webarticum.holodb:jpa:0.6.1-SNAPSHOT'
     
@@ -26,9 +31,20 @@ dependencies {
     implementation 'io.micronaut.sql:micronaut-jdbc-hikari'
     implementation 'jakarta.annotation:jakarta.annotation-api'
     implementation 'io.micronaut.views:micronaut-views-freemarker'
+    implementation 'org.slf4j:slf4j-api:2.0.17'
     implementation('uk.ac.abdn:SimpleNLG:4.5.0') {
         exclude group: 'gov.nih.nlm.nls.lexaccess', module: 'lexaccess-dist'
     }
+    
+    lwjglModules.each { module ->
+        implementation "org.lwjgl:${module}:${lwjglVersion}"
+        lwjglnativeVariants.each { variant ->
+            runtimeOnly "org.lwjgl:${module}:${lwjglVersion}:${variant}"
+        }
+    }
+    
+    runtimeOnly 'org.apache.logging.log4j:log4j-core:2.25.1'
+    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j2-impl:2.25.1'
     
     annotationProcessor 'io.micronaut.data:micronaut-data-processor'
     annotationProcessor 'io.micronaut:micronaut-http-validation'
@@ -40,11 +56,10 @@ application {
 
 graalvmNative.toolchainDetection = false
 micronaut {
-    version '3.2.2'
     runtime("netty")
     testRuntime("junit5")
     processing {
         incremental(true)
-        annotations("hu.webarticum.inno.paperdatabase.*")
+        annotations("hu.webarticum.miniconnect.generaldocs.examples.holodbjpa.*")
     }
 }
