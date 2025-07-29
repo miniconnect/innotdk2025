@@ -12,6 +12,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.opengl.GL20.glUseProgram;
 import static org.lwjgl.opengl.GL30.*;
 import static org.lwjgl.system.MemoryUtil.*;
 
@@ -132,6 +133,8 @@ public class GlRenderingService {
     }
 
     private void initGlBeforeRender(DrawContext ctx) {
+        glUseProgram(0);
+        
         glBindTexture(GL_TEXTURE_2D, ctx.global.tex);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, ctx.width, ctx.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, (ByteBuffer) null);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
@@ -144,9 +147,6 @@ public class GlRenderingService {
         
         glViewport(0, 0, ctx.width, ctx.height);
         glMatrixMode(GL_PROJECTION);
-        glLoadIdentity();
-        glOrtho(0, ctx.width, ctx.height, 0, -1, 1);
-        glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     }

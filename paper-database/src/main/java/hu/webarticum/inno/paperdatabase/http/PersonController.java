@@ -67,18 +67,18 @@ public class PersonController {
     @Get("/{id}/images/large.jpg")
     @Transactional
     public HttpResponse<byte[]> largeImage(@PathVariable Long id) throws IOException, InterruptedException, ExecutionException {
-        return createIJpegResponse(faceGeneratorService.renderFace().get());
+        return createIJpegResponse(faceGeneratorService.render().get());
     }
 
     @Get("/{id}/images/thumb.jpg")
     @Transactional
     public HttpResponse<byte[]> thumbImage(@PathVariable Long id) throws IOException, InterruptedException, ExecutionException {
-        return createIJpegResponse(faceGeneratorService.renderFaceThumb().get());
+        return createIJpegResponse(faceGeneratorService.renderThumb().get());
     }
     
     private HttpResponse<byte[]> createIJpegResponse(RenderedImage image) throws IOException, InterruptedException, ExecutionException {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
-        ImageIO.write(image, "png", out);
+        ImageIO.write(image, "jpeg", out);
         byte[] pngBytes = out.toByteArray();
 
         return HttpResponse.ok(pngBytes).contentType(MediaType.IMAGE_JPEG_TYPE);

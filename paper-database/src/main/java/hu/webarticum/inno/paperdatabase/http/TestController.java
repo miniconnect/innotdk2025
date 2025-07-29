@@ -1,6 +1,6 @@
 package hu.webarticum.inno.paperdatabase.http;
 
-import java.awt.image.BufferedImage;
+import java.awt.image.RenderedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
@@ -11,7 +11,9 @@ import javax.imageio.ImageIO;
 import javax.transaction.Transactional;
 
 import hu.webarticum.inno.paperdatabase.abstractgenerator.AbstractGenerator;
-import hu.webarticum.inno.paperdatabase.facegenerator.RenderingExperimentsService;
+import hu.webarticum.inno.paperdatabase.facegenerator.experiments.RandomCirleRenderingService;
+import hu.webarticum.inno.paperdatabase.facegenerator.experiments.SomeShaderRendernigService;
+import hu.webarticum.inno.paperdatabase.facegenerator.experiments.TextureRenderingService;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
@@ -19,11 +21,18 @@ import io.micronaut.http.annotation.Get;
 
 @Controller("/test")
 public class TestController {
+
+    private final RandomCirleRenderingService randomCirleRenderingService;
+    private final SomeShaderRendernigService someShaderRendernigService;
+    private final TextureRenderingService textureRenderingService;
     
-    private final RenderingExperimentsService renderingExperimentsService;;
-    
-    public TestController(RenderingExperimentsService renderingExperimentsService) {
-        this.renderingExperimentsService = renderingExperimentsService;
+    public TestController(
+            RandomCirleRenderingService randomCirleRenderingService,
+            SomeShaderRendernigService someShaderRendernigService,
+            TextureRenderingService textureRenderingService) {
+        this.randomCirleRenderingService = randomCirleRenderingService;
+        this.someShaderRendernigService = someShaderRendernigService;
+        this.textureRenderingService = textureRenderingService;
     }
 
     @Get("/abstract")
@@ -34,11 +43,25 @@ public class TestController {
         return result;
     }
 
-    @Get("/face")
+    @Get("/render/random-circle")
     @Transactional
-    public HttpResponse<byte[]> demoFace() throws IOException, InterruptedException, ExecutionException {
-        BufferedImage image = renderingExperimentsService.renderSomething().get();
-        
+    public HttpResponse<byte[]> demoRenderRandomCircle() throws IOException, InterruptedException, ExecutionException {
+        return createIPngResponse(randomCirleRenderingService.render().get());
+    }
+
+    @Get("/render/some-shader")
+    @Transactional
+    public HttpResponse<byte[]> demoRenderSomeShader() throws IOException, InterruptedException, ExecutionException {
+        return createIPngResponse(someShaderRendernigService.render().get());
+    }
+
+    @Get("/render/texture")
+    @Transactional
+    public HttpResponse<byte[]> demoRenderTexture() throws IOException, InterruptedException, ExecutionException {
+        return createIPngResponse(textureRenderingService.render().get());
+    }
+
+    private HttpResponse<byte[]> createIPngResponse(RenderedImage image) throws IOException, InterruptedException, ExecutionException {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         ImageIO.write(image, "png", out);
         byte[] pngBytes = out.toByteArray();

@@ -17,7 +17,7 @@ public class FaceGeneratorService {
     private static final int THUMB_WIDTH = 100;
     private static final int THUMB_HEIGHT = (IMAGE_HEIGHT * THUMB_WIDTH) / IMAGE_WIDTH;
     
-    public CompletableFuture<BufferedImage> renderFace() {
+    public CompletableFuture<BufferedImage> render() {
         BufferedImage image = new BufferedImage(IMAGE_WIDTH, IMAGE_HEIGHT, BufferedImage.TYPE_INT_RGB);
         Graphics2D g2d = (Graphics2D) image.getGraphics();
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
@@ -36,8 +36,8 @@ public class FaceGeneratorService {
         return CompletableFuture.completedFuture(image);
     }
 
-    public CompletableFuture<BufferedImage> renderFaceThumb() {
-        return renderFace().thenApply(b -> {
+    public CompletableFuture<BufferedImage> renderThumb() {
+        return render().thenApply(b -> {
             BufferedImage resizedImage = new BufferedImage(THUMB_WIDTH, THUMB_HEIGHT, BufferedImage.TYPE_INT_RGB);
             Graphics2D g2d = (Graphics2D) resizedImage.getGraphics();
             g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
