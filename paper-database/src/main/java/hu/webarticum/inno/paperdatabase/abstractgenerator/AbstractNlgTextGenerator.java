@@ -5,27 +5,39 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 import simplenlg.framework.DocumentElement;
 import simplenlg.framework.NLGElement;
 import simplenlg.framework.NLGFactory;
+import simplenlg.realiser.english.Realiser;
 
-public abstract class AbstractTextTemplateGenerator implements TextTemplateGenerator {
+public abstract class AbstractNlgTextGenerator implements TextGenerator {
+
+    protected final Function<PlaceholderType, String> substitutor;
     
     protected final NLGFactory factory;
+    
+    protected final Realiser realiser;
 
     protected final Supplier<Random> randomSupplier;
     
     protected Random random = null;
     
-    protected AbstractTextTemplateGenerator(NLGFactory factory, Supplier<Random> randomSupplier) {
+    protected AbstractNlgTextGenerator(Function<PlaceholderType, String> substitutor, NLGFactory factory, Realiser realiser, Supplier<Random> randomSupplier) {
+        this.substitutor = substitutor;
         this.factory = factory;
+        this.realiser = realiser;
         this.randomSupplier = randomSupplier;
     }
     
     @Override
-    public NLGElement generateTemplate() {
+    public String generate() {
+        return realiser.realise(buildNlgElement()).getRealisation().trim();
+    }
+    
+    private NLGElement buildNlgElement() {
         this.random = randomSupplier.get();
         Supplier<? extends NLGElement> generatorStructure = buildGeneratorStructure();
         NLGElement result = generatorStructure.get();

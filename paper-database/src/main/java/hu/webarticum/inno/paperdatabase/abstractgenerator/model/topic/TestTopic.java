@@ -8,23 +8,25 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
-import hu.webarticum.inno.paperdatabase.abstractgenerator.AbstractTextTemplateGenerator;
-import hu.webarticum.inno.paperdatabase.abstractgenerator.NlgPlaceholder;
+import hu.webarticum.inno.paperdatabase.abstractgenerator.AbstractNlgTextGenerator;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.PlaceholderType;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.Keyword;
-import hu.webarticum.inno.paperdatabase.abstractgenerator.model.PaperTextTemplatesResult;
+import hu.webarticum.inno.paperdatabase.abstractgenerator.model.PaperTextsResult;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.Topic;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.KeywordEnum;
 import simplenlg.features.Feature;
 import simplenlg.features.Form;
 import simplenlg.framework.DocumentElement;
+import simplenlg.framework.NLGElement;
 import simplenlg.framework.NLGFactory;
 import simplenlg.framework.PhraseCategory;
 import simplenlg.phrasespec.PPPhraseSpec;
 import simplenlg.phrasespec.SPhraseSpec;
 import simplenlg.phrasespec.VPPhraseSpec;
+import simplenlg.realiser.english.Realiser;
 
 enum SHARED_KEY {
     
@@ -39,10 +41,13 @@ public class TestTopic implements Topic {
     
     private final NLGFactory factory;
     
+    private final Realiser realiser;
+    
     private final List<Keyword> keywords;
     
-    public TestTopic(NLGFactory factory) {
+    public TestTopic(NLGFactory factory, Realiser realiser) {
         this.factory = factory;
+        this.realiser = realiser;
         this.keywords = Collections.unmodifiableList(collectKeywords());
     }
     
@@ -63,21 +68,21 @@ public class TestTopic implements Topic {
     }
 
     @Override
-    public PaperTextTemplatesResult buildPaperTextTemplates(long seed) {
-        return new PaperTextTemplatesResult(
-                factory.createClause("Particle", "do", "movement"),
-                new TestTextTemplateGenerator(factory, seed).generateTemplate());
+    public PaperTextsResult buildPaperTextTemplates(Function<PlaceholderType, String> substitutor, long seed) {
+        return new PaperTextsResult(
+                "Hello Paper!",
+                new TestTextTemplateGenerator(substitutor, factory, realiser, seed).generate());
     }
 
-    private static class TestTextTemplateGenerator extends AbstractTextTemplateGenerator {
+    private static class TestTextTemplateGenerator extends AbstractNlgTextGenerator {
         
-        private final Map<SHARED_KEY, NlgPlaceholder> sharedPlaceholders = new EnumMap<>(SHARED_KEY.class);
+        private final Map<SHARED_KEY, NLGElement> sharedElements = new EnumMap<>(SHARED_KEY.class);
     
-        protected TestTextTemplateGenerator(NLGFactory factory, long seed) {
-            super(factory, () -> createRandom(seed));
-            sharedPlaceholders.clear();
-            sharedPlaceholders.put(EARLIER_RESEARCHER, new NlgPlaceholder(PlaceholderType.SURNAME, PhraseCategory.NOUN_PHRASE, factory));
-            sharedPlaceholders.put(SOME_OBJECT, new NlgPlaceholder(PlaceholderType.ITEM, PhraseCategory.NOUN_PHRASE, factory));
+        protected TestTextTemplateGenerator(Function<PlaceholderType, String> substitutor, NLGFactory factory, Realiser realiser, long seed) {
+            super(substitutor, factory, realiser, () -> createRandom(seed));
+            sharedElements.clear();
+            sharedElements.put(EARLIER_RESEARCHER, createElement(substitutor.apply(PlaceholderType.SURNAME), PhraseCategory.NOUN_PHRASE, factory));
+            sharedElements.put(SOME_OBJECT, createElement(substitutor.apply(PlaceholderType.ITEM), PhraseCategory.NOUN_PHRASE, factory));
         }
 
         private static Random createRandom(long seed) {
@@ -125,8 +130,14 @@ public class TestTopic implements Topic {
             return phrase;
         }
         
-        private NlgPlaceholder shared(SHARED_KEY key) {
-            return sharedPlaceholders.get(key);
+        private NLGElement shared(SHARED_KEY key) {
+            return sharedElements.get(key);
+        }
+        
+        private NLGElement createElement(String value, PhraseCategory phraseCategory, NLGFactory factory) {
+            NLGElement element = factory.createStringElement(value);
+            element.setCategory(phraseCategory);
+            return element;
         }
     
     }

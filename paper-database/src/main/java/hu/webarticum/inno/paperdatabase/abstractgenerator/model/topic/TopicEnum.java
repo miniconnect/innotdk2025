@@ -1,9 +1,10 @@
 package hu.webarticum.inno.paperdatabase.abstractgenerator.model.topic;
 
-import java.util.function.Function;
+import java.util.function.BiFunction;
 
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.Topic;
 import simplenlg.framework.NLGFactory;
+import simplenlg.realiser.english.Realiser;
 
 public enum TopicEnum {
     
@@ -11,14 +12,14 @@ public enum TopicEnum {
     
     ;
     
-    private final Function<NLGFactory, Topic> topicSupplier;
+    private final BiFunction<NLGFactory, Realiser, Topic> topicSupplier;
     
-    private TopicEnum(Function<NLGFactory, Topic> topicSupplier) {
+    private TopicEnum(BiFunction<NLGFactory, Realiser, Topic> topicSupplier) {
         this.topicSupplier = topicSupplier;
     }
     
-    public Topic topic(NLGFactory factory) {
-        return topicSupplier.apply(factory);
+    public Topic topic(NLGFactory factory, Realiser realiser) {
+        return topicSupplier.apply(factory, realiser);
     }
 
 }

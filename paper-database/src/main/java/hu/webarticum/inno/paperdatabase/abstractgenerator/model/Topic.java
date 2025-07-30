@@ -1,6 +1,9 @@
 package hu.webarticum.inno.paperdatabase.abstractgenerator.model;
 
 import java.util.List;
+import java.util.function.Function;
+
+import hu.webarticum.inno.paperdatabase.abstractgenerator.PlaceholderType;
 
 public interface Topic {
 
@@ -8,6 +11,6 @@ public interface Topic {
     
     public List<Keyword> keywords();
     
-    public PaperTextTemplatesResult buildPaperTextTemplates(long seed);
+    public PaperTextsResult buildPaperTextTemplates(Function<PlaceholderType, String> substitutor, long seed);
     
 }

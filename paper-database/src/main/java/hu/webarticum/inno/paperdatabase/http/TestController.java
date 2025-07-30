@@ -44,7 +44,6 @@ public class TestController {
     @Transactional
     public Map<String, Object> demoAbstract() {
         Map<String, Object> result = new HashMap<>();
-        result.put("exampleAbstract", new PaperAbstractGeneratorService().generateExample());
         result.put("alternativesAbstracts", new PaperAbstractGeneratorService().generateAlternatives());
         return result;
     }

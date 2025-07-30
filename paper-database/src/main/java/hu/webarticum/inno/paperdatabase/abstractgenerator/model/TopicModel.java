@@ -8,6 +8,7 @@ import java.util.List;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.KeywordEnum;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.topic.TopicEnum;
 import simplenlg.framework.NLGFactory;
+import simplenlg.realiser.english.Realiser;
 
 public class TopicModel {
     
@@ -15,15 +16,15 @@ public class TopicModel {
 
     private final List<Keyword> keywords;
     
-    public TopicModel(NLGFactory factory) {
-        this.topics = Collections.unmodifiableList(collectTopics(factory));
+    public TopicModel(NLGFactory factory, Realiser realiser) {
+        this.topics = Collections.unmodifiableList(collectTopics(factory, realiser));
         this.keywords = Collections.unmodifiableList(collectKeywords());
     }
     
-    private static List<Topic> collectTopics(NLGFactory factory) {
+    private static List<Topic> collectTopics(NLGFactory factory, Realiser realiser) {
         List<Topic> topics = new ArrayList<>();
         for (TopicEnum topicEnum : TopicEnum.values()) {
-            topics.add(topicEnum.topic(factory));
+            topics.add(topicEnum.topic(factory, realiser));
         }
         Collections.sort(topics, Comparator.comparing(Topic::name));
         return topics;
