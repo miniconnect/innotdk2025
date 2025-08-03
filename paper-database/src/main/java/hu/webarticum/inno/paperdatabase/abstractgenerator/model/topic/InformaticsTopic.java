@@ -2,27 +2,27 @@ package hu.webarticum.inno.paperdatabase.abstractgenerator.model.topic;
 
 import static hu.webarticum.inno.paperdatabase.abstractgenerator.model.topic.SHARED_KEY.*;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
-import hu.webarticum.inno.paperdatabase.abstractgenerator.AbstractNlgTextGenerator;
-import hu.webarticum.inno.paperdatabase.abstractgenerator.PlaceholderType;
+import hu.webarticum.inno.paperdatabase.abstractgenerator.model.TextGeneratorBase;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.Keyword;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.PaperTextsResult;
+import hu.webarticum.inno.paperdatabase.abstractgenerator.model.PlaceholderType;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.Topic;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.KeywordEnum;
+import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.WordGenerator;
 import simplenlg.features.Feature;
 import simplenlg.features.Form;
 import simplenlg.framework.DocumentElement;
 import simplenlg.framework.NLGElement;
 import simplenlg.framework.NLGFactory;
 import simplenlg.framework.PhraseCategory;
+import simplenlg.phrasespec.NPPhraseSpec;
 import simplenlg.phrasespec.PPPhraseSpec;
 import simplenlg.phrasespec.SPhraseSpec;
 import simplenlg.phrasespec.VPPhraseSpec;
@@ -32,31 +32,28 @@ enum SHARED_KEY {
     
     EARLIER_RESEARCHER,
     SOME_OBJECT,
+    SOME_OTHER_OBJECT,
     
 }
 
-public class TestTopic implements Topic {
+public class InformaticsTopic implements Topic {
 
     private static final String NAME = "test";
+    
+    private static final Keyword[] keywords = {
+            KeywordEnum.AI.keyword(),
+            KeywordEnum.ALGORITHMS.keyword(),
+    };
     
     private final NLGFactory factory;
     
     private final Realiser realiser;
     
-    private final List<Keyword> keywords;
-    
-    public TestTopic(NLGFactory factory, Realiser realiser) {
+    public InformaticsTopic(NLGFactory factory, Realiser realiser) {
         this.factory = factory;
         this.realiser = realiser;
-        this.keywords = Collections.unmodifiableList(collectKeywords());
     }
     
-    private static List<Keyword> collectKeywords() {
-        List<Keyword> keywords = new ArrayList<>();
-        keywords.add(KeywordEnum.TEST_KEYWORD.keyword());
-        return keywords;
-    }
-
     @Override
     public String name() {
         return NAME;
@@ -64,25 +61,28 @@ public class TestTopic implements Topic {
 
     @Override
     public List<Keyword> keywords() {
-        return keywords;
+        return Collections.unmodifiableList(Arrays.asList(keywords));
     }
 
     @Override
-    public PaperTextsResult buildPaperTextTemplates(Function<PlaceholderType, String> substitutor, long seed) {
-        return new PaperTextsResult(
-                "Hello Paper!",
-                new TestTextTemplateGenerator(substitutor, factory, realiser, seed).generate());
+    public PaperTextsResult buildPaperTextTemplates(WordGenerator wordGenerator, boolean multiAuthored, long seed) {
+        InformaticsTextGenerator textGenerator = new InformaticsTextGenerator(wordGenerator, multiAuthored, factory, realiser, seed);
+        return new PaperTextsResult(textGenerator.generateTitle(), textGenerator.generateAbstract());
     }
-
-    private static class TestTextTemplateGenerator extends AbstractNlgTextGenerator {
+    
+    private static class InformaticsTextGenerator extends TextGeneratorBase {
+        
+        private final boolean multiAuthored;
         
         private final Map<SHARED_KEY, NLGElement> sharedElements = new EnumMap<>(SHARED_KEY.class);
     
-        protected TestTextTemplateGenerator(Function<PlaceholderType, String> substitutor, NLGFactory factory, Realiser realiser, long seed) {
-            super(substitutor, factory, realiser, () -> createRandom(seed));
+        protected InformaticsTextGenerator(WordGenerator wordGenerator, boolean multiAuthored, NLGFactory factory, Realiser realiser, long seed) {
+            super(factory, realiser, () -> createRandom(seed));
+            this.multiAuthored = multiAuthored;
             sharedElements.clear();
-            sharedElements.put(EARLIER_RESEARCHER, createElement(substitutor.apply(PlaceholderType.SURNAME), PhraseCategory.NOUN_PHRASE, factory));
-            sharedElements.put(SOME_OBJECT, createElement(substitutor.apply(PlaceholderType.ITEM), PhraseCategory.NOUN_PHRASE, factory));
+            sharedElements.put(EARLIER_RESEARCHER, createElement(wordGenerator.generate(PlaceholderType.SURNAME), PhraseCategory.NOUN_PHRASE, factory));
+            sharedElements.put(SOME_OBJECT, createElement(wordGenerator.generate(PlaceholderType.ITEM), PhraseCategory.NOUN_PHRASE, factory));
+            sharedElements.put(SOME_OTHER_OBJECT, createElement(wordGenerator.generate(PlaceholderType.ITEM), PhraseCategory.NOUN_PHRASE, factory));
         }
 
         private static Random createRandom(long seed) {
@@ -94,14 +94,33 @@ public class TestTopic implements Topic {
             return random;
         }
 
-        @Override
-        protected Supplier<DocumentElement> buildGeneratorStructure() {
-            return paragraphOf(sequenceOf(
+        public String generateTitle() {
+            return generate(this::titleStructure);
+        }
+
+        private NLGElement titleStructure() {
+            NPPhraseSpec mainPhrase = factory.createNounPhrase("Generation");
+            
+            NPPhraseSpec subjectPhrase = factory.createNounPhrase(shared(SOME_OBJECT) + " instances");
+            subjectPhrase.setPlural(true);
+            subjectPhrase.setPreModifier("of");
+            mainPhrase.addPostModifier(subjectPhrase);
+            
+            VPPhraseSpec gerundPhrase = factory.createVerbPhrase("using");
+            gerundPhrase.setFeature(Feature.FORM, Form.GERUND);
+            gerundPhrase.addComplement(shared(SOME_OTHER_OBJECT));
+            mainPhrase.addPostModifier(gerundPhrase);
+            
+            return mainPhrase;
+        }
+        
+        public String generateAbstract() {
+            return generate(paragraphOf(sequenceOf(
                     anyOf(sentence(this::sentenceA), sentence(this::sentenceB)),
                     anyOf(sentence(this::sentenceA), sentence(this::sentenceB)),
                     anyOf(sentence(this::sentenceA), sentence(this::sentenceB)),
                     anyOf(sentence(this::sentenceA), sentence(this::sentenceB)),
-                    optional(sentence(this::sentenceC))));
+                    optional(sentence(this::sentenceC)))));
         }
     
         private DocumentElement sentenceA() {
@@ -118,7 +137,7 @@ public class TestTopic implements Topic {
         }
     
         private DocumentElement sentenceB() {
-            return factory.createSentence(pastTense(factory.createClause(shared(EARLIER_RESEARCHER), "go", "home")));
+            return factory.createSentence(pastTense(factory.createClause(shared(EARLIER_RESEARCHER), "use", shared(SOME_OTHER_OBJECT))));
         }
     
         private DocumentElement sentenceC() {

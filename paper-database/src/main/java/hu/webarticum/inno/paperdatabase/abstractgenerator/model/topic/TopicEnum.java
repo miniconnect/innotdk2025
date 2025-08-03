@@ -8,7 +8,7 @@ import simplenlg.realiser.english.Realiser;
 
 public enum TopicEnum {
     
-    TEST_TOPIC(TestTopic::new),
+    INFORMATICS(InformaticsTopic::new),
     
     ;
     

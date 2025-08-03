@@ -8,15 +8,19 @@ import java.util.List;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.KeywordEnum;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.topic.TopicEnum;
 import simplenlg.framework.NLGFactory;
+import simplenlg.lexicon.Lexicon;
 import simplenlg.realiser.english.Realiser;
 
-public class TopicModel {
+public class ContextModel {
     
     private final List<Topic> topics;
 
     private final List<Keyword> keywords;
     
-    public TopicModel(NLGFactory factory, Realiser realiser) {
+    public ContextModel() {
+        Lexicon lexicon = Lexicon.getDefaultLexicon();
+        NLGFactory factory = new NLGFactory(lexicon);
+        Realiser realiser = new Realiser(lexicon);
         this.topics = Collections.unmodifiableList(collectTopics(factory, realiser));
         this.keywords = Collections.unmodifiableList(collectKeywords());
     }

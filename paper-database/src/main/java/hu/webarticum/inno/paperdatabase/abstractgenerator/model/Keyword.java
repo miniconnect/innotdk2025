@@ -1,11 +1,11 @@
 package hu.webarticum.inno.paperdatabase.abstractgenerator.model;
 
-import hu.webarticum.inno.paperdatabase.abstractgenerator.PlaceholderType;
+import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.WordGenerator;
 
 public interface Keyword {
 
     public String name();
     
-    public String generateWord(PlaceholderType type, long seed);
+    public WordGenerator wordGenerator(long seed);
     
 }
