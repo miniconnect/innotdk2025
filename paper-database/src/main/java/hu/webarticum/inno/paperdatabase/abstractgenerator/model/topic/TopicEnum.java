@@ -8,7 +8,14 @@ import simplenlg.realiser.english.Realiser;
 
 public enum TopicEnum {
     
+    ASTRONOMY(AstronomyTopic::new),
+    BIOLOGY(BiologyTopic::new),
+    CHEMISTRY(ChemistryTopic::new),
+    ENGINEERING(EngineeringTopic::new),
     INFORMATICS(InformaticsTopic::new),
+    MATHEMATICS(MathematicsTopic::new),
+    MEDICINE(MedicineTopic::new),
+    PHYSICS(PhysicsTopic::new),
     
     ;
     

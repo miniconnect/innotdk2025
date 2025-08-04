@@ -1,5 +1,6 @@
 package hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.HashMap;
@@ -7,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-import edu.emory.mathcs.backport.java.util.Arrays;
 import hu.webarticum.holodb.regex.facade.MatchList;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.Keyword;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.PlaceholderType;
@@ -34,7 +34,7 @@ public class DefaultKeyword implements Keyword {
     }
     
     private static String[] copyOf(String[] strings) {
-        return (String[]) Arrays.copyOf(strings, strings.length, String[].class);
+        return Arrays.copyOf(strings, strings.length);
     }
 
     @Override

@@ -6,10 +6,12 @@ import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.WordGene
 
 public interface Topic {
 
-    public String name();
-    
+    public default String name() {
+        return getClass().getSimpleName().replaceAll("^([A-Z][a-z]*).*$", "$1");
+    }
+
     public List<Keyword> keywords();
     
-    public PaperTextsResult buildPaperTextTemplates(WordGenerator wordGenerator, boolean multiAuthored, long seed);
+    public PaperTextsResult buildPaperTextTemplates(WordGenerator wordGenerator, long seed);
     
 }
