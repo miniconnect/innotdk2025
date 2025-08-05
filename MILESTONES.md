@@ -16,7 +16,7 @@
 | SaaS platform demo | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![TODO](https://img.shields.io/badge/TODO-gray) |
 | Customer coupon system | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![TODO](https://img.shields.io/badge/TODO-gray) |
 | Screen switcher | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
-| Brochure | ![MEDIUM](https://img.shields.io/badge/MEDIUM-yellow) | ![TODO](https://img.shields.io/badge/TODO-gray) |
+| Brochure | ![MEDIUM](https://img.shields.io/badge/MEDIUM-yellow) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
 | Exhibition desk design | ![MEDIUM](https://img.shields.io/badge/HIGH-red) | ![TODO](https://img.shields.io/badge/TODO-gray) |
 
 ---
