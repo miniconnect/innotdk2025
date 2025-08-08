@@ -55,7 +55,8 @@ public abstract class TextGeneratorBase {
         for (Map.Entry<String, PlaceholderType> entry : sharedPlaceholdersSpec.entrySet()) {
             String key = entry.getKey();
             PlaceholderType placeholderType = entry.getValue();
-            String word = retrieveWord(wordGenerator, placeholderType, occuredWords);
+            //String word = retrieveWord(wordGenerator, placeholderType, occuredWords);
+            String word = "P-" + key.toUpperCase();
             result.put(key, word);
         }
         return result;

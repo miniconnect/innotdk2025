@@ -17,6 +17,7 @@ import simplenlg.features.Form;
 import simplenlg.features.Tense;
 import simplenlg.framework.CoordinatedPhraseElement;
 import simplenlg.framework.DocumentElement;
+import simplenlg.framework.LexicalCategory;
 import simplenlg.framework.NLGElement;
 import simplenlg.framework.NLGFactory;
 import simplenlg.framework.PhraseElement;
@@ -62,17 +63,24 @@ public class InformaticsTopic implements Topic {
     
     private static class TopicTextGenerator extends TextGeneratorBase {
 
-        // TODO: enumerate all necessary placeholders
-        private static final String P_EARLIER_RESEARCHER = "earlier-researcher";
-        private static final String P_SOME_OBJECT = "object";
-        private static final String P_SOME_OTHER_OBJECT = "other-object";
+        private static final String P_POPULAR_TOOL = "popular-tool";
+        private static final String P_AREA = "area";
+        private static final String P_PRODUCE = "produce";
+        private static final String P_TARGET_PRODUCT = "target-product";
+        private static final String P_SOLUTION = "solution";
+        private static final String P_DIFFICULTY = "difficulty";
+        private static final String P_PROBLEMATIC_STUFF = "problematic-stuff";
         
         private static final Map<String, PlaceholderType> PLACEHOLDERS = new HashMap<>();
         static {
             // TODO: specify type for each placeholder
-            PLACEHOLDERS.put(P_EARLIER_RESEARCHER, PlaceholderType.TOOL);
-            PLACEHOLDERS.put(P_SOME_OBJECT, PlaceholderType.TOOL);
-            PLACEHOLDERS.put(P_SOME_OTHER_OBJECT, PlaceholderType.TOOL);
+            PLACEHOLDERS.put(P_POPULAR_TOOL, PlaceholderType.TOOL);
+            PLACEHOLDERS.put(P_AREA, PlaceholderType.TOOL);
+            PLACEHOLDERS.put(P_PRODUCE, PlaceholderType.TOOL);
+            PLACEHOLDERS.put(P_TARGET_PRODUCT, PlaceholderType.TOOL);
+            PLACEHOLDERS.put(P_SOLUTION, PlaceholderType.TOOL);
+            PLACEHOLDERS.put(P_DIFFICULTY, PlaceholderType.TOOL);
+            PLACEHOLDERS.put(P_PROBLEMATIC_STUFF, PlaceholderType.TOOL);
         }
         
         protected TopicTextGenerator(WordGenerator wordGenerator, NLGFactory factory, Realiser realiser, long seed) {
@@ -88,11 +96,11 @@ public class InformaticsTopic implements Topic {
             
             NPPhraseSpec subjectPhrase = factory.createNounPhrase("instances");
             subjectPhrase.setPlural(true);
-            subjectPhrase.addPreModifier(shared(P_SOME_OBJECT));
+            subjectPhrase.addPreModifier("<XXXX>"); // FIXME
             PPPhraseSpec preposition = factory.createPrepositionPhrase("of", subjectPhrase);
             mainPhrase.addPostModifier(preposition);
             
-            PPPhraseSpec usingPhrase = factory.createPrepositionPhrase("using", shared(P_SOME_OTHER_OBJECT));
+            PPPhraseSpec usingPhrase = factory.createPrepositionPhrase("using", "<XXXX>"); // FIXME
             mainPhrase.addPostModifier(usingPhrase);
             
             return mainPhrase;
@@ -107,10 +115,9 @@ public class InformaticsTopic implements Topic {
         }
 
         private DocumentElement contextSentenceNormalA() {
-            NPPhraseSpec objects = factory.createNounPhrase("<TOOLS>"); // TODO: use a placeholder
+            NPPhraseSpec objects = factory.createNounPhrase(factory.createWord(shared(P_POPULAR_TOOL), LexicalCategory.NOUN));
             objects.setPlural(true);
-            NPPhraseSpec targetArea = factory.createNounPhrase("<AREA>"); // TODO: use a placeholder
-            
+            NPPhraseSpec targetArea = factory.createNounPhrase(factory.createWord(shared(P_AREA), LexicalCategory.NOUN));
             if (random.nextBoolean()) {
                 PPPhraseSpec ofArea = factory.createPrepositionPhrase("of", targetArea);
                 targetArea = factory.createNounPhrase("the", choose(random, "area", "field"));
@@ -159,7 +166,7 @@ public class InformaticsTopic implements Topic {
             if (random.nextBoolean()) {
                 progressNoun.setSpecifier(choose(random, "recent", "the"));
             }
-            PPPhraseSpec inArea = factory.createPrepositionPhrase("in", "<AREA>"); // TODO: use a placeholder
+            PPPhraseSpec inArea = factory.createPrepositionPhrase("in", factory.createWord(shared(P_AREA), LexicalCategory.NOUN));
             progressNoun.addPostModifier(inArea);
             String verb = choose(random, "bring", "entail", "expose", "generate", "introduce");
             String adjective = choose(random, "emerging", "new", "novel", "significant", "unforeseen");
@@ -244,15 +251,17 @@ public class InformaticsTopic implements Topic {
             if (random.nextBoolean()) {
                 gerundPhrase = factory.createVerbPhrase(choose(random, "analyze", "create", "generate", "produce"));
             } else {
-                gerundPhrase = factory.createVerbPhrase(choose(random, "pick")); // TODO: use a placeholder
+                gerundPhrase = factory.createVerbPhrase(factory.createWord(shared(P_PRODUCE), LexicalCategory.VERB));
             }
             gerundPhrase.setFeature(Feature.FORM, Form.GERUND);
-            gerundPhrase.addComplement(choose(random, "Feistel-networks", "evolutionary algorithms", "labeled graphs")); // TODO: use a placeholder
+            NPPhraseSpec targetNounPhrase = factory.createNounPhrase(factory.createWord(shared(P_TARGET_PRODUCT), LexicalCategory.NOUN));
+            targetNounPhrase.setPlural(true);
+            gerundPhrase.addComplement(targetNounPhrase);
             return gerundPhrase;
         }
 
         private NPPhraseSpec createProposalBasePhrase() {
-            NPPhraseSpec phrase = factory.createNounPhrase("a", choose(random, "algorithm", "method", "solution")); // TODO: use a placeholder
+            NPPhraseSpec phrase = factory.createNounPhrase("a", factory.createWord(shared(P_SOLUTION), LexicalCategory.NOUN));
             if (random.nextBoolean()) {
                 phrase.addPreModifier(choose(random, "efficient", "new", "novel", "revolutionary"));
             }
@@ -261,12 +270,11 @@ public class InformaticsTopic implements Topic {
 
         private DocumentElement detailsSentenceA() {
             NPPhraseSpec problemPhrase = factory.createNounPhrase("the", choose(random, "difficulty", "problem", "challenge"));
-            String problemName = "XYZ"; // TODO: use a placeholder
-            problemPhrase.addPostModifier(factory.createPrepositionPhrase("of", problemName));
+            problemPhrase.addPostModifier(factory.createPrepositionPhrase("of", factory.createWord(shared(P_DIFFICULTY), LexicalCategory.NOUN)));
             VPPhraseSpec occurPhrase = factory.createVerbPhrase(choose(random, "appear", "arise", "emerge", "occur"));
             occurPhrase.setFeature(Feature.FORM, Form.PRESENT_PARTICIPLE);
             occurPhrase.setPreModifier("often");
-            NPPhraseSpec problematicNounPhrase = factory.createNounPhrase("ABC"); // TODO: use a placeholder
+            NPPhraseSpec problematicNounPhrase = factory.createNounPhrase(factory.createWord(shared(P_PROBLEMATIC_STUFF), LexicalCategory.NOUN));
             problematicNounPhrase.setPlural(true);
             occurPhrase.addPostModifier(factory.createPrepositionPhrase("with", problematicNounPhrase));
             
@@ -301,7 +309,7 @@ public class InformaticsTopic implements Topic {
         
         private SPhraseSpec createChallengeLiesPhrase(NPPhraseSpec challengePhrase) {
             NPPhraseSpec problemPhrase = factory.createNounPhrase("the", "problem");
-            PPPhraseSpec ofPhrase = factory.createPrepositionPhrase("of", "ABCD"); // TODO: use a placeholder
+            PPPhraseSpec ofPhrase = factory.createPrepositionPhrase("of", factory.createWord(shared(P_DIFFICULTY), LexicalCategory.NOUN));
             problemPhrase.addPostModifier(ofPhrase);
             String[] verbAndPreposition = choose(
                     random, 
@@ -407,7 +415,7 @@ public class InformaticsTopic implements Topic {
 
         private VPPhraseSpec createResultComparedToPhrase() {
             String adjective = choose(random, "former", "old");
-            String noun = choose(random, "approach", "implementation", "method");
+            String noun = choose(random,  "algorithm", "approach", "implementation", "method");
             NPPhraseSpec comparedNounPhrase = factory.createNounPhrase(adjective, noun);
             comparedNounPhrase.setPlural(true);
             PPPhraseSpec toPhrase = factory.createPrepositionPhrase("to", comparedNounPhrase);
