@@ -4,22 +4,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Set;
 import java.util.function.Supplier;
 
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.PlaceholderType;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.WordGenerator;
-import simplenlg.features.Feature;
 import simplenlg.framework.DocumentElement;
 import simplenlg.framework.NLGElement;
 import simplenlg.framework.NLGFactory;
 import simplenlg.framework.PhraseCategory;
-import simplenlg.phrasespec.SPhraseSpec;
 import simplenlg.realiser.english.Realiser;
 
 public abstract class TextGeneratorBase {
+    
+    private static final int MAX_WORD_RETRIES = 5;
     
     private static final String FALLBACK_WORD = "buzz";
 
@@ -42,21 +44,30 @@ public abstract class TextGeneratorBase {
         this.factory = factory;
         this.realiser = realiser;
         this.seed = seed;
-        this.sharedWordSubstitutionMap = buildSubstitutionMap(sharedPlaceholdersSpec, wordGenerator, seed);
+        this.sharedWordSubstitutionMap = buildSubstitutionMap(sharedPlaceholdersSpec, wordGenerator);
     }
     
     private static Map<String, String> buildSubstitutionMap(
             Map<String, PlaceholderType> sharedPlaceholdersSpec,
-            WordGenerator wordGenerator,
-            long seed) {
+            WordGenerator wordGenerator) {
         Map<String, String> result = new HashMap<>();
+        Set<String> occuredWords = new HashSet<>();
         for (Map.Entry<String, PlaceholderType> entry : sharedPlaceholdersSpec.entrySet()) {
             String key = entry.getKey();
             PlaceholderType placeholderType = entry.getValue();
-            String word = wordGenerator.generate(placeholderType);
+            String word = retrieveWord(wordGenerator, placeholderType, occuredWords);
             result.put(key, word);
         }
         return result;
+    }
+    
+    private static String retrieveWord(WordGenerator wordGenerator, PlaceholderType placeholderType, Set<String> occuredWords) {
+        String candidate = wordGenerator.generate(placeholderType);
+        for (int i = 0; i < MAX_WORD_RETRIES && occuredWords.contains(candidate); i++) {
+            candidate = wordGenerator.generate(placeholderType);
+        }
+        occuredWords.add(candidate);
+        return candidate;
     }
 
     protected String generate(Supplier<? extends NLGElement> generatorStructure) {
@@ -98,11 +109,6 @@ public abstract class TextGeneratorBase {
         return () -> factory.createParagraph(documentElements(content.get()));
     }
 
-    protected SPhraseSpec pastTense(SPhraseSpec phrase) {
-        phrase.setFeature(Feature.PRONOMINAL, true);
-        return phrase;
-    }
-    
     private List<DocumentElement> documentElements(List<NLGElement> nlgElements) {
         List<DocumentElement> result = new ArrayList<>(nlgElements.size());
         for (NLGElement nlgElement : nlgElements) {
@@ -136,6 +142,10 @@ public abstract class TextGeneratorBase {
 
     protected final Supplier<List<NLGElement>> optional(Supplier<List<NLGElement>> part) {
         return () -> random.nextBoolean() ? part.get() : Collections.emptyList();
+    }
+
+    protected final Supplier<List<NLGElement>> nothing() {
+        return Collections::emptyList;
     }
     
     protected final Supplier<List<NLGElement>> sentence(Supplier<NLGElement> sentenceSupplier) {

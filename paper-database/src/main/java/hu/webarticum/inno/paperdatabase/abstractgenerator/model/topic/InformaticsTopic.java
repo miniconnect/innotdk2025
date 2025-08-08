@@ -15,9 +15,11 @@ import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.WordGene
 import simplenlg.features.Feature;
 import simplenlg.features.Form;
 import simplenlg.features.Tense;
+import simplenlg.framework.CoordinatedPhraseElement;
 import simplenlg.framework.DocumentElement;
 import simplenlg.framework.NLGElement;
 import simplenlg.framework.NLGFactory;
+import simplenlg.framework.PhraseElement;
 import simplenlg.phrasespec.NPPhraseSpec;
 import simplenlg.phrasespec.PPPhraseSpec;
 import simplenlg.phrasespec.SPhraseSpec;
@@ -98,20 +100,73 @@ public class InformaticsTopic implements Topic {
 
         public String generateAbstract() {
             return generate(paragraphOf(sequenceOf(
-                    optional(anyOf(sentence(this::contextSentenceA), sentence(this::contextSentenceB))),
+                    optional(anyOf(sentence(this::contextSentenceNormalA), sentence(this::contextSentenceNormalB))),
                     anyOf(sentence(this::introSentenceWe), sentence(this::introSentencePassive), sentence(this::introSentencePaper)),
                     optional(anyOf(sentence(this::detailsSentenceA), sentence(this::detailsSentenceB))),
                     anyOf(sentence(this::resultsSentenceA), sentence(this::resultsSentenceB)))));
         }
 
-        private DocumentElement contextSentenceA() {
-            // TODO: implement something usable
-            return factory.createSentence(pastTense(factory.createClause(shared(P_EARLIER_RESEARCHER), "is", shared(P_SOME_OTHER_OBJECT))));
+        private DocumentElement contextSentenceNormalA() {
+            NPPhraseSpec objects = factory.createNounPhrase("<TOOLS>"); // TODO: use a placeholder
+            objects.setPlural(true);
+            NPPhraseSpec targetArea = factory.createNounPhrase("<AREA>"); // TODO: use a placeholder
+            
+            if (random.nextBoolean()) {
+                PPPhraseSpec ofArea = factory.createPrepositionPhrase("of", targetArea);
+                targetArea = factory.createNounPhrase("the", choose(random, "area", "field"));
+                targetArea.addPostModifier(ofArea);
+            }
+            SPhraseSpec clause = createContextClauseNormalA(objects);
+            PPPhraseSpec inField = factory.createPrepositionPhrase("in", targetArea);
+            clause.addPostModifier(inField);
+            if (random.nextBoolean()) {
+                String modifier = choose(random, "currently", "in recent years", "nowadays", "recently");
+                String optionalComma = random.nextBoolean() ? "," : "";
+                clause.addFrontModifier(modifier + optionalComma);
+            }
+            return factory.createSentence(clause);
+        }
+        
+        private SPhraseSpec createContextClauseNormalA(NPPhraseSpec objects) {
+            if (random.nextBoolean()) {
+                return createContextClauseNormalAPlay(objects);
+            } else {
+                return createContextClauseNormalAUsed(objects);
+            }
         }
 
-        private DocumentElement contextSentenceB() {
-            // TODO: implement something usable
-            return factory.createSentence(pastTense(factory.createClause(shared(P_SOME_OTHER_OBJECT), "is", shared(P_SOME_OTHER_OBJECT))));
+        private SPhraseSpec createContextClauseNormalAPlay(NPPhraseSpec objects) {
+            NPPhraseSpec qualifiedRole = factory.createNounPhrase("a", "role");
+            qualifiedRole.addPreModifier(choose(random, "increasingly important", "crucial"));
+            SPhraseSpec clause = factory.createClause(objects, "play", qualifiedRole);
+            clause.setFeature(Feature.PROGRESSIVE, random.nextInt(4) != 0);
+            return clause;
+        }
+
+        private SPhraseSpec createContextClauseNormalAUsed(NPPhraseSpec objects) {
+            String statement = choose(random, "commonly used", "essential", "integral to current methods", "widely applied");
+            return factory.createClause(objects, "are", statement);
+        }
+
+        private DocumentElement contextSentenceNormalB() {
+            NPPhraseSpec progressNoun;
+            if (random.nextBoolean()) {
+                progressNoun = factory.createNounPhrase(choose(random, "growth", "progress"));
+            } else {
+                progressNoun = factory.createNounPhrase(choose(random, "advances", "innovations", "developments"));
+                progressNoun.setPlural(true);
+            }
+            if (random.nextBoolean()) {
+                progressNoun.setSpecifier(choose(random, "recent", "the"));
+            }
+            PPPhraseSpec inArea = factory.createPrepositionPhrase("in", "<AREA>"); // TODO: use a placeholder
+            progressNoun.addPostModifier(inArea);
+            String verb = choose(random, "bring", "entail", "expose", "generate", "introduce");
+            String adjective = choose(random, "emerging", "new", "novel", "significant", "unforeseen");
+            String problemName = choose(random, "challenge", "issue", "obstacle", "problem");
+            NPPhraseSpec problemNoun = factory.createNounPhrase(adjective, problemName);
+            problemNoun.setPlural(true);
+            return factory.createSentence(factory.createClause(progressNoun, verb, problemNoun));
         }
 
         private DocumentElement introSentenceWe() {
@@ -185,7 +240,12 @@ public class InformaticsTopic implements Topic {
         }
 
         private VPPhraseSpec createProposalForGerund() {
-            VPPhraseSpec gerundPhrase = factory.createVerbPhrase(choose(random, "analyze", "create", "generate", "produce")); // TODO: use a placeholder
+            VPPhraseSpec gerundPhrase;
+            if (random.nextBoolean()) {
+                gerundPhrase = factory.createVerbPhrase(choose(random, "analyze", "create", "generate", "produce"));
+            } else {
+                gerundPhrase = factory.createVerbPhrase(choose(random, "pick")); // TODO: use a placeholder
+            }
             gerundPhrase.setFeature(Feature.FORM, Form.GERUND);
             gerundPhrase.addComplement(choose(random, "Feistel-networks", "evolutionary algorithms", "labeled graphs")); // TODO: use a placeholder
             return gerundPhrase;
@@ -200,23 +260,237 @@ public class InformaticsTopic implements Topic {
         }
 
         private DocumentElement detailsSentenceA() {
-            // TODO: implement something usable
-            return factory.createSentence(pastTense(factory.createClause(shared(P_EARLIER_RESEARCHER), "do", shared(P_SOME_OTHER_OBJECT))));
+            NPPhraseSpec problemPhrase = factory.createNounPhrase("the", choose(random, "difficulty", "problem", "challenge"));
+            String problemName = "XYZ"; // TODO: use a placeholder
+            problemPhrase.addPostModifier(factory.createPrepositionPhrase("of", problemName));
+            VPPhraseSpec occurPhrase = factory.createVerbPhrase(choose(random, "appear", "arise", "emerge", "occur"));
+            occurPhrase.setFeature(Feature.FORM, Form.PRESENT_PARTICIPLE);
+            occurPhrase.setPreModifier("often");
+            NPPhraseSpec problematicNounPhrase = factory.createNounPhrase("ABC"); // TODO: use a placeholder
+            problematicNounPhrase.setPlural(true);
+            occurPhrase.addPostModifier(factory.createPrepositionPhrase("with", problematicNounPhrase));
+            
+            problemPhrase.addPostModifier(occurPhrase);
+            
+            VPPhraseSpec verbPhrase;
+            SPhraseSpec mainClause;
+            if (random.nextBoolean()) {
+                verbPhrase = factory.createVerbPhrase("solve");
+                mainClause= factory.createClause("we", verbPhrase, problemPhrase);
+            } else {
+                verbPhrase = factory.createVerbPhrase("deal");
+                mainClause = factory.createClause("we", verbPhrase);
+                PPPhraseSpec withPrepositionPhrase = factory.createPrepositionPhrase("with", problemPhrase);
+                mainClause.addPostModifier(withPrepositionPhrase);
+            }
+            verbPhrase.addPreModifier("also " + choose(random, "effectively", "efficiently", "reliably", "robustly", "successfully"));
+            mainClause.setFeature(Feature.TENSE, Tense.PAST);
+
+            return factory.createSentence(mainClause);
         }
 
         private DocumentElement detailsSentenceB() {
-            // TODO: implement something usable
-            return factory.createSentence(pastTense(factory.createClause(shared(P_EARLIER_RESEARCHER), "make", shared(P_SOME_OTHER_OBJECT))));
+            NPPhraseSpec challengePhrase = factory.createNounPhrase("a", choose(random, "challenge", "difficulty"));
+            challengePhrase.addPreModifier(choose(random, "additional", "further"));
+            SPhraseSpec mainClause = createChallengeLiesPhrase(challengePhrase);
+            PhraseElement besidesCoreInitial = createBesidesCoreInitial();
+            besidesCoreInitial.addPostModifier(",");
+            mainClause.addFrontModifier(besidesCoreInitial);
+            return factory.createSentence(mainClause);
+        }
+        
+        private SPhraseSpec createChallengeLiesPhrase(NPPhraseSpec challengePhrase) {
+            NPPhraseSpec problemPhrase = factory.createNounPhrase("the", "problem");
+            PPPhraseSpec ofPhrase = factory.createPrepositionPhrase("of", "ABCD"); // TODO: use a placeholder
+            problemPhrase.addPostModifier(ofPhrase);
+            String[] verbAndPreposition = choose(
+                    random, 
+                    "arise from", "come from", "emerge from", "lie in", "reside in"
+                    ).split(" ");
+            PPPhraseSpec prepositionPhrase = factory.createPrepositionPhrase(verbAndPreposition[1], problemPhrase);
+            SPhraseSpec mainClause = factory.createClause(challengePhrase, verbAndPreposition[0]);
+            mainClause.addPostModifier(prepositionPhrase);
+            return mainClause;
+        }
+        
+        private PhraseElement createBesidesCoreInitial() {
+            if (random.nextInt(4) == 0) {
+                return factory.createAdverbPhrase("also");
+            }
+            NPPhraseSpec problemPhrase = factory.createNounPhrase("the", choose(random, "concern", "issue", "problem"));
+            problemPhrase.addPreModifier(choose(random, "central", "core", "key", "main"));
+            return factory.createPrepositionPhrase(choose(random, "besides", "beyond"), problemPhrase);
         }
 
         private DocumentElement resultsSentenceA() {
-            // TODO: implement something usable
-            return factory.createSentence(pastTense(factory.createClause(shared(P_EARLIER_RESEARCHER), "end")));
+            SPhraseSpec mainClause = createResultSentenceAMainClause();
+            if (random.nextBoolean()) {
+                return factory.createSentence(mainClause);
+            } else if (random.nextBoolean()) {
+                SPhraseSpec framingClause = createResultShowingPreClause();
+                framingClause.setObject(mainClause);
+                return factory.createSentence(framingClause);
+            } else if (random.nextBoolean()) {
+                NPPhraseSpec resultNoun = createResultShowingPreNoun();
+                PPPhraseSpec onPhrase = factory.createPrepositionPhrase("on", resultNoun);
+                VPPhraseSpec basedOnPhrase = factory.createVerbPhrase("base");
+                basedOnPhrase.setFeature(Feature.TENSE, Tense.PAST);
+                basedOnPhrase.addPostModifier(onPhrase);
+                basedOnPhrase.addPostModifier(",");
+                mainClause.setFrontModifier(basedOnPhrase);
+                return factory.createSentence(mainClause);
+            } else {
+                SPhraseSpec framingClause = createResultShowingPreClause();
+                framingClause.setFeature(Feature.TENSE, Tense.PAST);
+                framingClause.addFrontModifier("as");
+                CoordinatedPhraseElement connectedPhrase = factory.createCoordinatedPhrase(framingClause, mainClause);
+                connectedPhrase.setConjunction(",");
+                return factory.createSentence(connectedPhrase);
+            }
+        }
+        
+        private SPhraseSpec createResultSentenceAMainClause() {
+            NPPhraseSpec nounPhrase = createResultApproachNounPhrase();
+            String verb = choose(random, "achieve", "show");
+            NLGElement achievementNounPhrase = createResultImprovementPhrase();
+            SPhraseSpec mainClause = factory.createClause(nounPhrase, verb, achievementNounPhrase);
+            VPPhraseSpec basedOnPhrase = createResultComparedToPhrase();
+            mainClause.addPostModifier(basedOnPhrase);
+            return mainClause;
+        }
+        
+        private NLGElement createResultImprovementPhrase() {
+            if (random.nextBoolean()) {
+                return createResultIncreaseNoun();
+            } else if (random.nextBoolean()) {
+                return createResultDecreaseNoun();
+            } else {
+                NPPhraseSpec increaseNoun = createResultIncreaseNoun();
+                NPPhraseSpec decreaseNoun = createResultDecreaseNoun();
+                CoordinatedPhraseElement connectedPhrase = factory.createCoordinatedPhrase(increaseNoun, decreaseNoun);
+                connectedPhrase.setConjunction("and");
+                return connectedPhrase;
+            }
+        }
+
+        private NPPhraseSpec createResultIncreaseNoun() {
+            String increaseName = choose(random, "advancement", "enhancement", "growth", "increase", "improvement");
+            String increaseSubject = choose(random, "efficiency", "performance", "speed");
+            return createResultAnyImprovementNoun(increaseName, increaseSubject);
+        }
+
+        private NPPhraseSpec createResultDecreaseNoun() {
+            String decreaseName = choose(random, "decrease", "reduction");
+            String decreaseSubject = choose(random, "execution time", "memory use", "storage");
+            return createResultAnyImprovementNoun(decreaseName, decreaseSubject);
+        }
+        
+        private NPPhraseSpec createResultAnyImprovementNoun(String improvementName, String improvementSubject) {
+            NPPhraseSpec increaseNounPhrase = factory.createNounPhrase("a", improvementName);
+            if (random.nextBoolean()) {
+                increaseNounPhrase.addPreModifier(choose(random, "major", "serious", "significant"));
+            } else if (random.nextBoolean()) {
+                String increasePercent = (random.nextInt(120) + 20) + "%";
+                increaseNounPhrase.addPreModifier(increasePercent);
+            } else {
+                String increaseFactor = ((random.nextInt(24) + 4) / 2.0) + "";
+                NPPhraseSpec factorNounPhrase = factory.createNounPhrase("a", "factor");
+                PPPhraseSpec ofPhrase = factory.createPrepositionPhrase("of", increaseFactor);
+                factorNounPhrase.addPostModifier(ofPhrase);
+                PPPhraseSpec byPhrase = factory.createPrepositionPhrase("by", factorNounPhrase);
+                increaseNounPhrase.addPostModifier(byPhrase);
+            }
+            PPPhraseSpec inPhrase = factory.createPrepositionPhrase("in", improvementSubject);
+            increaseNounPhrase.addPostModifier(inPhrase);
+            return increaseNounPhrase;
+        }
+
+        private VPPhraseSpec createResultComparedToPhrase() {
+            String adjective = choose(random, "former", "old");
+            String noun = choose(random, "approach", "implementation", "method");
+            NPPhraseSpec comparedNounPhrase = factory.createNounPhrase(adjective, noun);
+            comparedNounPhrase.setPlural(true);
+            PPPhraseSpec toPhrase = factory.createPrepositionPhrase("to", comparedNounPhrase);
+            VPPhraseSpec comparedToPhrase = factory.createVerbPhrase("compare");
+            comparedToPhrase.setFeature(Feature.TENSE, Tense.PAST);
+            comparedToPhrase.addPostModifier(toPhrase);
+            return comparedToPhrase;
+        }
+        
+        private SPhraseSpec createResultShowingPreClause() {
+            String verb = choose(random, "demonstrate", "show", "suggest");
+            return factory.createClause(createResultShowingPreNoun(), verb);
+        }
+        
+        private NPPhraseSpec createResultShowingPreNoun() {
+            String specifier = choose(random, "detailed", "early", "initial", "our", "the");
+            boolean plural = random.nextBoolean();
+            String nounName = plural ?
+                    choose(random, "results", "measurements", "experiments", "findings", "tests", "observations", "outcomes") :
+                    choose(random, "analysis", "assessment", "comparison", "evaluation", "investigation", "profiling", "study");
+            NPPhraseSpec nounPhrase = factory.createNounPhrase(specifier, nounName);
+            nounPhrase.setPlural(plural);
+            return nounPhrase;
         }
 
         private DocumentElement resultsSentenceB() {
-            // TODO: implement something usable
-            return factory.createSentence(pastTense(factory.createClause(shared(P_EARLIER_RESEARCHER), "finish")));
+            SPhraseSpec frontClause = createShownFrontClause();
+            frontClause.setFrontModifier("as");
+            frontClause.setPostModifier(",");
+            NPPhraseSpec approachNounPhrase = createResultApproachNounPhrase();
+            String[] verbAndPreposition = choose(
+                    random, 
+                    "adapt to", "align with", "integrate into", "fit with", "plug into", "work with"
+                    ).split(" ");
+            VPPhraseSpec verbPhrase = factory.createVerbPhrase(verbAndPreposition[0]);
+            verbPhrase.addModifier(choose(random, "smoothly", "well"));
+            SPhraseSpec mainClause = factory.createClause(approachNounPhrase, verbPhrase);
+            String existingName = choose(random, "common", "existing", "popular");
+            String workflowName = choose(random, "methodology", "pipeline", "system", "workflow");
+            NPPhraseSpec workflowNounPhrase = factory.createNounPhrase(existingName, workflowName);
+            workflowNounPhrase.setPlural(true);
+            PPPhraseSpec intoPhrase = factory.createPrepositionPhrase(verbAndPreposition[1], workflowNounPhrase);
+            mainClause.addPostModifier(intoPhrase);
+            CoordinatedPhraseElement coordinatedPhrase = factory.createCoordinatedPhrase(frontClause, mainClause);
+            coordinatedPhrase.setConjunction(",");
+            return factory.createSentence(coordinatedPhrase);
+        }
+        
+        private SPhraseSpec createShownFrontClause() {
+            int possibility = random.nextInt(4);
+            if (possibility == 0) {
+                return factory.createClause("we", "show");
+            } else if (possibility == 1) {
+                return createPastClauseWithPrepositionPhrase("demonstrate", "in", "our", "evaluation");
+            } else if (possibility == 2) {
+                return createPastClauseWithPrepositionPhrase("illustrate", "by", "our", "case study");
+            } else {
+                return createPastClauseWithPrepositionPhrase("validate", "in", null, "practice");
+            }
+        }
+
+        private SPhraseSpec createPastClauseWithPrepositionPhrase(String verb, String preposition, String specifier, String noun) {
+            VPPhraseSpec verbPhrase = factory.createVerbPhrase(verb);
+            verbPhrase.setFeature(Feature.TENSE, Tense.PAST);
+            SPhraseSpec frontClause = factory.createClause(null, verbPhrase);
+            frontClause.addPostModifier(createPrepositionPhrase(preposition, specifier, noun));
+            return frontClause;
+        }
+        
+        private PPPhraseSpec createPrepositionPhrase(String preposition, String specifier, String noun) {
+            NPPhraseSpec nounPhrase = factory.createNounPhrase(specifier, noun);
+            PPPhraseSpec prepositionPhrase = factory.createPrepositionPhrase(preposition, nounPhrase);
+            return prepositionPhrase;
+        }
+
+        private NPPhraseSpec createResultApproachNounPhrase() {
+            String specifier = choose(random, "the", "our");
+            String approachNoun = choose(random, "approach", "implementation", "method");
+            NPPhraseSpec nounPhrase = factory.createNounPhrase(specifier, approachNoun);
+            if (random.nextBoolean()) {
+                nounPhrase.setPreModifier(choose(random, "new", "novel", "latest", "present"));
+            }
+            return nounPhrase;
         }
 
     }
