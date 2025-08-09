@@ -29,11 +29,12 @@ import simplenlg.realiser.english.Realiser;
 
 public class InformaticsTopic implements Topic {
     
-    private static final String NAME = "informatics";
-    
-    private static final Keyword[] keywords = {
-            KeywordEnum.AI.keyword(),
+    private static final Keyword[] primaryKeywords = {
             KeywordEnum.ALGORITHMS.keyword(),
+    };
+
+    private static final Keyword[] secondaryKeywords = {
+            KeywordEnum.AI.keyword(),
     };
     
     private final NLGFactory factory;
@@ -46,18 +47,18 @@ public class InformaticsTopic implements Topic {
     }
     
     @Override
-    public String name() {
-        return NAME;
+    public List<Keyword> primaryKeywords() {
+        return Collections.unmodifiableList(Arrays.asList(primaryKeywords));
     }
 
     @Override
-    public List<Keyword> keywords() {
-        return Collections.unmodifiableList(Arrays.asList(keywords));
+    public List<Keyword> secondaryKeywords() {
+        return Collections.unmodifiableList(Arrays.asList(secondaryKeywords));
     }
 
     @Override
-    public PaperTextsResult buildPaperTextTemplates(WordGenerator wordGenerator, long seed) {
-        TopicTextGenerator textGenerator = new TopicTextGenerator(wordGenerator, factory, realiser, seed);
+    public PaperTextsResult buildPaperTextTemplates(WordGenerator primaryWordGenerator, WordGenerator secondaryWordGenerator, long seed) {
+        TopicTextGenerator textGenerator = new TopicTextGenerator(primaryWordGenerator, secondaryWordGenerator, factory, realiser, seed);
         return new PaperTextsResult(textGenerator.generateTitle(), textGenerator.generateAbstract());
     }
     
@@ -71,20 +72,26 @@ public class InformaticsTopic implements Topic {
         private static final String P_DIFFICULTY = "difficulty";
         private static final String P_PROBLEMATIC_STUFF = "problematic-stuff";
         
-        private static final Map<String, PlaceholderType> PLACEHOLDERS = new HashMap<>();
+        private static final Map<String, PlaceholderType> PRIMARY_PLACEHOLDERS = new HashMap<>();
         static {
             // TODO: specify type for each placeholder
-            PLACEHOLDERS.put(P_POPULAR_TOOL, PlaceholderType.TOOL);
-            PLACEHOLDERS.put(P_AREA, PlaceholderType.TOOL);
-            PLACEHOLDERS.put(P_PRODUCE, PlaceholderType.TOOL);
-            PLACEHOLDERS.put(P_TARGET_PRODUCT, PlaceholderType.TOOL);
-            PLACEHOLDERS.put(P_SOLUTION, PlaceholderType.TOOL);
-            PLACEHOLDERS.put(P_DIFFICULTY, PlaceholderType.TOOL);
-            PLACEHOLDERS.put(P_PROBLEMATIC_STUFF, PlaceholderType.TOOL);
+            PRIMARY_PLACEHOLDERS.put(P_POPULAR_TOOL, PlaceholderType.TOOL);
+            PRIMARY_PLACEHOLDERS.put(P_AREA, PlaceholderType.TOOL);
+            PRIMARY_PLACEHOLDERS.put(P_TARGET_PRODUCT, PlaceholderType.TOOL);
+            PRIMARY_PLACEHOLDERS.put(P_PROBLEMATIC_STUFF, PlaceholderType.TOOL);
+        }
+
+        private static final Map<String, PlaceholderType> SECONDARY_PLACEHOLDERS = new HashMap<>();
+        static {
+            // TODO: specify type for each placeholder
+            SECONDARY_PLACEHOLDERS.put(P_PRODUCE, PlaceholderType.TOOL);
+            SECONDARY_PLACEHOLDERS.put(P_SOLUTION, PlaceholderType.TOOL);
+            SECONDARY_PLACEHOLDERS.put(P_DIFFICULTY, PlaceholderType.TOOL);
         }
         
-        protected TopicTextGenerator(WordGenerator wordGenerator, NLGFactory factory, Realiser realiser, long seed) {
-            super(PLACEHOLDERS, factory, realiser, wordGenerator, seed);
+        protected TopicTextGenerator(
+                WordGenerator primaryWordGenerator, WordGenerator secondaryWordGenerator, NLGFactory factory, Realiser realiser, long seed) {
+            super(PRIMARY_PLACEHOLDERS, SECONDARY_PLACEHOLDERS, factory, realiser, primaryWordGenerator, secondaryWordGenerator, seed);
         }
 
         public String generateTitle() {
@@ -222,7 +229,7 @@ public class InformaticsTopic implements Topic {
                 name = choose(random, "article", "contribution", "publication", "report", "research", "work");
             }
             NPPhraseSpec phrase = factory.createNounPhrase(specifier, name);
-            if (random.nextInt(8) == 0) {
+            if (!specifier.equals("this") && random.nextInt(4) == 0) {
                 phrase.addPreModifier(choose(random, "current", "present"));
             }
             return phrase;

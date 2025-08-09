@@ -36,30 +36,30 @@ public abstract class TextGeneratorBase {
     protected final Map<String, String> sharedWordSubstitutionMap;
     
     protected TextGeneratorBase(
-            Map<String, PlaceholderType> sharedPlaceholdersSpec,
+            Map<String, PlaceholderType> primaryPlaceholdersSpec,
+            Map<String, PlaceholderType> secondaryPlaceholdersSpec,
             NLGFactory factory,
             Realiser realiser,
-            WordGenerator wordGenerator,
+            WordGenerator primaryWordGenerator,
+            WordGenerator secondaryWordGenerator,
             long seed) {
         this.factory = factory;
         this.realiser = realiser;
         this.seed = seed;
-        this.sharedWordSubstitutionMap = buildSubstitutionMap(sharedPlaceholdersSpec, wordGenerator);
+        this.sharedWordSubstitutionMap = new HashMap<>();
+        generateIntoSubstitutionMap(primaryPlaceholdersSpec, primaryWordGenerator, true);
+        generateIntoSubstitutionMap(secondaryPlaceholdersSpec, secondaryWordGenerator, false);
     }
     
-    private static Map<String, String> buildSubstitutionMap(
-            Map<String, PlaceholderType> sharedPlaceholdersSpec,
-            WordGenerator wordGenerator) {
-        Map<String, String> result = new HashMap<>();
+    private void generateIntoSubstitutionMap(Map<String, PlaceholderType> sharedPlaceholdersSpec, WordGenerator wordGenerator, boolean primary) {
         Set<String> occuredWords = new HashSet<>();
         for (Map.Entry<String, PlaceholderType> entry : sharedPlaceholdersSpec.entrySet()) {
             String key = entry.getKey();
             PlaceholderType placeholderType = entry.getValue();
             //String word = retrieveWord(wordGenerator, placeholderType, occuredWords);
-            String word = "P-" + key.toUpperCase();
-            result.put(key, word);
+            String word = "P-" + (primary ? "1" : "2") + "-" + key.toUpperCase();
+            this.sharedWordSubstitutionMap.put(key, word);
         }
-        return result;
     }
     
     private static String retrieveWord(WordGenerator wordGenerator, PlaceholderType placeholderType, Set<String> occuredWords) {

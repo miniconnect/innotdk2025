@@ -10,8 +10,10 @@ public interface Topic {
         return getClass().getSimpleName().replaceAll("^([A-Z][a-z]*).*$", "$1");
     }
 
-    public List<Keyword> keywords();
+    public List<Keyword> primaryKeywords();
+
+    public List<Keyword> secondaryKeywords();
     
-    public PaperTextsResult buildPaperTextTemplates(WordGenerator wordGenerator, long seed);
+    public PaperTextsResult buildPaperTextTemplates(WordGenerator primaryWordGenerator, WordGenerator secondaryWordGenerator, long seed);
     
 }

@@ -17,15 +17,12 @@ import simplenlg.realiser.english.Realiser;
 
 public class BiologyTopic implements Topic {
 
-    enum SharedKey {
-        
-        SOME_OBJECT,
-        
-    }
-
-    private static final Keyword[] keywords = {
-            KeywordEnum.AI.keyword(),
+    private static final Keyword[] primaryKeywords = {
             KeywordEnum.ALGORITHMS.keyword(),
+    };
+
+    private static final Keyword[] secondaryKeywords = {
+            KeywordEnum.AI.keyword(),
     };
     
     private final NLGFactory factory;
@@ -36,29 +33,41 @@ public class BiologyTopic implements Topic {
         this.factory = factory;
         this.realiser = realiser;
     }
-    
+
     @Override
-    public List<Keyword> keywords() {
-        return Collections.unmodifiableList(Arrays.asList(keywords));
+    public List<Keyword> primaryKeywords() {
+        return Collections.unmodifiableList(Arrays.asList(primaryKeywords));
     }
 
     @Override
-    public PaperTextsResult buildPaperTextTemplates(WordGenerator wordGenerator, long seed) {
-        TopicTextGenerator textGenerator = new TopicTextGenerator(wordGenerator, factory, realiser, seed);
+    public List<Keyword> secondaryKeywords() {
+        return Collections.unmodifiableList(Arrays.asList(secondaryKeywords));
+    }
+
+    @Override
+    public PaperTextsResult buildPaperTextTemplates(WordGenerator primaryWordGenerator, WordGenerator secondaryWordGenerator, long seed) {
+        TopicTextGenerator textGenerator = new TopicTextGenerator(primaryWordGenerator, secondaryWordGenerator, factory, realiser, seed);
         return new PaperTextsResult(textGenerator.generateTitle(), textGenerator.generateAbstract());
     }
-
+    
     private static class TopicTextGenerator extends TextGeneratorBase {
 
         private static final String P_LOREM = "lorem";
+        private static final String P_IPSUM = "ipsum";
         
-        private static final Map<String, PlaceholderType> PLACEHOLDERS = new HashMap<>();
+        private static final Map<String, PlaceholderType> PRIMARY_PLACEHOLDERS = new HashMap<>();
         static {
-            PLACEHOLDERS.put(P_LOREM, PlaceholderType.TOOL);
+            PRIMARY_PLACEHOLDERS.put(P_LOREM, PlaceholderType.TOOL);
+        }
+
+        private static final Map<String, PlaceholderType> SECONDARY_PLACEHOLDERS = new HashMap<>();
+        static {
+            SECONDARY_PLACEHOLDERS.put(P_IPSUM, PlaceholderType.TOOL);
         }
         
-        protected TopicTextGenerator(WordGenerator wordGenerator, NLGFactory factory, Realiser realiser, long seed) {
-            super(PLACEHOLDERS, factory, realiser, wordGenerator, seed);
+        protected TopicTextGenerator(
+                WordGenerator primaryWordGenerator, WordGenerator secondaryWordGenerator, NLGFactory factory, Realiser realiser, long seed) {
+            super(PRIMARY_PLACEHOLDERS, SECONDARY_PLACEHOLDERS, factory, realiser, primaryWordGenerator, secondaryWordGenerator, seed);
         }
 
         public String generateTitle() {
