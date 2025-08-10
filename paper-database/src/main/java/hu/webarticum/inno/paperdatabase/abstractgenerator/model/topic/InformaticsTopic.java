@@ -68,25 +68,23 @@ public class InformaticsTopic implements Topic {
         private static final String P_AREA = "area";
         private static final String P_PRODUCE = "produce";
         private static final String P_TARGET_PRODUCT = "target-product";
-        private static final String P_SOLUTION = "solution";
+        private static final String P_METHOD = "method";
         private static final String P_DIFFICULTY = "difficulty";
         private static final String P_PROBLEMATIC_STUFF = "problematic-stuff";
         
         private static final Map<String, PlaceholderType> PRIMARY_PLACEHOLDERS = new HashMap<>();
         static {
-            // TODO: specify type for each placeholder
-            PRIMARY_PLACEHOLDERS.put(P_POPULAR_TOOL, PlaceholderType.TOOL);
-            PRIMARY_PLACEHOLDERS.put(P_AREA, PlaceholderType.TOOL);
-            PRIMARY_PLACEHOLDERS.put(P_TARGET_PRODUCT, PlaceholderType.TOOL);
-            PRIMARY_PLACEHOLDERS.put(P_PROBLEMATIC_STUFF, PlaceholderType.TOOL);
+            PRIMARY_PLACEHOLDERS.put(P_POPULAR_TOOL, PlaceholderType.ITEM);
+            PRIMARY_PLACEHOLDERS.put(P_AREA, PlaceholderType.AREA);
+            PRIMARY_PLACEHOLDERS.put(P_TARGET_PRODUCT, PlaceholderType.ITEM);
+            PRIMARY_PLACEHOLDERS.put(P_PROBLEMATIC_STUFF, PlaceholderType.ITEM);
         }
 
         private static final Map<String, PlaceholderType> SECONDARY_PLACEHOLDERS = new HashMap<>();
         static {
-            // TODO: specify type for each placeholder
-            SECONDARY_PLACEHOLDERS.put(P_PRODUCE, PlaceholderType.TOOL);
-            SECONDARY_PLACEHOLDERS.put(P_SOLUTION, PlaceholderType.TOOL);
-            SECONDARY_PLACEHOLDERS.put(P_DIFFICULTY, PlaceholderType.TOOL);
+            SECONDARY_PLACEHOLDERS.put(P_PRODUCE, PlaceholderType.VERB);
+            SECONDARY_PLACEHOLDERS.put(P_METHOD, PlaceholderType.METHOD);
+            SECONDARY_PLACEHOLDERS.put(P_DIFFICULTY, PlaceholderType.DIFFICULTY);
         }
         
         protected TopicTextGenerator(
@@ -268,7 +266,7 @@ public class InformaticsTopic implements Topic {
         }
 
         private NPPhraseSpec createProposalBasePhrase() {
-            NPPhraseSpec phrase = factory.createNounPhrase("a", factory.createWord(shared(P_SOLUTION), LexicalCategory.NOUN));
+            NPPhraseSpec phrase = factory.createNounPhrase("a", factory.createWord(shared(P_METHOD), LexicalCategory.NOUN));
             if (random.nextBoolean()) {
                 phrase.addPreModifier(choose(random, "efficient", "new", "novel", "revolutionary"));
             }
@@ -408,7 +406,10 @@ public class InformaticsTopic implements Topic {
                 String increasePercent = (random.nextInt(120) + 20) + "%";
                 increaseNounPhrase.addPreModifier(increasePercent);
             } else {
-                String increaseFactor = ((random.nextInt(24) + 4) / 2.0) + "";
+                String increaseFactor = (random.nextInt(12) + 2) + "";
+                if (random.nextInt(4) == 0) {
+                    increaseFactor += ".5";
+                }
                 NPPhraseSpec factorNounPhrase = factory.createNounPhrase("a", "factor");
                 PPPhraseSpec ofPhrase = factory.createPrepositionPhrase("of", increaseFactor);
                 factorNounPhrase.addPostModifier(ofPhrase);

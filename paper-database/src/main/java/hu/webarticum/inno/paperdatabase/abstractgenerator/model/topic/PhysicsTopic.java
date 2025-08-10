@@ -57,12 +57,12 @@ public class PhysicsTopic implements Topic {
         
         private static final Map<String, PlaceholderType> PRIMARY_PLACEHOLDERS = new HashMap<>();
         static {
-            PRIMARY_PLACEHOLDERS.put(P_LOREM, PlaceholderType.TOOL);
+            PRIMARY_PLACEHOLDERS.put(P_LOREM, PlaceholderType.ITEM);
         }
 
         private static final Map<String, PlaceholderType> SECONDARY_PLACEHOLDERS = new HashMap<>();
         static {
-            SECONDARY_PLACEHOLDERS.put(P_IPSUM, PlaceholderType.TOOL);
+            SECONDARY_PLACEHOLDERS.put(P_IPSUM, PlaceholderType.ITEM);
         }
         
         protected TopicTextGenerator(

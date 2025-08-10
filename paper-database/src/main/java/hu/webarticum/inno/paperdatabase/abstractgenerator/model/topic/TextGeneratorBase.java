@@ -47,17 +47,16 @@ public abstract class TextGeneratorBase {
         this.realiser = realiser;
         this.seed = seed;
         this.sharedWordSubstitutionMap = new HashMap<>();
-        generateIntoSubstitutionMap(primaryPlaceholdersSpec, primaryWordGenerator, true);
-        generateIntoSubstitutionMap(secondaryPlaceholdersSpec, secondaryWordGenerator, false);
+        generateIntoSubstitutionMap(primaryPlaceholdersSpec, primaryWordGenerator);
+        generateIntoSubstitutionMap(secondaryPlaceholdersSpec, secondaryWordGenerator);
     }
     
-    private void generateIntoSubstitutionMap(Map<String, PlaceholderType> sharedPlaceholdersSpec, WordGenerator wordGenerator, boolean primary) {
+    private void generateIntoSubstitutionMap(Map<String, PlaceholderType> sharedPlaceholdersSpec, WordGenerator wordGenerator) {
         Set<String> occuredWords = new HashSet<>();
         for (Map.Entry<String, PlaceholderType> entry : sharedPlaceholdersSpec.entrySet()) {
             String key = entry.getKey();
             PlaceholderType placeholderType = entry.getValue();
-            //String word = retrieveWord(wordGenerator, placeholderType, occuredWords);
-            String word = "P-" + (primary ? "1" : "2") + "-" + key.toUpperCase();
+            String word = retrieveWord(wordGenerator, placeholderType, occuredWords);
             this.sharedWordSubstitutionMap.put(key, word);
         }
     }
