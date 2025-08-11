@@ -79,12 +79,4 @@ public class PaperAbstractGeneratorService {
         return new CompoundWordGenerator(wordGenerators, seed);
     }
     
-    private List<String> keywordNamesOf(List<Keyword> keywords) {
-        List<String> result = new ArrayList<String>(keywords.size());
-        for (Keyword keyword : keywords) {
-            result.add(keyword.name());
-        }
-        return result;
-    }
-
 }

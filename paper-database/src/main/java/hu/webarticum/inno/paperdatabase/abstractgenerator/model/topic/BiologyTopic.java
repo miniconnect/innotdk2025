@@ -18,11 +18,18 @@ import simplenlg.realiser.english.Realiser;
 public class BiologyTopic implements Topic {
 
     private static final Keyword[] primaryKeywords = {
-            KeywordEnum.ALGORITHMS.keyword(),
+            KeywordEnum.GENOMICS.keyword(),
+            KeywordEnum.NEUROSCIENCE.keyword(),
+            KeywordEnum.SYS_BIOLOGY.keyword(),
     };
 
     private static final Keyword[] secondaryKeywords = {
             KeywordEnum.AI.keyword(),
+            KeywordEnum.CATALYSIS.keyword(),
+            KeywordEnum.GRAPH_THEORY.keyword(),
+            KeywordEnum.ML.keyword(),
+            KeywordEnum.MOLECULAR_MOD.keyword(),
+            KeywordEnum.PROBABILITY.keyword(),
     };
     
     private final NLGFactory factory;

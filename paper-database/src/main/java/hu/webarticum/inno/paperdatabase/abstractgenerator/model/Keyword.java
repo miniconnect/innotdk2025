@@ -4,7 +4,11 @@ import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.WordGene
 
 public interface Keyword {
 
-    public String name();
+    public default String label() {
+        return getClass().getSimpleName().toLowerCase().replace("_", "-");
+    }
+
+    public String longLabel();
     
     public WordGenerator wordGenerator(long seed);
     

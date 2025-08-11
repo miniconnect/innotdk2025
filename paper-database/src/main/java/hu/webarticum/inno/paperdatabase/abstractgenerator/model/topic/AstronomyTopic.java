@@ -18,11 +18,14 @@ import simplenlg.realiser.english.Realiser;
 public class AstronomyTopic implements Topic {
 
     private static final Keyword[] primaryKeywords = {
-            KeywordEnum.ALGORITHMS.keyword(),
+            KeywordEnum.ASTRO_INSTR.keyword(),
+            KeywordEnum.ASTROPHYSICS.keyword(),
+            KeywordEnum.EXOPLANETS.keyword(),
     };
 
     private static final Keyword[] secondaryKeywords = {
-            KeywordEnum.AI.keyword(),
+            KeywordEnum.SPECTROSCOPY.keyword(),
+            KeywordEnum.T_SERIES.keyword(),
     };
     
     private final NLGFactory factory;

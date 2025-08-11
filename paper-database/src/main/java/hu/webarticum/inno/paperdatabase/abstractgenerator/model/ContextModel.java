@@ -39,7 +39,7 @@ public class ContextModel {
         for (KeywordEnum keywordEnum : KeywordEnum.values()) {
             keywords.add(keywordEnum.keyword());
         }
-        Collections.sort(keywords, Comparator.comparing(Keyword::name));
+        Collections.sort(keywords, Comparator.comparing(Keyword::label));
         return keywords;
     }
     

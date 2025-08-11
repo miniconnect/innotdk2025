@@ -17,12 +17,12 @@ public class DefaultKeyword implements Keyword {
 
     private static final Map<String, MatchList> matchListCache = Collections.synchronizedMap(new HashMap<>());
     
-    private final String name;
+    private final String longLabel;
     
     private final Map<PlaceholderType, String[][]> possibilitiesPerType;
     
-    public DefaultKeyword(String name, List<PlaceholderTypeWordsSpec> placeholderTypeWordsSpecs) {
-        this.name = name;
+    public DefaultKeyword(String longLabel, List<PlaceholderTypeWordsSpec> placeholderTypeWordsSpecs) {
+        this.longLabel = longLabel;
         this.possibilitiesPerType = new EnumMap<>(PlaceholderType.class);
         for (PlaceholderTypeWordsSpec placeholderTypeWordsSpec : placeholderTypeWordsSpecs) {
             this.possibilitiesPerType.put(
@@ -38,8 +38,8 @@ public class DefaultKeyword implements Keyword {
     }
 
     @Override
-    public String name() {
-        return name;
+    public String longLabel() {
+        return longLabel;
     }
 
     @Override

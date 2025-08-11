@@ -18,11 +18,23 @@ import simplenlg.realiser.english.Realiser;
 public class ChemistryTopic implements Topic {
 
     private static final Keyword[] primaryKeywords = {
-            KeywordEnum.ALGORITHMS.keyword(),
+            KeywordEnum.CATALYSIS.keyword(),
+            KeywordEnum.ELECTROCHEM.keyword(),
+            KeywordEnum.MOLECULAR_MOD.keyword(),
+            KeywordEnum.SIGNAL_PROC.keyword(),
     };
 
     private static final Keyword[] secondaryKeywords = {
             KeywordEnum.AI.keyword(),
+            KeywordEnum.CONDENSED_MAT.keyword(),
+            KeywordEnum.DATABASES.keyword(),
+            KeywordEnum.VERIFICATION.keyword(),
+            KeywordEnum.GRAPH_THEORY.keyword(),
+            KeywordEnum.ML.keyword(),
+            KeywordEnum.MATERIALS_MOD.keyword(),
+            KeywordEnum.PROBABILITY.keyword(),
+            KeywordEnum.QC.keyword(),
+            KeywordEnum.ROBOTICS.keyword(),
     };
     
     private final NLGFactory factory;

@@ -18,11 +18,25 @@ import simplenlg.realiser.english.Realiser;
 public class MedicineTopic implements Topic {
 
     private static final Keyword[] primaryKeywords = {
-            KeywordEnum.ALGORITHMS.keyword(),
+            KeywordEnum.EPIDEMIOLOGY.keyword(),
+            KeywordEnum.MED_IMAGING.keyword(),
     };
 
     private static final Keyword[] secondaryKeywords = {
             KeywordEnum.AI.keyword(),
+            KeywordEnum.COMPUTER_VIS.keyword(),
+            KeywordEnum.DATA_PRIVACY.keyword(),
+            KeywordEnum.GENOMICS.keyword(),
+            KeywordEnum.GRAPH_THEORY.keyword(),
+            KeywordEnum.ML.keyword(),
+            KeywordEnum.NLP.keyword(),
+            KeywordEnum.NEUROSCIENCE.keyword(),
+            KeywordEnum.RELIABILITY.keyword(),
+            KeywordEnum.ROBOTICS.keyword(),
+            KeywordEnum.SIGNAL_PROC.keyword(),
+            KeywordEnum.SPECTROSCOPY.keyword(),
+            KeywordEnum.SYS_BIOLOGY.keyword(),
+            KeywordEnum.T_SERIES.keyword(),
     };
     
     private final NLGFactory factory;
