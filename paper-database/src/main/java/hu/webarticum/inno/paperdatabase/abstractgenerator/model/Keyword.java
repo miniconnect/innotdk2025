@@ -4,9 +4,7 @@ import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.WordGene
 
 public interface Keyword {
 
-    public default String label() {
-        return getClass().getSimpleName().toLowerCase().replace("_", "-");
-    }
+    public String label();
 
     public String longLabel();
     

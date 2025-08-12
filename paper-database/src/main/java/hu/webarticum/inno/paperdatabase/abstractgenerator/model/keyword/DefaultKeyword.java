@@ -16,12 +16,15 @@ import hu.webarticum.miniconnect.lang.LargeInteger;
 public class DefaultKeyword implements Keyword {
 
     private static final Map<String, MatchList> matchListCache = Collections.synchronizedMap(new HashMap<>());
-    
+
+    private final String label;
+
     private final String longLabel;
     
     private final Map<PlaceholderType, String[][]> possibilitiesPerType;
     
-    public DefaultKeyword(String longLabel, List<PlaceholderTypeWordsSpec> placeholderTypeWordsSpecs) {
+    public DefaultKeyword(String label, String longLabel, List<PlaceholderTypeWordsSpec> placeholderTypeWordsSpecs) {
+        this.label = label;
         this.longLabel = longLabel;
         this.possibilitiesPerType = new EnumMap<>(PlaceholderType.class);
         for (PlaceholderTypeWordsSpec placeholderTypeWordsSpec : placeholderTypeWordsSpecs) {
@@ -35,6 +38,11 @@ public class DefaultKeyword implements Keyword {
     
     private static String[] copyOf(String[] strings) {
         return Arrays.copyOf(strings, strings.length);
+    }
+
+    @Override
+    public String label() {
+        return label;
     }
 
     @Override

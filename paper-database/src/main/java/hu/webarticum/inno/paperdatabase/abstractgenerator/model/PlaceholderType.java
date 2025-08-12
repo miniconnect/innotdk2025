@@ -6,7 +6,7 @@ public enum PlaceholderType {
     DIFFICULTY("erosion"),
     METHOD("effort"),
     ITEM("item"),
-    VERB("transform"),
+    PRODUCE("produce"),
     
     ;
     

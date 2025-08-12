@@ -1,6 +1,7 @@
 package hu.webarticum.inno.paperdatabase.abstractgenerator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,6 +11,7 @@ import java.util.stream.Collectors;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.PaperTextsResult;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.Topic;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.CompoundWordGenerator;
+import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.KeywordEnum;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.WordGenerator;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.topic.InformaticsTopic;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.ContextModel;
@@ -29,17 +31,13 @@ public class PaperAbstractGeneratorService {
             List<Keyword> secondaryKeywords = chooseSecondaryKeywords(topic, primaryKeyword, random);
             WordGenerator secondaryWordGenerator = compoundWordGeneratorOf(secondaryKeywords, random.nextLong());
             PaperTextsResult templates = topic.buildPaperTextTemplates(primaryWordGenerator, secondaryWordGenerator, i);
-            /*
             Map<String, Object> paperDataMap = new LinkedHashMap<>();
             paperDataMap.put("title", templates.title());
             paperDataMap.put("topic", topic.name());
-            paperDataMap.put("primaryKeyword", primaryKeyword.name());
+            paperDataMap.put("primaryKeyword", primaryKeyword.label());
             paperDataMap.put("secondaryKeywords", keywordNamesOf(secondaryKeywords));
             paperDataMap.put("abstract", templates.abstractText());
             result.add(paperDataMap);
-            /*/
-            result.add(templates.abstractText());
-            //*/
         }
         return result;
     }
@@ -51,12 +49,22 @@ public class PaperAbstractGeneratorService {
     }
 
     private Keyword choosePrimaryKeyword(Topic topic, Random random) {
+        // FIXME
+        if (true) {
+            return KeywordEnum.AI.keyword();
+        }
+        
         List<Keyword> primaryKeywords = topic.primaryKeywords();
         int choosenIndex = random.nextInt(primaryKeywords.size());
         return primaryKeywords.get(choosenIndex);
     }
 
     private List<Keyword> chooseSecondaryKeywords(Topic topic, Keyword primaryKeyword, Random random) {
+        // FIXME
+        if (true) {
+            return Arrays.asList(KeywordEnum.ALGORITHMS.keyword());
+        }
+        
         List<Keyword> remainingPrimaryKeywords = topic.primaryKeywords().stream()
                 .filter(k -> k != primaryKeyword)
                 .collect(Collectors.toList());
@@ -78,5 +86,13 @@ public class PaperAbstractGeneratorService {
         }
         return new CompoundWordGenerator(wordGenerators, seed);
     }
-    
+
+    private List<String> keywordNamesOf(List<Keyword> keywords) {
+        List<String> result = new ArrayList<String>(keywords.size());
+        for (Keyword keyword : keywords) {
+            result.add(keyword.label());
+        }
+        return result;
+    }
+
 }

@@ -14,6 +14,7 @@ import java.util.function.Supplier;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.PlaceholderType;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.WordGenerator;
 import simplenlg.framework.DocumentElement;
+import simplenlg.framework.LexicalCategory;
 import simplenlg.framework.NLGElement;
 import simplenlg.framework.NLGFactory;
 import simplenlg.framework.PhraseCategory;
@@ -77,7 +78,7 @@ public abstract class TextGeneratorBase {
     protected static Random createRandom(long seed) {
         Random random = new Random(seed);
         // FIXME: warmup
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 3; i++) {
             random.nextLong();
         }
         return random;
@@ -88,6 +89,10 @@ public abstract class TextGeneratorBase {
         NLGElement result = generatorStructure.get();
         this.random = null;
         return result;
+    }
+    
+    protected NLGElement shared(String key, LexicalCategory lexicalCategory) {
+        return factory.createWord(shared(key), lexicalCategory);
     }
     
     protected String shared(String key) {
@@ -107,6 +112,10 @@ public abstract class TextGeneratorBase {
 
     protected Supplier<NLGElement> paragraphOf(Supplier<List<NLGElement>> content) {
         return () -> factory.createParagraph(documentElements(content.get()));
+    }
+
+    protected Supplier<NLGElement> firstOf(Supplier<List<NLGElement>> content) {
+        return () -> content.get().get(0);
     }
 
     private List<DocumentElement> documentElements(List<NLGElement> nlgElements) {
@@ -151,5 +160,5 @@ public abstract class TextGeneratorBase {
     protected final Supplier<List<NLGElement>> sentence(Supplier<NLGElement> sentenceSupplier) {
         return () -> Arrays.asList(sentenceSupplier.get());
     }
-    
+
 }

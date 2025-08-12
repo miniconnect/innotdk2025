@@ -20,8 +20,8 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "model", "robot" },
                     new String[] { "NLV-\\d{3}" }),
-            typeCase(PlaceholderType.VERB,
-                    new String[] { "speak", "listen" },
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] { "analyze", "observe", "produce" },
                     new String[] { "[XYZ]-match" })),
     
     ALGORITHMS("Algorithms",
@@ -32,13 +32,13 @@ public enum KeywordEnum {
                     new String[] { "EVIL", "DEVIL" },
                     new String[] { "X\\d{2}\\-ouch" }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "algorithm", "method", "analiser strategy" },
+                    new String[] { "algorithm", "analiser strategy" },
                     new String[] { "[A-Z]{3}\\-method" }),
             typeCase(PlaceholderType.ITEM,
                     new String[] { "thing", "item" },
                     new String[] { "[ABC]\\-agent" }),
-            typeCase(PlaceholderType.VERB,
-                    new String[] { "calculate", "move" },
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] { "construct", "create", "generate" },
                     new String[] { "[A-Z]\\d\\-create" })),
 
     ASTRO_INSTR("Astronomical Instrumentation",
@@ -54,7 +54,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -71,7 +71,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -88,7 +88,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -105,7 +105,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -122,7 +122,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -139,7 +139,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -156,7 +156,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -173,7 +173,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -190,7 +190,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -207,7 +207,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -224,7 +224,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -241,7 +241,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -258,7 +258,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -275,7 +275,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -292,7 +292,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -309,7 +309,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -326,7 +326,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -343,7 +343,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -360,7 +360,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -377,7 +377,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -394,7 +394,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -411,7 +411,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -428,7 +428,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -445,7 +445,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -462,7 +462,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -479,7 +479,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -496,7 +496,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -513,7 +513,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -530,7 +530,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -547,7 +547,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -564,7 +564,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -581,7 +581,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -598,7 +598,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -615,7 +615,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -632,7 +632,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -649,7 +649,7 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.ITEM,
                     new String[] { "lorem" },
                     new String[] {  }),
-            typeCase(PlaceholderType.VERB,
+            typeCase(PlaceholderType.PRODUCE,
                     new String[] { "lorem" },
                     new String[] {  })),
 
@@ -657,10 +657,14 @@ public enum KeywordEnum {
     
     private final Keyword keyword;
     
-    private KeywordEnum(String longname, PlaceholderTypeWordsSpec... placeholderTypeWordsSpecs) {
-        this.keyword = new DefaultKeyword(longname, Arrays.asList(placeholderTypeWordsSpecs));
+    private KeywordEnum(String longLabel, PlaceholderTypeWordsSpec... placeholderTypeWordsSpecs) {
+        this.keyword = new DefaultKeyword(getNormalizedLabel(), longLabel, Arrays.asList(placeholderTypeWordsSpecs));
     }
-    
+
+    private String getNormalizedLabel() {
+        return name().toLowerCase().replace("_", "-");
+    }
+
     public Keyword keyword() {
         return keyword;
     }
