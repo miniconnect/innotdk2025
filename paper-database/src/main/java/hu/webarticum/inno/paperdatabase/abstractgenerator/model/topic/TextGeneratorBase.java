@@ -71,8 +71,12 @@ public abstract class TextGeneratorBase {
         return candidate;
     }
 
+    protected String capitalize(String text) {
+        return Character.toUpperCase(text.charAt(0)) + text.substring(1);
+    }
+
     protected String generate(Supplier<? extends NLGElement> generatorStructure) {
-        return realiser.realise(buildNlgElement(generatorStructure)).getRealisation().trim();
+        return realiser.realise(buildNlgElement(generatorStructure)).getRealisation().trim().replace("*", "");
     }
 
     protected static Random createRandom(long seed) {

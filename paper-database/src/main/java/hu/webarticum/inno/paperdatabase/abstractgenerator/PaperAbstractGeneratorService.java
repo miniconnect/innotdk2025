@@ -24,7 +24,7 @@ public class PaperAbstractGeneratorService {
         Random random = new Random(234814592L);
         List<Topic> topics = model.topics();
         List<Object> result = new ArrayList<>();
-        for (long i = 0; i < 100; i++) {
+        for (long i = 0; i < 20; i++) {
             Topic topic = chooseTopic(topics, random);
             Keyword primaryKeyword = choosePrimaryKeyword(topic, random);
             WordGenerator primaryWordGenerator = primaryKeyword.wordGenerator(random.nextLong());

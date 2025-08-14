@@ -119,10 +119,6 @@ public class InformaticsTopic implements Topic {
                     sentence(this::titleD)))));
         }
         
-        private String capitalize(String text) {
-            return Character.toUpperCase(text.charAt(0)) + text.substring(1);
-        }
-
         private NLGElement titleA() {
             VPPhraseSpec gerundPhrase = createProposalGerund();
             NPPhraseSpec methodPhrase = factory.createNounPhrase(shared(P_METHOD, LexicalCategory.NOUN));
@@ -139,13 +135,13 @@ public class InformaticsTopic implements Topic {
             String adjective;
             if (random.nextBoolean()) {
                 optionalThe = "the";
-                adjective = choose(random, "most recent", "newest");
+                adjective = choose(random, "most recent", "newest*");
             } else {
                 adjective = choose(random, "new", "novel", "recent", "state-of-the-art");
             }
             NPPhraseSpec methodsNounPhrase = factory.createNounPhrase(optionalThe, choose(random, "approach", "method", "technique"));
             methodsNounPhrase.setPlural(true);
-            methodsNounPhrase.addPreModifier(factory.createWord(adjective, LexicalCategory.ADJECTIVE));
+            methodsNounPhrase.addPreModifier(adjective);
             String adverbPrefix = choose(random,
                     "as affected by", "as related to", "considering", "in light of", "in the context of", "regarding", "with respect to");
             AdvPhraseSpec adverbPhrase = factory.createAdverbPhrase(adverbPrefix);
