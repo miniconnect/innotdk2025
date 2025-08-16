@@ -92,20 +92,47 @@ public enum KeywordEnum {
 
     ASTRO_INSTR("Astronomical Instrumentation",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "astronomical optics", "astrophotography", "celestial navigation", "cryogenic instrumentation",
+                            "observational astronomy", "photometric calibration", "radio astronomy", "space instrumentation",
+                    },
+                    new String[] {
+                            "(auto|inter|xygho)?(stell|celest|astr)([aeiou][bcdfgrt]){1,3}ian (calibration|instrumentation|navigation|observations)"
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "atmospheric turbulence", "background radiation", "calibration drift",
+                            "light pollution", "mechanical vibration", "tracking error",
+                    },
+                    new String[] {
+                            "(aerial|celestial|cosmic|optical|radio) [bgmw][aeiou][r][aieou][clnvx][ei]ty",
+                            "([BCDKS][ar][nr][ltu]?(sky|ss?on|er)\\-|[bkr][au][nl][dt]ing )(distortion|effect|loss)",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "Doppler spectroscopy", "nod-and-shuffle", "phase diversity", "photoelectric photometry",
+                            "relativistic beaming", "tip–tilt correction", "transit photometry", "wavefront sensing",
+                    },
+                    new String[] {
+                            "[bcdfghjkvw][aieo][bcdklx](en|id|ub)?(ic|ian|ing) (spectroscopy|photometry)",
+                            "(orbit|relativistic|space|telescope) ([bdghklmpst][aeiou]){1,3}[aeiou](try|py|[knst]ing)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "aperture mask", "echelle spectrograph", "exoplanet", "deformable mirror",
+                            "galaxy", "slit mask", "spectrograph", "star", "telescope",
+                    },
+                    new String[] {
+                            "[A-F]{2}\\d (ca|di|spe)(cri|do|la|ro)?(ctro|nto|di|no)(graph|scope)",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "calibrate", "capture", "correct", "extract", "focus",
+                            "observe", "reconstruct", "stabilize", "track",
+                    },
+                    new String[] {
+                            "(back|co|down|re|un|up)([bcdfghj][aei])?(stella|atro|celesti)([aeiou][bdhjklmnprst]){1,3}(ize|ify)",
+                    })),
 
     ASTROPHYSICS("Astrophysics",
             typeCase(PlaceholderType.AREA,
