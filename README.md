@@ -21,6 +21,10 @@ This is a monorepo containing the following materials:
 | :blue_book: [Brochure](brochure/) | Brochure for printing |
 | :computer: [Screen Switcher](screen-switcher/) | Starter screen for choosing a demo app |
 
+Here is a brief summary of the offical informations and requirements (in Hungarian):
+
+[INFO.md](INFO.md)
+
 This is where the planned milestones with their current status can be reviewed:
 
 [MILESTONES.md](MILESTONES.md)
