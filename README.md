@@ -14,11 +14,12 @@ This is a monorepo containing the following materials:
 
 | Part | Description |
 | --- | --- |
+| :movie_camera: [Video](video/) | Video animations and speech text |
+| :blue_book: [Brochure](brochure/) | Brochure for printing |
 | :stars: [HoloSky](holosky/) | Simple planetarium app using synthetic data provided by HoloDB |
 | :page_facing_up: [Paper Database](paper-database/) | Library of papers and authors using synthetic data provided by HoloDB |
 | :loop: [Local REPL Setup](local-repl-setup/) | Local live demo of YAML editing and REPL |
 | :link: [REST API Demo](rest-demo/) | Java-based REST API project with data mocked by HoloDB |
-| :blue_book: [Brochure](brochure/) | Brochure for printing |
 | :computer: [Screen Switcher](screen-switcher/) | Starter screen for choosing a demo app |
 
 Here is a brief summary of the offical informations and requirements (in Hungarian):
