@@ -19,7 +19,7 @@
 | Brochure | ![MEDIUM](https://img.shields.io/badge/MEDIUM-yellow) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
 | Competition abstract | ![MEDIUM](https://img.shields.io/badge/MEDIUM-yellow) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
 | Competition poster | ![MEDIUM](https://img.shields.io/badge/MEDIUM-yellow) | ![TODO](https://img.shields.io/badge/TODO-gray) |
-| Competition video | ![MEDIUM](https://img.shields.io/badge/MEDIUM-red) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
+| Competition video | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
 | Exhibition desk design | ![MEDIUM](https://img.shields.io/badge/HIGH-red) | ![TODO](https://img.shields.io/badge/TODO-gray) |
 
 ---
