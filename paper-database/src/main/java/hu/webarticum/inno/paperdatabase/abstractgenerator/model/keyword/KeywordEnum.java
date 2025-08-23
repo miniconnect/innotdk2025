@@ -13,28 +13,40 @@ public enum KeywordEnum {
                             "automated planning", "cognitive architectures", "expert systems",
                             "intelligent agents", "knowledge representation", "symbolic reasoning",
                     },
-                    new String[] { "(adaptive|general|[dtg][yeo][nmpr]amyc)? [bcdhnptw][aeio][lntr]{1,2}[ei][nlr]ing" }),
+                    new String[] {
+                            "(adaptive|general|[dtg][yeo][nmpr]amyc)? [bcdhnptw][aeio][lntr]{1,2}[ei][nlr]ing",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
                     new String[] {
                             "alignment", "catastrophic forgetting",
                             "explainability gap", "symbol grounding", "transfer",
                     },
-                    new String[] { "(irr|(de|in|un)[cmt])[eiu][bdst]((ab)?ility)", "[A-F]{2}\\-(bias|drift|erosion)" }),
+                    new String[] {
+                            "(irr|(de|in|un)[cmt])[eiu][bdst]((ab)?ility)", "[A-F]{2}\\-(bias|drift|erosion)",
+                    }),
             typeCase(PlaceholderType.METHOD,
                     new String[] {
                             "symbolic reasoning", "knowledge graph inference", "heuristic search",
                             "Bayesian learning", "constraint satisfaction", "case-based reasoning",
                     },
-                    new String[] { "[bdghtsw][aeiou][lnr][kt]ing (search|planning|[brw](oo|[aeiu])[mn]n?[ey]sis)" }),
+                    new String[] {
+                            "[bdghtsw][aeiou][lnr][kt]ing (search|planning|[brw](oo|[aeiu])[mn]n?[ey]sis)",
+                    }),
             typeCase(PlaceholderType.ITEM,
                     new String[] {
                             "decision support system", "expert module", "intelligent agent", "knowledge base",
                             "language model", "planning system", "reasoning engine",
                     },
-                    new String[] { "[ACEFK]{1,2}[1-9]\\-(agent|net|planner)" }),
+                    new String[] {
+                            "[ACEFK]{1,2}[1-9]\\-(agent|net|planner)",
+                        }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "classify", "diagnose", "generate", "plan" },
-                    new String[] { "(de|in|re)?[cdgk][aeou][mnl](ify|ese|ate)" })),
+                    new String[] {
+                            "classify", "diagnose", "generate", "plan",
+                    },
+                    new String[] {
+                            "(de|in|re)?[cdgk][aeou][mnl](ify|ese|ate)",
+                    })),
     
     ALGORITHMS("Algorithms",
             typeCase(PlaceholderType.AREA,
@@ -133,601 +145,1614 @@ public enum KeywordEnum {
                     new String[] {
                             "(back|co|down|re|un|up)([bcdfghj][aei])?(stella|atro|celesti)([aeiou][bdhjklmnprst]){1,3}(ize|ify)",
                     })),
-
     ASTROPHYSICS("Astrophysics",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                             "stellar dynamics", "galactic dynamics", "cosmology", "plasma astrophysics", "high-energy astrophysics",
+                             "relativistic astrophysics", "astroparticle physics", "gravitational astrophysics",
+                    },
+                    new String[] {
+                            "(cosmic|galactic|interstellar|planetary|stellar) (chemistry|dynamics|evolution|magnetism|structures)",
+                            "(cosmic|galactic|interstellar|planetary|stellar) (chemistry|dynamics|evolution|magnetism|structures)",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "foreground contamination", "interstellar extinction",
+                            "magnetic turbulence", "source confusion",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\d{0,2}\\-(emission|diffusion|fluctuation|loss)",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "hydrodynamic simulation", "N-body simulation", "radiative transfer modeling",
+                            "spectral energy distribution fitting", "time-domain analysis", "weak lensing analysis",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\d{0,2}\\-(lensing|mapping|stacking|(hydro)?dynamics)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "accretion disk", "dark matter halo", "galaxy cluster", "molecular cloud",
+                            "neutron star", "protoplanetary disk", "supernova remnant",
+                    },
+                    new String[] {
+                            "(brown|red|white) dwarf",
+                            "(elliptical|irregular|spiral) galaxy",
+                            "(cosmic|galactic|large-scale|stellar|universal) (constant|forming|radiation)",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "characterize", "constrain", "map", "model", "simulate",
+                    },
+                    new String[] {
+                            "[A-F]\\d\\-simulate",
+                    })),
 
     CATALYSIS("Catalysis",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "electrocatalysis", "enzyme catalysis", "heterogeneous catalysis",
+                            "homogeneous catalysis", "photocatalysis", "plasma catalysis", "thermal catalysis",
+                    },
+                    new String[] {
+                            "(hydro|oxi|nano|multi)([bcdghlmx][aeiou]){1,3}(\\-(kinetic|thermal))? (catalysis)"
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "active site deactivation", "coke formation", "mass-transport limitation",
+                            "poison adsorption", "selectivity loss", "sintering", "surface reconstruction",
+                    },
+                    new String[] {
+                            "(carbon|coke|chloride|sulfur|water) (deposition|poisoning)",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "density functional theory", "kinetic Monte Carlo", "microkinetic modeling",
+                            "operando spectroscopy", "temperature-programmed desorption",
+                            "turnover frequency analysis", "volcano plot analysis"
+                    },
+                    new String[] {
+                            "(in situ|operando) (IR|Raman|XPS)",
+                            "[A-Z]{2,3}\\d{0,2}\\-(screening|workflow)"
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "Brønsted acid site", "catalyst pellet", "metal nanoparticle",
+                            "MOF catalyst", "single-atom catalyst", "support material",
+                    },
+                    new String[] {
+                            "(Au|Pd|Pt) nanocluster",
+                            "(Ni|Co|Fe)–Nx site",
+                            "(Cu|Fe|Ni|Pd|Pt|Ru)(\\-|/)(Al2O3|CeO2|SiO2|TiO2)"
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "activate", "adsorb", "convert", "dehydrogenate",
+                            "hydrogenate", "oxidize", "reduce",
+                    },
+                    new String[] {
+                            "(partially|selectively|([bcdmkl][aeiou]){1,2}ly) (de|re)?(activate|hydrogenate|oxidize|reduce)"
+                    })),
 
     COMPILERS("Compilers",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "automatic vectorization", "code generation", "data-flow analysis",
+                            "intermediate representation design", "link-time optimization", "static single assignment",
+                    },
+                    new String[] {
+                            "(profile|feedback)\\-directed optimization",
+                            "(ahead-of-time|just-in-time|([aeiou][bcdklmt]){2,5}(\\-aware|ic||er)) compilation",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "aliasing ambiguity", "branch misprediction", "instruction cache pressure",
+                            "register pressure", "undefined behavior", "write-after-read hazard", "write-back latency",
+                    },
+                    new String[] {
+                            "[A-Z]{2-3}\\-(hardness|error|race)",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "common subexpression elimination", "dead code elimination", "inlining",
+                            "partial redundancy elimination", "strength reduction",
+                    },
+                    new String[] {
+                            "loop (interchange|unrolling)",
+                            "(dependence|polyhedral) analysis",
+                            "[A-Z]{2,3}\\d{0,2}\\-(lowering|scheduling|tiling)"
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "abstract syntax tree", "basic block", "control-flow graph",
+                            "intermediate representation", "live range", "register file",
+                    },
+                    new String[] {
+                            "(AArch64|RISC\\-V|x86\\-64) backend",
+                            "L[1-3] cache line",
+                            "(CPS|SSA) form",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "allocate", "analyze", "coalesce", "inline", "lower",
+                            "optimize", "schedule", "specialize", "tile", "vectorize"
+                    },
+                    new String[] {
+                            "(de)?([aeiou][dlt]){2,5}?ize",
+                    })),
 
     COMPUTER_VIS("Computer Vision",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "image segmentation", "object detection", "pose estimation",
+                            "scene reconstruction", "stereo matching", "visual odometry",
+                    },
+                    new String[] {
+                            "(dense|instance|panoptic) segmentation",
+                            "[DBKR]{1,2}\\-(matching|segmentation|reconstruction)",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "adversarial noise", "camera shaking", "domain shift",
+                            "motion blur", "occlusion", "sensor noise",
+                    },
+                    new String[] {
+                            "(illumination|pose|scale|viewpoint) (variation|([bdlrt][aeiou]){2,3}ty)",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "contrastive learning", "convolutional neural network", "graph cut",
+                            "optical flow", "transformer encoder", "unsupervised pretraining",
+                    },
+                    new String[] {
+                            "(ResNet|U\\-Net|ViT)\\-based (model|pipeline)",
+                            "[abcei][lr]([aeiou][bdrs]){1,2}(ed|er|ing) (encoding|flow)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "bounding box", "camera sensor", "depth map",
+                            "feature map", "keypoint descriptor", "training dataset",
+                    },
+                    new String[] {
+                            "(ORB|SIFT|SURF|[A-F]{2,3}\\d?) descriptor",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "classify", "detect", "estimate",
+                            "localize", "reconstruct", "segment", "track",
+                    },
+                    new String[] {
+                            "(co|re)?(project|register)",
+                    })),
 
     CONDENSED_MAT("Condensed Matter",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "quantum materials", "spintronics", "strongly correlated systems",
+                            "superconductivity", "topological phases",
+                    },
+                    new String[] {
+                            "(quantum|topological|([aeiou][bcdhklmnst]){2,4}ic) (insulator|metal|semimetal)",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "disorder scattering", "electron–phonon coupling", "impurities",
+                            "lattice strain", "many–body interactions", "spin-orbit coupling",
+                    },
+                    new String[] {
+                            "(impurity|phonon|vacancy) scattering",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "angle–resolved photoemission spectroscopy", "density functional theory", "neutron scattering",
+                            "renormalization group", "scanning tunneling microscopy", "transport measurement",
+                    },
+                    new String[] {
+                            "(DFT\\+U|DMFT|QMC|[A-F]{2}[1-9]{1,2}) calculation",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "Brillouin zone", "Fermi surface", "magnon",
+                            "phonon", "quasiparticle", "spin lattice",
+                    },
+                    new String[] {
+                            "([A-FGKL]{2,3}\\d?) (crystal|lattice|surface)",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "characterize", "probe", "simulate", "tune",
+                    },
+                    new String[] {
+                            "(field|pressure|strain)\\-tune",
+                    })),
 
     CONTROL_THEORY("Control Theory",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "atabilization", "observability",
+                            "state estimation", "system identification",
+                    },
+                    new String[] {
+                            "(adaptive|H\\-infinity|LQR|MPC|nonlinear|optimal|robust|[XY][ABCK]{2,3}\\d{1,2}) control",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "actuator saturation", "measurement noise",
+                            "model uncertainty", "sensor delay", "unmodeled dynamics",
+                    },
+                    new String[] {
+                            "[ABDEKLMNST]{2,3}\\-delay",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "Lyapunov analysis", "model predictive control", "moving horizon estimation",
+                            "pole placement", "sliding mode control", "state–space feedback",
+                    },
+                    new String[] {
+                            "(backstepping|feedback) linearization",
+                            "((super\\-)?extended)? Kalman filter",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "control barrier function", "gain matrix", "particle filter",
+                            "reference trajectory", "state observer", "transfer function",
+                    },
+                    new String[] {
+                            "[A-D]\\-matrix",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "estimate", "linearize", "optimize",
+                            "regulate", "stabilize", "track",
+                    },
+                    new String[] {
+                            "[A-Z]\\-(follow|stabilize|track)",
+                    })),
 
     CRYPTOGRAPHY("Cryptography",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "asymmetric cryptography", "cryptanalysis", "lattice-based cryptography",
+                            "post-quantum cryptography", "symmetric cryptography", "zero-knowledge protocols",
+                    },
+                    new String[] {
+                            "(code|isogeny|lattice)\\-based (cryptography|scheme)",
+                            "(crypto|cypther)(de|fi|to)(al|gur|woz)(bor|ver)(gurr|hess|mitt|pos)ing"
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "entropy shortage",  "randomness bias",
+                            "side-channel leakage", "timing leakage",
+                    },
+                    new String[] {
+                            "(chosen\\-(ciphertext|plaintext)|replay|rollback) attack",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "authenticated encryption", "elliptic-curve cryptography", "homomorphic encryption",
+                            "signature scheme design", "zero-knowledge proof construction",
+                    },
+                    new String[] {
+                            "(Fiat\\-Shamir|KEM|MAC|PRF)\\-based (protocol|scheme)",
+                            "([A-F]{1,2}\\d?)\\-((de|en)coding|shift|shuffl|XOR)ing",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "block cipher", "cipher suite", "hash function",
+                            "key schedule", "public key", "secret key", "signature keypair",
+                    },
+                    new String[] {
+                            "(AEAD|CBC|CTR|GCM) mode",
+                            "([A-Z]{2}\\d)\\-(exchange|hash|key)",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "decrypt", "derive", "encrypt",
+                            "hash", "sign", "verify",
+                    },
+                    new String[] {
+                            "(de|[dmst][ao])?(crypt|cypher)[aeiou](da|ge|ki|wu)(hash|[bcdgklmnpst])(en|or|y)",
+                    })),
 
     DATA_PRIVACY("Data Privacy",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "access control", "anonymization", "differential privacy", "federated analytics",
+                            "privacy-preserving learning", "secure aggregation", "secure data sharing",
+                    },
+                    new String[] {
+                            "(client|server)\\-side (sanitization|aggregation)",
+                            "(anon|deg|sanit|secur|priv)([ariou][dghklmstrz]){2,3}ing"
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "data linkage", "membership inference", "model inversion vulnerability",
+                            "re-identification risk", "privacy–utility tradeoff",
+                    },
+                    new String[] {
+                            "([A-Z]{2,3}|[BDGKLST]([aiou][bknrst]){2,3}sky)\\-(inference|linkage|tradeoff)",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "differential privacy mechanism", "homomorphic encryption pipeline",
+                            "k-anonymity modeling", "synthetic data generation", "t-closeness analysis",
+                    },
+                    new String[] {
+                            "(epsilon|delta|gamma)\\-[BDF][KPT] (calibration|modeling)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "consent record", "data controller", "dataset release",
+                            "privacy budget", "pseudonymization token", "risk report",
+                    },
+                    new String[] {
+                            "(Do\\-Not\\-Track|Opt\\-Out) flag",
+                            "[A-Z]\\d\\-(field|record|token)",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "anonymize", "de-identify", "obfuscate",
+                            "perturb", "sanitize", "scrub",
+                    },
+                    new String[] {
+                            "(anon|obsus)([aeiou][bdlnrt]){2,3}(en|ify|ise)",
+                    })),
 
     DATA_STRUCTS("Data Structures",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "dynamic connectivity", "geometric range searching", "persistent data structures",
+                            "priority queue theory", "randomized data structures", "string indexing", "succinct data structures",
+                    },
+                    new String[] {
+                            "(comparison-?based )?(dictionaries|symbol tables)",
+                            "(static|dynamic) (set|predecessor) problems",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "ABA problem", "adversarial hash collisions", "amortization debt spikes", "iterator invalidation",
+                            "heap-order violations", "rebalancing cascades", "skewed key distributions",
+                    },
+                    new String[] {
+                            "(ABA|lost\\-update|race) (?hazard|phenomenon)",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "amortized analysis", "Euler tour technique", "fractional cascading",
+                            "path compression", "potential method", "randomized balancing",
+                    },
+                    new String[] {
+                            "((in|pre|pre)order |(memory|stack)\\-limited |[A-Z]{1,2}\\d?\\-|([qxy][aeiou]){2,4} )(recursion|traversal|visiting)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "DAG", "disjoint-set union", "linked list",
+                            "priority queue", "suffix array", "trie",
+                    },
+                    new String[] {
+                            "(binomial|pairing|Fibonacci)? heap",
+                            "(acyclic|bipartite|colored|labeled|simple|(un)directed)? graph",
+                            "(AVL |B[\\+\\*]?\\-|binary |labeled |k\\-ary |red\\-black |segment |splay |(un)?rooted )\\-tree",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "decrease key", "delete", "insert",
+                            "merge", "search", "traverse", "split",
+                    },
+                    new String[] {
+                            "(bulk\\-|batched )(insert|delete|update)",
+                    })),
 
     DATABASES("Databases",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "columnar storage", "graph processing", "in-memory databases",
+                            "replication control", "stream processing", "transaction processing",
+                    },
+                    new String[] {
+                            "(columnar|document|graph|in\\-memory|key\\-value|relational) (engine|indexing|querying|storage)",
+                            "(index|query|storage) (optimization|structures|tuning|([aeiou][bhklmprst]){2,3}[nltsx]ing)",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "contention", "data skew", "deadlock", "replication lag", "write skew",
+                    },
+                    new String[] {
+                            "(cold|hot|read|write) (amplification|contention|skew)",
+                            "([aeiou][bhklt]){2,3}[nltsx]ing|[A-K]{1,2}\\d?) (bloat|corruption|inconsistency|shard|workload)",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "B-tree indexing", "bitmap indexing", "cost-based optimization", "hash partitioning",
+                            "join reordering", "multiversion concurrency control", "query rewriting",
+                    },
+                    new String[] {
+                            "(hash|range|shard) (compaction|partitioning|replication)",
+                            "[A-Z]{1,2}\\d? (locking|ordering|paging|partitioning)"
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "foreign key", "index segment", "page cache",
+                            "primary key", "query plan", "redo log", "row store",
+                    },
+                    new String[] {
+                            "(AOF|BINLOG|WAL) file",
+                            "[A-Z]{1,3}\\d?\\-(log|plan|relation|transaction)"
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "backup", "compact", "evict", "index", "materialize",
+                    },
+                    new String[] {
+                            "(bulk |range )?(load|scan)",
+                    })),
 
     DISTRIBUTED("Distributed Systems",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "byzantine fault tolerance", "consensus protocols", "distributed tracing",
+                            "event-driven architecture", "leader election", "replication control", "service discovery",
+                    },
+                    new String[] {
+                            "(edge|federated|geo\\-replicated) (orchestration|scheduling|systems)",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "clock skew", "network jitter", "partial failure",
+                            "split brain state", "straggler", "tail latency", "thundering herd",
+                    },
+                    new String[] {
+                            "(leader|replica) churn",
+                            "(un|out)?(distr|fail|latent|sync)([aeiou]fklmt){2,3}(ation|ing)"
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "anti-entropy gossip", "distributed snapshot", "gossip protocol",
+                            "quorum replication", "state machine replication", "vector clocks",
+                    },
+                    new String[] {
+                            "(epoch|lease)\\-based (coordination|replication)",
+                            "(three|two)-phase commit",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "conflict-free replicated data type", "coordinator node", "distributed log", "gossip message",
+                            "membership view", "Merkle DAG", "replica set", "vector clock", "write-ahead log",
+                    },
+                    new String[] {
+                            "[A-F]{1,2}\\d?\\-(cluster|leader|message|replica|service)",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "broadcast", "elect", "gossip", "rebalance", "reconcile", "replicate", "synchronize",
+                    },
+                    new String[] {
+                            "[dklp]?([aeiou][bklmrstxw]){3,4}\\-(discover|message|rebalance|synchronize|trace)",
+                    })),
 
     ELECTROCHEM("Electrochemistry",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "battery materials", "electrocatalysis", "electrolysis",
+                            "fuel cells", "ion transport", "redox flow batteries",
+                            "solid-state electrolytes", "supercapacitors",
+                    },
+                    new String[] {
+                            "(anode|cathode|solid\\-state) interfaces",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "dendrite growth", "electrolyte degradation", "gas evolution",
+                            "ohmic heating", "passivation", "solid–electrolyte interphase instability",
+                    },
+                    new String[] {
+                            "(capacity|voltage) fade",
+                            "(dendri|electro|explo|gaso)[bcdeklmn]([aeiou][fklmxp]){1,2}(instabil|var)([aiou][cdlntx]){0,3}([ei]ty|ing|)",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "cyclic voltammetry", "electrochemical impedance spectroscopy", "galvanostatic charge–discharge",
+                            "pulse plating", "thin-film deposition", "titration gas analysis",
+                    },
+                    new String[] {
+                            "chrono(ampero|potentio)metry measurement",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "anode", "cathode", "current collector", "electrolyte",
+                            "membrane", "solid–electrolyte interphase", "test cell",
+                    },
+                    new String[] {
+                            "(LiCoO2|LiFePO4|LiNiMnCoO2) cathode",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "adsorb", "charge", "deposit", "discharge",
+                            "electroplate", "intercalate", "oxidize", "reduce",
+                    },
+                    new String[] {
+                            "(de|re)?intercalate",
+                            "(oxi|electro|redu|charg[aeiou])(pat|con)?(r?ol|fu[ae]l|gen)ize"
+                    })),
 
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
+    // generated, non-reviewed yet:
+    
     EMBEDDED("Embedded Systems",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "bare-metal programming", "embedded AI inference", "firmware engineering",
+                            "hardware–software co-design", "real-time systems", "resource-constrained computing",
+                            "safety-critical systems", "sensor fusion",
+                    },
+                    new String[] {
+                            "(edge|embedded|on\\-device) (control|inference|sensing|systems)",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "electromagnetic interference", "hard real-time deadlines", "memory footprint limits",
+                            "power budget constraints", "thermal throttling", "timing jitter",
+                            "toolchain fragmentation", "wear-out of flash",
+                    },
+                    new String[] {
+                            "(latency|power|thermal) (budget|ceiling|constraint|limit)",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "DMA-driven I/O", "hardware abstraction layer", "interrupt coalescing",
+                            "memory-mapped I/O", "model-based design", "static analysis",
+                            "task scheduling", "worst-case execution time analysis",
+                    },
+                    new String[] {
+                            "(cycle\\-accurate|event\\-driven) simulation",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "bootloader", "embedded Linux", "firmware image",
+                            "microcontroller", "peripheral driver", "real-time kernel",
+                            "sensor module", "SoC board",
+                    },
+                    new String[] {
+                            "(ARM Cortex\\-(M[0-7]|A[3-9])|RISC\\-V RV(32|64)) (board|core)",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "debounce", "flash", "instrument",
+                            "poll", "sample", "schedule",
+                            "sleep", "throttle",
+                    },
+                    new String[] {
+                            "(power|clock) gate",
+                    })),
 
     EPIDEMIOLOGY("Epidemiology Modeling",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "agent-based simulation", "compartmental models", "contact network analysis",
+                            "disease forecasting", "outbreak detection", "phylogenetic inference",
+                            "surveillance modeling", "vaccination strategy design",
+                    },
+                    new String[] {
+                            "(age\\-structured|spatial) transmission modeling",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "asymptomatic transmission", "case underreporting", "contact heterogeneity",
+                            "data sparsity", "incubation uncertainty", "parameter identifiability",
+                            "reporting delays", "seasonal forcing",
+                    },
+                    new String[] {
+                            "(left|right) censoring",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "Bayesian calibration", "contact matrix estimation", "Markov chain Monte Carlo",
+                            "nowcasting", "particle filtering", "reproduction number estimation",
+                            "stochastic differential equations", "synthetic population generation",
+                    },
+                    new String[] {
+                            "(ABC|MCMC|SMC) sampling",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "attack rate", "basic reproduction number", "case fatality ratio",
+                            "contact matrix", "epidemic curve", "generation interval",
+                            "sero-prevalence survey", "time-to-event data",
+                    },
+                    new String[] {
+                            "R0 estimate",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "estimate", "forecast", "impute",
+                            "infer", "project", "simulate",
+                            "smooth", "stratify",
+                    },
+                    new String[] {
+                            "(de|re)parameterize",
+                    })),
 
     EXOPLANETS("Exoplanets",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "atmospheric retrieval", "exomoon detection", "planet formation",
+                            "planet–disk interaction", "radial-velocity surveys", "transit photometry",
+                            "transit timing variations", "young planet characterization",
+                    },
+                    new String[] {
+                            "(high\\-resolution|multi\\-band) spectroscopy",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "activity-induced jitter", "blended light contamination", "instrumental systematics",
+                            "limb-darkening uncertainty", "orbital eccentricity degeneracy", "stellar variability",
+                            "telluric contamination", "window function gaps",
+                    },
+                    new String[] {
+                            "(red|white) noise dominance",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "cross-correlation analysis", "differential photometry", "Gaussian-process modeling",
+                            "line-by-line retrieval", "matched filtering", "radial-velocity modeling",
+                            "spectro-photometric calibration", "transit light-curve fitting",
+                    },
+                    new String[] {
+                            "(joint|multi\\-instrument) fitting",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "atmospheric spectrum", "exoatmosphere", "hot Jupiter",
+                            "light curve", "mass–radius diagram", "phase curve",
+                            "radial-velocity time series", "transit depth",
+                    },
+                    new String[] {
+                            "(K2|TOI)\\-\\d{3,5} candidate",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "detect", "detrend", "fit",
+                            "model", "retrieve", "validate",
+                            "vet", "verify",
+                    },
+                    new String[] {
+                            "(co|re)\\-fit (curves|signals)",
+                    })),
 
     VERIFICATION("Formal Verification",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "contract-based design", "equivalence checking", "hardware verification",
+                            "model checking", "program logics", "proof-carrying code",
+                            "runtime verification", "type systems",
+                    },
+                    new String[] {
+                            "(bounded|symbolic|temporal) model checking",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "combinatorial explosion", "counterexample complexity", "specification drift",
+                            "state-space explosion", "tool interoperability", "traceability gaps",
+                            "undecidability", "weak memory models",
+                    },
+                    new String[] {
+                            "(liveness|safety) violation",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "abstract interpretation", "bounded model checking", "counterexample-guided abstraction refinement",
+                            "decision procedures", "Hoare logic", "k-induction",
+                            "SAT-based verification", "SMT solving",
+                    },
+                    new String[] {
+                            "(automata|temporal) reasoning",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "assertion", "invariant", "Kripke structure",
+                            "proof obligation", "specification", "transition system",
+                            "verification condition", "witness trace",
+                    },
+                    new String[] {
+                            "(CTL|LTL|MSO) formula",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "assert", "check", "prove",
+                            "refine", "simulate", "specify",
+                            "verify", "witness",
+                    },
+                    new String[] {
+                            "(dis|re)?prove",
+                    })),
 
     GENOMICS("Genomics",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "comparative genomics", "functional genomics", "genome assembly",
+                            "metagenomics", "population genomics", "regulatory genomics",
+                            "structural variation analysis", "transcriptomics",
+                    },
+                    new String[] {
+                            "(de novo|reference\\-guided) assembly",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "GC bias", "homopolymer errors", "low-complexity regions",
+                            "mapping bias", "population stratification", "sample contamination",
+                            "sequencing errors", "variant calling ambiguity",
+                    },
+                    new String[] {
+                            "(batch|capture) effects",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "de Bruijn graph assembly", "genome-wide association study", "haplotype phasing",
+                            "k-mer counting", "quality control pipelines", "read alignment",
+                            "variant calling", "variant phasing",
+                    },
+                    new String[] {
+                            "(Bayesian|graph\\-based) haplotyping",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "coding sequence", "contig", "haplotype block",
+                            "read pair", "reference genome", "single nucleotide polymorphism",
+                            "structural variant", "transcript",
+                    },
+                    new String[] {
+                            "(CNV|INDEL|SNP) set",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "assemble", "call", "cluster",
+                            "map", "normalize", "phase",
+                            "quantify", "realign",
+                    },
+                    new String[] {
+                            "(de|re)\\-align",
+                    })),
 
     GRAPH_THEORY("Graph Theory",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "extremal graph theory", "graph coloring", "graph drawing",
+                            "graph minors", "network flow", "random graphs",
+                            "spectral graph theory", "topological graph theory",
+                    },
+                    new String[] {
+                            "(directed|undirected|weighted) networks",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "combinatorial explosion", "edge density constraints", "NP-completeness",
+                            "planarity constraints", "sparsity limits", "subgraph isomorphism",
+                            "treewidth bounds", "vertex cover hardness",
+                    },
+                    new String[] {
+                            "(cut|flow) bottlenecks",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "algebraic connectivity analysis", "greedy coloring", "matching algorithms",
+                            "maximum flow algorithms", "planar embedding", "spectral partitioning",
+                            "tree decomposition", "vertex cover approximation",
+                    },
+                    new String[] {
+                            "(branch\\-and\\-bound|parameterized) search",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "adjacency matrix", "cut set", "Laplacian matrix",
+                            "matching", "path cover", "spanning tree",
+                            "subgraph", "vertex separator",
+                    },
+                    new String[] {
+                            "(k\\-core|k\\-clique) subgraph",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "color", "contract", "cut",
+                            "embed", "match", "partition",
+                            "traverse", "weight",
+                    },
+                    new String[] {
+                            "(re)?label",
+                    })),
 
     ML("Machine Learning",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "deep learning", "ensemble methods", "reinforcement learning",
+                            "representation learning", "semi-supervised learning", "supervised learning",
+                            "transfer learning", "unsupervised learning",
+                    },
+                    new String[] {
+                            "(few|multi|self)\\-(shot|task|modal) learning",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "adversarial vulnerability", "catastrophic forgetting", "class imbalance",
+                            "concept drift", "data sparsity", "overfitting",
+                            "sample complexity", "scalability bottleneck",
+                    },
+                    new String[] {
+                            "(label|feature|data) noise",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "boosting", "clustering", "decision tree induction", "dimensionality reduction",
+                            "gradient descent", "kernel methods", "nearest neighbor search",
+                    },
+                    new String[] {
+                            "[a-z]{3,6}\\-networks?",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "dataset", "feature extractor", "learning algorithm",
+                            "loss function", "model checkpoint", "neural architecture",
+                            "parameter set", "training pipeline",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-[0-9]{2,4}",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "classify", "cluster", "detect", "forecast",
+                            "infer", "predict", "recommend", "regress",
+                    },
+                    new String[] {
+                            "(auto|re)?encode",
+                    })),
 
     MATERIALS_MOD("Materials Modeling",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "atomistic simulation", "crystal structure prediction", "density functional theory",
+                            "molecular dynamics", "multiscale modeling", "nanomaterials",
+                            "phase field modeling", "quantum chemistry",
+                    },
+                    new String[] {
+                            "(ab initio|first\\-principles) (modeling|simulation)",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "computational cost", "defect prediction", "energy landscape complexity",
+                            "finite size effects", "parameter uncertainty", "scale bridging",
+                            "structural disorder", "validation gap",
+                    },
+                    new String[] {
+                            "(convergence|transferability) issue[s]?",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "coarse graining", "density functional theory", "finite element analysis",
+                            "Green’s function method", "lattice dynamics", "machine-learned potential",
+                            "Monte Carlo simulation", "tight-binding approximation",
+                    },
+                    new String[] {
+                            "[A-Z]{2,4}\\-(approximation|potential|model)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "atomic configuration", "crystal lattice", "force field",
+                            "grain boundary", "material sample", "phase diagram",
+                            "potential energy surface", "simulation cell",
+                    },
+                    new String[] {
+                            "[0-9]+\\-site (cluster|lattice)",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "assemble", "calculate", "design", "engineer",
+                            "fabricate", "optimize", "simulate", "synthesize",
+                    },
+                    new String[] {
+                            "(re|co)?construct",
+                    })),
 
     MED_IMAGING("Medical Imaging",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "computed tomography", "functional MRI", "image-guided surgery",
+                            "magnetic resonance imaging", "nuclear medicine", "optical imaging",
+                            "positron emission tomography", "ultrasound imaging",
+                    },
+                    new String[] {
+                            "(multi|hyper)\\-modal imaging",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "artifacts", "class imbalance", "data heterogeneity",
+                            "low contrast", "motion blur", "noise",
+                            "radiation dose", "segmentation errors",
+                    },
+                    new String[] {
+                            "(under|over)exposure",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "compressed sensing", "convolutional neural networks", "edge detection",
+                            "image registration", "level set methods", "radiomics",
+                            "segmentation algorithms", "tomographic reconstruction",
+                    },
+                    new String[] {
+                            "[a-z]+\\-enhanced imaging",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "contrast agent", "detector array", "imaging modality",
+                            "image dataset", "probe", "radiotracer",
+                            "scanner", "segmentation mask",
+                    },
+                    new String[] {
+                            "[A-Z]{1,3}[0-9]{2,3} (scanner|probe)",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
-
+                    new String[] {
+                            "acquire", "classify", "detect", "enhance",
+                            "localize", "quantify", "reconstruct", "segment",
+                    },
+                    new String[] {
+                            "(pre|post)process",
+                    })), 
+  
     MOLECULAR_MOD("Molecular Modeling",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "computational chemistry", "drug design", "ligand binding",
+                            "molecular docking", "molecular dynamics", "protein folding",
+                            "quantum mechanics", "structure-based modeling",
+                    },
+                    new String[] {
+                            "(in silico|first\\-principles) modeling",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "conformational flexibility", "energy barriers", "force field limitations",
+                            "parameter transferability", "sampling inefficiency", "solvation effects",
+                            "timescale limitations", "validation gap",
+                    },
+                    new String[] {
+                            "(finite|limited) sampling",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "coarse graining", "docking algorithms", "free energy perturbation",
+                            "homology modeling", "Markov state models", "molecular dynamics",
+                            "Monte Carlo sampling", "quantum chemical calculations",
+                    },
+                    new String[] {
+                            "[A-Z]{2,4}\\-(docking|MD|QM)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "active site", "binding pocket", "conformational ensemble",
+                            "force field", "ligand library", "molecular structure",
+                            "protein target", "solvent box",
+                    },
+                    new String[] {
+                            "[A-Z]{3}[0-9]{1,3} ligand",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "align", "bind", "dock", "fold",
+                            "interact", "minimize", "simulate", "stabilize",
+                    },
+                    new String[] {
+                            "(re)?parameterize",
+                    })),
 
     NLP("Natural Language Processing",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "dialog systems", "information extraction", "language modeling",
+                            "machine translation", "named entity recognition", "parsing",
+                            "question answering", "sentiment analysis",
+                    },
+                    new String[] {
+                            "(multi|cross|zero)\\-(lingual|modal) (NLP|processing|translation)",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "ambiguity", "bias", "context dependence",
+                            "data sparsity", "domain adaptation", "low resource availability",
+                            "polysemy", "syntactic complexity",
+                    },
+                    new String[] {
+                            "(out\\-of\\-vocabulary|OOV) issue[s]?",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "attention mechanisms", "conditional random fields", "distributional semantics",
+                            "language models", "recurrent neural networks", "sequence labeling",
+                            "transformers", "word embeddings",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(LM|RNN|BERT|GPT)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "annotation corpus", "embedding space", "grammar formalism",
+                            "knowledge graph", "lexicon", "parser",
+                            "pretrained model", "tokenizer",
+                    },
+                    new String[] {
+                            "[A-Z]{2,4}\\-[a-z]{3,5}",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "answer", "classify", "decode", "embed",
+                            "generate", "parse", "summarize", "translate",
+                    },
+                    new String[] {
+                            "(auto)?complete",
+                    })),
 
     NEUROSCIENCE("Neuroscience",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "cognitive neuroscience", "computational neuroscience", "developmental neuroscience",
+                            "molecular neuroscience", "neuroanatomy", "neurophysiology",
+                            "sensory neuroscience", "systems neuroscience",
+                    },
+                    new String[] {
+                            "(social|affective|behavioral) neuroscience",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "brain complexity", "connectivity mapping", "ethical concerns",
+                            "heterogeneity", "measurement noise", "neural variability",
+                            "plasticity limits", "signal interpretation",
+                    },
+                    new String[] {
+                            "(over|under)activation",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "calcium imaging", "diffusion tensor imaging", "electrophysiology",
+                            "functional MRI", "neuroimaging", "optogenetics",
+                            "patch clamp", "two-photon microscopy",
+                    },
+                    new String[] {
+                            "[A-Z]{2,4}\\-(staining|recording|imaging)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "brain atlas", "electrode array", "fMRI dataset",
+                            "ion channel", "neuron model", "neurotransmitter",
+                            "recording device", "synapse",
+                    },
+                    new String[] {
+                            "[A-Z]{1,2}[0-9]{1,3}\\-neuron",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "activate", "connect", "encode", "fire",
+                            "inhibit", "learn", "map", "signal",
+                    },
+                    new String[] {
+                            "(up|down)regulate",
+                    })), 
 
     NUM_ANALYSIS("Numerical Analysis",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "approximation theory", "computational linear algebra", "differential equations",
+                            "error analysis", "functional analysis", "numerical integration",
+                            "spectral methods", "stability theory",
+                    },
+                    new String[] {
+                            "(finite|spectral) element (analysis|methods?)",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "accuracy loss", "cancellation errors", "conditioning",
+                            "convergence issues", "instability", "round-off errors",
+                            "stiffness", "truncation error",
+                    },
+                    new String[] {
+                            "(ill|poor)\\-conditioning",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "conjugate gradient", "finite difference", "finite element",
+                            "iterative solvers", "Monte Carlo methods", "multigrid algorithms",
+                            "Newton’s method", "spectral decomposition",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(iteration|solver|method)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "coefficient matrix", "error bound", "grid function",
+                            "Jacobian matrix", "linear system", "residual vector",
+                            "sparse matrix", "stability region",
+                    },
+                    new String[] {
+                            "[A-Z]{1,3}[0-9]{1,3} matrix",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "approximate", "compute", "converge", "differentiate",
+                            "integrate", "interpolate", "iterate", "solve",
+                    },
+                    new String[] {
+                            "(pre)?condition",
+                    })),
 
     OPTIMIZATION("Optimization",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "combinatorial optimization", "convex optimization", "global optimization",
+                            "integer programming", "linear programming", "nonlinear optimization",
+                            "stochastic optimization", "variational methods",
+                    },
+                    new String[] {
+                            "(multi|bi)\\-(criteria|objective) optimization",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "computational complexity", "convergence gap", "curse of dimensionality",
+                            "feasibility issues", "local minima", "nonconvexity",
+                            "scalability limits", "sensitivity to noise",
+                    },
+                    new String[] {
+                            "(premature|false) convergence",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "branch and bound", "dynamic programming", "genetic algorithms",
+                            "gradient descent", "interior point methods", "Lagrangian relaxation",
+                            "linear programming simplex", "simulated annealing",
+                    },
+                    new String[] {
+                            "[a-z]{3,6}\\-(heuristic|search|descent)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "constraint set", "cost function", "decision variable",
+                            "feasible region", "objective function", "optimization problem",
+                            "search space", "solution candidate",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-LP model",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "approximate", "balance", "maximize", "minimize",
+                            "optimize", "refine", "relax", "solve",
+                    },
+                    new String[] {
+                            "(re)?parameterize",
+                    })),
 
     OS("Operating Systems",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "concurrent programming", "distributed systems", "file systems",
+                            "memory management", "process scheduling", "real-time systems",
+                            "resource allocation", "virtualization",
+                    },
+                    new String[] {
+                            "(micro|exokernel) architecture",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "deadlock", "fault tolerance", "latency",
+                            "memory leaks", "race conditions", "resource contention",
+                            "security vulnerabilities", "throughput bottlenecks",
+                    },
+                    new String[] {
+                            "(starvation|livelock)",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "context switching", "garbage collection", "locking protocols",
+                            "paging algorithms", "preemptive scheduling", "synchronization primitives",
+                            "system calls", "virtual memory management",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(lock|sched|alloc)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "driver", "kernel module", "page table",
+                            "process", "scheduler", "semaphore",
+                            "system call interface", "thread pool",
+                    },
+                    new String[] {
+                            "[A-Z]{2,4}\\-OS",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "allocate", "boot", "dispatch", "execute",
+                            "isolate", "schedule", "suspend", "terminate",
+                    },
+                    new String[] {
+                            "(fork|spawn)",
+                    })), 
 
     PROBABILITY("Probability Theory",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "Bayesian probability", "ergodic theory", "limit theorems",
+                            "Markov chains", "random processes", "stochastic analysis",
+                            "stochastic calculus", "stochastic modeling",
+                    },
+                    new String[] {
+                            "(large|small) deviation theory",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "concentration bounds", "dependence", "high variance",
+                            "intractability", "nonstationarity", "rare events",
+                            "sample inefficiency", "tail risk",
+                    },
+                    new String[] {
+                            "(heavy|fat) tails?",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "Bayesian inference", "central limit theorem", "characteristic functions",
+                            "law of large numbers", "Markov chain Monte Carlo", "measure theory",
+                            "probability distributions", "stochastic simulation",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(test|bound|limit)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "confidence interval", "distribution function", "likelihood ratio",
+                            "martingale", "probability space", "random variable",
+                            "sample space", "stochastic process",
+                    },
+                    new String[] {
+                            "[A-Z]{1,3}[0-9]{1,3} distribution",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "approximate", "estimate", "infer", "integrate",
+                            "predict", "sample", "simulate", "test",
+                    },
+                    new String[] {
+                            "(re)?normalize",
+                    })),
 
     QC("Quantum Computing",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "adiabatic quantum computing", "fault-tolerant computing", "quantum algorithms",
+                            "quantum communication", "quantum cryptography", "quantum information theory",
+                            "quantum machine learning", "quantum simulation",
+                    },
+                    new String[] {
+                            "(post|near)\\-quantum cryptography",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "coherence time", "decoherence", "error correction overhead",
+                            "gate fidelity", "hardware scalability",
+                            "noise sensitivity", "qubit quality",
+                    },
+                    new String[] {
+                            "(measurement|readout) error[s]?",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "Grover’s algorithm", "phase estimation", "quantum annealing",
+                            "quantum error correction", "quantum Fourier transform", "quantum teleportation",
+                            "Shor’s algorithm", "variational quantum eigensolver",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(ansatz|circuit|gate)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "ancilla qubit", "Bloch sphere", "error correction code",
+                            "Hamiltonian", "quantum gate", "quantum register",
+                            "qubit", "superposition state",
+                    },
+                    new String[] {
+                            "Q[0-9]{1,3}\\-(gate|circuit)",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "compute", "decode", "entangle", "factorize",
+                            "initialize", "measure", "simulate", "teleport",
+                    },
+                    new String[] {
+                            "(re|de)?cohere",
+                    })),
 
     RELIABILITY("Reliability Engineering",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "availability analysis", "fault tree analysis", "lifetime modeling",
+                            "maintainability analysis", "reliability growth modeling", "reliability prediction",
+                            "safety analysis", "survivability analysis",
+                    },
+                    new String[] {
+                            "(mean|system|network) time to failure",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "aging effects", "component wear-out", "dependency propagation",
+                            "failure uncertainty", "fault propagation", "hazard rate variation",
+                            "latent faults", "maintenance cost",
+                    },
+                    new String[] {
+                            "(rare|hidden) failure[s]?",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "accelerated life testing", "Bayesian reliability models", "fault injection",
+                            "load sharing models", "Markov reliability models", "redundancy allocation",
+                            "stress testing", "Weibull analysis",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(test|model|analysis)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "failure distribution", "fault tree", "lifetime data",
+                            "maintenance log", "redundant component", "reliability block diagram",
+                            "system log", "test plan",
+                    },
+                    new String[] {
+                            "MT(T|BF|TF|TR)",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "analyze", "assure", "evaluate", "inspect",
+                            "maintain", "predict", "repair", "test",
+                    },
+                    new String[] {
+                            "(re)?calibrate",
+                    })), 
 
     ROBOTICS("Robotics",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "autonomous navigation", "field robotics", "humanoid robotics",
+                            "industrial robotics", "manipulation", "medical robotics",
+                            "service robotics", "swarm robotics",
+                    },
+                    new String[] {
+                            "(soft|bio)\\-robotics",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "actuator precision", "battery limitations", "control instability",
+                            "dynamic environments", "localization errors", "payload limits",
+                            "sensor noise", "uncertainty in perception",
+                    },
+                    new String[] {
+                            "(slip|drift) error[s]?",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "control theory", "kinematics", "localization algorithms",
+                            "motion planning", "path optimization", "reinforcement learning",
+                            "Simultaneous Localization and Mapping", "trajectory generation",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(controller|planner|bot)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "actuator", "end effector", "gripper",
+                            "joint module", "mobile platform", "robot arm",
+                            "sensor suite", "wheel module",
+                    },
+                    new String[] {
+                            "R[0-9]{2,3}\\-(arm|bot|unit)",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "adapt", "assemble", "grasp", "lift",
+                            "manipulate", "move", "navigate", "sense",
+                    },
+                    new String[] {
+                            "(re)?calibrate",
+                    })),
 
     SIGNAL_PROC("Signal Processing",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "audio processing", "digital communications", "image processing",
+                            "radar signal analysis", "speech processing", "statistical signal analysis",
+                            "time-frequency analysis", "wireless communication signals",
+                    },
+                    new String[] {
+                            "(multi|array) signal processing",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "aliasing", "channel fading", "computational load",
+                            "distortion", "filtering artifacts", "noise",
+                            "quantization error", "signal loss",
+                    },
+                    new String[] {
+                            "(over|under)sampling",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "convolution", "fast Fourier transform", "Kalman filtering",
+                            "linear prediction", "spectral estimation", "wavelet transform",
+                            "Wiener filtering", "z-transform",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(filter|transform|method)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "antenna array", "band-pass filter", "codec",
+                            "oscilloscope", "sampling device", "spectrum analyzer",
+                            "transducer", "waveform",
+                    },
+                    new String[] {
+                            "[0-9]{2,3}\\-Hz signal",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "amplify", "decode", "demodulate", "detect",
+                            "encode", "filter", "modulate", "transmit",
+                    },
+                    new String[] {
+                            "(pre|post)process",
+                    })),
 
     SPECTROSCOPY("Spectroscopy",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "atomic spectroscopy", "fluorescence spectroscopy", "infrared spectroscopy",
+                            "mass spectrometry", "nuclear magnetic resonance", "optical spectroscopy",
+                            "photoelectron spectroscopy", "Raman spectroscopy",
+                    },
+                    new String[] {
+                            "(ultra|hyper)\\-resolution spectroscopy",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "background noise", "calibration drift", "detector sensitivity",
+                            "interference effects", "low signal-to-noise ratio", "overlapping peaks",
+                            "sample degradation", "spectral resolution limits",
+                    },
+                    new String[] {
+                            "(baseline|peak) shift",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "absorption spectroscopy", "electron spin resonance", "fluorescence spectroscopy",
+                            "Fourier transform spectroscopy", "laser-induced breakdown spectroscopy", "photoacoustic spectroscopy",
+                            "Raman spectroscopy", "time-resolved spectroscopy",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(spectroscopy|method|technique)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "detector", "grating", "laser source",
+                            "optical fiber", "sample cell", "spectral line",
+                            "spectrometer", "wavelength filter",
+                    },
+                    new String[] {
+                            "[0-9]{2,4}\\-nm line",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "absorb", "analyze", "detect", "emit",
+                            "excite", "illuminate", "measure", "record",
+                    },
+                    new String[] {
+                            "(re)?calibrate",
+                    })), 
 
     SYS_BIOLOGY("Systems Biology",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "cell signaling networks", "gene regulatory networks", "metabolic pathways",
+                            "multi-omics integration", "network biology", "quantitative systems pharmacology",
+                            "synthetic biology", "systems pharmacology",
+                    },
+                    new String[] {
+                            "(whole|multi)\\-cell modeling",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "data heterogeneity", "emergent complexity", "incomplete knowledge",
+                            "inter-scale coupling", "measurement noise", "model uncertainty",
+                            "parameter identifiability", "system nonlinearity",
+                    },
+                    new String[] {
+                            "(over|under)fitting",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "agent-based modeling", "Bayesian networks", "differential equations",
+                            "flux balance analysis", "Markov models", "network inference",
+                            "ordinary differential equations", "stochastic modeling",
+                    },
+                    new String[] {
+                            "[A-Z]{2,4}\\-(model|sim|ODE)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "biological pathway", "cell population", "gene circuit",
+                            "interaction map", "metabolic network", "network topology",
+                            "protein complex", "regulatory module",
+                    },
+                    new String[] {
+                            "[A-Z]{2,4}[0-9]{1,3}\\-pathway",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "analyze", "couple", "infer", "integrate",
+                            "map", "model", "predict", "simulate",
+                    },
+                    new String[] {
+                            "(re)?calibrate",
+                    })),
 
     T_SERIES("Time-Series Analysis",
             typeCase(PlaceholderType.AREA,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "autoregressive modeling", "causal inference", "change point detection",
+                            "forecasting", "seasonality analysis", "signal decomposition",
+                            "spectral analysis", "trend estimation",
+                    },
+                    new String[] {
+                            "(multi|cross)\\-temporal analysis",
+                    }),
             typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "auto-correlation bias", "concept drift", "data sparsity",
+                            "high dimensionality", "irregular sampling", "nonstationarity",
+                            "noise sensitivity", "seasonal effects",
+                    },
+                    new String[] {
+                            "(long|short) memory",
+                    }),
             typeCase(PlaceholderType.METHOD,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "autoregressive integrated moving average", "exponential smoothing", "Fourier analysis",
+                            "hidden Markov models", "Kalman filtering", "state-space models",
+                            "vector autoregression", "wavelet decomposition",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(AR|MA|VAR|HMM)",
+                    }),
             typeCase(PlaceholderType.ITEM,
-                    new String[] { "lorem" },
-                    new String[] {  }),
+                    new String[] {
+                            "covariance matrix", "lag operator", "observation sequence",
+                            "power spectrum", "signal trace", "state vector",
+                            "time lag", "transition matrix",
+                    },
+                    new String[] {
+                            "[0-9]{1,3}\\-step forecast",
+                    }),
             typeCase(PlaceholderType.PRODUCE,
-                    new String[] { "lorem" },
-                    new String[] {  })),
+                    new String[] {
+                            "decompose", "estimate", "forecast", "interpolate",
+                            "predict", "smooth", "transform", "trend",
+                    },
+                    new String[] {
+                            "(re)?sample",
+                    })), 
 
     ;
     
