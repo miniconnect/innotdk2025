@@ -927,6 +927,90 @@ public enum KeywordEnum {
                             "(re)?label",
                     })),
 
+    ML("Machine Learning",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "deep learning", "ensemble learning", "feature learning",
+                            "reinforcement learning", "representation learning", "transfer learning",
+                    },
+                    new String[] {
+                            "(few|multi|self)\\-(shot|task|modal) learning",
+                            "(semi\\-|un)?supervised learning",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "adversarial vulnerability", "catastrophic forgetting",
+                            "class imbalance", "concept drift", "overfitting",
+                    },
+                    new String[] {
+                            "(label|feature|data) noise",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "boosting", "clustering", "decision tree induction", "dimensionality reduction",
+                            "gradient descent", "kernel methods", "nearest neighbor search",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\d?\\-networks?",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "dataset", "feature extractor", "learning algorithm", "loss function",
+                            "model checkpoint", "neural architecture", "parameter set", "training pipeline",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\d?\\-(learning|network|parameter)",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "detect", "forecast", "infer", "predict",
+                    },
+                    new String[] {
+                            "(auto|re)?(classify|encode)",
+                    })),
+
+    MATERIALS_MOD("Materials Modeling",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "atomistic simulation", "crystal structure prediction", "density functional theory",
+                            "multiscale modeling", "nanomaterials", "phase field modeling", "quantum chemistry",
+                    },
+                    new String[] {
+                            "(ab initio|first\\-principles) (modeling|simulation)",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "computational cost", "defect prediction", "energy landscape complexity",
+                            "finite size effects", "parameter uncertainty", "structural disorder", "validation gap",
+                    },
+                    new String[] {
+                            "(convergence|transferability) issues",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "coarse graining", "density functional theory", "finite element analysis",
+                            "Green's function method", "lattice dynamics", "tight-binding approximation",
+                    },
+                    new String[] {
+                            "[A-Z]{2,4}\\-(dynamics|potential|model)",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "atomic configuration", "crystal lattice", "grain boundary", "material sample",
+                            "phase diagram", "potential energy surface", "simulation cell",
+                    },
+                    new String[] {
+                            "[0-9]+\\-site (cluster|lattice)",
+                            "(alu|ferro|gran|heli|poly)(cen|den|oph|rod|ryl)([aeiou][gklmnpqrstx]){1,3}(l[iy]te|xde|trix)",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "assemble", "engineer", "fabricate", "model", "reconstruct", "simulate", "synthesize",
+                    },
+                    new String[] {
+                            "(allo|dens[eio]|ferro|iono|lamina|silica|therm[aio])([glnprt][aeiou]){1,2}(ate|ify|[iy]ze)",
+                    })),
+
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
@@ -942,97 +1026,6 @@ public enum KeywordEnum {
 
     // generated, non-reviewed yet:
     
-    ML("Machine Learning",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "deep learning", "ensemble methods", "reinforcement learning",
-                            "representation learning", "semi-supervised learning", "supervised learning",
-                            "transfer learning", "unsupervised learning",
-                    },
-                    new String[] {
-                            "(few|multi|self)\\-(shot|task|modal) learning",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "adversarial vulnerability", "catastrophic forgetting", "class imbalance",
-                            "concept drift", "data sparsity", "overfitting",
-                            "sample complexity", "scalability bottleneck",
-                    },
-                    new String[] {
-                            "(label|feature|data) noise",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "boosting", "clustering", "decision tree induction", "dimensionality reduction",
-                            "gradient descent", "kernel methods", "nearest neighbor search",
-                    },
-                    new String[] {
-                            "[a-z]{3,6}\\-networks?",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "dataset", "feature extractor", "learning algorithm",
-                            "loss function", "model checkpoint", "neural architecture",
-                            "parameter set", "training pipeline",
-                    },
-                    new String[] {
-                            "[A-Z]{2,3}\\-[0-9]{2,4}",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "classify", "cluster", "detect", "forecast",
-                            "infer", "predict", "recommend", "regress",
-                    },
-                    new String[] {
-                            "(auto|re)?encode",
-                    })),
-
-    MATERIALS_MOD("Materials Modeling",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "atomistic simulation", "crystal structure prediction", "density functional theory",
-                            "molecular dynamics", "multiscale modeling", "nanomaterials",
-                            "phase field modeling", "quantum chemistry",
-                    },
-                    new String[] {
-                            "(ab initio|first\\-principles) (modeling|simulation)",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "computational cost", "defect prediction", "energy landscape complexity",
-                            "finite size effects", "parameter uncertainty", "scale bridging",
-                            "structural disorder", "validation gap",
-                    },
-                    new String[] {
-                            "(convergence|transferability) issue[s]?",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "coarse graining", "density functional theory", "finite element analysis",
-                            "Green’s function method", "lattice dynamics", "machine-learned potential",
-                            "Monte Carlo simulation", "tight-binding approximation",
-                    },
-                    new String[] {
-                            "[A-Z]{2,4}\\-(approximation|potential|model)",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "atomic configuration", "crystal lattice", "force field",
-                            "grain boundary", "material sample", "phase diagram",
-                            "potential energy surface", "simulation cell",
-                    },
-                    new String[] {
-                            "[0-9]+\\-site (cluster|lattice)",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "assemble", "calculate", "design", "engineer",
-                            "fabricate", "optimize", "simulate", "synthesize",
-                    },
-                    new String[] {
-                            "(re|co)?construct",
-                    })),
-
     MED_IMAGING("Medical Imaging",
             typeCase(PlaceholderType.AREA,
                     new String[] {
@@ -1171,6 +1164,14 @@ public enum KeywordEnum {
                             "(auto)?complete",
                     })),
 
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    
     NEUROSCIENCE("Neuroscience",
             typeCase(PlaceholderType.AREA,
                     new String[] {
