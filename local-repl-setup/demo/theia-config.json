@@ -1,6 +1,6 @@
 {
     "yaml.schemas": {
-        "./config.schema.json": [
+        "./build/config.schema.json": [
             "**/config.yaml"
         ]
     }

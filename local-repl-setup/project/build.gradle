@@ -1,0 +1,54 @@
+plugins {
+    id 'java-library'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+description = "Local REPL Setup"
+
+// XXX
+def miniConnectApiVersion = '0.3.1-SNAPSHOT'
+def miniConnectVersion = '0.6.1-SNAPSHOT'
+def miniBaseVersion = '0.3.1-SNAPSHOT'
+def miniConnectClientVersion = '0.3.1-SNAPSHOT'
+def holodbVersion = '0.6.1-SNAPSHOT'
+def calciteIntegrationVersion = '0.1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+
+    // XXX
+    implementation "hu.webarticum.miniconnect.api:lang:${miniConnectApiVersion}"
+    implementation "hu.webarticum.miniconnect.api:api:${miniConnectApiVersion}"
+    implementation "hu.webarticum.miniconnect.api:lang-jackson:${miniConnectApiVersion}"
+    implementation "hu.webarticum.minibase:engine:${miniBaseVersion}"
+    implementation "hu.webarticum.miniconnect:record:${miniConnectVersion}"
+    implementation "hu.webarticum.miniconnect:server:${miniConnectVersion}"
+    implementation "hu.webarticum.miniconnect:messenger:${miniConnectVersion}"
+    implementation "hu.webarticum.miniconnect:jdbc:${miniConnectVersion}"
+    implementation "hu.webarticum.miniconnect.client:client:${miniConnectClientVersion}"
+    implementation "hu.webarticum.miniconnect.client:repl:${miniConnectClientVersion}"
+    implementation "hu.webarticum.holodb:config:${holodbVersion}"
+    implementation "hu.webarticum.holodb:bootstrap:${holodbVersion}"
+    implementation "hu.webarticum.holodb.calcite:minibase-calcite:${calciteIntegrationVersion}"
+    implementation "hu.webarticum.holodb.calcite:holodb-calcite:${calciteIntegrationVersion}"
+    
+    implementation 'info.picocli:picocli:4.7.7'
+    implementation 'org.slf4j:slf4j-api:2.0.17'
+    
+    runtimeOnly 'org.apache.logging.log4j:log4j-core:2.25.1'
+    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j2-impl:2.25.1'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+application {
+    mainClass = "hu.webarticum.inno.localreplsetup.ReplMain"
+}
