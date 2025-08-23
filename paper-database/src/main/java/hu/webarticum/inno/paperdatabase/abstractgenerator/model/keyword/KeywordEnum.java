@@ -1011,6 +1011,133 @@ public enum KeywordEnum {
                             "(allo|dens[eio]|ferro|iono|lamina|silica|therm[aio])([glnprt][aeiou]){1,2}(ate|ify|[iy]ze)",
                     })),
 
+    MED_IMAGING("Medical Imaging",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "computed tomography", "functional MRI", "image-guided surgery", "magnetic resonance imaging",
+                            "nuclear medicine", "optical imaging", "positron emission tomography", "ultrasound imaging",
+                    },
+                    new String[] {
+                            "(multi|hyper)\\-modal imaging",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "artifacts", "low contrast", "motion blur", "image noise",
+                            "radiation overdose", "segmentation errors",
+                    },
+                    new String[] {
+                            "(under|over)exposure",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "compressed sensing", "edge detection", "image registration",
+                            "level set methods", "radiomics", "tomographic reconstruction",
+                    },
+                    new String[] {
+                            "[A-F]{2,3}\\-enhanced imaging",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "contrast agent", "detector array", "imaging modality",
+                            "image dataset", "probe", "radiotracer", "segmentation mask",
+                    },
+                    new String[] {
+                            "[A-Z]{1,3}\\d{2,3} (scanner|probe)",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "classify", "detect", "enhance", "localize", "reconstruct", "segment",
+                    },
+                    new String[] {
+                            "(pre|post)process",
+                    })), 
+
+    MOLECULAR_MOD("Molecular Modeling",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "computational chemistry", "ligand binding", "molecular docking",
+                            "molecular dynamics", "protein folding", "structure-based modeling",
+                    },
+                    new String[] {
+                            "(in silico|first\\-principles) modeling",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "force field limitations", "sampling inefficiency", "solvation effects",
+                            "timescale limitations", "validation gap",
+                    },
+                    new String[] {
+                            "(finite|limited) sampling",
+                            "(a|[iu]n|over)(molecu|solva|protei)(d[aeo]|n[eo]|r[ei]|s[au]){2,3}[dhnvsx]([ei]ty|ing)"
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "coarse graining", "free energy perturbation",
+                            "homology modeling", "molecular dynamics", "quantum chemical calculations",
+                    },
+                    new String[] {
+                            "[A-Z]{2,4}\\-(chemistry|docking|MD)",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "active site", "binding pocket", "conformational ensemble",
+                            "ligand library", "protein target", "solvent box",
+                    },
+                    new String[] {
+                            "[A-Z]{3}[0-9]{1,3} ligand",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "align", "bind", "dock", "fold", "interact",
+                    },
+                    new String[] {
+                            "(re)?(fold|parameterize|stabilize)",
+                    })),
+
+    NLP("Natural Language Processing",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "dialog systems", "distributional semantics", "language modeling", "machine translation",
+                            "named entity recognition", "question answering", "sentiment analysis",
+                    },
+                    new String[] {
+                            "(multi|cross|zero)\\-(lingual|modal) (NLP|processing|translation)",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "meaning ambiguity", "data sparsity",
+                            "low resource availability", "polysemy issues",
+                    },
+                    new String[] {
+                            "(out\\-of\\-vocabulary|OOV) issues",
+                            "[A-F]{2,3}\\d?\\-(ambiguity|sparsity)",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "attention mechanisms", "conditional random fields", "recurrent neural networks",
+                            "sequence labeling", "transformers", "word embeddings",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(LM|RNN|BERT|GPT)",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "annotation corpus", "grammar formalism", "knowledge graph",
+                            "lexicon", "parser", "pretrained model", "tokenizer",
+                    },
+                    new String[] {
+                            "(embedding|latent (feature)?) space",
+                            "[A-Z]{2,3}\\d? (corpus|model|tokenizer)",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "answer", "classify", "embed", "generate",
+                            "parse", "summarize", "translate",
+                    },
+                    new String[] {
+                            "(auto)?complete",
+                    })),
+
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
@@ -1025,152 +1152,6 @@ public enum KeywordEnum {
     ////////////////////////////////////////////////////////////////////////////
 
     // generated, non-reviewed yet:
-    
-    MED_IMAGING("Medical Imaging",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "computed tomography", "functional MRI", "image-guided surgery",
-                            "magnetic resonance imaging", "nuclear medicine", "optical imaging",
-                            "positron emission tomography", "ultrasound imaging",
-                    },
-                    new String[] {
-                            "(multi|hyper)\\-modal imaging",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "artifacts", "class imbalance", "data heterogeneity",
-                            "low contrast", "motion blur", "noise",
-                            "radiation dose", "segmentation errors",
-                    },
-                    new String[] {
-                            "(under|over)exposure",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "compressed sensing", "convolutional neural networks", "edge detection",
-                            "image registration", "level set methods", "radiomics",
-                            "segmentation algorithms", "tomographic reconstruction",
-                    },
-                    new String[] {
-                            "[a-z]+\\-enhanced imaging",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "contrast agent", "detector array", "imaging modality",
-                            "image dataset", "probe", "radiotracer",
-                            "scanner", "segmentation mask",
-                    },
-                    new String[] {
-                            "[A-Z]{1,3}[0-9]{2,3} (scanner|probe)",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "acquire", "classify", "detect", "enhance",
-                            "localize", "quantify", "reconstruct", "segment",
-                    },
-                    new String[] {
-                            "(pre|post)process",
-                    })), 
-  
-    MOLECULAR_MOD("Molecular Modeling",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "computational chemistry", "drug design", "ligand binding",
-                            "molecular docking", "molecular dynamics", "protein folding",
-                            "quantum mechanics", "structure-based modeling",
-                    },
-                    new String[] {
-                            "(in silico|first\\-principles) modeling",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "conformational flexibility", "energy barriers", "force field limitations",
-                            "parameter transferability", "sampling inefficiency", "solvation effects",
-                            "timescale limitations", "validation gap",
-                    },
-                    new String[] {
-                            "(finite|limited) sampling",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "coarse graining", "docking algorithms", "free energy perturbation",
-                            "homology modeling", "Markov state models", "molecular dynamics",
-                            "Monte Carlo sampling", "quantum chemical calculations",
-                    },
-                    new String[] {
-                            "[A-Z]{2,4}\\-(docking|MD|QM)",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "active site", "binding pocket", "conformational ensemble",
-                            "force field", "ligand library", "molecular structure",
-                            "protein target", "solvent box",
-                    },
-                    new String[] {
-                            "[A-Z]{3}[0-9]{1,3} ligand",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "align", "bind", "dock", "fold",
-                            "interact", "minimize", "simulate", "stabilize",
-                    },
-                    new String[] {
-                            "(re)?parameterize",
-                    })),
-
-    NLP("Natural Language Processing",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "dialog systems", "information extraction", "language modeling",
-                            "machine translation", "named entity recognition", "parsing",
-                            "question answering", "sentiment analysis",
-                    },
-                    new String[] {
-                            "(multi|cross|zero)\\-(lingual|modal) (NLP|processing|translation)",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "ambiguity", "bias", "context dependence",
-                            "data sparsity", "domain adaptation", "low resource availability",
-                            "polysemy", "syntactic complexity",
-                    },
-                    new String[] {
-                            "(out\\-of\\-vocabulary|OOV) issue[s]?",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "attention mechanisms", "conditional random fields", "distributional semantics",
-                            "language models", "recurrent neural networks", "sequence labeling",
-                            "transformers", "word embeddings",
-                    },
-                    new String[] {
-                            "[A-Z]{2,3}\\-(LM|RNN|BERT|GPT)",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "annotation corpus", "embedding space", "grammar formalism",
-                            "knowledge graph", "lexicon", "parser",
-                            "pretrained model", "tokenizer",
-                    },
-                    new String[] {
-                            "[A-Z]{2,4}\\-[a-z]{3,5}",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "answer", "classify", "decode", "embed",
-                            "generate", "parse", "summarize", "translate",
-                    },
-                    new String[] {
-                            "(auto)?complete",
-                    })),
-
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     
     NEUROSCIENCE("Neuroscience",
             typeCase(PlaceholderType.AREA,
