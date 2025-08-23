@@ -676,6 +676,257 @@ public enum KeywordEnum {
                             "(oxi|electro|redu|charg[aeiou])(pat|con)?(r?ol|fu[ae]l|gen)ize"
                     })),
 
+    EMBEDDED("Embedded Systems",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "bare-metal programming", "embedded AI inference", "firmware engineering",
+                            "hardware–software co-design", "resource-constrained computing", "safety-critical systems",
+                    },
+                    new String[] {
+                            "(edge|embedded|on\\-device) (control|inference|sensing|systems)",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "electromagnetic interference", "heap fragmentation",
+                            "missed strict deadline", "timing jitter", "wear-out of flash",
+                    },
+                    new String[] {
+                            "(latency|power|thermal) (budget|ceiling|constraint|limit)",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "DMA-driven I/O", "hardware abstraction layer", "interrupt coalescing", "memory-mapped I/O",
+                            "model-based design", "static analysis", "task scheduling", "worst-case execution time analysis",
+                    },
+                    new String[] {
+                            "(cycle\\-accurate|event\\-driven) simulation",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "bootloader", "firmware image", "microcontroller",
+                            "peripheral driver", "real-time kernel", "sensor module",
+                    },
+                    new String[] {
+                            "(ARM Cortex\\-(M[0-7]|A[3-9])|RISC\\-V RV(32|64)) (board|core)",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "debounce", "flash", "instrument", "schedule", "throttle",
+                    },
+                    new String[] {
+                            "[A-Z]{1,2}\\d?\\-(schedule|throttle)",
+                    })),
+
+    EPIDEMIOLOGY("Epidemiology Modeling",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "agent-based simulation", "compartmental models", "contact network analysis",
+                            "disease forecasting", "outbreak detection", "surveillance modeling",
+                    },
+                    new String[] {
+                            "(age\\-structured|spatial) transmission modeling",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "case underreporting", "misclassification", "overdispersion",
+                            "pathogen evolution", "report delay", "seasonal forcing",
+                    },
+                    new String[] {
+                            "(left|right) (censoring|truncation)",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "contact matrix estimation", "nowcasting", "particle filtering",
+                            "reproduction number estimation", "synthetic population generation",
+                    },
+                    new String[] {
+                            "(ABC|MCMC|SMC) sampling",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "attack rate", "basic reproduction number", "case fatality ratio", "contact matrix",
+                            "epidemic curve", "generation interval", "sero-prevalence survey", "time-to-event data",
+                    },
+                    new String[] {
+                            "[A-Z]\\d estimate",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "estimate", "impute", "project", "simulate", "stratify",
+                    },
+                    new String[] {
+                            "(de|re)parameterize",
+                    })),
+
+    EXOPLANETS("Exoplanets",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "atmospheric retrieval", "exomoon detection", "planet formation",
+                            "planet–disk interaction", "radial-velocity surveys", "young planet characterization",
+                    },
+                    new String[] {
+                            "(high\\-resolution|multi\\-band) spectroscopy",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "activity-induced jitter", "blended light contamination",
+                            "instrumental systematics", "limb-darkening uncertainty", "telluric contamination",
+                    },
+                    new String[] {
+                            "(blue|green|red|white|yellow) noise dominance",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "differential photometry", "Gaussian-process modeling", "matched filtering",
+                            "radial-velocity modeling", "transit photometry",  "transit light-curve fitting",
+                    },
+                    new String[] {
+                            "(joint|multi\\-instrument) fitting",
+                            "(atmosphera|exo|planeta)[lpqr]([aeiou][klmrstxw]){3,4}ing"
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "exoatmosphere", "light curve", "mass–radius diagram",
+                            "phase curve", "radial-velocity time series", "transit depth",
+                    },
+                    new String[] {
+                            "(K2|TOI)\\-\\d{3,5} candidate",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "detect", "detrend", "model", "vet", "verify",
+                    },
+                    new String[] {
+                            "(co|re)\\-fit (curves|signals)",
+                    })),
+
+    VERIFICATION("Formal Verification",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "equivalence checking", "hardware verification", "model checking",
+                            "proof-carrying code", "runtime verification", "type systems", "type theory",
+                    },
+                    new String[] {
+                            "(bounded|symbolic|temporal) model checking",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "combinatorial explosion", "specification drift",
+                            "state-space explosion", "traceability gaps", "undecidability",
+                    },
+                    new String[] {
+                            "(liveness|safety) violation",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "abstract interpretation", "bounded model checking", "decision procedures",
+                            "Hoare logic", "k-induction", "SAT-based verification", "SMT solving",
+                    },
+                    new String[] {
+                            "(automata|temporal) reasoning",
+                            "(geno|genom|haplo|phylo|metage|epige|transcrip|chromat|variant)[clst]([aeiou][klmrstxw]){3,4}ing",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "assertion", "invariant", "Kripke structure",
+                            "proof obligation", "specification", "verification condition",
+                    },
+                    new String[] {
+                            "(CTL|LTL|MSO|SAT) formula",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "assert", "check", "specify", "verify", "witness",
+                    },
+                    new String[] {
+                            "(dis|re)?prove",
+                    })),
+
+    GENOMICS("Genomics",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "comparative genomics", "functional genomics", "genome assembly", "metagenomics",
+                            "population genomics", "regulatory genomics", "structural variation analysis", "transcriptomics",
+                    },
+                    new String[] {
+                            "(de novo|reference\\-guided) assembly",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "GC bias", "homopolymer errors", "mapping bias",
+                            "sample contamination", "sequencing errors", "variant calling ambiguity",
+                    },
+                    new String[] {
+                            "(batch|capture) effects",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "de Bruijn graph assembly", "haplotype phasing",
+                            "k-mer counting", "variant calling", "variant phasing",
+                    },
+                    new String[] {
+                            "(Bayesian|graph\\-based) haplotyping",
+                            "(geno|haplo|metage|epige|chroma)[lnst]([aeiou][klmrstxw]){3,4}ing",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "coding sequence", "contig", "haplotype block",
+                            "reference genome", "structural variant", "transcript",
+                    },
+                    new String[] {
+                            "(CNV|InDel|SNP) set",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "cluster", "map", "normalize", "phase",
+                    },
+                    new String[] {
+                            "(de|re)\\-align",
+                    })),
+
+    GRAPH_THEORY("Graph Theory",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "graph coloring", "graph drawing", "network flow", "random graphs",
+                    },
+                    new String[] {
+                            "(directed|undirected|weighted) networks",
+                            "(extremal|spectral|topological) graph theory",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "NP-completeness", "sparsity limits", "vertex cover hardness",
+                    },
+                    new String[] {
+                            "(cut|flow) bottlenecks",
+                            "[A-Z]{1,3}\\d? (hardness|limits)",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "algebraic connectivity analysis", "planar embedding",
+                            "spectral partitioning", "tree decomposition", "vertex cover approximation",
+                    },
+                    new String[] {
+                            "([234]|greedy|non\\-repetitive) coloring",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "adjacency matrix", "cut set", "DAG", "graph minor", "Laplacian matrix",
+                            "path cover", "spanning tree", "subgraph", "vertex separator",
+                    },
+                    new String[] {
+                            "(k\\-core|k\\-clique) subgraph",
+                            "(acyclic|([1-5]\\-)?colored|(un)?directed|labeled|weighted|simple) graph",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "color", "contract", "cut", "embed",
+                            "match", "partition", "traverse", "weight",
+                    },
+                    new String[] {
+                            "(re)?label",
+                    })),
+
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
@@ -691,288 +942,6 @@ public enum KeywordEnum {
 
     // generated, non-reviewed yet:
     
-    EMBEDDED("Embedded Systems",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "bare-metal programming", "embedded AI inference", "firmware engineering",
-                            "hardware–software co-design", "real-time systems", "resource-constrained computing",
-                            "safety-critical systems", "sensor fusion",
-                    },
-                    new String[] {
-                            "(edge|embedded|on\\-device) (control|inference|sensing|systems)",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "electromagnetic interference", "hard real-time deadlines", "memory footprint limits",
-                            "power budget constraints", "thermal throttling", "timing jitter",
-                            "toolchain fragmentation", "wear-out of flash",
-                    },
-                    new String[] {
-                            "(latency|power|thermal) (budget|ceiling|constraint|limit)",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "DMA-driven I/O", "hardware abstraction layer", "interrupt coalescing",
-                            "memory-mapped I/O", "model-based design", "static analysis",
-                            "task scheduling", "worst-case execution time analysis",
-                    },
-                    new String[] {
-                            "(cycle\\-accurate|event\\-driven) simulation",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "bootloader", "embedded Linux", "firmware image",
-                            "microcontroller", "peripheral driver", "real-time kernel",
-                            "sensor module", "SoC board",
-                    },
-                    new String[] {
-                            "(ARM Cortex\\-(M[0-7]|A[3-9])|RISC\\-V RV(32|64)) (board|core)",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "debounce", "flash", "instrument",
-                            "poll", "sample", "schedule",
-                            "sleep", "throttle",
-                    },
-                    new String[] {
-                            "(power|clock) gate",
-                    })),
-
-    EPIDEMIOLOGY("Epidemiology Modeling",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "agent-based simulation", "compartmental models", "contact network analysis",
-                            "disease forecasting", "outbreak detection", "phylogenetic inference",
-                            "surveillance modeling", "vaccination strategy design",
-                    },
-                    new String[] {
-                            "(age\\-structured|spatial) transmission modeling",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "asymptomatic transmission", "case underreporting", "contact heterogeneity",
-                            "data sparsity", "incubation uncertainty", "parameter identifiability",
-                            "reporting delays", "seasonal forcing",
-                    },
-                    new String[] {
-                            "(left|right) censoring",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "Bayesian calibration", "contact matrix estimation", "Markov chain Monte Carlo",
-                            "nowcasting", "particle filtering", "reproduction number estimation",
-                            "stochastic differential equations", "synthetic population generation",
-                    },
-                    new String[] {
-                            "(ABC|MCMC|SMC) sampling",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "attack rate", "basic reproduction number", "case fatality ratio",
-                            "contact matrix", "epidemic curve", "generation interval",
-                            "sero-prevalence survey", "time-to-event data",
-                    },
-                    new String[] {
-                            "R0 estimate",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "estimate", "forecast", "impute",
-                            "infer", "project", "simulate",
-                            "smooth", "stratify",
-                    },
-                    new String[] {
-                            "(de|re)parameterize",
-                    })),
-
-    EXOPLANETS("Exoplanets",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "atmospheric retrieval", "exomoon detection", "planet formation",
-                            "planet–disk interaction", "radial-velocity surveys", "transit photometry",
-                            "transit timing variations", "young planet characterization",
-                    },
-                    new String[] {
-                            "(high\\-resolution|multi\\-band) spectroscopy",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "activity-induced jitter", "blended light contamination", "instrumental systematics",
-                            "limb-darkening uncertainty", "orbital eccentricity degeneracy", "stellar variability",
-                            "telluric contamination", "window function gaps",
-                    },
-                    new String[] {
-                            "(red|white) noise dominance",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "cross-correlation analysis", "differential photometry", "Gaussian-process modeling",
-                            "line-by-line retrieval", "matched filtering", "radial-velocity modeling",
-                            "spectro-photometric calibration", "transit light-curve fitting",
-                    },
-                    new String[] {
-                            "(joint|multi\\-instrument) fitting",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "atmospheric spectrum", "exoatmosphere", "hot Jupiter",
-                            "light curve", "mass–radius diagram", "phase curve",
-                            "radial-velocity time series", "transit depth",
-                    },
-                    new String[] {
-                            "(K2|TOI)\\-\\d{3,5} candidate",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "detect", "detrend", "fit",
-                            "model", "retrieve", "validate",
-                            "vet", "verify",
-                    },
-                    new String[] {
-                            "(co|re)\\-fit (curves|signals)",
-                    })),
-
-    VERIFICATION("Formal Verification",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "contract-based design", "equivalence checking", "hardware verification",
-                            "model checking", "program logics", "proof-carrying code",
-                            "runtime verification", "type systems",
-                    },
-                    new String[] {
-                            "(bounded|symbolic|temporal) model checking",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "combinatorial explosion", "counterexample complexity", "specification drift",
-                            "state-space explosion", "tool interoperability", "traceability gaps",
-                            "undecidability", "weak memory models",
-                    },
-                    new String[] {
-                            "(liveness|safety) violation",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "abstract interpretation", "bounded model checking", "counterexample-guided abstraction refinement",
-                            "decision procedures", "Hoare logic", "k-induction",
-                            "SAT-based verification", "SMT solving",
-                    },
-                    new String[] {
-                            "(automata|temporal) reasoning",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "assertion", "invariant", "Kripke structure",
-                            "proof obligation", "specification", "transition system",
-                            "verification condition", "witness trace",
-                    },
-                    new String[] {
-                            "(CTL|LTL|MSO) formula",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "assert", "check", "prove",
-                            "refine", "simulate", "specify",
-                            "verify", "witness",
-                    },
-                    new String[] {
-                            "(dis|re)?prove",
-                    })),
-
-    GENOMICS("Genomics",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "comparative genomics", "functional genomics", "genome assembly",
-                            "metagenomics", "population genomics", "regulatory genomics",
-                            "structural variation analysis", "transcriptomics",
-                    },
-                    new String[] {
-                            "(de novo|reference\\-guided) assembly",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "GC bias", "homopolymer errors", "low-complexity regions",
-                            "mapping bias", "population stratification", "sample contamination",
-                            "sequencing errors", "variant calling ambiguity",
-                    },
-                    new String[] {
-                            "(batch|capture) effects",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "de Bruijn graph assembly", "genome-wide association study", "haplotype phasing",
-                            "k-mer counting", "quality control pipelines", "read alignment",
-                            "variant calling", "variant phasing",
-                    },
-                    new String[] {
-                            "(Bayesian|graph\\-based) haplotyping",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "coding sequence", "contig", "haplotype block",
-                            "read pair", "reference genome", "single nucleotide polymorphism",
-                            "structural variant", "transcript",
-                    },
-                    new String[] {
-                            "(CNV|INDEL|SNP) set",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "assemble", "call", "cluster",
-                            "map", "normalize", "phase",
-                            "quantify", "realign",
-                    },
-                    new String[] {
-                            "(de|re)\\-align",
-                    })),
-
-    GRAPH_THEORY("Graph Theory",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "extremal graph theory", "graph coloring", "graph drawing",
-                            "graph minors", "network flow", "random graphs",
-                            "spectral graph theory", "topological graph theory",
-                    },
-                    new String[] {
-                            "(directed|undirected|weighted) networks",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "combinatorial explosion", "edge density constraints", "NP-completeness",
-                            "planarity constraints", "sparsity limits", "subgraph isomorphism",
-                            "treewidth bounds", "vertex cover hardness",
-                    },
-                    new String[] {
-                            "(cut|flow) bottlenecks",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "algebraic connectivity analysis", "greedy coloring", "matching algorithms",
-                            "maximum flow algorithms", "planar embedding", "spectral partitioning",
-                            "tree decomposition", "vertex cover approximation",
-                    },
-                    new String[] {
-                            "(branch\\-and\\-bound|parameterized) search",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "adjacency matrix", "cut set", "Laplacian matrix",
-                            "matching", "path cover", "spanning tree",
-                            "subgraph", "vertex separator",
-                    },
-                    new String[] {
-                            "(k\\-core|k\\-clique) subgraph",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "color", "contract", "cut",
-                            "embed", "match", "partition",
-                            "traverse", "weight",
-                    },
-                    new String[] {
-                            "(re)?label",
-                    })),
-
     ML("Machine Learning",
             typeCase(PlaceholderType.AREA,
                     new String[] {
