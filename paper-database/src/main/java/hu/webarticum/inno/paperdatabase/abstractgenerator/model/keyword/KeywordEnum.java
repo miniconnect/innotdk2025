@@ -1138,6 +1138,91 @@ public enum KeywordEnum {
                             "(auto)?complete",
                     })),
 
+    NEUROSCIENCE("Neuroscience",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "cognitive neuroscience", "computational neuroscience",
+                            "molecular neuroscience", "neuroanatomy", "neurophysiology",
+                            "sensory neuroscience", "systems neuroscience",
+                    },
+                    new String[] {
+                            "(affective|developmental|behavioral|social) neuroscience",
+                            "(cog|comp|mol|sens)?([aeiou][dklmrst]){1,2}(ic|al|ory) neuro(anatomy|physiology|science|([aeiou][dklmrst]){1,2}ology)",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "electrical crosstalk", "localization ambiguity", "measurement noise",
+                            "nonlinear cascade effects", "spurious correlations", "synaptic drift",
+                    },
+                    new String[] {
+                            "(over|under)activation",
+                            "plasticity (limits|saturation)",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "calcium imaging", "diffusion tensor imaging", "electrophysiology",
+                            "functional MRI", "optogenetics", "patch clamp", "two-photon microscopy",
+                    },
+                    new String[] {
+                            "[A-Z]{1,3}\\d?\\-(staining|recording|imaging)",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "brain atlas", "EEG machine", "electrode array", "fMRI dataset",
+                            "ion channel", "neuron model", "neurotransmitter", "synapse",
+                    },
+                    new String[] {
+                            "[A-Z]{1,2}\\d{1,3}\\-(neuron|synapse)",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "activate", "connect", "encode", "fire", "inhibit", "learn", "map", "signal",
+                    },
+                    new String[] {
+                            "(up|down)regulate",
+                    })), 
+
+    NUM_ANALYSIS("Numerical Analysis",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "approximation theory", "differential equations", "error analysis",
+                            "functional analysis", "numerical integration", "spectral methods",
+                    },
+                    new String[] {
+                            "(finite|spectral) element (analysis|methods)",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "accuracy loss", "convergence issues", "ill-conditioning",
+                    },
+                    new String[] {
+                            "(round-off|truncation) (errors|issues|loss)",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "conjugate gradient", "finite difference", "finite element",
+                            "multigrid algorithm", "spectral decomposition",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(iteration|method)",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "coefficient matrix", "error bound", "grid function",
+                            "Jacobian matrix", "linear system", "residual vector",
+                            "sparse matrix", "stability region",
+                    },
+                    new String[] {
+                            "[A-Z]{1,2}\\d?(\\-type)? (bound|matrix|vector)",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "approximate", "compute", "differentiate", "integrate", "interpolate",
+                    },
+                    new String[] {
+                            "(approx|differ|integ)[aei][nmrtx]([aeiou][bcklmt]){2,3}ate",
+                    })),
+
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
@@ -1153,98 +1238,6 @@ public enum KeywordEnum {
 
     // generated, non-reviewed yet:
     
-    NEUROSCIENCE("Neuroscience",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "cognitive neuroscience", "computational neuroscience", "developmental neuroscience",
-                            "molecular neuroscience", "neuroanatomy", "neurophysiology",
-                            "sensory neuroscience", "systems neuroscience",
-                    },
-                    new String[] {
-                            "(social|affective|behavioral) neuroscience",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "brain complexity", "connectivity mapping", "ethical concerns",
-                            "heterogeneity", "measurement noise", "neural variability",
-                            "plasticity limits", "signal interpretation",
-                    },
-                    new String[] {
-                            "(over|under)activation",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "calcium imaging", "diffusion tensor imaging", "electrophysiology",
-                            "functional MRI", "neuroimaging", "optogenetics",
-                            "patch clamp", "two-photon microscopy",
-                    },
-                    new String[] {
-                            "[A-Z]{2,4}\\-(staining|recording|imaging)",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "brain atlas", "electrode array", "fMRI dataset",
-                            "ion channel", "neuron model", "neurotransmitter",
-                            "recording device", "synapse",
-                    },
-                    new String[] {
-                            "[A-Z]{1,2}[0-9]{1,3}\\-neuron",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "activate", "connect", "encode", "fire",
-                            "inhibit", "learn", "map", "signal",
-                    },
-                    new String[] {
-                            "(up|down)regulate",
-                    })), 
-
-    NUM_ANALYSIS("Numerical Analysis",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "approximation theory", "computational linear algebra", "differential equations",
-                            "error analysis", "functional analysis", "numerical integration",
-                            "spectral methods", "stability theory",
-                    },
-                    new String[] {
-                            "(finite|spectral) element (analysis|methods?)",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "accuracy loss", "cancellation errors", "conditioning",
-                            "convergence issues", "instability", "round-off errors",
-                            "stiffness", "truncation error",
-                    },
-                    new String[] {
-                            "(ill|poor)\\-conditioning",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "conjugate gradient", "finite difference", "finite element",
-                            "iterative solvers", "Monte Carlo methods", "multigrid algorithms",
-                            "Newton’s method", "spectral decomposition",
-                    },
-                    new String[] {
-                            "[A-Z]{2,3}\\-(iteration|solver|method)",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "coefficient matrix", "error bound", "grid function",
-                            "Jacobian matrix", "linear system", "residual vector",
-                            "sparse matrix", "stability region",
-                    },
-                    new String[] {
-                            "[A-Z]{1,3}[0-9]{1,3} matrix",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "approximate", "compute", "converge", "differentiate",
-                            "integrate", "interpolate", "iterate", "solve",
-                    },
-                    new String[] {
-                            "(pre)?condition",
-                    })),
-
     OPTIMIZATION("Optimization",
             typeCase(PlaceholderType.AREA,
                     new String[] {
