@@ -6,13 +6,13 @@
         https://logging.apache.org/xml/ns
         https://logging.apache.org/xml/ns/log4j-config-2.xsd">
   <Appenders>
-    <Console name="CONSOLE">
-      <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
-    </Console>
+    <File name="FILE" fileName="${env:LOG_PATH}">
+      <PatternLayout  pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </File>
   </Appenders>
   <Loggers>
-    <Root level="ERROR">
-      <!-- <AppenderRef ref="CONSOLE" /> -->
+    <Root level="DEBUG">
+      <AppenderRef ref="FILE"/>
     </Root>
   </Loggers>
 </Configuration>

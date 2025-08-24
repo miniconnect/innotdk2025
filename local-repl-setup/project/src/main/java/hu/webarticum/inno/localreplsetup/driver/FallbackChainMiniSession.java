@@ -41,7 +41,7 @@ public class FallbackChainMiniSession implements MiniSession {
                 continue;
             }
             try {
-                result = except(() -> session.execute(query));
+                result = except(() -> execute(session, query));
                 logger.debug("Executed with: " + session);
                 break;
             } catch (Exception e) {
@@ -128,6 +128,18 @@ public class FallbackChainMiniSession implements MiniSession {
             }
         }
         return true;
+    }
+    
+    private MiniResult execute(MiniSession session, String query) {
+        logger.debug("Running SQL '{}' with {}", query, session);
+        long startTime = System.nanoTime();
+        MiniResult result = session.execute(query);
+        long endTime = System.nanoTime();
+        long timeDiff = endTime - startTime;
+        if (logger.isDebugEnabled()) {
+            logger.debug("Execution time: {}", String.format("%.6f", (timeDiff / 1_000_000_000.0)));
+        }
+        return result;
     }
     
     private RuntimeException aggregateExceptions(List<Exception> exceptions, String message) {

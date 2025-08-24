@@ -30,6 +30,7 @@ dependencies {
     implementation "hu.webarticum.miniconnect:server:${miniConnectVersion}"
     implementation "hu.webarticum.miniconnect:messenger:${miniConnectVersion}"
     implementation "hu.webarticum.miniconnect:jdbc:${miniConnectVersion}"
+    implementation "hu.webarticum.miniconnect:jdbc-adapter:${miniConnectVersion}"
     implementation "hu.webarticum.miniconnect.client:client:${miniConnectClientVersion}"
     implementation "hu.webarticum.miniconnect.client:repl:${miniConnectClientVersion}"
     implementation "hu.webarticum.holodb:config:${holodbVersion}"
@@ -37,6 +38,7 @@ dependencies {
     implementation "hu.webarticum.holodb.calcite:minibase-calcite:${calciteIntegrationVersion}"
     implementation "hu.webarticum.holodb.calcite:holodb-calcite:${calciteIntegrationVersion}"
     
+    implementation 'org.apache.calcite:calcite-core:1.35.0'
     implementation 'info.picocli:picocli:4.7.7'
     implementation 'org.slf4j:slf4j-api:2.0.17'
     
