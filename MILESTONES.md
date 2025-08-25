@@ -3,7 +3,6 @@
 | Milestone | Challenge Level | Status |
 | --- | --- | --- |
 | Live edit demo basics | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![DONE](https://img.shields.io/badge/DONE-green) |
-| DBeaver integration | ![MEDIUM](https://img.shields.io/badge/MEDIUM-yellow) | ![TODO](https://img.shields.io/badge/TODO-gray) |
 | Calcite fallback | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![DONE](https://img.shields.io/badge/DONE-green) |
 | REST API dev demo | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
 | Sky app basics | ![MEDIUM](https://img.shields.io/badge/MEDIUM-yellow) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
