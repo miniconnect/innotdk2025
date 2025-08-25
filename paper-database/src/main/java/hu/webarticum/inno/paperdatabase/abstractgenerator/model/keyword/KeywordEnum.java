@@ -1223,6 +1223,173 @@ public enum KeywordEnum {
                             "(approx|differ|integ)[aei][nmrtx]([aeiou][bcklmt]){2,3}ate",
                     })),
 
+    OPTIMIZATION("Optimization",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "combinatorial optimization", "convex optimization", "global optimization",
+                            "integer programming", "stochastic optimization", "variational methods",
+                    },
+                    new String[] {
+                            "((non)linear|(multi|bi)\\-(criteria|objective)) (programming|optimization)",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "computational explosion", "feasibility issues",
+                            "local minimum trap", "scalability limits", "sensitivity to noise",
+                    },
+                    new String[] {
+                            "(premature|false) convergence",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "branch and bound", "dynamic programming", "genetic algorithm", "gradient descent",
+                            "interior-point method", "MAX-SAT", "simplex algorithm", "simulated annealing",
+                    },
+                    new String[] {
+                            "[A-Z]{1,2}\\d?\\-(heuristic|search|descent)",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "constraint set", "cost function", "decision variable", "feasible region",
+                            "objective function", "search space", "solution candidate",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\d?(\\-(LP|opt))? model",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "approximate", "maximize", "minimize", "optimize", "refine", "relax", "solve",
+                    },
+                    new String[] {
+                            "(re)?(balance|parameterize)",
+                    })),
+
+    OS("Operating Systems",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "concurrent programming", "containerization", "file systems", "memory management", "process scheduling",
+                            "real-time systems", "resource allocation", "thread management", "virtualization",
+                    },
+                    new String[] {
+                            "(adaptive |distributed |hybrid |exokernel |micro(|kernel ))(architectures|protocols|systems)",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "deadlock", "latency", "livelock", "memory leaks", "resource contention",
+                            "security vulnerabilities", "throughput bottlenecks",
+                    },
+                    new String[] {
+                            "[A-Z]{1,2}\\d?\\-(leak|starvation)",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "context switching", "garbage collection", "locking protocols", "paging algorithms",
+                            "preemptive scheduling", "synchronization primitives", "system calls", "virtual memory management",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(lock|sched|alloc)",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "driver", "kernel module", "page table", "process",
+                            "scheduler", "semaphore", "thread", "thread pool",
+                    },
+                    new String[] {
+                            "[A-Z]{1,2}\\d?\\-(kernel|lock|process)",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "allocate", "dispatch", "execute", "fork", "schedule", "suspend", "terminate",
+                    },
+                    new String[] {
+                            "(de|out|over|re|un)?(sched|term|alloc)([aeiou][bklmnrstvw]){2,3}(atch|[au]te|en)",
+                    })), 
+
+    PROBABILITY("Probability Theory",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "Bayesian probability", "ergodic theory", "limit theorems", "Markov chains",
+                            "random processes", "stochastic analysis", "stochastic calculus", "stochastic modeling",
+                    },
+                    new String[] {
+                            "(large|small) deviation theory",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "convergence failures", "dependence leakage", "explosive branching",
+                            "sample inefficiency", "tail risk", "variance blow-up",
+                    },
+                    new String[] {
+                            "(heavy|fat) tails?",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "Bayesian inference", "characteristic functions", "Markov chain Monte Carlo",
+                            "measure theory", "probability distributions", "stochastic simulation",
+                    },
+                    new String[] {
+                            "[A-Z]{1,2}\\d?\\-(test|bound|limit)",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "confidence interval", "distribution function", "likelihood ratio", "martingale",
+                            "probability space", "random variable", "sample space", "stochastic process",
+                    },
+                    new String[] {
+                            "[A-Z]{1,2}\\d?\\-(distributiont|probability|ratio)",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "estimate", "infer", "integrate", "predict", "sample", "test",
+                    },
+                    new String[] {
+                            "(re)?normalize",
+                            "(de|out|over|re|un)(estim|pred|prob|sampl)([aeiou][bklmnrstvw]){2,3}(ize|[au]te|en)"
+                    })),
+
+    QC("Quantum Computing",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "adiabatic quantum computing", "fault-tolerant computing", "quantum algorithms", "quantum communication",
+                            "quantum cryptography", "quantum information theory", "quantum machine learning", "quantum simulation",
+                    },
+                    new String[] {
+                            "((post|near)\\-)?quantum cryptography",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "crosstalk", "decoherence", "error correction overhead",
+                            "gate noise", "hardware instability", "qubit quality",
+                    },
+                    new String[] {
+                            "(measurement|readout) errors",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "phase estimation", "quantum annealing", "quantum error correction",
+                            "quantum Fourier transform", "quantum teleportation", "variational quantum eigensolver",
+                    },
+                    new String[] {
+                            "[A-Z]{2,3}\\-(ansatz|circuit|gate)",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "Bloch sphere", "error correction code", "Hamiltonian",
+                            "quantum gate", "quantum register", "superposition state",
+                    },
+                    new String[] {
+                            "Q[0-9]{1,3}\\-(gate|circuit)",
+                            "((ancilla|neutral atom|photonic|spin|superconducting|trapped ion) )?qubit"
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "compute", "decode", "entangle", "measure", "teleport",
+                    },
+                    new String[] {
+                            "(re|de)?cohere",
+                            "(de|out|over|re|un)(gate|meas|telep|quant)([aeiou][bklmnrstvw]){2,3}(ize|[au]te|en)"
+                    })),
+
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
@@ -1238,190 +1405,6 @@ public enum KeywordEnum {
 
     // generated, non-reviewed yet:
     
-    OPTIMIZATION("Optimization",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "combinatorial optimization", "convex optimization", "global optimization",
-                            "integer programming", "linear programming", "nonlinear optimization",
-                            "stochastic optimization", "variational methods",
-                    },
-                    new String[] {
-                            "(multi|bi)\\-(criteria|objective) optimization",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "computational complexity", "convergence gap", "curse of dimensionality",
-                            "feasibility issues", "local minima", "nonconvexity",
-                            "scalability limits", "sensitivity to noise",
-                    },
-                    new String[] {
-                            "(premature|false) convergence",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "branch and bound", "dynamic programming", "genetic algorithms",
-                            "gradient descent", "interior point methods", "Lagrangian relaxation",
-                            "linear programming simplex", "simulated annealing",
-                    },
-                    new String[] {
-                            "[a-z]{3,6}\\-(heuristic|search|descent)",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "constraint set", "cost function", "decision variable",
-                            "feasible region", "objective function", "optimization problem",
-                            "search space", "solution candidate",
-                    },
-                    new String[] {
-                            "[A-Z]{2,3}\\-LP model",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "approximate", "balance", "maximize", "minimize",
-                            "optimize", "refine", "relax", "solve",
-                    },
-                    new String[] {
-                            "(re)?parameterize",
-                    })),
-
-    OS("Operating Systems",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "concurrent programming", "distributed systems", "file systems",
-                            "memory management", "process scheduling", "real-time systems",
-                            "resource allocation", "virtualization",
-                    },
-                    new String[] {
-                            "(micro|exokernel) architecture",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "deadlock", "fault tolerance", "latency",
-                            "memory leaks", "race conditions", "resource contention",
-                            "security vulnerabilities", "throughput bottlenecks",
-                    },
-                    new String[] {
-                            "(starvation|livelock)",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "context switching", "garbage collection", "locking protocols",
-                            "paging algorithms", "preemptive scheduling", "synchronization primitives",
-                            "system calls", "virtual memory management",
-                    },
-                    new String[] {
-                            "[A-Z]{2,3}\\-(lock|sched|alloc)",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "driver", "kernel module", "page table",
-                            "process", "scheduler", "semaphore",
-                            "system call interface", "thread pool",
-                    },
-                    new String[] {
-                            "[A-Z]{2,4}\\-OS",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "allocate", "boot", "dispatch", "execute",
-                            "isolate", "schedule", "suspend", "terminate",
-                    },
-                    new String[] {
-                            "(fork|spawn)",
-                    })), 
-
-    PROBABILITY("Probability Theory",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "Bayesian probability", "ergodic theory", "limit theorems",
-                            "Markov chains", "random processes", "stochastic analysis",
-                            "stochastic calculus", "stochastic modeling",
-                    },
-                    new String[] {
-                            "(large|small) deviation theory",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "concentration bounds", "dependence", "high variance",
-                            "intractability", "nonstationarity", "rare events",
-                            "sample inefficiency", "tail risk",
-                    },
-                    new String[] {
-                            "(heavy|fat) tails?",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "Bayesian inference", "central limit theorem", "characteristic functions",
-                            "law of large numbers", "Markov chain Monte Carlo", "measure theory",
-                            "probability distributions", "stochastic simulation",
-                    },
-                    new String[] {
-                            "[A-Z]{2,3}\\-(test|bound|limit)",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "confidence interval", "distribution function", "likelihood ratio",
-                            "martingale", "probability space", "random variable",
-                            "sample space", "stochastic process",
-                    },
-                    new String[] {
-                            "[A-Z]{1,3}[0-9]{1,3} distribution",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "approximate", "estimate", "infer", "integrate",
-                            "predict", "sample", "simulate", "test",
-                    },
-                    new String[] {
-                            "(re)?normalize",
-                    })),
-
-    QC("Quantum Computing",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "adiabatic quantum computing", "fault-tolerant computing", "quantum algorithms",
-                            "quantum communication", "quantum cryptography", "quantum information theory",
-                            "quantum machine learning", "quantum simulation",
-                    },
-                    new String[] {
-                            "(post|near)\\-quantum cryptography",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "coherence time", "decoherence", "error correction overhead",
-                            "gate fidelity", "hardware scalability",
-                            "noise sensitivity", "qubit quality",
-                    },
-                    new String[] {
-                            "(measurement|readout) error[s]?",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "Grover’s algorithm", "phase estimation", "quantum annealing",
-                            "quantum error correction", "quantum Fourier transform", "quantum teleportation",
-                            "Shor’s algorithm", "variational quantum eigensolver",
-                    },
-                    new String[] {
-                            "[A-Z]{2,3}\\-(ansatz|circuit|gate)",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "ancilla qubit", "Bloch sphere", "error correction code",
-                            "Hamiltonian", "quantum gate", "quantum register",
-                            "qubit", "superposition state",
-                    },
-                    new String[] {
-                            "Q[0-9]{1,3}\\-(gate|circuit)",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "compute", "decode", "entangle", "factorize",
-                            "initialize", "measure", "simulate", "teleport",
-                    },
-                    new String[] {
-                            "(re|de)?cohere",
-                    })),
-
     RELIABILITY("Reliability Engineering",
             typeCase(PlaceholderType.AREA,
                     new String[] {
@@ -1560,6 +1543,10 @@ public enum KeywordEnum {
                             "(pre|post)process",
                     })),
 
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    
     SPECTROSCOPY("Spectroscopy",
             typeCase(PlaceholderType.AREA,
                     new String[] {
