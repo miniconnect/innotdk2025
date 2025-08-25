@@ -1390,6 +1390,48 @@ public enum KeywordEnum {
                             "(de|out|over|re|un)(gate|meas|telep|quant)([aeiou][bklmnrstvw]){2,3}(ize|[au]te|en)"
                     })),
 
+    RELIABILITY("Reliability Engineering",
+            typeCase(PlaceholderType.AREA,
+                    new String[] {
+                            "availability analysis", "fault tree analysis", "lifetime modeling", "maintainability analysis",
+                            "reliability growth modeling", "reliability prediction", "survivability analysis",
+                    },
+                    new String[] {
+                            "(life|reliabi|mainta)([aeiou][bklmnrstvw]){2,3}([ei]ty|ing) analysis",
+                    }),
+            typeCase(PlaceholderType.DIFFICULTY,
+                    new String[] {
+                            "aging effects", "component wear-out",
+                            "fault propagation", "latent faults", "maintenance cost",
+                    },
+                    new String[] {
+                            "(rare|hidden) failure[s]?",
+                    }),
+            typeCase(PlaceholderType.METHOD,
+                    new String[] {
+                            "accelerated life testing", "fault injection", "load sharing models",
+                            "redundancy allocation", "stress testing", "Weibull analysis",
+                    },
+                    new String[] {
+                            "[A-Z]{1,2}\\d?\\-(test|model|analysis)",
+                            "(Bayesian|Markov) reliability models",
+                    }),
+            typeCase(PlaceholderType.ITEM,
+                    new String[] {
+                            "failure distribution", "fault tree", "lifetime data", "maintenance log",
+                            "redundant component", "reliability block diagram", "test plan",
+                    },
+                    new String[] {
+                            "MT(T|BF|TF|TR)",
+                    }),
+            typeCase(PlaceholderType.PRODUCE,
+                    new String[] {
+                            "analyze", "assure", "maintain", "predict", "repair", "test",
+                    },
+                    new String[] {
+                            "(re)?(calibrate|evaluate)",
+                    })), 
+
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
@@ -1405,52 +1447,6 @@ public enum KeywordEnum {
 
     // generated, non-reviewed yet:
     
-    RELIABILITY("Reliability Engineering",
-            typeCase(PlaceholderType.AREA,
-                    new String[] {
-                            "availability analysis", "fault tree analysis", "lifetime modeling",
-                            "maintainability analysis", "reliability growth modeling", "reliability prediction",
-                            "safety analysis", "survivability analysis",
-                    },
-                    new String[] {
-                            "(mean|system|network) time to failure",
-                    }),
-            typeCase(PlaceholderType.DIFFICULTY,
-                    new String[] {
-                            "aging effects", "component wear-out", "dependency propagation",
-                            "failure uncertainty", "fault propagation", "hazard rate variation",
-                            "latent faults", "maintenance cost",
-                    },
-                    new String[] {
-                            "(rare|hidden) failure[s]?",
-                    }),
-            typeCase(PlaceholderType.METHOD,
-                    new String[] {
-                            "accelerated life testing", "Bayesian reliability models", "fault injection",
-                            "load sharing models", "Markov reliability models", "redundancy allocation",
-                            "stress testing", "Weibull analysis",
-                    },
-                    new String[] {
-                            "[A-Z]{2,3}\\-(test|model|analysis)",
-                    }),
-            typeCase(PlaceholderType.ITEM,
-                    new String[] {
-                            "failure distribution", "fault tree", "lifetime data",
-                            "maintenance log", "redundant component", "reliability block diagram",
-                            "system log", "test plan",
-                    },
-                    new String[] {
-                            "MT(T|BF|TF|TR)",
-                    }),
-            typeCase(PlaceholderType.PRODUCE,
-                    new String[] {
-                            "analyze", "assure", "evaluate", "inspect",
-                            "maintain", "predict", "repair", "test",
-                    },
-                    new String[] {
-                            "(re)?calibrate",
-                    })), 
-
     ROBOTICS("Robotics",
             typeCase(PlaceholderType.AREA,
                     new String[] {
@@ -1543,10 +1539,6 @@ public enum KeywordEnum {
                             "(pre|post)process",
                     })),
 
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    
     SPECTROSCOPY("Spectroscopy",
             typeCase(PlaceholderType.AREA,
                     new String[] {
