@@ -208,9 +208,8 @@ public enum KeywordEnum {
                     }),
             typeCase(PlaceholderType.METHOD,
                     new String[] {
-                            "density functional theory", "kinetic Monte Carlo", "microkinetic modeling",
-                            "operando spectroscopy", "temperature-programmed desorption",
-                            "turnover frequency analysis", "volcano plot analysis"
+                            "kinetic Monte Carlo", "microkinetic modeling", "operando spectroscopy",
+                            "temperature-programmed desorption", "turnover frequency analysis", "volcano plot analysis"
                     },
                     new String[] {
                             "(in situ|operando) (IR|Raman|XPS)",
@@ -988,8 +987,8 @@ public enum KeywordEnum {
                     }),
             typeCase(PlaceholderType.METHOD,
                     new String[] {
-                            "coarse graining", "density functional theory", "finite element analysis",
-                            "Green's function method", "lattice dynamics", "tight-binding approximation",
+                            "coarse graining", "finite element analysis", "Green's function method",
+                            "lattice dynamics", "tight-binding approximation",
                     },
                     new String[] {
                             "[A-Z]{2,4}\\-(dynamics|potential|model)",
@@ -1432,76 +1431,56 @@ public enum KeywordEnum {
                             "(re)?(calibrate|evaluate)",
                     })), 
 
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-
-    // generated, non-reviewed yet:
-    
     ROBOTICS("Robotics",
             typeCase(PlaceholderType.AREA,
                     new String[] {
                             "autonomous navigation", "field robotics", "humanoid robotics",
-                            "industrial robotics", "manipulation", "medical robotics",
-                            "service robotics", "swarm robotics",
+                            "industrial robotics", "medical robotics", "service robotics", "swarm robotics",
                     },
                     new String[] {
-                            "(soft|bio)\\-robotics",
+                            "(soft|bio)(([aeiou][cgklmnrstv]){2,3}ing)?\\-robotics",
                     }),
             typeCase(PlaceholderType.DIFFICULTY,
                     new String[] {
-                            "actuator precision", "battery limitations", "control instability",
-                            "dynamic environments", "localization errors", "payload limits",
-                            "sensor noise", "uncertainty in perception",
+                            "battery limitations", "control instability",
+                            "localization errors", "uncertainty in perception",
                     },
                     new String[] {
-                            "(slip|drift) error[s]?",
+                            "(actuator|sensor) (defects|degradation|drift|failure)",
                     }),
             typeCase(PlaceholderType.METHOD,
                     new String[] {
-                            "control theory", "kinematics", "localization algorithms",
-                            "motion planning", "path optimization", "reinforcement learning",
-                            "Simultaneous Localization and Mapping", "trajectory generation",
+                            "iterative closest point", "localization algorithms", "motion planning",
+                            "particle filter", "PID control", "probabilistic roadmap", "robot kinematics",
                     },
                     new String[] {
-                            "[A-Z]{2,3}\\-(controller|planner|bot)",
+                            "(path|trajectory) (generation|optimization|planning)",
                     }),
             typeCase(PlaceholderType.ITEM,
                     new String[] {
                             "actuator", "end effector", "gripper",
                             "joint module", "mobile platform", "robot arm",
-                            "sensor suite", "wheel module",
                     },
                     new String[] {
                             "R[0-9]{2,3}\\-(arm|bot|unit)",
+                            "(navigation|sensor|wheel) (suite|module|platform)",
                     }),
             typeCase(PlaceholderType.PRODUCE,
                     new String[] {
-                            "adapt", "assemble", "grasp", "lift",
-                            "manipulate", "move", "navigate", "sense",
+                            "adapt", "assemble", "grasp", "lift", "move", "navigate", "sense",
                     },
                     new String[] {
-                            "(re)?calibrate",
+                            "(p?re)?(calibrate|explore|plan)",
                     })),
 
     SIGNAL_PROC("Signal Processing",
             typeCase(PlaceholderType.AREA,
                     new String[] {
-                            "audio processing", "digital communications", "image processing",
-                            "radar signal analysis", "speech processing", "statistical signal analysis",
-                            "time-frequency analysis", "wireless communication signals",
+                            "digital communications", "image processing", "radar signal analysis",
+                            "statistical signal analysis", "time-frequency analysis", "wireless communication signals",
                     },
                     new String[] {
-                            "(multi|array) signal processing",
+                            "(audio |array |multi\\-|speech )signal processing",
                     }),
             typeCase(PlaceholderType.DIFFICULTY,
                     new String[] {
@@ -1514,37 +1493,35 @@ public enum KeywordEnum {
                     }),
             typeCase(PlaceholderType.METHOD,
                     new String[] {
-                            "convolution", "fast Fourier transform", "Kalman filtering",
-                            "linear prediction", "spectral estimation", "wavelet transform",
-                            "Wiener filtering", "z-transform",
+                            "convolution", "Fourier transform", "linear prediction",
+                            "spectral estimation", "wavelet transform", "z-transform",
                     },
                     new String[] {
-                            "[A-Z]{2,3}\\-(filter|transform|method)",
+                            "[A-Z]{1,2}\\d?\\-(filter|transform|method)",
                     }),
             typeCase(PlaceholderType.ITEM,
                     new String[] {
-                            "antenna array", "band-pass filter", "codec",
-                            "oscilloscope", "sampling device", "spectrum analyzer",
-                            "transducer", "waveform",
+                            "band-pass filter", "codec", "oscilloscope", "sampling device",
+                            "spectrum analyzer", "transducer", "waveform",
                     },
                     new String[] {
-                            "[0-9]{2,3}\\-Hz signal",
+                            "antenna( array)?",
+                            "[1-9]{1,2}0{2,4}\\-[KMG]?Hz signal",
                     }),
             typeCase(PlaceholderType.PRODUCE,
                     new String[] {
-                            "amplify", "decode", "demodulate", "detect",
-                            "encode", "filter", "modulate", "transmit",
+                            "amplify", "demodulate", "filter", "modulate", "transmit",
                     },
                     new String[] {
                             "(pre|post)process",
+                            "(de|en)code",
                     })),
 
     SPECTROSCOPY("Spectroscopy",
             typeCase(PlaceholderType.AREA,
                     new String[] {
-                            "atomic spectroscopy", "fluorescence spectroscopy", "infrared spectroscopy",
-                            "mass spectrometry", "nuclear magnetic resonance", "optical spectroscopy",
-                            "photoelectron spectroscopy", "Raman spectroscopy",
+                            "atomic spectroscopy", "fluorescence spectroscopy", "infrared spectroscopy", "mass spectrometry",
+                            "nuclear magnetic resonance", "optical spectroscopy", "photoelectron spectroscopy", "time-resolved spectroscopy",
                     },
                     new String[] {
                             "(ultra|hyper)\\-resolution spectroscopy",
@@ -1552,129 +1529,116 @@ public enum KeywordEnum {
             typeCase(PlaceholderType.DIFFICULTY,
                     new String[] {
                             "background noise", "calibration drift", "detector sensitivity",
-                            "interference effects", "low signal-to-noise ratio", "overlapping peaks",
                             "sample degradation", "spectral resolution limits",
                     },
                     new String[] {
-                            "(baseline|peak) shift",
+                            "(baseline|peak|nois([aeiou][bklmrstv]){2,3}) shift",
                     }),
             typeCase(PlaceholderType.METHOD,
                     new String[] {
                             "absorption spectroscopy", "electron spin resonance", "fluorescence spectroscopy",
-                            "Fourier transform spectroscopy", "laser-induced breakdown spectroscopy", "photoacoustic spectroscopy",
-                            "Raman spectroscopy", "time-resolved spectroscopy",
+                            "Fourier transform spectroscopy", "photoacoustic spectroscopy", "Raman spectroscopy",
                     },
                     new String[] {
-                            "[A-Z]{2,3}\\-(spectroscopy|method|technique)",
+                            "[A-Z]{1,2}\\d?\\-(spectroscopy|method|technique)",
                     }),
             typeCase(PlaceholderType.ITEM,
                     new String[] {
-                            "detector", "grating", "laser source",
+                            "detector", "grating",
                             "optical fiber", "sample cell", "spectral line",
                             "spectrometer", "wavelength filter",
                     },
                     new String[] {
-                            "[0-9]{2,4}\\-nm line",
+                            "laser( source)?",
                     }),
             typeCase(PlaceholderType.PRODUCE,
                     new String[] {
-                            "absorb", "analyze", "detect", "emit",
-                            "excite", "illuminate", "measure", "record",
+                            "absorb", "analyze", "detect", "emit", "illuminate", "measure", "record",
                     },
                     new String[] {
-                            "(re)?calibrate",
+                            "(de|en|over|re|un)?(absorb|emit|light|measur)([aeiou][klmnrstv]){2,3}(ate|ify|en)",
                     })), 
 
     SYS_BIOLOGY("Systems Biology",
             typeCase(PlaceholderType.AREA,
                     new String[] {
-                            "cell signaling networks", "gene regulatory networks", "metabolic pathways",
-                            "multi-omics integration", "network biology", "quantitative systems pharmacology",
-                            "synthetic biology", "systems pharmacology",
+                            "cell signaling networks", "gene regulatory networks", "metabolic pathways", "multi-omics integration",
+                            "network biology", "quantitative systems pharmacology", "synthetic biology", "systems pharmacology",
                     },
                     new String[] {
                             "(whole|multi)\\-cell modeling",
                     }),
             typeCase(PlaceholderType.DIFFICULTY,
                     new String[] {
-                            "data heterogeneity", "emergent complexity", "incomplete knowledge",
-                            "inter-scale coupling", "measurement noise", "model uncertainty",
-                            "parameter identifiability", "system nonlinearity",
+                            "data heterogeneity", "incomplete knowledge", "mapping errors",
+                            "measurement noise", "model uncertainty", "parameter identifiability",
                     },
                     new String[] {
                             "(over|under)fitting",
                     }),
             typeCase(PlaceholderType.METHOD,
                     new String[] {
-                            "agent-based modeling", "Bayesian networks", "differential equations",
-                            "flux balance analysis", "Markov models", "network inference",
-                            "ordinary differential equations", "stochastic modeling",
+                            "agent-based modeling", "flux balance analysis", "Markov models",
+                            "network inference", "ordinary differential equations", "stochastic modeling",
                     },
                     new String[] {
-                            "[A-Z]{2,4}\\-(model|sim|ODE)",
+                            "[A-Z]{1,2}\\d?\\-(model|ODE|sim|system)",
                     }),
             typeCase(PlaceholderType.ITEM,
                     new String[] {
-                            "biological pathway", "cell population", "gene circuit",
-                            "interaction map", "metabolic network", "network topology",
-                            "protein complex", "regulatory module",
+                            "biological pathway", "cell population", "gene circuit", "interaction map",
+                            "metabolic network", "network topology", "protein complex", "regulatory module",
                     },
                     new String[] {
-                            "[A-Z]{2,4}[0-9]{1,3}\\-pathway",
+                            "[A-Z]{1,2}\\d?\\-(gene|pathway|population|protein)",
                     }),
             typeCase(PlaceholderType.PRODUCE,
                     new String[] {
-                            "analyze", "couple", "infer", "integrate",
-                            "map", "model", "predict", "simulate",
+                            "analyze", "infer", "map", "model", "predict", "simulate",
                     },
                     new String[] {
-                            "(re)?calibrate",
+                            "(re|un)?(biol|genetic|popul|pharmac)([aeiou][bklmsw]){2,3}(ate|ify|en)",
                     })),
 
     T_SERIES("Time-Series Analysis",
             typeCase(PlaceholderType.AREA,
                     new String[] {
                             "autoregressive modeling", "causal inference", "change point detection",
-                            "forecasting", "seasonality analysis", "signal decomposition",
-                            "spectral analysis", "trend estimation",
+                            "forecasting", "seasonality analysis", "signal decomposition", "trend estimation",
                     },
                     new String[] {
                             "(multi|cross)\\-temporal analysis",
                     }),
             typeCase(PlaceholderType.DIFFICULTY,
                     new String[] {
-                            "auto-correlation bias", "concept drift", "data sparsity",
-                            "high dimensionality", "irregular sampling", "nonstationarity",
-                            "noise sensitivity", "seasonal effects",
+                            "auto-correlation bias",  "irregular sampling", "nonstationarity",
+                            "over-differencing", "seasonal effects", "temporal leakage",
                     },
                     new String[] {
-                            "(long|short) memory",
+                            "(evaluation|regime|seasonal|temporal|tuning) (bias|leakagespathologies)",
                     }),
             typeCase(PlaceholderType.METHOD,
                     new String[] {
-                            "autoregressive integrated moving average", "exponential smoothing", "Fourier analysis",
-                            "hidden Markov models", "Kalman filtering", "state-space models",
-                            "vector autoregression", "wavelet decomposition",
+                            "ARIMA", "exponential smoothing", "Fourier analysis", "hidden Markov models",
+                            "Kalman filtering", "state-space representation", "vector autoregression", "wavelet decomposition",
                     },
                     new String[] {
-                            "[A-Z]{2,3}\\-(AR|MA|VAR|HMM)",
+                            "[A-Z]{1,2}\\d?\\-(HMM|MA|V?AR)",
                     }),
             typeCase(PlaceholderType.ITEM,
                     new String[] {
-                            "covariance matrix", "lag operator", "observation sequence",
-                            "power spectrum", "signal trace", "state vector",
-                            "time lag", "transition matrix",
+                            "covariance matrix", "frame", "lag operator", "power spectrum",
+                            "sample", "time lag", "time step", "transition matrix",
                     },
                     new String[] {
-                            "[0-9]{1,3}\\-step forecast",
+                            "([1-5]|multi)\\-step forecast",
                     }),
             typeCase(PlaceholderType.PRODUCE,
                     new String[] {
-                            "decompose", "estimate", "forecast", "interpolate",
-                            "predict", "smooth", "transform", "trend",
+                            "decompose", "interpolate", "predict", "smooth", "transform",
                     },
                     new String[] {
-                            "(re)?sample",
+                            "(re)?(estimate|normalize|sample)",
                     })), 
 
     ;
