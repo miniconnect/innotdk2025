@@ -2,7 +2,7 @@
 
 ## Alapvető adatok
 
-- **Időpont:** várhatóan október második fele
+- **Időpont:** 2025. október 17. (péntek), egész nap
 - **Helyszín:** Óbudai Egyetem (1034 Budapest, Bécsi út 94-96.)
 - **Számlázási cím:** OTDT 1025 Budapest, Muraközi utca 15.
 - **Számlázási adószám:** 19307408-1-41
