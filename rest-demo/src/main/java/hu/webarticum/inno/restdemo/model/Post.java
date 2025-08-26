@@ -18,6 +18,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -30,6 +31,10 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "author_id", nullable = false)
+    private Author author;
+
     @Column(nullable = false)
     private String title;
 
@@ -40,8 +45,8 @@ public class Post {
     @ElementCollection
     @CollectionTable(name = "post_tags", joinColumns = { @JoinColumn(name = "post_id") })
     @HoloTable(size = 20)
-    @HoloColumn(values = { "tag1", "tag2", "tag3" })
-    @HoloVirtualColumn(name = "virt_col", type = String.class, values = { "v1", "v2" })
+    @HoloColumn(values = { "educational", "news", "review", "tutorial" })
+    @HoloVirtualColumn(name = "color", type = String.class, valuesBundle = "colors")
     private Set<String> tags;
 
     @OneToMany(cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
@@ -55,6 +60,14 @@ public class Post {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 
     public String getTitle() {
