@@ -5,25 +5,21 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.CollectionTable;
-import javax.persistence.Column;
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderBy;
-import javax.persistence.Table;
-
 import hu.webarticum.holodb.jpa.annotation.HoloColumn;
 import hu.webarticum.holodb.jpa.annotation.HoloTable;
 import hu.webarticum.holodb.jpa.annotation.HoloVirtualColumn;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "posts")
@@ -48,27 +44,9 @@ public class Post {
     @HoloVirtualColumn(name = "virt_col", type = String.class, values = { "v1", "v2" })
     private Set<String> tags;
 
-    @ElementCollection
-    @CollectionTable(name = "post_values")
-    @JoinColumn(name = "post_id")
-    @OrderBy("ord")
-    @HoloTable(size = 30)
-    @HoloVirtualColumn(name = "prop_x", type = String.class, values = { "x1", "x2", "x3" })
-    private List<EmbeddedProperties> values;
-
     @OneToMany(cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
     @JoinColumn(name = "post_id")
     private List<PostComment> comments;
-
-    @ManyToMany(cascade = { CascadeType.ALL })
-    @JoinTable(
-        name = "post_images", 
-        joinColumns = { @JoinColumn(name = "post_id") }, 
-        inverseJoinColumns = { @JoinColumn(name = "image_id") }
-    )
-    @HoloTable(size = 100)
-    @HoloVirtualColumn(name = "img_x", type = Integer.class, valuesRange = { 1, 100 })
-    private List<GalleryImage> images;
 
     
     public Long getId() {
@@ -103,14 +81,6 @@ public class Post {
         this.tags = new HashSet<>(tags);
     }
 
-    public List<EmbeddedProperties> getValues() {
-        return new ArrayList<>(values);
-    }
-
-    public void setValues(List<EmbeddedProperties> values) {
-        this.values = new ArrayList<>(values);
-    }
-
     public List<PostComment> getComments() {
         return new ArrayList<>(comments);
     }
@@ -119,12 +89,5 @@ public class Post {
         this.comments = new ArrayList<>(comments);
     }
 
-    public List<GalleryImage> getImages() {
-        return new ArrayList<>(images);
-    }
-
-    public void setImages(List<GalleryImage> images) {
-        this.images = new ArrayList<>(images);
-    }
 
 }

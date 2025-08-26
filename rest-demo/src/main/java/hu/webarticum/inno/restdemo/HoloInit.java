@@ -1,12 +1,11 @@
 package hu.webarticum.inno.restdemo;
 
 import jakarta.inject.Singleton;
-import javax.persistence.EntityManager;
-import javax.transaction.Transactional;
-
+import jakarta.persistence.EntityManager;
 import hu.webarticum.holodb.jpa.JpaMetamodelDriver;
 import io.micronaut.context.event.StartupEvent;
 import io.micronaut.runtime.event.annotation.EventListener;
+import io.micronaut.transaction.annotation.Transactional;
 
 @Singleton
 public class HoloInit {

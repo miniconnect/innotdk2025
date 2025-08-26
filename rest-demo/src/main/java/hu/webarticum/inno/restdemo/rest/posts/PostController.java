@@ -1,13 +1,12 @@
-package hu.webarticum.inno.restdemo.rest;
+package hu.webarticum.inno.restdemo.rest.posts;
 
 import java.util.Optional;
-
-import javax.transaction.Transactional;
 
 import hu.webarticum.inno.restdemo.repository.PostRepository;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
+import jakarta.transaction.Transactional;
 
 @Controller("/posts")
 class PostController {

@@ -1,4 +1,4 @@
-package hu.webarticum.inno.restdemo.rest;
+package hu.webarticum.inno.restdemo.rest.posts;
 
 import java.util.Collections;
 import java.util.Set;
@@ -8,7 +8,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 import hu.webarticum.inno.restdemo.model.Post;
+import io.micronaut.serde.annotation.Serdeable;
 
+@Serdeable
 public class PostDto {
     
     private final long id;
