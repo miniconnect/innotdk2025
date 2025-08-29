@@ -24,13 +24,15 @@ QR-link
 
 ### Vázlat 2
 
-Az adatok hagyományosan valamilyen begyűjtött és tárolt valamik, amik feldolgozásra várnak. Néha azonban fordított a helyzet, és egy helyzetnek van szüksége bizonyos jellgű adatokra, hogy működőképes legyen, ami gyakran mesterséges adatok tömegének a legenerálását és ideiglenes tárolását jelenti. Például játékok, szoftverfejlesztés, prototipizálás, oktatás, és így tovább. A HoloDB egy adatbázis-szimulátor, mely a szükséges adatok koherens halmazát előregenerálés nélkül azonnal rendelkezésre bocsátja, anélkül, hogy a háttérben tárolná. Bizonyos értelemben olyan, mint egy hologram.
+(TODO: tömöríteni, fókuszálni)
 
-Hogyan lehetséges ez? Képzeljünk el egy szorzótáblát. Ha nem tudunk szorozni, nagyon nagy tábla kell ahhoz, hogy sokféle szorzás eredményét le tudjuk olvasni. Ha azonban tudunk szorozni, elég ismerni a szorzat kiszámításának algoritmusát. Ez jóval bonyolultabb dolgokra is működik. Ráadásul egy kis kriptográfia bevetésével az adatok kereshetővé is tehetők.
+Az adatok hagyományosan valamilyen begyűjtött és tárolt valamik, amik feldolgozásra várnak. Néha azonban fordított a helyzet, és egy helyzetnek van szüksége bizonyos jellegű adatokra, hogy működőképes legyen, ami gyakran mesterséges adatok tömegének a legenerálását és ideiglenes tárolását jelenti. Például játékok, szoftverfejlesztés, prototipizálás, oktatás, és így tovább. A HoloDB egy adatbázis-szimulátor, mely a szükséges adatok koherens halmazát előregenerálás nélkül azonnal rendelkezésre bocsátja, azokat tehát a háttérben sem tárolja. Bizonyos értelemben olyan, mint egy hologram.
 
-A nyílt forrású HoloDB barátságos deklaratív konfigurációból indítva használható relációsadatbázis-szerverként, beágyazott adatbázisként. Akár közvetlenül orm entitásokból közvetlenül is indíthatjuk. Számos beépített értékkiosztás-típus(...)
+Hogyan lehetséges ez? Képzeljünk el egy szorzótáblát. Ha nem tudunk szorozni, tárolnunk kell egy nagy táblát, hogy a szorzások eredményét meg tudjuk mondani. Jóval takarékosabb, ha ismerjük a szorzat kiszámításának algoritmusát. Ez bonyolultabb dolgokra is működik. Ráadásul egy kis kriptográfia bevetésével az adatok gyors kereshetősége is lehetővé válik.
 
-(Üzleti terv: SaaS platform és VIP adatgenerálók...)
+A nyílt forrású HoloDB barátságos deklaratív konfigurációból indítva használható relációsadatbázis-szerverként, beágyazott adatbázisként. Akár közvetlenül ORM entitásokból közvetlenül is indíthatjuk. Számos beépített értékkiosztás-típus(...)
 
-(jövőkép, öko, AI..)
+(TODO: Üzleti terv: SaaS platform és VIP adatgenerálók...)
+
+(TODO: jövőkép, ökobarátság és AI-ortogonalitás hangsúlyozása)
 
