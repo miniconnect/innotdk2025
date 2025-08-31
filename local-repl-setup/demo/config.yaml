@@ -8,9 +8,9 @@ schemas:
         size: 5
         columns:
           - name: id
-            mode: COUNTER
+            mode: counter
           - name: name
-            mode: FIXED
+            mode: fixed
             values:
               - Fav Fruits Inc.
               - Fru-fru Sales Inc.
@@ -26,10 +26,10 @@ schemas:
         size: 10000
         columns:
           - name: id
-            mode: COUNTER
+            mode: counter
           - name: company_id
             valuesForeignColumn: [companies, id]
-            shuffleQuality: LOW
+            shuffleQuality: low
           - name: firstname
             valuesBundle: forenames
           - name: lastname
@@ -43,10 +43,10 @@ schemas:
         size: 500000
         columns:
           - name: id
-            mode: COUNTER
+            mode: counter
           - name: company_id
             valuesForeignColumn: [companies, id]
-            shuffleQuality: LOW
+            shuffleQuality: low
           - name: product
             valuesBundle: fruits
           - name: color
@@ -54,15 +54,15 @@ schemas:
           - name: quantity
             type: java.lang.Integer
             valuesRange: [100, 500]
-            shuffleQuality: MEDIUM
+            shuffleQuality: medium
           - name: quality
-            mode: ENUM
+            mode: enum
             values:
               - POOR
               - AVERAGE
               - GOOD
               - EXCELLENT
-            defaultValue: AVERAGE
+            defaultValue: average
           - name: comment
             nullCount: 20
-            valuesDynamicPattern: '(Lorem|Dolor|Amet)( (lorem|ipsum|dolor|sit|amet|consectetur|adipisicing)){2,6}\.'
+            valuesTextKind: paragraph
