@@ -1,5 +1,7 @@
 package hu.webarticum.inno.restdemo.model;
 
+import hu.webarticum.holodb.jpa.annotation.HoloColumn;
+import hu.webarticum.holodb.jpa.annotation.HoloColumnDummyTextKind;
 import hu.webarticum.holodb.jpa.annotation.HoloTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -17,10 +19,11 @@ public class PostComment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "username", nullable = false)
     private String username;
 
-    @Column(nullable = false)
+    @Column(name = "content", nullable = false)
+    @HoloColumn(valuesTextKind = HoloColumnDummyTextKind.PARAGRAPH)
     private String content;
 
     

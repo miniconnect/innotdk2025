@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import hu.webarticum.holodb.jpa.annotation.HoloColumn;
+import hu.webarticum.holodb.jpa.annotation.HoloColumnDummyTextKind;
 import hu.webarticum.holodb.jpa.annotation.HoloTable;
 import hu.webarticum.holodb.jpa.annotation.HoloVirtualColumn;
 import jakarta.persistence.CascadeType;
@@ -39,11 +40,13 @@ public class Post {
     @JoinColumn(name = "author_id", nullable = false)
     private Author author;
 
-    @Column(nullable = false)
+    @Column(name = "title", nullable = false)
+    @HoloColumn(valuesTextKind = HoloColumnDummyTextKind.TITLE)
     private String title;
 
-    @Column(nullable = false)
-    private String description;
+    @Column(name = "html_content", nullable = false)
+    @HoloColumn(valuesTextKind = HoloColumnDummyTextKind.HTML)
+    private String htmlContent;
 
     @Column(name = "tag")
     @ElementCollection
@@ -82,12 +85,12 @@ public class Post {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
+    public String getHtmlContent() {
+        return htmlContent;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setHtmlContent(String htmlContent) {
+        this.htmlContent = htmlContent;
     }
 
     public Set<String> getTags() {

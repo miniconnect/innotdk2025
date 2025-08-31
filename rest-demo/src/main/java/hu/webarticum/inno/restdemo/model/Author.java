@@ -18,11 +18,11 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "firstname", nullable = false)
     @HoloColumn(valuesBundle = "forenames")
     private String firstname;
 
-    @Column(nullable = false)
+    @Column(name = "lastname", nullable = false)
     @HoloColumn(valuesBundle = "surnames")
     private String lastname;
 

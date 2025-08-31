@@ -40,22 +40,22 @@ class PostController {
         
         private final Long id;
         private final String title;
-        private final String description;
+        private final String htmlContent;
         private final Set<String> tags;
 
-        public PostDto(String title, String description, Set<String> tags) {
-            this(null, title, description, tags);
+        public PostDto(String title, String htmlContent, Set<String> tags) {
+            this(null, title, htmlContent, tags);
         }
 
         @JsonCreator
         public PostDto(
                 @JsonProperty(value = "id", required = false) Long id,
                 @JsonProperty(value = "title", required = true) String title,
-                @JsonProperty(value = "description", required = true) String description,
+                @JsonProperty(value = "htmlContent", required = true) String htmlContent,
                 @JsonProperty(value = "tags", required = false) Set<String> tags) {
             this.id = id;
             this.title = title;
-            this.description = description;
+            this.htmlContent = htmlContent;
             this.tags =
                     (tags != null && !tags.isEmpty()) ?
                     Collections.unmodifiableSet(new TreeSet<>(tags)) :
@@ -63,7 +63,7 @@ class PostController {
         }
         
         public static PostDto from(Post post) {
-            return new PostDto(post.getId(), post.getTitle(), post.getDescription(), post.getTags());
+            return new PostDto(post.getId(), post.getTitle(), post.getHtmlContent(), post.getTags());
         }
 
         @JsonInclude(Include.ALWAYS)
@@ -77,8 +77,8 @@ class PostController {
         }
 
         @JsonInclude(Include.ALWAYS)
-        public String getDescription() {
-            return description;
+        public String getHtmlContent() {
+            return htmlContent;
         }
         
         @JsonInclude(Include.ALWAYS)
