@@ -2,6 +2,7 @@ package hu.webarticum.inno.restdemo.model;
 
 import hu.webarticum.holodb.jpa.annotation.HoloColumn;
 import hu.webarticum.holodb.jpa.annotation.HoloTable;
+import hu.webarticum.holodb.jpa.annotation.HoloWriteable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,11 +12,12 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "authors")
-@HoloTable(size = 20)
+@HoloTable(size = 100, writeable = HoloWriteable.WRITEABLE)
 public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false, updatable = false)
     private Long id;
 
     @Column(name = "firstname", nullable = false)

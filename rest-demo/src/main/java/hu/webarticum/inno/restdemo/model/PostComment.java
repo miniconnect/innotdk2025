@@ -1,23 +1,38 @@
 package hu.webarticum.inno.restdemo.model;
 
+import java.time.LocalDateTime;
+
 import hu.webarticum.holodb.jpa.annotation.HoloColumn;
 import hu.webarticum.holodb.jpa.annotation.HoloColumnDummyTextKind;
 import hu.webarticum.holodb.jpa.annotation.HoloTable;
+import hu.webarticum.holodb.jpa.annotation.HoloWriteable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "images")
-@HoloTable(size = 30)
+@HoloTable(size = 10000, writeable = HoloWriteable.WRITEABLE)
 public class PostComment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false, updatable = false)
     private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "post_id", nullable = false)
+    private Post post;
+
+    @Column(name = "created_at", nullable = false)
+    @HoloColumn(valuesPattern = "2025\\-0[78]\\-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]")
+    private LocalDateTime createdAt;
 
     @Column(name = "username", nullable = false)
     private String username;
@@ -33,6 +48,22 @@ public class PostComment {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Post getPost() {
+        return post;
+    }
+
+    public void setPost(Post post) {
+        this.post = post;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
     public String getUsername() {

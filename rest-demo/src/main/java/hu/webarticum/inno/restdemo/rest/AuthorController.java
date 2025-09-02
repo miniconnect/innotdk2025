@@ -9,9 +9,17 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 import hu.webarticum.inno.restdemo.model.Author;
 import hu.webarticum.inno.restdemo.repository.AuthorRepository;
+import io.micronaut.core.annotation.Nullable;
+import io.micronaut.data.model.Page;
+import io.micronaut.data.model.Pageable;
+import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
+import io.micronaut.http.annotation.Post;
+import io.micronaut.http.annotation.Put;
+import io.micronaut.http.annotation.QueryValue;
+import io.micronaut.http.exceptions.HttpStatusException;
 import io.micronaut.serde.annotation.Serdeable;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.transaction.Transactional;
@@ -26,10 +34,40 @@ class AuthorController {
         this.authorRepository = authorRepository;
     }
 
+    @Get("/{?firstname,lastname}")
+    @Transactional
+    public Page<AuthorDto> list(
+                @QueryValue("firstname") @Nullable String firstname,
+                @QueryValue("lastname") @Nullable String lastname,
+                Pageable pageable) {
+        return authorRepository.findOptionally(firstname, lastname, pageable).map(AuthorDto::from);
+    }
+
     @Get("/{id}")
     @Transactional
     Optional<AuthorDto> findById(@PathVariable Long id) {
         return authorRepository.findById(id).map(AuthorDto::from);
+    }
+
+    @Post("/")
+    @Transactional
+    public AuthorDto create(AuthorDto authorDto) {
+        Author author = authorDto.toAuthor();
+        Author savedAuthor = authorRepository.save(author);
+        return AuthorDto.from(savedAuthor);
+    }
+
+    @Put("/{id}")
+    @Transactional
+    public AuthorDto update(@PathVariable Long id, AuthorDto authorDto) {
+        Author author = authorRepository.findById(id).orElseThrow(() -> new HttpStatusException(HttpStatus.NOT_FOUND, "No such author"));
+        Long givenId = authorDto.getId();
+        if (givenId != null && givenId != id) {
+            throw new HttpStatusException(HttpStatus.BAD_REQUEST, "Changing 'id' is not allowed");
+        }
+        authorDto.mergeToAuthor(author);
+        Author savedAuthor = authorRepository.update(author);
+        return AuthorDto.from(savedAuthor);
     }
 
     @Serdeable
@@ -39,15 +77,11 @@ class AuthorController {
         private final String firstname;
         private final String lastname;
 
-        public AuthorDto(String firstname, String lastname) {
-            this(null, firstname, lastname);
-        }
-
         @JsonCreator
         public AuthorDto(
                 @JsonProperty(value = "id", required = false) Long id,
-                @JsonProperty(value = "firstname", required = true) String firstname,
-                @JsonProperty(value = "lastname", required = true) String lastname) {
+                @JsonProperty(value = "firstname", required = false) String firstname,
+                @JsonProperty(value = "lastname", required = false) String lastname) {
             this.id = id;
             this.firstname = firstname;
             this.lastname = lastname;
@@ -70,6 +104,24 @@ class AuthorController {
         @JsonInclude(Include.ALWAYS)
         public String getLastname() {
             return lastname;
+        }
+
+        public Author toAuthor() {
+            Author author = new Author();
+            mergeToAuthor(author);
+            return author;
+        }
+
+        public void mergeToAuthor(Author author) {
+            if (id != null) {
+                author.setId(id);
+            }
+            if (firstname != null) {
+                author.setFirstname(firstname);
+            }
+            if (lastname != null) {
+                author.setLastname(lastname);
+            }
         }
 
     }

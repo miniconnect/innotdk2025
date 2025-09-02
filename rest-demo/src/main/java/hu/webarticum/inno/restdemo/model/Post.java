@@ -1,15 +1,12 @@
 package hu.webarticum.inno.restdemo.model;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 import hu.webarticum.holodb.jpa.annotation.HoloColumn;
 import hu.webarticum.holodb.jpa.annotation.HoloColumnDummyTextKind;
 import hu.webarticum.holodb.jpa.annotation.HoloTable;
-import hu.webarticum.holodb.jpa.annotation.HoloVirtualColumn;
-import jakarta.persistence.CascadeType;
+import hu.webarticum.holodb.jpa.annotation.HoloWriteable;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
@@ -20,25 +17,31 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "posts")
-@HoloTable(size = 20)
+@HoloTable(size = 1000, writeable = HoloWriteable.WRITEABLE)
 public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false, updatable = false)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
+    @Column(name = "category_id", insertable = false, updatable = false)
+    private Long categoryId;
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "author_id", nullable = false)
     private Author author;
+
+    @Column(name = "author_id", insertable = false, updatable = false)
+    private Long authorId;
 
     @Column(name = "title", nullable = false)
     @HoloColumn(valuesTextKind = HoloColumnDummyTextKind.TITLE)
@@ -51,14 +54,9 @@ public class Post {
     @Column(name = "tag")
     @ElementCollection
     @CollectionTable(name = "post_tags", joinColumns = { @JoinColumn(name = "post_id") })
-    @HoloTable(size = 20)
+    @HoloTable(size = 1500, writeable = HoloWriteable.WRITEABLE)
     @HoloColumn(values = { "educational", "news", "review", "tutorial" })
-    @HoloVirtualColumn(name = "color", type = String.class, valuesBundle = "colors")
     private Set<String> tags;
-
-    @OneToMany(cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
-    @JoinColumn(name = "post_id")
-    private List<PostComment> comments;
 
     
     public Long getId() {
@@ -69,12 +67,40 @@ public class Post {
         this.id = id;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public Long getCategoryId() {
+        if (categoryId != null) {
+            return categoryId;
+        } else if (category != null) {
+            return category.getId();
+        } else {
+            return null;
+        }
+    }
+
     public Author getAuthor() {
         return author;
     }
 
     public void setAuthor(Author author) {
         this.author = author;
+    }
+
+    public Long getAuthorId() {
+        if (authorId != null) {
+            return authorId;
+        } else if (author != null) {
+            return author.getId();
+        } else {
+            return null;
+        }
     }
 
     public String getTitle() {
@@ -94,20 +120,11 @@ public class Post {
     }
 
     public Set<String> getTags() {
-        return new HashSet<>(tags);
+        return new TreeSet<>(tags);
     }
 
     public void setTags(Set<String> tags) {
-        this.tags = new HashSet<>(tags);
+        this.tags = new TreeSet<>(tags);
     }
-
-    public List<PostComment> getComments() {
-        return new ArrayList<>(comments);
-    }
-
-    public void setComments(List<PostComment> comments) {
-        this.comments = new ArrayList<>(comments);
-    }
-
 
 }
