@@ -5,6 +5,7 @@
 | Live edit demo basics | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![DONE](https://img.shields.io/badge/DONE-green) |
 | Calcite fallback | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![DONE](https://img.shields.io/badge/DONE-green) |
 | REST API dev demo | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![DONE](https://img.shields.io/badge/DONE-green) |
+| HoloDB logo | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
 | Sky app basics | ![MEDIUM](https://img.shields.io/badge/MEDIUM-yellow) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
 | Sky app querying | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![TODO](https://img.shields.io/badge/TODO-gray) |
 | Paper web app basics | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
