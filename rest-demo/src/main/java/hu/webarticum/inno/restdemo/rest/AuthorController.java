@@ -21,6 +21,7 @@ import io.micronaut.http.annotation.Put;
 import io.micronaut.http.annotation.QueryValue;
 import io.micronaut.http.exceptions.HttpStatusException;
 import io.micronaut.serde.annotation.Serdeable;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.transaction.Transactional;
 
@@ -39,13 +40,14 @@ class AuthorController {
     public Page<AuthorDto> list(
                 @QueryValue("firstname") @Nullable String firstname,
                 @QueryValue("lastname") @Nullable String lastname,
-                Pageable pageable) {
-        return authorRepository.findOptionally(firstname, lastname, pageable).map(AuthorDto::from);
+                @QueryValue(value = "page", defaultValue = "0") @Nullable Integer page,
+                @QueryValue(value = "size", defaultValue = "20") @Nullable Integer size) {
+        return authorRepository.findOptionally(firstname, lastname, Pageable.from(page, size)).map(AuthorDto::from);
     }
 
     @Get("/{id}")
     @Transactional
-    Optional<AuthorDto> findById(@PathVariable Long id) {
+    public Optional<AuthorDto> get(@PathVariable Long id) {
         return authorRepository.findById(id).map(AuthorDto::from);
     }
 
@@ -91,6 +93,7 @@ class AuthorController {
             return new AuthorDto(author.getId(), author.getFirstname(), author.getLastname());
         }
 
+        @Schema(accessMode = Schema.AccessMode.READ_ONLY)
         @JsonInclude(Include.ALWAYS)
         public Long getId() {
             return id;

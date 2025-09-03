@@ -18,6 +18,7 @@ import io.micronaut.http.annotation.Post;
 import io.micronaut.http.annotation.Put;
 import io.micronaut.http.exceptions.HttpStatusException;
 import io.micronaut.serde.annotation.Serdeable;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.transaction.Transactional;
 
@@ -85,6 +86,7 @@ public class CategoryController {
             return new CategoryDto(category.getId(), category.getName(), category.getDescription());
         }
 
+        @Schema(accessMode = Schema.AccessMode.READ_ONLY)
         @JsonInclude(Include.NON_NULL)
         public Long getId() {
             return id;

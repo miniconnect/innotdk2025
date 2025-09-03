@@ -17,7 +17,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "images")
+@Table(name = "post_comments")
 @HoloTable(size = 10000, writeable = HoloWriteable.WRITEABLE)
 public class PostComment {
 
@@ -31,7 +31,7 @@ public class PostComment {
     private Post post;
 
     @Column(name = "created_at", nullable = false)
-    @HoloColumn(valuesPattern = "2025\\-0[78]\\-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]")
+    @HoloColumn(valuesPattern = "2025\\-0[78]\\-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]", type = LocalDateTime.class)
     private LocalDateTime createdAt;
 
     @Column(name = "username", nullable = false)

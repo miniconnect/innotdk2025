@@ -5,10 +5,12 @@ import java.util.List;
 import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
+import hu.webarticum.inno.restdemo.model.Post;
 import hu.webarticum.inno.restdemo.model.PostComment;
 import hu.webarticum.inno.restdemo.repository.PostCommentRepository;
 import hu.webarticum.inno.restdemo.repository.PostRepository;
@@ -16,8 +18,10 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
+import io.micronaut.http.annotation.Put;
 import io.micronaut.http.exceptions.HttpStatusException;
 import io.micronaut.serde.annotation.Serdeable;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.transaction.Transactional;
 
@@ -38,20 +42,54 @@ class PostCommentController {
     @Transactional
     public List<PostCommentDto> list(@PathVariable long postId) {
         checkPostId(postId);
-        return postCommentRepository.findByPostIdOrderByCreatedAt(postId).stream().map(PostCommentDto::from).toList();
+        return postCommentRepository.findAllByPostIdOrderByCreatedAt(postId).stream().map(PostCommentDto::from).toList();
     }
 
     @Get("/{id}")
     @Transactional
-    Optional<PostCommentDto> get(@PathVariable long postId, @PathVariable Long id) {
+    public Optional<PostCommentDto> get(@PathVariable long postId, @PathVariable Long id) {
         checkPostId(postId);
-        return postCommentRepository.findById(id).map(PostCommentDto::from);
+        return postCommentRepository.findByPostIdAndId(postId, id).map(PostCommentDto::from);
+    }
+
+    @io.micronaut.http.annotation.Post("/")
+    @Transactional
+    public PostCommentDto create(@PathVariable long postId, PostCommentDto postCommentDto) {
+        Post post = getPostById(postId);
+        PostComment postComment = postCommentDto.toPostComment(post);
+        PostComment savedPostComment = postCommentRepository.save(postComment);
+        
+        System.out.println(savedPostComment.getCreatedAt());
+        
+        return PostCommentDto.from(savedPostComment);
+    }
+
+    @Put("/{id}")
+    @Transactional
+    public PostCommentDto update(@PathVariable long postId, @PathVariable Long id, PostCommentDto postCommentDto) {
+        Post post = getPostById(postId);
+        PostComment postComment = postCommentRepository.findByPostIdAndId(postId, id).orElseThrow(() -> new HttpStatusException(HttpStatus.NOT_FOUND, "No such comment"));
+        Long givenId = postCommentDto.getId();
+        if (givenId != null && givenId != id) {
+            throw new HttpStatusException(HttpStatus.BAD_REQUEST, "Changing 'id' is not allowed");
+        }
+        postCommentDto.mergeToPostComment(postComment, post);
+        PostComment savedPostComment = postCommentRepository.update(postComment);
+        return PostCommentDto.from(savedPostComment);
     }
 
     private void checkPostId(long postId) {
         if (!postRepository.existsById(postId)) {
-            throw new HttpStatusException(HttpStatus.NOT_FOUND, "No such post");
+            throw createNoSuchPostException();
         }
+    }
+
+    private Post getPostById(long postId) {
+        return postRepository.findById(postId).orElseThrow(this::createNoSuchPostException);
+    }
+
+    private HttpStatusException createNoSuchPostException() {
+        return new HttpStatusException(HttpStatus.NOT_FOUND, "No such post");
     }
     
     @Serdeable
@@ -65,9 +103,9 @@ class PostCommentController {
         @JsonCreator
         public PostCommentDto(
                 @JsonProperty(value = "id", required = false) Long id,
-                @JsonProperty(value = "createdAt", required = true) LocalDateTime createdAt,
-                @JsonProperty(value = "username", required = true) String username,
-                @JsonProperty(value = "content", required = true) String content) {
+                @JsonProperty(value = "createdAt", required = false) LocalDateTime createdAt,
+                @JsonProperty(value = "username", required = false) String username,
+                @JsonProperty(value = "content", required = false) String content) {
             this.id = id;
             this.createdAt = createdAt;
             this.username = username;
@@ -78,12 +116,15 @@ class PostCommentController {
             return new PostCommentDto(comment.getId(), comment.getCreatedAt(), comment.getUsername(), comment.getContent());
         }
 
+        @Schema(accessMode = Schema.AccessMode.READ_ONLY)
         @JsonInclude(Include.ALWAYS)
         public Long getId() {
             return id;
         }
 
+        @Schema(example = "2025-10-17T12:00:00")
         @JsonInclude(Include.ALWAYS)
+        @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
         public LocalDateTime getCreatedAt() {
             return createdAt;
         }
@@ -96,6 +137,30 @@ class PostCommentController {
         @JsonInclude(Include.ALWAYS)
         public String getContent() {
             return content;
+        }
+
+        public PostComment toPostComment(Post post) {
+            PostComment postComment = new PostComment();
+            mergeToPostComment(postComment, post);
+            return postComment;
+        }
+
+        public void mergeToPostComment(PostComment postComment, Post post) {
+            if (id != null) {
+                postComment.setId(id);
+            }
+            if (createdAt != null) {
+                postComment.setCreatedAt(createdAt);
+            }
+            if (username != null) {
+                postComment.setUsername(username);
+            }
+            if (content != null) {
+                postComment.setContent(content);
+            }
+            if (post != null) {
+                postComment.setPost(post);
+            }
         }
 
     }

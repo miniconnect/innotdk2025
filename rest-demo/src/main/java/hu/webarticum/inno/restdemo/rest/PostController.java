@@ -10,6 +10,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
+import hu.webarticum.inno.restdemo.model.Author;
+import hu.webarticum.inno.restdemo.model.Category;
 import hu.webarticum.inno.restdemo.model.Post;
 import hu.webarticum.inno.restdemo.repository.AuthorRepository;
 import hu.webarticum.inno.restdemo.repository.CategoryRepository;
@@ -25,6 +27,7 @@ import io.micronaut.http.annotation.Put;
 import io.micronaut.http.annotation.QueryValue;
 import io.micronaut.http.exceptions.HttpStatusException;
 import io.micronaut.serde.annotation.Serdeable;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
@@ -54,14 +57,13 @@ class PostController {
                 @QueryValue("categoryId") @Nullable Long categoryId,
                 @QueryValue("authorId") @Nullable Long authorId,
                 @QueryValue(value = "page", defaultValue = "0") @Nullable Integer page,
-                @QueryValue(value = "size", defaultValue = "20") @Nullable Integer size,
-                Pageable pageable) {
+                @QueryValue(value = "size", defaultValue = "20") @Nullable Integer size) {
         return postRepository.findOptionally(categoryId, authorId, Pageable.from(page, size)).map(PostDto::from);
     }
 
     @Get("/{id}")
     @Transactional
-    Optional<PostDto> findById(@PathVariable Long id) {
+    public Optional<PostDto> get(@PathVariable Long id) {
         return postRepository.findById(id).map(PostDto::from);
     }
 
@@ -103,8 +105,8 @@ class PostController {
                 @JsonProperty(value = "id", required = false) Long id,
                 @JsonProperty(value = "categoryId", required = false) Long categoryId,
                 @JsonProperty(value = "authorId", required = false) Long authorId,
-                @JsonProperty(value = "title", required = true) String title,
-                @JsonProperty(value = "htmlContent", required = true) String htmlContent,
+                @JsonProperty(value = "title", required = false) String title,
+                @JsonProperty(value = "htmlContent", required = false) String htmlContent,
                 @JsonProperty(value = "tags", required = false) Set<String> tags) {
             this.categoryId = categoryId;
             this.authorId = authorId;
@@ -121,6 +123,7 @@ class PostController {
             return new PostDto(post.getId(), post.getCategoryId(), post.getAuthorId(), post.getTitle(), post.getHtmlContent(), post.getTags());
         }
 
+        @Schema(accessMode = Schema.AccessMode.READ_ONLY)
         @JsonInclude(Include.ALWAYS)
         public Long getId() {
             return id;
@@ -162,10 +165,14 @@ class PostController {
                 post.setId(id);
             }
             if (categoryId != null) {
-                post.setCategory(categoryRepository.findById(categoryId).get());
+                Category category = categoryRepository.findById(categoryId)
+                        .orElseThrow(() -> new HttpStatusException(HttpStatus.BAD_REQUEST, "No such category"));
+                post.setCategory(category);
             }
             if (authorId != null) {
-                post.setAuthor(authorRepository.findById(authorId).get());
+                Author author = authorRepository.findById(authorId)
+                        .orElseThrow(() -> new HttpStatusException(HttpStatus.BAD_REQUEST, "No such author"));
+                post.setAuthor(author);
             }
             if (title != null) {
                 post.setTitle(title);
