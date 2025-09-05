@@ -27,8 +27,11 @@ dependencies {
     compileOnly 'io.micronaut.openapi:micronaut-openapi-annotations'
 
     runtimeOnly 'ch.qos.logback:logback-classic'
-
+    
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testImplementation 'io.micronaut:micronaut-http-client'
+    testImplementation 'org.assertj:assertj-core:3.27.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
 
@@ -44,11 +47,11 @@ java {
 graalvmNative.toolchainDetection = false
 
 micronaut {
-    runtime("netty")
-    testRuntime("junit5")
+    runtime('netty')
+    testRuntime('junit5')
     processing {
         incremental(true)
-        annotations("hu.webarticum.inno.restdemo.*")
+        annotations('hu.webarticum.inno.restdemo.*')
     }
     aot {
         optimizeServiceLoading = false
@@ -63,9 +66,23 @@ micronaut {
 }
 
 tasks.withType(JavaCompile).configureEach {
-    options.compilerArgs += [ "-parameters", "-Amicronaut.openapi.views.spec=swagger-ui.enabled=true" ]
+    options.compilerArgs += [ '-parameters', '-Amicronaut.openapi.views.spec=swagger-ui.enabled=true' ]
 }
 
-tasks.named("dockerfileNative") {
-    jdkVersion = "17"
+tasks.named('dockerfileNative') {
+    jdkVersion = '17'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.register('smoke', Test) {
+    group = 'verification'
+    description = 'Runs smoke tests'
+    testClassesDirs = sourceSets.test.output.classesDirs
+    classpath = sourceSets.test.runtimeClasspath
+    useJUnitPlatform {
+        includeTags 'smoke'
+    }
 }
