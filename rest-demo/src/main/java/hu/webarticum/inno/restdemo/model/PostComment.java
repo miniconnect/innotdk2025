@@ -14,6 +14,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
 @Entity
@@ -34,6 +36,10 @@ public class PostComment {
     @HoloColumn(valuesPattern = "2025\\-0[78]\\-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]", type = LocalDateTime.class)
     private LocalDateTime createdAt;
 
+    @Column(name = "updated_at", nullable = false)
+    @HoloColumn(valuesPattern = "2025\\-0[78]\\-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]", type = LocalDateTime.class)
+    private LocalDateTime updatedAt;
+
     @Column(name = "username", nullable = false)
     private String username;
 
@@ -42,6 +48,18 @@ public class PostComment {
     private String content;
 
     
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+        updatedAt = createdAt;
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = LocalDateTime.now();
+    }
+
+
     public Long getId() {
         return id;
     }
@@ -64,6 +82,14 @@ public class PostComment {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     public String getUsername() {

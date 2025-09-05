@@ -78,6 +78,7 @@ class PostCommentController {
         }
         postCommentDto.mergeToPostComment(postComment, post);
         PostComment savedPostComment = postCommentRepository.update(postComment);
+        postCommentRepository.flush();
         return PostCommentDto.from(savedPostComment);
     }
 
@@ -100,6 +101,7 @@ class PostCommentController {
         
         private final Long id;
         private final LocalDateTime createdAt;
+        private final LocalDateTime updatedAt;
         private final String username;
         private final String content;
 
@@ -107,16 +109,18 @@ class PostCommentController {
         public PostCommentDto(
                 @JsonProperty(value = "id", required = false) Long id,
                 @JsonProperty(value = "createdAt", required = false) LocalDateTime createdAt,
+                @JsonProperty(value = "updatedAt", required = false) LocalDateTime updatedAt,
                 @JsonProperty(value = "username", required = false) String username,
                 @JsonProperty(value = "content", required = false) String content) {
             this.id = id;
             this.createdAt = createdAt;
+            this.updatedAt = updatedAt;
             this.username = username;
             this.content = content;
         }
         
         public static PostCommentDto from(PostComment comment) {
-            return new PostCommentDto(comment.getId(), comment.getCreatedAt(), comment.getUsername(), comment.getContent());
+            return new PostCommentDto(comment.getId(), comment.getCreatedAt(), comment.getUpdatedAt(), comment.getUsername(), comment.getContent());
         }
 
         @Schema(accessMode = Schema.AccessMode.READ_ONLY)
@@ -126,11 +130,18 @@ class PostCommentController {
             return id;
         }
 
-        @Schema(example = "2025-10-17T12:00:00")
+        @Schema(accessMode = Schema.AccessMode.READ_ONLY)
         @JsonInclude(Include.ALWAYS)
         @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
         public LocalDateTime getCreatedAt() {
             return createdAt;
+        }
+
+        @Schema(accessMode = Schema.AccessMode.READ_ONLY)
+        @JsonInclude(Include.ALWAYS)
+        @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+        public LocalDateTime getUpdatedAt() {
+            return updatedAt;
         }
 
         @JsonInclude(Include.ALWAYS)
@@ -155,6 +166,9 @@ class PostCommentController {
             }
             if (createdAt != null) {
                 postComment.setCreatedAt(createdAt);
+            }
+            if (updatedAt != null) {
+                postComment.setUpdatedAt(updatedAt);
             }
             if (username != null) {
                 postComment.setUsername(username);
