@@ -14,20 +14,24 @@ import hu.webarticum.inno.restdemo.model.Post;
 import hu.webarticum.inno.restdemo.model.PostComment;
 import hu.webarticum.inno.restdemo.repository.PostCommentRepository;
 import hu.webarticum.inno.restdemo.repository.PostRepository;
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.annotation.Put;
+import io.micronaut.http.annotation.Status;
 import io.micronaut.http.exceptions.HttpStatusException;
 import io.micronaut.serde.annotation.Serdeable;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.transaction.Transactional;
 
-@Controller("/post/{postId}/comments")
+@Controller(PostCommentController.PATH_TEMPLATE)
 @Tag(name = "Comments", description = "Endpoints for accessing comments for each post")
 class PostCommentController {
+    
+    static final String PATH_TEMPLATE = "/posts/{postId}/comments";
     
     private final PostRepository postRepository;
     
@@ -53,15 +57,14 @@ class PostCommentController {
     }
 
     @io.micronaut.http.annotation.Post("/")
+    @Status(HttpStatus.CREATED)
     @Transactional
-    public PostCommentDto create(@PathVariable long postId, PostCommentDto postCommentDto) {
+    public HttpResponse<PostCommentDto> create(@PathVariable long postId, PostCommentDto postCommentDto) {
         Post post = getPostById(postId);
         PostComment postComment = postCommentDto.toPostComment(post);
         PostComment savedPostComment = postCommentRepository.save(postComment);
-        
-        System.out.println(savedPostComment.getCreatedAt());
-        
-        return PostCommentDto.from(savedPostComment);
+        String path = PATH_TEMPLATE.replace("{postId}", "" + postId);
+        return RestUtil.createdResponse(path, PostCommentDto.from(savedPostComment));
     }
 
     @Put("/{id}")
@@ -93,7 +96,7 @@ class PostCommentController {
     }
     
     @Serdeable
-    public static class PostCommentDto {
+    public static class PostCommentDto implements HasId {
         
         private final Long id;
         private final LocalDateTime createdAt;
@@ -118,6 +121,7 @@ class PostCommentController {
 
         @Schema(accessMode = Schema.AccessMode.READ_ONLY)
         @JsonInclude(Include.ALWAYS)
+        @Override
         public Long getId() {
             return id;
         }

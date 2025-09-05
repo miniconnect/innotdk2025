@@ -10,21 +10,25 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 import hu.webarticum.inno.restdemo.model.Category;
 import hu.webarticum.inno.restdemo.repository.CategoryRepository;
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.annotation.Post;
 import io.micronaut.http.annotation.Put;
+import io.micronaut.http.annotation.Status;
 import io.micronaut.http.exceptions.HttpStatusException;
 import io.micronaut.serde.annotation.Serdeable;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.transaction.Transactional;
 
-@Controller("/categories")
+@Controller(CategoryController.PATH)
 @Tag(name = "Categories", description = "Endpoints for accessing post categories")
 public class CategoryController {
+    
+    static final String PATH = "/categories";
     
     private final CategoryRepository categoryRepository;
     
@@ -45,11 +49,12 @@ public class CategoryController {
     }
 
     @Post("/")
+    @Status(HttpStatus.CREATED)
     @Transactional
-    public CategoryDto create(CategoryDto categoryDto) {
+    public HttpResponse<CategoryDto> create(CategoryDto categoryDto) {
         Category category = categoryDto.toCategory();
         Category savedCategory = categoryRepository.save(category);
-        return CategoryDto.from(savedCategory);
+        return RestUtil.createdResponse(PATH, CategoryDto.from(savedCategory));
     }
 
     @Put("/{id}")
@@ -66,7 +71,7 @@ public class CategoryController {
     }
 
     @Serdeable
-    public static class CategoryDto {
+    public static class CategoryDto implements HasId {
         
         private final Long id;
         private final String name;
@@ -88,6 +93,7 @@ public class CategoryController {
 
         @Schema(accessMode = Schema.AccessMode.READ_ONLY)
         @JsonInclude(Include.NON_NULL)
+        @Override
         public Long getId() {
             return id;
         }

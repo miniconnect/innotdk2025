@@ -19,12 +19,14 @@ import hu.webarticum.inno.restdemo.repository.PostRepository;
 import io.micronaut.core.annotation.Nullable;
 import io.micronaut.data.model.Page;
 import io.micronaut.data.model.Pageable;
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.annotation.Put;
 import io.micronaut.http.annotation.QueryValue;
+import io.micronaut.http.annotation.Status;
 import io.micronaut.http.exceptions.HttpStatusException;
 import io.micronaut.serde.annotation.Serdeable;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -32,9 +34,11 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 
-@Controller("/posts")
+@Controller(PostController.PATH)
 @Tag(name = "Posts", description = "Endpoints for accessing posts")
 class PostController {
+
+    static final String PATH = "/posts";
     
     private final EntityManager entityManager;
     
@@ -68,11 +72,12 @@ class PostController {
     }
 
     @io.micronaut.http.annotation.Post("/")
+    @Status(HttpStatus.CREATED)
     @Transactional
-    public PostDto create(PostDto postDto) {
+    public HttpResponse<PostDto> create(PostDto postDto) {
         Post post = postDto.toPost(categoryRepository, authorRepository);
         Post savedPost = postRepository.save(post);
-        return PostDto.from(savedPost);
+        return RestUtil.createdResponse(PATH, PostDto.from(savedPost));
     }
 
     @Put("/{id}")
@@ -91,7 +96,7 @@ class PostController {
     }
 
     @Serdeable
-    public static class PostDto {
+    public static class PostDto implements HasId {
         
         private final Long id;
         private final Long categoryId;
@@ -125,6 +130,7 @@ class PostController {
 
         @Schema(accessMode = Schema.AccessMode.READ_ONLY)
         @JsonInclude(Include.ALWAYS)
+        @Override
         public Long getId() {
             return id;
         }

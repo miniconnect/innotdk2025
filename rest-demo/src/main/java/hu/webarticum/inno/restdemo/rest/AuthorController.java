@@ -12,6 +12,7 @@ import hu.webarticum.inno.restdemo.repository.AuthorRepository;
 import io.micronaut.core.annotation.Nullable;
 import io.micronaut.data.model.Page;
 import io.micronaut.data.model.Pageable;
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
@@ -19,15 +20,18 @@ import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.annotation.Post;
 import io.micronaut.http.annotation.Put;
 import io.micronaut.http.annotation.QueryValue;
+import io.micronaut.http.annotation.Status;
 import io.micronaut.http.exceptions.HttpStatusException;
 import io.micronaut.serde.annotation.Serdeable;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.transaction.Transactional;
 
-@Controller("/authors")
+@Controller(AuthorController.PATH)
 @Tag(name = "Authors", description = "Endpoints for accessing post authors")
 class AuthorController {
+    
+    static final String PATH = "/authors";
     
     private final AuthorRepository authorRepository;
     
@@ -52,11 +56,12 @@ class AuthorController {
     }
 
     @Post("/")
+    @Status(HttpStatus.CREATED)
     @Transactional
-    public AuthorDto create(AuthorDto authorDto) {
+    public HttpResponse<AuthorDto> create(AuthorDto authorDto) {
         Author author = authorDto.toAuthor();
         Author savedAuthor = authorRepository.save(author);
-        return AuthorDto.from(savedAuthor);
+        return RestUtil.createdResponse(PATH, AuthorDto.from(savedAuthor));
     }
 
     @Put("/{id}")
@@ -73,7 +78,7 @@ class AuthorController {
     }
 
     @Serdeable
-    public static class AuthorDto {
+    public static class AuthorDto implements HasId {
         
         private final Long id;
         private final String firstname;
@@ -95,6 +100,7 @@ class AuthorController {
 
         @Schema(accessMode = Schema.AccessMode.READ_ONLY)
         @JsonInclude(Include.ALWAYS)
+        @Override
         public Long getId() {
             return id;
         }
