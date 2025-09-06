@@ -23,6 +23,7 @@ import io.micronaut.http.annotation.Put;
 import io.micronaut.http.annotation.Status;
 import io.micronaut.http.exceptions.HttpStatusException;
 import io.micronaut.serde.annotation.Serdeable;
+import io.micronaut.serde.config.annotation.SerdeConfig;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.transaction.Transactional;
@@ -132,14 +133,14 @@ class PostCommentController {
 
         @Schema(accessMode = Schema.AccessMode.READ_ONLY)
         @JsonInclude(Include.ALWAYS)
-        @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+        @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "UTC")
         public LocalDateTime getCreatedAt() {
             return createdAt;
         }
 
         @Schema(accessMode = Schema.AccessMode.READ_ONLY)
         @JsonInclude(Include.ALWAYS)
-        @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+        @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "UTC")
         public LocalDateTime getUpdatedAt() {
             return updatedAt;
         }

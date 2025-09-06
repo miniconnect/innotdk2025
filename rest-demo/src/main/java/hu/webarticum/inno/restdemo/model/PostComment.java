@@ -32,12 +32,18 @@ public class PostComment {
     @JoinColumn(name = "post_id", nullable = false)
     private Post post;
 
-    @Column(name = "created_at", nullable = false)
-    @HoloColumn(valuesPattern = "2025\\-0[78]\\-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]", type = LocalDateTime.class)
+    @Column(name = "created_at", nullable = false, updatable = false)
+    @HoloColumn(
+        valuesPattern = "2025\\-0[78]\\-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]", 
+        type = LocalDateTime.class,
+        seedKey = 1L)
     private LocalDateTime createdAt;
 
     @Column(name = "updated_at", nullable = false)
-    @HoloColumn(valuesPattern = "2025\\-0[78]\\-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]", type = LocalDateTime.class)
+    @HoloColumn(
+        valuesPattern = "2025\\-0[78]\\-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]", 
+        type = LocalDateTime.class,
+        seedKey = 1L)
     private LocalDateTime updatedAt;
 
     @Column(name = "username", nullable = false)
