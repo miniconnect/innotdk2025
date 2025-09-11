@@ -56,6 +56,7 @@ class SmokeTest {
         assertThat(createResponse.getStatus().getCode()).isEqualTo(201);
         checkPostBody(entityInputData, createResponse.body());
         String location = createResponse.header(HttpHeaders.LOCATION);
+        System.out.println(location);
         HttpResponse<JsonNode> getResponse = client.toBlocking().exchange(HttpRequest.GET(location), JsonNode.class);
         checkPostBody(entityInputData, getResponse.body());
     }

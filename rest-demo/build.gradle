@@ -11,22 +11,29 @@ repositories {
     mavenLocal()
 }
 
+configurations {
+    demoRuntime
+}
+
 dependencies {
     annotationProcessor 'io.micronaut:micronaut-http-validation'
     annotationProcessor 'io.micronaut.openapi:micronaut-openapi'
     annotationProcessor 'io.micronaut.serde:micronaut-serde-processor'
 
-    implementation 'hu.webarticum.holodb:jpa:0.6.1-SNAPSHOT'
+    implementation 'hu.webarticum.holodb:jpa-annotations:0.6.1-SNAPSHOT'
 
     implementation 'io.micronaut.serde:micronaut-serde-jackson'
     implementation 'jakarta.annotation:jakarta.annotation-api'
     implementation 'io.micronaut.data:micronaut-data-hibernate-jpa'
     implementation 'io.micronaut.sql:micronaut-jdbc-hikari'
+    implementation 'org.yaml:snakeyaml'
 
     compileOnly 'io.micronaut:micronaut-http-client'
     compileOnly 'io.micronaut.openapi:micronaut-openapi-annotations'
 
     runtimeOnly 'ch.qos.logback:logback-classic'
+
+    demoRuntime 'hu.webarticum.holodb:jpa:0.6.1-SNAPSHOT'
     
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testImplementation 'io.micronaut:micronaut-http-client'
@@ -34,15 +41,14 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
-
 application {
-    mainClass = "hu.webarticum.inno.restdemo.Application"
+    mainClass = 'hu.webarticum.inno.restdemo.Application'
 }
+
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
 }
-
 
 graalvmNative.toolchainDetection = false
 
@@ -74,15 +80,26 @@ tasks.named('dockerfileNative') {
 }
 
 test {
-    useJUnitPlatform()
+    useJUnitPlatform {
+        excludeTags 'smoke'
+    }
+}
+
+tasks.register('demo', JavaExec) {
+    group = 'application'
+    description = 'Runs the app with HoloDB backend'
+    classpath = sourceSets.main.runtimeClasspath + configurations.demoRuntime
+    mainClass = application.mainClass.get()
+    systemProperty 'micronaut.environments', 'demo'
 }
 
 tasks.register('smoke', Test) {
     group = 'verification'
     description = 'Runs smoke tests'
     testClassesDirs = sourceSets.test.output.classesDirs
-    classpath = sourceSets.test.runtimeClasspath
+    classpath = sourceSets.test.runtimeClasspath + configurations.demoRuntime
     useJUnitPlatform {
         includeTags 'smoke'
     }
+    systemProperty 'micronaut.environments', 'demo'
 }

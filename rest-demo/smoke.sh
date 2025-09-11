@@ -1,3 +1,3 @@
 #!/bin/sh
 
-( cd -- "$( dirname -- "$0" )" && ./gradlew test -Djunit.platform.tags.include=smoke )
+( cd -- "$( dirname -- "$0" )" && ./gradlew smoke )

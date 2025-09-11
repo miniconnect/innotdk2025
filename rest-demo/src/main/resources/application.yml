@@ -21,10 +21,10 @@ netty:
       max-order: 3
 datasources:
   default:
-    url: 'jdbc:holodb:jpa:///mockdata'
-    username: ''
-    password: ''
-    driverClassName: 'hu.webarticum.holodb.jpa.JpaMetamodelDriver'
+    url: "${JDBC_URL:}"
+    username: "${JDBC_USER:}"
+    password: "${JDBC_PASSWORD:}"
+    driverClassName: "${JDBC_DRIVER:}"
 jpa:
   default:
     properties:
