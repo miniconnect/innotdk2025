@@ -34,7 +34,7 @@ dependencies {
     runtimeOnly 'ch.qos.logback:logback-classic'
 
     demoRuntime 'hu.webarticum.holodb:jpa:0.6.1-SNAPSHOT'
-    
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testImplementation 'io.micronaut:micronaut-http-client'
     testImplementation 'org.assertj:assertj-core:3.27.3'

@@ -30,11 +30,11 @@ import jakarta.transaction.Transactional;
 @Controller(AuthorController.PATH)
 @Tag(name = "Authors", description = "Endpoints for accessing post authors")
 class AuthorController {
-    
+
     static final String PATH = "/authors";
-    
+
     private final AuthorRepository authorRepository;
-    
+
     public AuthorController(AuthorRepository authorRepository) {
         this.authorRepository = authorRepository;
     }
@@ -79,7 +79,7 @@ class AuthorController {
 
     @Serdeable
     public static class AuthorDto implements HasId {
-        
+
         private final Long id;
         private final String firstname;
         private final String lastname;
@@ -93,7 +93,7 @@ class AuthorController {
             this.firstname = firstname;
             this.lastname = lastname;
         }
-        
+
         public static AuthorDto from(Author author) {
             return new AuthorDto(author.getId(), author.getFirstname(), author.getLastname());
         }
@@ -134,5 +134,5 @@ class AuthorController {
         }
 
     }
-    
+
 }

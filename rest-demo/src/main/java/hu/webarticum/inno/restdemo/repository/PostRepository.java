@@ -11,13 +11,13 @@ import io.micronaut.data.model.Pageable;
 public interface PostRepository extends JpaRepository<Post, Long> {
 
     public Page<Post> findAll(Pageable pageable);
-    
+
     public Page<Post> findByCategoryId(long categoryId, Pageable pageable);
-    
+
     public Page<Post> findByAuthorId(long authorId, Pageable pageable);
 
     public Page<Post> findByCategoryIdAndAuthorId(long categoryId, long authorId, Pageable pageable);
-  
+
     public default Page<Post> findOptionally(@Nullable Long categoryId, @Nullable Long authorId, Pageable pageable) {
         if (categoryId != null && authorId != null) {
             return findByCategoryIdAndAuthorId(categoryId, authorId, pageable);
@@ -29,5 +29,5 @@ public interface PostRepository extends JpaRepository<Post, Long> {
             return findAll(pageable);
         }
     }
-    
+
 }

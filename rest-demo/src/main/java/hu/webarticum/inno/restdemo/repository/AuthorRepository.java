@@ -11,13 +11,13 @@ import io.micronaut.data.model.Pageable;
 public interface AuthorRepository extends JpaRepository<Author, Long> {
 
     public Page<Author> findAll(Pageable pageable);
-    
+
     public Page<Author> findByFirstname(String firstname, Pageable pageable);
-    
+
     public Page<Author> findByLastname(String lastname, Pageable pageable);
 
     public Page<Author> findByFirstnameAndLastname(String firstname, String lastname, Pageable pageable);
-  
+
     public default Page<Author> findOptionally(@Nullable String firstname, @Nullable String lastname, Pageable pageable) {
         if (firstname != null && lastname != null) {
             return findByFirstnameAndLastname(firstname, lastname, pageable);
@@ -29,5 +29,5 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
             return findAll(pageable);
         }
     }
-    
+
 }

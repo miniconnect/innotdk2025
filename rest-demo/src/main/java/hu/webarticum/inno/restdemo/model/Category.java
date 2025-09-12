@@ -30,7 +30,7 @@ public class Category {
     @HoloColumn(valuesTextKind = HoloColumnDummyTextKind.PARAGRAPH)
     private String description;
 
-    
+
     public Long getId() {
         return id;
     }

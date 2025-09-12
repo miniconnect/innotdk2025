@@ -58,7 +58,7 @@ public class Post {
     @HoloColumn(values = { "educational", "news", "review", "tutorial" })
     private Set<String> tags;
 
-    
+
     public Long getId() {
         return id;
     }

@@ -27,11 +27,11 @@ import jakarta.transaction.Transactional;
 @Controller(CategoryController.PATH)
 @Tag(name = "Categories", description = "Endpoints for accessing post categories")
 public class CategoryController {
-    
+
     static final String PATH = "/categories";
-    
+
     private final CategoryRepository categoryRepository;
-    
+
     public CategoryController(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
     }
@@ -72,7 +72,7 @@ public class CategoryController {
 
     @Serdeable
     public static class CategoryDto implements HasId {
-        
+
         private final Long id;
         private final String name;
         private final String description;
@@ -86,7 +86,7 @@ public class CategoryController {
             this.name = name;
             this.description = description;
         }
-        
+
         public static CategoryDto from(Category category) {
             return new CategoryDto(category.getId(), category.getName(), category.getDescription());
         }
@@ -127,5 +127,5 @@ public class CategoryController {
         }
 
     }
-    
+
 }

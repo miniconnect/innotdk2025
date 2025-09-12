@@ -30,13 +30,13 @@ import jakarta.transaction.Transactional;
 @Controller(PostCommentController.PATH_TEMPLATE)
 @Tag(name = "Comments", description = "Endpoints for accessing comments for each post")
 class PostCommentController {
-    
+
     static final String PATH_TEMPLATE = "/posts/{postId}/comments";
-    
+
     private final PostRepository postRepository;
-    
+
     private final PostCommentRepository postCommentRepository;
-    
+
     public PostCommentController(PostRepository postRepository, PostCommentRepository postCommentRepository) {
         this.postRepository = postRepository;
         this.postCommentRepository = postCommentRepository;
@@ -95,10 +95,10 @@ class PostCommentController {
     private HttpStatusException createNoSuchPostException() {
         return new HttpStatusException(HttpStatus.NOT_FOUND, "No such post");
     }
-    
+
     @Serdeable
     public static class PostCommentDto implements HasId {
-        
+
         private final Long id;
         private final LocalDateTime createdAt;
         private final LocalDateTime updatedAt;
@@ -118,7 +118,7 @@ class PostCommentController {
             this.username = username;
             this.content = content;
         }
-        
+
         public static PostCommentDto from(PostComment comment) {
             return new PostCommentDto(comment.getId(), comment.getCreatedAt(), comment.getUpdatedAt(), comment.getUsername(), comment.getContent());
         }

@@ -13,15 +13,14 @@ import io.micronaut.transaction.annotation.Transactional;
 @Singleton
 @Requires(env = "demo")
 public class HoloInit {
-    
+
     private final EntityManager entityManager;
-    
+
 
     public HoloInit(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
-    
-    
+
     @EventListener
     @Transactional
     public void onStartup(StartupEvent startupEvent) throws ReflectiveOperationException {
@@ -29,5 +28,5 @@ public class HoloInit {
         Method setMetamodel = driverClazz.getMethod("setMetamodel", Object.class);
         setMetamodel.invoke(null, entityManager.getMetamodel());
     }
-    
+
 }

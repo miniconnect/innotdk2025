@@ -39,15 +39,15 @@ import jakarta.transaction.Transactional;
 class PostController {
 
     static final String PATH = "/posts";
-    
+
     private final EntityManager entityManager;
-    
+
     private final PostRepository postRepository;
-    
+
     private final CategoryRepository categoryRepository;
-    
+
     private final AuthorRepository authorRepository;
-    
+
     public PostController(EntityManager entityManager, PostRepository postRepository, CategoryRepository categoryRepository, AuthorRepository authorRepository) {
         this.entityManager = entityManager;
         this.postRepository = postRepository;
@@ -97,7 +97,7 @@ class PostController {
 
     @Serdeable
     public static class PostDto implements HasId {
-        
+
         private final Long id;
         private final Long categoryId;
         private final Long authorId;
@@ -123,7 +123,7 @@ class PostController {
                     Collections.unmodifiableSet(new TreeSet<>(tags)) :
                     Collections.emptySet();
         }
-        
+
         public static PostDto from(Post post) {
             return new PostDto(post.getId(), post.getCategoryId(), post.getAuthorId(), post.getTitle(), post.getHtmlContent(), post.getTags());
         }
@@ -154,7 +154,7 @@ class PostController {
         public String getHtmlContent() {
             return htmlContent;
         }
-        
+
         @JsonInclude(Include.ALWAYS)
         public Set<String> getTags() {
             return tags;

@@ -28,7 +28,7 @@ public class Author {
     @HoloColumn(valuesBundle = "surnames")
     private String lastname;
 
-    
+
     public Long getId() {
         return id;
     }

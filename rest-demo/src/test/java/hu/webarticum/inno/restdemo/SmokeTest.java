@@ -31,7 +31,7 @@ class SmokeTest {
     private static final String FIELD_TAGS = "tags";
 
     @Inject
-    @Client("/") 
+    @Client("/")
     HttpClient client;
 
     @Test
@@ -40,7 +40,7 @@ class SmokeTest {
         assertThat(response.getStatus().getCode()).isEqualTo(200);
         assertThat(response.body().get("id").getNumberValue()).isEqualTo(1);
     }
-    
+
     @Test
     void testPostAndGetANewPost() {
         Map<String, Object> entityInputData = Map.of(
@@ -73,5 +73,5 @@ class SmokeTest {
         Set<String> tags = (Set<String>) entityInputData.get(FIELD_TAGS);
         assertThat(responseBody.get(FIELD_TAGS).values()).map(n -> n.getStringValue()).containsExactlyInAnyOrderElementsOf(tags);
     }
-    
+
 }
