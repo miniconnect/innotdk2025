@@ -34,3 +34,4 @@ Possible statuses:
 ![TODO](https://img.shields.io/badge/TODO-gray)
 ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue)
 ![DONE](https://img.shields.io/badge/DONE-green)
+![CANCELLED](https://img.shields.io/badge/CANCELLED-saddlebrown)
