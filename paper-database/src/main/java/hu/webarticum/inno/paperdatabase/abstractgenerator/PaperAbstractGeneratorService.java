@@ -13,7 +13,7 @@ import hu.webarticum.inno.paperdatabase.abstractgenerator.model.Topic;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.CompoundWordGenerator;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.KeywordEnum;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.WordGenerator;
-import hu.webarticum.inno.paperdatabase.abstractgenerator.model.topic.InformaticsTopic;
+import hu.webarticum.inno.paperdatabase.abstractgenerator.model.topic.MathematicsTopic;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.ContextModel;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.Keyword;
 
@@ -30,22 +30,31 @@ public class PaperAbstractGeneratorService {
             WordGenerator primaryWordGenerator = primaryKeyword.wordGenerator(random.nextLong());
             List<Keyword> secondaryKeywords = chooseSecondaryKeywords(topic, primaryKeyword, random);
             WordGenerator secondaryWordGenerator = compoundWordGeneratorOf(secondaryKeywords, random.nextLong());
-            PaperTextsResult templates = topic.buildPaperTextTemplates(primaryWordGenerator, secondaryWordGenerator, i);
+            PaperTextsResult textsResult = topic.buildPaperTextTemplates(primaryWordGenerator, secondaryWordGenerator, i);
             Map<String, Object> paperDataMap = new LinkedHashMap<>();
-            paperDataMap.put("title", templates.title());
+            paperDataMap.put("title", textsResult.title());
             paperDataMap.put("topic", topic.name());
             paperDataMap.put("primaryKeyword", primaryKeyword.label());
             paperDataMap.put("secondaryKeywords", keywordNamesOf(secondaryKeywords));
-            paperDataMap.put("abstract", templates.abstractText());
+            paperDataMap.put("abstract", textsResult.abstractText());
+
+            System.out.println("TITLE: " + textsResult.title());
+            System.out.println("ABSTRACT: " + textsResult.abstractText());
+            System.out.println();
+            
             result.add(paperDataMap);
         }
         return result;
     }
     
+    public static void main(String[] args) {
+        new PaperAbstractGeneratorService().generateAlternatives();
+    }
+    
     private Topic chooseTopic(List<Topic> topics, Random random) {
         //int choosenTopicIndex = random.nextInt(topics.size());
         //return topics.get(choosenTopicIndex);
-        return topics.stream().filter(InformaticsTopic.class::isInstance).findAny().get(); // NOSONAR: always present
+        return topics.stream().filter(MathematicsTopic.class::isInstance).findAny().get(); // NOSONAR: always present
     }
 
     private Keyword choosePrimaryKeyword(Topic topic, Random random) {

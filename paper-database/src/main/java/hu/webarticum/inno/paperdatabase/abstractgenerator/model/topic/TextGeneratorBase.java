@@ -11,6 +11,7 @@ import java.util.Random;
 import java.util.Set;
 import java.util.function.Supplier;
 
+import hu.webarticum.holodb.regex.facade.MatchList;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.PlaceholderType;
 import hu.webarticum.inno.paperdatabase.abstractgenerator.model.keyword.WordGenerator;
 import simplenlg.framework.DocumentElement;
@@ -25,6 +26,9 @@ public abstract class TextGeneratorBase {
     private static final int MAX_WORD_RETRIES = 5;
     
     private static final String FALLBACK_WORD = "buzz";
+    
+    private static final MatchList nameMatchList = MatchList.of(
+            "([AEIOU][nklmrv][aeiou]|[CDG][aeiou][bcnklmr]|(B|St|T)[aei]r)([aeiou][klmnstvw]?)?([bkln]|on)?(a|er|in|ov)?(ev|ss?[eo]n|sk[iy])?");
 
     protected final NLGFactory factory;
     
@@ -48,17 +52,23 @@ public abstract class TextGeneratorBase {
         this.realiser = realiser;
         this.seed = seed;
         this.sharedWordSubstitutionMap = new HashMap<>();
+        prepare();
         generateIntoSubstitutionMap(primaryPlaceholdersSpec, primaryWordGenerator);
         generateIntoSubstitutionMap(secondaryPlaceholdersSpec, secondaryWordGenerator);
     }
     
+    protected void prepare() {
+        // can be overridden
+    }
+    
+    protected static String generateName(Random random) {
+        return nameMatchList.get(nameMatchList.size().random(random));
+    }
+
     private void generateIntoSubstitutionMap(Map<String, PlaceholderType> sharedPlaceholdersSpec, WordGenerator wordGenerator) {
         Set<String> occuredWords = new HashSet<>();
         for (Map.Entry<String, PlaceholderType> entry : sharedPlaceholdersSpec.entrySet()) {
-            String key = entry.getKey();
-            PlaceholderType placeholderType = entry.getValue();
-            String word = retrieveWord(wordGenerator, placeholderType, occuredWords);
-            this.sharedWordSubstitutionMap.put(key, word);
+            this.sharedWordSubstitutionMap.computeIfAbsent(entry.getKey(), k -> retrieveWord(wordGenerator, entry.getValue(), occuredWords));
         }
     }
     
@@ -155,6 +165,10 @@ public abstract class TextGeneratorBase {
 
     protected final Supplier<List<NLGElement>> optional(Supplier<List<NLGElement>> part) {
         return () -> random.nextBoolean() ? part.get() : Collections.emptyList();
+    }
+
+    protected final Supplier<List<NLGElement>> conditional(boolean condition, Supplier<List<NLGElement>> ifTrue, Supplier<List<NLGElement>> ifFalse) {
+        return condition ? ifTrue : ifFalse;
     }
 
     protected final Supplier<List<NLGElement>> nothing() {
