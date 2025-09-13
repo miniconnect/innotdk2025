@@ -8,10 +8,10 @@
 | HoloDB logo | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
 | Sky app basics | ![MEDIUM](https://img.shields.io/badge/MEDIUM-yellow) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
 | Sky app querying | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![TODO](https://img.shields.io/badge/TODO-gray) |
-| Paper web app basics | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
-| Paper web app design | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![TODO](https://img.shields.io/badge/TODO-gray) |
-| Paper web app constraints | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
-| Abstract generator | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
+| Paper web app basics | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![CANCELLED](https://img.shields.io/badge/CANCELLED-saddlebrown) |
+| Paper web app design | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![CANCELLED](https://img.shields.io/badge/CANCELLED-saddlebrown) |
+| Paper web app constraints | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![CANCELLED](https://img.shields.io/badge/CANCELLED-saddlebrown) |
+| Abstract generator | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![CANCELLED](https://img.shields.io/badge/CANCELLED-saddlebrown) |
 | Face image generator | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
 | Customer invitation | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![TODO](https://img.shields.io/badge/TODO-gray) |
 | Screen switcher | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
