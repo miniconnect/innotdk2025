@@ -1,6 +1,6 @@
 datasources:
   default:
-    url: 'jdbc:holodb:jpa:///mockdata'
+    url: 'jdbc:holodb:jpa:///demo'
     username: ''
     password: ''
     driverClassName: 'hu.webarticum.holodb.jpa.JpaMetamodelDriver'
