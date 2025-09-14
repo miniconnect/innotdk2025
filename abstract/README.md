@@ -4,11 +4,13 @@
 
 - (*általában előre adott, felgyülemlett adatok kezelésével foglalkozunk*)
 - (*néha azonban fordított a helyzet, és az adatokat kell odateremteni egy helyzetbe*)
-- (*...*)
+- (*egyszerű, de kicsit absztraktan hagyott példa erre*)
 
-## A kutatómunkáról és az eméleti problémáról
+## A kutatómunkáról és az elméleti problémáról
 
-- (*...*)
+- (*minek a megvalósíthatóságára kerestem a választ*)
+- (*alapkoncepció*)
+- (*kereshetőség és konzisztencia, kriptográfia*)
 
 ## A termékről
 
