@@ -48,6 +48,7 @@ class PostController {
 
     private final AuthorRepository authorRepository;
 
+
     public PostController(EntityManager entityManager, PostRepository postRepository, CategoryRepository categoryRepository, AuthorRepository authorRepository) {
         this.entityManager = entityManager;
         this.postRepository = postRepository;
@@ -95,15 +96,22 @@ class PostController {
         return PostDto.from(savedPost);
     }
 
+
     @Serdeable
     public static class PostDto implements HasId {
 
         private final Long id;
+
         private final Long categoryId;
+
         private final Long authorId;
+
         private final String title;
+
         private final String htmlContent;
+
         private final Set<String> tags;
+
 
         @JsonCreator
         public PostDto(

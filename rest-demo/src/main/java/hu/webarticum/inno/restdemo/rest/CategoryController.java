@@ -32,6 +32,7 @@ public class CategoryController {
 
     private final CategoryRepository categoryRepository;
 
+
     public CategoryController(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
     }
@@ -70,12 +71,16 @@ public class CategoryController {
         return CategoryDto.from(savedCategory);
     }
 
+
     @Serdeable
     public static class CategoryDto implements HasId {
 
         private final Long id;
+
         private final String name;
+
         private final String description;
+
 
         @JsonCreator
         public CategoryDto(

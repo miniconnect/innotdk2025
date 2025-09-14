@@ -3,8 +3,6 @@ package hu.webarticum.inno.restdemo;
 import jakarta.inject.Singleton;
 import jakarta.persistence.EntityManager;
 
-import java.lang.reflect.Method;
-
 import io.micronaut.context.annotation.Requires;
 import io.micronaut.context.event.StartupEvent;
 import io.micronaut.runtime.event.annotation.EventListener;
@@ -24,9 +22,9 @@ public class HoloInit {
     @EventListener
     @Transactional
     public void onStartup(StartupEvent startupEvent) throws ReflectiveOperationException {
-        Class<?> driverClazz = Class.forName("hu.webarticum.holodb.jpa.JpaMetamodelDriver");
-        Method setMetamodel = driverClazz.getMethod("setMetamodel", Object.class);
-        setMetamodel.invoke(null, entityManager.getMetamodel());
+        Class.forName("hu.webarticum.holodb.jpa.JpaMetamodelDriver")
+                .getMethod("setMetamodel", Object.class)
+                .invoke(null, entityManager.getMetamodel());
     }
 
 }

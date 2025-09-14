@@ -65,7 +65,6 @@ public class PostComment {
         updatedAt = LocalDateTime.now();
     }
 
-
     public Long getId() {
         return id;
     }

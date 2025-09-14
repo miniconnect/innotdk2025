@@ -37,6 +37,7 @@ class PostCommentController {
 
     private final PostCommentRepository postCommentRepository;
 
+
     public PostCommentController(PostRepository postRepository, PostCommentRepository postCommentRepository) {
         this.postRepository = postRepository;
         this.postCommentRepository = postCommentRepository;
@@ -96,14 +97,20 @@ class PostCommentController {
         return new HttpStatusException(HttpStatus.NOT_FOUND, "No such post");
     }
 
+
     @Serdeable
     public static class PostCommentDto implements HasId {
 
         private final Long id;
+
         private final LocalDateTime createdAt;
+
         private final LocalDateTime updatedAt;
+
         private final String username;
+
         private final String content;
+
 
         @JsonCreator
         public PostCommentDto(

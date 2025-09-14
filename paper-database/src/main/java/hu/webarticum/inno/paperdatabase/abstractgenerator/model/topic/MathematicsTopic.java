@@ -145,30 +145,6 @@ public class MathematicsTopic implements Topic {
         }
 
         private NLGElement theoremIntroSentence() {
-            /*
-             * demonstration of Lemma XYZ
-
-derivation of Lemma XYZ
-
-deduction of Lemma XYZ
-
-verification of Lemma XYZ
-
-justification of Lemma XYZ
-
-establishment of Lemma XYZ
-
-formal derivation of Lemma XYZ
-
-sequent-calculus derivation of Lemma XYZ
-
-natural-deduction derivation of Lemma XYZ
-
-             */
-            
-            
-            //return "This is a " + (theoremIsNewProof ? "novel proof" : "proof") + " for the " + theoremName + ".";s
-            
             return factory.createClause("derivation", "prove", "theorem");
         }
 

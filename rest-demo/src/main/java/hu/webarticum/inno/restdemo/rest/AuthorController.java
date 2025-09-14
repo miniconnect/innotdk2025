@@ -35,6 +35,7 @@ class AuthorController {
 
     private final AuthorRepository authorRepository;
 
+
     public AuthorController(AuthorRepository authorRepository) {
         this.authorRepository = authorRepository;
     }
@@ -77,12 +78,16 @@ class AuthorController {
         return AuthorDto.from(savedAuthor);
     }
 
+
     @Serdeable
     public static class AuthorDto implements HasId {
 
         private final Long id;
+
         private final String firstname;
+
         private final String lastname;
+
 
         @JsonCreator
         public AuthorDto(

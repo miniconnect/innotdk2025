@@ -24,11 +24,17 @@ import jakarta.inject.Inject;
 class SmokeTest {
 
     private static final String FIELD_ID = "id";
+
     private static final String FIELD_CATEGORY_ID = "categoryId";
+
     private static final String FIELD_AUTHOR_ID = "authorId";
+
     private static final String FIELD_TITLE = "title";
+
     private static final String FIELD_HTML_CONTENT = "htmlContent";
+
     private static final String FIELD_TAGS = "tags";
+
 
     @Inject
     @Client("/")
