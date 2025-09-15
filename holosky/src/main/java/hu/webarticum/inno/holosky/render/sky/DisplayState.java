@@ -1,4 +1,4 @@
-package hu.webarticum.inno.holosky.render;
+package hu.webarticum.inno.holosky.render.sky;
 
 public class DisplayState {
 

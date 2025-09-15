@@ -1,4 +1,4 @@
-package hu.webarticum.inno.holosky.render;
+package hu.webarticum.inno.holosky.state;
 
 import java.util.EventListener;
 import java.util.function.DoubleUnaryOperator;

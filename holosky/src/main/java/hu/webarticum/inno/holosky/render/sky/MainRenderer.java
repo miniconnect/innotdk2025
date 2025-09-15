@@ -1,4 +1,4 @@
-package hu.webarticum.inno.holosky.render;
+package hu.webarticum.inno.holosky.render.sky;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,6 +16,8 @@ import com.jogamp.opengl.fixedfunc.GLMatrixFunc;
 import com.jogamp.opengl.glu.GLU;
 import com.jogamp.opengl.util.texture.Texture;
 import com.jogamp.opengl.util.texture.TextureIO;
+
+import hu.webarticum.inno.holosky.state.ViewState;
 
 public class MainRenderer implements GLEventListener {
 

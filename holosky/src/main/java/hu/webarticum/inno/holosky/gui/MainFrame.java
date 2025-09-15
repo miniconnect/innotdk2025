@@ -12,8 +12,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import hu.webarticum.inno.holosky.render.MainCanvas;
-import hu.webarticum.inno.holosky.render.StateCanvas;
+import hu.webarticum.inno.holosky.render.sky.MainCanvas;
+import hu.webarticum.inno.holosky.render.viewstate.StateCanvas;
 
 public class MainFrame extends JFrame {
 

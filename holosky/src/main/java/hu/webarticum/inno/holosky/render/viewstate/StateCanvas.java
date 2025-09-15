@@ -1,4 +1,4 @@
-package hu.webarticum.inno.holosky.render;
+package hu.webarticum.inno.holosky.render.viewstate;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -10,7 +10,8 @@ import java.awt.event.HierarchyEvent;
 
 import javax.swing.JPanel;
 
-import hu.webarticum.inno.holosky.render.ViewState.ViewStateListener;
+import hu.webarticum.inno.holosky.state.ViewState;
+import hu.webarticum.inno.holosky.state.ViewState.ViewStateListener;
 
 public class StateCanvas extends JPanel {
 
@@ -51,16 +52,7 @@ public class StateCanvas extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-
-        Graphics2D g2 = (Graphics2D) g;
-        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-        g2.setColor(Color.WHITE);
-        g2.setFont(new Font("Monospaced", Font.BOLD, 20));
-        g2.drawString(String.format("Azimuth: %.2f", viewState.getAzimuthDeg()), 10, 25);
-        g2.drawString(String.format("Elevation: %.2f", viewState.getElevationDeg()), 10, 50);
-        g2.drawString(String.format("Zoom: %.2f", viewState.getZoom()), 10, 75);
+        new StateRenderer().render(viewState, (Graphics2D) g, getWidth(), getHeight());
     }
     
 }

@@ -1,4 +1,4 @@
-package hu.webarticum.inno.holosky.render;
+package hu.webarticum.inno.holosky.render.sky;
 
 import java.awt.Dimension;
 import java.awt.event.HierarchyEvent;
@@ -13,6 +13,8 @@ import com.jogamp.opengl.GLCapabilities;
 import com.jogamp.opengl.GLProfile;
 import com.jogamp.opengl.awt.GLCanvas;
 import com.jogamp.opengl.util.FPSAnimator;
+
+import hu.webarticum.inno.holosky.state.ViewState;
 
 public class MainCanvas extends GLCanvas {
 
