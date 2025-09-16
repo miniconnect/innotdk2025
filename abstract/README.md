@@ -1,6 +1,7 @@
 # HoloDB absztrakt (InnOtdk 2025)
 
-(***általában előre adott, felgyülemlett adatok kezelésével foglalkozunk***)
+Az adatbázisokra általában úgy gondolunk, mint organikusan felgyülemlett adatok rendszerére.
+
 (***néha azonban fordított a helyzet, és az adatokat kell odateremteni egy helyzetbe***)
 (***egyszerű, de kicsit absztraktan hagyott példa erre***)
 
