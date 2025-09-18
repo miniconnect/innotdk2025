@@ -14,7 +14,8 @@ This is a monorepo containing the following materials:
 
 | Part | Description |
 | --- | --- |
-|  :scroll: [Abstract](abstract/) | Abstract text |
+| :scroll: [Abstract](abstract/) | Abstract text |
+| :placard: [Poster](poster/) | Conference poster |
 | :movie_camera: [Video](video/) | Video animations and speech text |
 | :blue_book: [Brochure](brochure/) | Brochure for printing |
 | :stars: [HoloSky](holosky/) | Simple planetarium app using synthetic data provided by HoloDB |
