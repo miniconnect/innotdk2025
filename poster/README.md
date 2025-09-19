@@ -11,12 +11,12 @@
 
 ## Termékbemutató szövegdobozok
 
-1. a HoloDB-ről általában, konfiguráció (ehhez akár kép is, pl. példa-konfigurációból pélad-adatbázis)
+1. a HoloDB-ről általában
 2. azonnal indul, nincs generálás, nem kell adattárhely, live mode
-3. integrálhatóság, JPA-entitások, eszközök
-4. hol használható
-5. MI-ortogonalitás, és -involválhatóság (agent pipeline-ok, konfiguráció generálása, stb.)
-6. üzleti terv, SaaS, integrációk, zöld
+3. hol használható, integrálhatóság, JPA-entitások, eszközök
+4. MI-ortogonalitás, és -involválhatóság (agent pipeline-ok, konfiguráció generálása, stb.)
+5. üzleti terv, SaaS, integrációk, zöld
+6. konfiguráció
 
 ## Poszter
 
