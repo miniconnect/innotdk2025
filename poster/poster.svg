@@ -10,8 +10,7 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+   xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs38" />
   <sodipodi:namedview
@@ -24,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.55259982"
-     inkscape:cx="2057.5468"
-     inkscape:cy="1445.8926"
+     inkscape:zoom="0.7561475"
+     inkscape:cx="1228.5963"
+     inkscape:cy="4180.4013"
      inkscape:window-width="1920"
      inkscape:window-height="1135"
      inkscape:window-x="0"
@@ -112,22 +111,22 @@
      transform="matrix(2.4,0,0,2.4,312.47106,1897.707)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10920">A megoldás kiindulópontja, hogy a </tspan><tspan
+       id="tspan12090">A megoldás kiindulópontja, hogy a </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan10922">relációs adatmodell adatelérési elemeit </tspan><tspan
+       id="tspan12092">relációs adatmodell adatelérési elemeit </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan10924">(táblák, oszlopok, mezők stb.) egy API </tspan><tspan
+       id="tspan12094">(táblák, oszlopok, mezők stb.) egy API </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan10926">képében formalizáljuk. Mindössze ezt kell </tspan><tspan
+       id="tspan12096">képében formalizáljuk. Mindössze ezt kell </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan10928">megfelelően implementálni ahhoz, hogy </tspan><tspan
+       id="tspan12098">megfelelően implementálni ahhoz, hogy </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan10930">kívülről koherens adatbázisnak tűnjön.</tspan></text>
+       id="tspan12100">kívülről koherens adatbázisnak tűnjön.</tspan></text>
   <text
      x="394.47198"
      y="2068.3477"
@@ -215,34 +214,34 @@
      transform="matrix(2.4,0,0,2.4,292.77875,1217.2763)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10932">Az adatbázisokra hagyományosan úgy gondolunk, </tspan><tspan
+       id="tspan12102">Az adatbázisokra hagyományosan úgy gondolunk, </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan10934">mint organikusan felgyülemlett adatok </tspan><tspan
+       id="tspan12104">mint organikusan felgyülemlett adatok </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan10936">rendszerére, melyek feldolgozásra, interakcióra </tspan><tspan
+       id="tspan12106">rendszerére, melyek feldolgozásra, interakcióra </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan10938">várnak. Fejlesztési környezetben azonban gyakran </tspan><tspan
+       id="tspan12108">várnak. Fejlesztési környezetben azonban gyakran </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan10940">fordított a helyzet: az adott feldolgozó rendszerhez </tspan><tspan
+       id="tspan12110">fordított a helyzet: az adott feldolgozó rendszerhez </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan10942">kell szintetikus adatokat biztosítani, például </tspan><tspan
+       id="tspan12112">kell szintetikus adatokat biztosítani, például </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan10944">teszteléshez, bemutatóhoz. De vajon tényleg </tspan><tspan
+       id="tspan12114">teszteléshez, bemutatóhoz. De vajon tényleg </tspan><tspan
        x="70.500626"
        y="218.05943"
-       id="tspan10946">szükséges ehhez egy teljes adathalmaz </tspan><tspan
+       id="tspan12116">szükséges ehhez egy teljes adathalmaz </tspan><tspan
        x="70.500626"
        y="237.50394"
-       id="tspan10948">legenerálása és egy hús-vér adatbázis </tspan><tspan
+       id="tspan12118">legenerálása és egy hús-vér adatbázis </tspan><tspan
        x="70.500626"
        y="256.94844"
-       id="tspan10950">működtetése?</tspan></text>
+       id="tspan12120">működtetése?</tspan></text>
   <text
      x="374.47198"
      y="1389.1481"
@@ -329,24 +328,24 @@
      transform="matrix(2.4,0,0,2.4,354.37906,2390.1299)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10952">Az előzetes legenerálás elkerülhető az </tspan><tspan
+       id="tspan12122">Az előzetes legenerálás elkerülhető az </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan10956"><tspan
+       id="tspan12126"><tspan
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.19999485"
-         id="tspan10954">adatok szabályalapú on-the-fly </tspan></tspan><tspan
+         id="tspan12124">adatok szabályalapú on-the-fly </tspan></tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan10958">generálásával, ha ez kellően gyors. Az így </tspan><tspan
+       id="tspan12128">generálásával, ha ez kellően gyors. Az így </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan10960">nyert, eredendően immutábilis </tspan><tspan
+       id="tspan12130">nyert, eredendően immutábilis </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan10962">adathalmaz ezután írhatóvá tehető a </tspan><tspan
+       id="tspan12132">adathalmaz ezután írhatóvá tehető a </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan10964">módosításokat megjegyző plusz réteggel.</tspan></text>
+       id="tspan12134">módosításokat megjegyző plusz réteggel.</tspan></text>
   <text
      x="436.38007"
      y="2560.7708"
@@ -434,31 +433,31 @@
      transform="matrix(2.4,0,0,2.4,272.47106,3688.107)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10966">Egy oszlop kereshetősége biztosítható egy </tspan><tspan
+       id="tspan12136">Egy oszlop kereshetősége biztosítható egy </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan10968">eleve rendezett értékkészletből kiindulva, </tspan><tspan
+       id="tspan12138">eleve rendezett értékkészletből kiindulva, </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan10970">ha az értékeket szétterítjük az oszlop </tspan><tspan
+       id="tspan12140">ha az értékeket szétterítjük az oszlop </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan10972">méretére, majd permutáljuk – feltéve, hogy </tspan><tspan
+       id="tspan12142">méretére, majd permutáljuk – feltéve, hogy </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan10974">mindkét művelet visszafejthető. Az egyes </tspan><tspan
+       id="tspan12144">mindkét művelet visszafejthető. Az egyes </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan10976">lépések külön-külön paraméterezhetők és </tspan><tspan
+       id="tspan12146">lépések külön-külön paraméterezhetők és </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan10978">skálázhatók, a kiinduló értékkészlet pedig </tspan><tspan
+       id="tspan12148">skálázhatók, a kiinduló értékkészlet pedig </tspan><tspan
        x="70.500626"
        y="218.05943"
-       id="tspan10980">maga is lehet virtuális, például egy adott </tspan><tspan
+       id="tspan12150">maga is lehet virtuális, például egy adott </tspan><tspan
        x="70.500626"
        y="237.50394"
-       id="tspan10982">reguláris kifejezésre illeszkedő szavak.</tspan></text>
+       id="tspan12152">reguláris kifejezésre illeszkedő szavak.</tspan></text>
   <text
      x="354.47198"
      y="3858.748"
@@ -560,25 +559,25 @@
      transform="matrix(2.4,0,0,2.4,590.3791,4320.5299)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10984">A fejlesztés több mellékeredményt hozott, </tspan><tspan
+       id="tspan12154">A fejlesztés több mellékeredményt hozott, </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan10986">amelyek önállóan is értéket képviselnek. </tspan><tspan
+       id="tspan12156">amelyek önállóan is értéket képviselnek. </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan10988">Ilyen a LargeInteger aritmetikai típus vagy </tspan><tspan
+       id="tspan12158">Ilyen a LargeInteger aritmetikai típus vagy </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan10990">a reguláris kifejezésekre illeszkedő szavak </tspan><tspan
+       id="tspan12160">a reguláris kifejezésekre illeszkedő szavak </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan10992">rendezett listáját adó MatchList – ezek </tspan><tspan
+       id="tspan12162">rendezett listáját adó MatchList – ezek </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan10994">nemcsak új funkcionalitást kínálnak, de </tspan><tspan
+       id="tspan12164">nemcsak új funkcionalitást kínálnak, de </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan10996">gyorsabbak is a meglévő megoldásoknál.</tspan></text>
+       id="tspan12166">gyorsabbak is a meglévő megoldásoknál.</tspan></text>
   <text
      x="296.38007"
      y="4491.1709"
@@ -618,24 +617,24 @@
      transform="matrix(2.4,0,0,2.4,314.37906,2885.5852)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10998">A nem létező, virtuális adatokban is </tspan><tspan
+       id="tspan12168">A nem létező, virtuális adatokban is </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan11000">hatékonyan kell tudnunk keresni és </tspan><tspan
+       id="tspan12170">hatékonyan kell tudnunk keresni és </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan11004"><tspan
+       id="tspan12174"><tspan
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.19998722"
-         id="tspan11002">rendezni. Ez megoldható kriptográfiai </tspan></tspan><tspan
+         id="tspan12172">rendezni. Ez megoldható kriptográfiai </tspan></tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan11006">módszerek – például Feistel-hálózat – </tspan><tspan
+       id="tspan12176">módszerek – például Feistel-hálózat – </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan11008">bevetésével: a lekérés kódolásként, a </tspan><tspan
+       id="tspan12178">bevetésével: a lekérés kódolásként, a </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan11010">keresés dekódolásként működik.</tspan></text>
+       id="tspan12180">keresés dekódolásként működik.</tspan></text>
   <path
      id="rect6-6-9-1-6"
      style="font-variation-settings:normal;vector-effect:none;fill:#174050;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
@@ -952,7 +951,7 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,2131.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan11012">Lorem ipsum.</tspan></text>
+       id="tspan12182">Lorem ipsum.</tspan></text>
   <text
      x="1723.1298"
      y="2302.2559"
@@ -1047,7 +1046,7 @@
      transform="matrix(2.4,0,0,2.4,2533.1193,2131.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan11014">Lorem ipsum.</tspan></text>
+       id="tspan12184">Lorem ipsum.</tspan></text>
   <text
      x="2615.1189"
      y="2302.2559"
@@ -1130,7 +1129,7 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,1573.7873)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan11016">Lorem ipsum.</tspan></text>
+       id="tspan12186">Lorem ipsum.</tspan></text>
   <text
      x="1723.1298"
      y="1744.4282"
@@ -1225,7 +1224,7 @@
      transform="matrix(2.4,0,0,2.4,2533.1193,1573.7873)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan11018">Lorem ipsum.</tspan></text>
+       id="tspan12188">Lorem ipsum.</tspan></text>
   <text
      x="2615.1189"
      y="1744.4282"
@@ -1309,7 +1308,7 @@
      transform="matrix(2.4,0,0,2.4,1601.1291,847.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan11020">Lorem ipsum.</tspan></text>
+       id="tspan12190">Lorem ipsum.</tspan></text>
   <text
      x="1683.1298"
      y="1018.2557"
@@ -1405,7 +1404,7 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,2691.5384)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan11022">Lorem ipsum.</tspan></text>
+       id="tspan12192">Lorem ipsum.</tspan></text>
   <text
      x="1723.1301"
      y="2862.178"
@@ -2623,43 +2622,6 @@
      id="rect16357"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
   <g
-     id="g16367"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16365"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16363"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 117px; margin-left: 1px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">A</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="15"
-           y="121"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16361"
-           style="fill:#ffffff;fill-opacity:1">A</text>
-      </switch>
-    </g>
-  </g>
-  <g
      data-cell-id="DKQcyYTNdZ15Uf8QAMDz-37"
      id="g16625"
      transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
@@ -2684,43 +2646,6 @@
      id="rect16371"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
   <g
-     id="g16381"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16379"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16377"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 97px; margin-left: 1px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">B</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="15"
-           y="101"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16375"
-           style="fill:#ffffff;fill-opacity:1">B</text>
-      </switch>
-    </g>
-  </g>
-  <g
      data-cell-id="DKQcyYTNdZ15Uf8QAMDz-38"
      id="g16631"
      transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
@@ -2744,43 +2669,6 @@
      pointer-events="all"
      id="rect16385"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16395"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16393"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16391"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 77px; margin-left: 1px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">C</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="15"
-           y="81"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16389"
-           style="fill:#ffffff;fill-opacity:1">C</text>
-      </switch>
-    </g>
-  </g>
   <g
      data-cell-id="DKQcyYTNdZ15Uf8QAMDz-39"
      id="g16639"
@@ -2848,43 +2736,6 @@
     </g>
   </g>
   <g
-     id="g16409"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16407"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16405"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 117px; margin-left: 51px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">A</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="65"
-           y="121"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16403"
-           style="fill:#ffffff;fill-opacity:1">A</text>
-      </switch>
-    </g>
-  </g>
-  <g
      data-cell-id="DKQcyYTNdZ15Uf8QAMDz-42"
      id="g16655"
      transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
@@ -2944,43 +2795,6 @@
            d="m 100.00195,76.998047 -0.951169,0.318359 -8.857422,2.955078 4.910157,1.625 1.625,4.910157 z m -1.582028,1.582031 -1.6875,5.052734 -0.835938,-2.529296 -2.529297,-0.835938 z"
            id="path29258" />
       </g>
-    </g>
-  </g>
-  <g
-     id="g16423"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16421"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16419"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 97px; margin-left: 51px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">A</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="65"
-           y="101"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16417"
-           style="fill:#ffffff;fill-opacity:1">A</text>
-      </switch>
     </g>
   </g>
   <g
@@ -3064,43 +2878,6 @@
      pointer-events="all"
      id="rect16427"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16437"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16435"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16433"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 77px; margin-left: 51px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">B</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="65"
-           y="81"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16431"
-           style="fill:#ffffff;fill-opacity:1">B</text>
-      </switch>
-    </g>
-  </g>
   <rect
      x="1650.5228"
      y="4201.8809"
@@ -3111,43 +2888,6 @@
      pointer-events="all"
      id="rect16441"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16451"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16449"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16447"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 117px; margin-left: 101px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">A</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="115"
-           y="121"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16445"
-           style="fill:#ffffff;fill-opacity:1">A</text>
-      </switch>
-    </g>
-  </g>
   <rect
      x="1650.5228"
      y="4133.6162"
@@ -3158,43 +2898,6 @@
      pointer-events="all"
      id="rect16455"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16465"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16463"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16461"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 97px; margin-left: 101px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">C</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="115"
-           y="101"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16459"
-           style="fill:#ffffff;fill-opacity:1">C</text>
-      </switch>
-    </g>
-  </g>
   <rect
      x="1650.5228"
      y="4065.3518"
@@ -3205,43 +2908,6 @@
      pointer-events="all"
      id="rect16469"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16479"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16477"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16475"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 77px; margin-left: 101px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">A</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="115"
-           y="81"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16473"
-           style="fill:#ffffff;fill-opacity:1">A</text>
-      </switch>
-    </g>
-  </g>
   <rect
      x="1821.1838"
      y="4201.8809"
@@ -3252,43 +2918,6 @@
      pointer-events="all"
      id="rect16483"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16493"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16491"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16489"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 117px; margin-left: 151px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">A</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="165"
-           y="121"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16487"
-           style="fill:#ffffff;fill-opacity:1">A</text>
-      </switch>
-    </g>
-  </g>
   <rect
      x="1821.1838"
      y="4133.6162"
@@ -3299,43 +2928,6 @@
      pointer-events="all"
      id="rect16497"
      style="stroke-width:2.26771649;fill:#6376c6;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16507"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16505"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16503"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 97px; margin-left: 151px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">S</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="165"
-           y="101"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16501"
-           style="fill:#ffffff;fill-opacity:1">S</text>
-      </switch>
-    </g>
-  </g>
   <rect
      x="1821.1838"
      y="4065.3518"
@@ -3346,43 +2938,6 @@
      pointer-events="all"
      id="rect16511"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16521"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16519"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16517"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 77px; margin-left: 151px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">A</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="165"
-           y="81"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16515"
-           style="fill:#ffffff;fill-opacity:1">A</text>
-      </switch>
-    </g>
-  </g>
   <rect
      x="1479.8618"
      y="3997.0874"
@@ -3393,43 +2948,6 @@
      pointer-events="all"
      id="rect16525"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16535"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1;stroke-dasharray:none;stroke-width:0.66439226">
-    <g
-       id="g16533"
-       style="fill:#ffffff;fill-opacity:1;stroke-dasharray:none;stroke-width:0.66439226">
-      <switch
-         id="switch16531"
-         style="fill:#ffffff;fill-opacity:1;stroke-dasharray:none;stroke-width:0.66439226">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 57px; margin-left: 51px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">C</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="65"
-           y="61"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16529"
-           style="fill:#ffffff;fill-opacity:1;stroke-dasharray:none;stroke-width:0.66439226">C</text>
-      </switch>
-    </g>
-  </g>
   <rect
      x="1479.8618"
      y="3928.8232"
@@ -3440,43 +2958,6 @@
      pointer-events="all"
      id="rect16539"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16549"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16547"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16545"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 37px; margin-left: 51px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">C</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="65"
-           y="41"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16543"
-           style="fill:#ffffff;fill-opacity:1">C</text>
-      </switch>
-    </g>
-  </g>
   <rect
      x="1650.5228"
      y="3997.0874"
@@ -3487,43 +2968,6 @@
      pointer-events="all"
      id="rect16553"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16563"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16561"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16559"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 57px; margin-left: 101px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">B</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="115"
-           y="61"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16557"
-           style="fill:#ffffff;fill-opacity:1">B</text>
-      </switch>
-    </g>
-  </g>
   <rect
      x="1650.5228"
      y="3928.8232"
@@ -3534,43 +2978,6 @@
      pointer-events="all"
      id="rect16567"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16577"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16575"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16573"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 37px; margin-left: 101px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">C</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="115"
-           y="41"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16571"
-           style="fill:#ffffff;fill-opacity:1">C</text>
-      </switch>
-    </g>
-  </g>
   <rect
      x="1821.1838"
      y="3997.0874"
@@ -3581,43 +2988,6 @@
      pointer-events="all"
      id="rect16581"
      style="stroke-width:2.26771649;fill:#57425b;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16591"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16589"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16587"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 57px; margin-left: 151px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">C</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="165"
-           y="61"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16585"
-           style="fill:#ffffff;fill-opacity:1">C</text>
-      </switch>
-    </g>
-  </g>
   <rect
      x="1821.1838"
      y="3928.8232"
@@ -3628,43 +2998,6 @@
      pointer-events="all"
      id="rect16595"
      style="stroke-width:2.26771649;fill:#518744;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16605"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16603"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16601"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 37px; margin-left: 151px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">N</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="165"
-           y="41"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16599"
-           style="fill:#ffffff;fill-opacity:1">N</text>
-      </switch>
-    </g>
-  </g>
   <rect
      x="1821.1838"
      y="3860.5588"
@@ -3675,43 +3008,6 @@
      pointer-events="all"
      id="rect16673"
      style="stroke-width:2.26771649;fill:#518744;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
-  <g
-     id="g16683"
-     transform="matrix(3.4132193,0,0,3.4132193,1309.2009,3836.6662)"
-     style="fill:#ffffff;fill-opacity:1">
-    <g
-       id="g16681"
-       style="fill:#ffffff;fill-opacity:1">
-      <switch
-         id="switch16679"
-         style="fill:#ffffff;fill-opacity:1">
-        <foreignObject
-           style="overflow: visible; text-align: left;"
-           pointer-events="none"
-           width="100%"
-           height="100%"
-           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-          <xhtml:div
-             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 17px; margin-left: 151px;">
-            <xhtml:div
-               style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-              <xhtml:div
-                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">M</xhtml:div>
-            </xhtml:div>
-          </xhtml:div>
-        </foreignObject>
-        <text
-           x="165"
-           y="21"
-           fill="light-dark(#000000, #ffffff)"
-           font-family="Helvetica"
-           font-size="12px"
-           text-anchor="middle"
-           id="text16677"
-           style="fill:#ffffff;fill-opacity:1">M</text>
-      </switch>
-    </g>
-  </g>
   <g
      data-cell-id="DKQcyYTNdZ15Uf8QAMDz-46"
      id="g16699"
@@ -4082,30 +3378,30 @@
      id="text964"><tspan
        x="2149.7786"
        y="3837.5896"
-       id="tspan11024">TDK-dolgozat: HoloDB: Relációs demóadatok konzisztens </tspan><tspan
+       id="tspan12194">TDK-dolgozat: HoloDB: Relációs demóadatok konzisztens </tspan><tspan
        x="2149.7786"
        y="3887.5897"
-       id="tspan11026">on-the-fly generálása deklaratív konfigurációból
+       id="tspan12196">on-the-fly generálása deklaratív konfigurációból
 </tspan><tspan
        x="2149.7786"
        y="3937.5897"
-       id="tspan11028">Horváth Dávid
+       id="tspan12198">Horváth Dávid
 </tspan><tspan
        x="2149.7786"
        y="3987.5897"
-       id="tspan11030">ELTE-IK
+       id="tspan12200">ELTE-IK
 </tspan><tspan
        x="2149.7786"
        y="4037.5897"
-       id="tspan11032">horvathdown@student.elte.hu
+       id="tspan12202">horvathdown@student.elte.hu
 </tspan><tspan
        x="2149.7786"
        y="4087.5897"
-       id="tspan11034">Témavezető: Dr. Vincellér Zoltán, ELTE
+       id="tspan12204">Témavezető: Dr. Vincellér Zoltán, ELTE
 </tspan><tspan
        x="2149.7786"
        y="4137.5894"
-       id="tspan11036">InnOtdk mentor: Dr. Ruppert Tamás, Pannon Egyetem</tspan></text>
+       id="tspan12206">InnOtdk mentor: Dr. Ruppert Tamás, Pannon Egyetem</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
@@ -4126,4 +3422,194 @@
        id="tspan5148"
        x="2281.8582"
        y="4771.5068">1. helyezés</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1516.6868"
+     y="4252.3462"
+     id="text11040"><tspan
+       sodipodi:role="line"
+       id="tspan11038"
+       x="1516.6868"
+       y="4252.3462">A</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1516.6868"
+     y="4184.0815"
+     id="text11040-4"><tspan
+       sodipodi:role="line"
+       id="tspan11038-3"
+       x="1516.6868"
+       y="4184.0815">A</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1516.0801"
+     y="4115.8174"
+     id="text11040-4-0"><tspan
+       sodipodi:role="line"
+       id="tspan11038-3-6"
+       x="1516.0801"
+       y="4115.8174">B</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1345.4192"
+     y="4184.0815"
+     id="text11040-4-0-8"><tspan
+       sodipodi:role="line"
+       id="tspan11038-3-6-9"
+       x="1345.4192"
+       y="4184.0815">B</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1345.8859"
+     y="4115.8174"
+     id="text11040-4-0-8-6"><tspan
+       sodipodi:role="line"
+       id="tspan11038-3-6-9-4"
+       x="1345.8859"
+       y="4115.8174">C</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1516.5468"
+     y="3979.2888"
+     id="text11040-4-0-8-6-9"><tspan
+       sodipodi:role="line"
+       id="tspan11038-3-6-9-4-5"
+       x="1516.5468"
+       y="3979.2888">C</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1516.5468"
+     y="4047.553"
+     id="text11040-4-0-8-6-0"><tspan
+       sodipodi:role="line"
+       id="tspan11038-3-6-9-4-4"
+       x="1516.5468"
+       y="4047.553">C</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1687.2078"
+     y="3979.2888"
+     id="text11040-4-0-8-6-8"><tspan
+       sodipodi:role="line"
+       id="tspan11038-3-6-9-4-7"
+       x="1687.2078"
+       y="3979.2888">C</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1687.2078"
+     y="4184.0815"
+     id="text11040-4-0-8-6-1"><tspan
+       sodipodi:role="line"
+       id="tspan11038-3-6-9-4-72"
+       x="1687.2078"
+       y="4184.0815">C</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1857.8688"
+     y="4047.553"
+     id="text11040-4-0-8-6-7"><tspan
+       sodipodi:role="line"
+       id="tspan11038-3-6-9-4-2"
+       x="1857.8688"
+       y="4047.553">C</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1686.7411"
+     y="4047.553"
+     id="text11040-4-0-2"><tspan
+       sodipodi:role="line"
+       id="tspan11038-3-6-6"
+       x="1686.7411"
+       y="4047.553">B</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1346.0259"
+     y="4252.3462"
+     id="text11040-0"><tspan
+       sodipodi:role="line"
+       id="tspan11038-7"
+       x="1346.0259"
+       y="4252.3462">A</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1687.3478"
+     y="4115.8174"
+     id="text11040-8"><tspan
+       sodipodi:role="line"
+       id="tspan11038-6"
+       x="1687.3478"
+       y="4115.8174">A</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1687.3478"
+     y="4252.3462"
+     id="text11040-88"><tspan
+       sodipodi:role="line"
+       id="tspan11038-4"
+       x="1687.3478"
+       y="4252.3462">A</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1858.0088"
+     y="4252.3462"
+     id="text11040-3"><tspan
+       sodipodi:role="line"
+       id="tspan11038-1"
+       x="1858.0088"
+       y="4252.3462">A</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1858.5454"
+     y="4184.0815"
+     id="text11040-3-2"><tspan
+       sodipodi:role="line"
+       id="tspan11038-1-6"
+       x="1858.5454"
+       y="4184.0815">S</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1855.9554"
+     y="3979.2888"
+     id="text11040-3-2-1"><tspan
+       sodipodi:role="line"
+       id="tspan11038-1-6-0"
+       x="1855.9554"
+       y="3979.2888">N</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1853.4354"
+     y="3911.0244"
+     id="text11040-3-2-6"><tspan
+       sodipodi:role="line"
+       id="tspan11038-1-6-1"
+       x="1853.4354"
+       y="3911.0244">M</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
+     x="1858.0088"
+     y="4115.8174"
+     id="text11040-49"><tspan
+       sodipodi:role="line"
+       id="tspan11038-2"
+       x="1858.0088"
+       y="4115.8174">A</tspan></text>
 </svg>
