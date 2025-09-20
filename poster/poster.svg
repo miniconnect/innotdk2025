@@ -156,9 +156,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.32574393"
-     inkscape:cx="1749.8407"
-     inkscape:cy="1105.1626"
+     inkscape:zoom="0.77456498"
+     inkscape:cx="2596.2961"
+     inkscape:cy="2897.1101"
      inkscape:window-width="1920"
      inkscape:window-height="1135"
      inkscape:window-x="0"
@@ -170,7 +170,7 @@
      inkscape:document-units="cm" />
   <rect
      x="3.5527137e-15"
-     y="1.1368684e-13"
+     y="3.5527137e-15"
      width="3590.5513"
      height="5102.3623"
      fill="#0f2233"
@@ -244,22 +244,22 @@
      transform="matrix(2.4,0,0,2.4,312.47106,1897.707)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan86710">A megoldás kiindulópontja, hogy a relációs </tspan><tspan
+       id="tspan125894">A megoldás kiindulópontja, hogy a relációs </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan86712">adatmodell adatelérési elemeit (táblák, </tspan><tspan
+       id="tspan125896">adatmodell adatelérési elemeit (táblák, </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan86714">oszlopok, mezők stb.) egy API képében </tspan><tspan
+       id="tspan125898">oszlopok, mezők, indexek stb.) egy API </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan86716">formalizáljuk. Mindössze ezt kell </tspan><tspan
+       id="tspan125900">képében formalizáljuk. Mindössze ezt kell </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan86718">megfelelően implementálni ahhoz, hogy </tspan><tspan
+       id="tspan125902">megfelelően implementálni ahhoz, hogy </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan86720">kívülről koherens adatbázisnak tűnjön.</tspan></text>
+       id="tspan125904">kívülről koherens adatbázisnak tűnjön.</tspan></text>
   <text
      x="394.47198"
      y="2068.3477"
@@ -347,34 +347,34 @@
      transform="matrix(2.4,0,0,2.4,292.77875,1217.2763)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan86722">Az adatbázisokra hagyományosan úgy gondolunk, </tspan><tspan
+       id="tspan125906">Az adatbázisokra hagyományosan úgy gondolunk, </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan86724">mint organikusan felgyülemlett adatok </tspan><tspan
+       id="tspan125908">mint organikusan felgyülemlett adatok </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan86726">rendszerére, melyek feldolgozásra, interakcióra </tspan><tspan
+       id="tspan125910">rendszerére, melyek feldolgozásra, interakcióra </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan86728">várnak. Fejlesztési környezetben azonban gyakran </tspan><tspan
+       id="tspan125912">várnak. Fejlesztési környezetben azonban gyakran </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan86730">fordított a helyzet: az adott feldolgozó rendszerhez </tspan><tspan
+       id="tspan125914">fordított a helyzet: az adott feldolgozó rendszerhez </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan86732">kell szintetikus adatokat biztosítani, például </tspan><tspan
+       id="tspan125916">kell szintetikus adatokat biztosítani, például </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan86734">teszteléshez, bemutatóhoz. De vajon tényleg </tspan><tspan
+       id="tspan125918">teszteléshez, bemutatóhoz. De vajon tényleg </tspan><tspan
        x="70.500626"
        y="218.05943"
-       id="tspan86736">szükséges ehhez egy teljes adathalmaz </tspan><tspan
+       id="tspan125920">szükséges ehhez egy teljes adathalmaz </tspan><tspan
        x="70.500626"
        y="237.50394"
-       id="tspan86738">legenerálása és egy hús-vér adatbázis </tspan><tspan
+       id="tspan125922">legenerálása és egy hús-vér adatbázis </tspan><tspan
        x="70.500626"
        y="256.94844"
-       id="tspan86740">működtetése?</tspan></text>
+       id="tspan125924">működtetése?</tspan></text>
   <text
      x="374.47198"
      y="1389.1481"
@@ -461,21 +461,21 @@
      transform="matrix(2.4,0,0,2.4,1114.3791,2390.1299)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan86742">Az előzetes legenerálás elkerülhető az </tspan><tspan
+       id="tspan125926">Az előzetes legenerálás elkerülhető az </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan86746"><tspan
+       id="tspan125930"><tspan
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.19999485"
-         id="tspan86744">adatok szabályalapú on-the-fly </tspan></tspan><tspan
+         id="tspan125928">adatok szabályalapú on-the-fly </tspan></tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan86748">generálásával, ha ez kellően gyors. Az így </tspan><tspan
+       id="tspan125932">generálásával, ha ez kellően gyors. Az így </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan86750">nyert, eredendően immutábilis </tspan><tspan
+       id="tspan125934">nyert, eredendően immutábilis </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan86752">adathalmaz ezután írhatóvá tehető a</tspan></text>
+       id="tspan125936">adathalmaz ezután írhatóvá tehető a</tspan></text>
   <text
      x="436.38007"
      y="2560.7708"
@@ -563,31 +563,31 @@
      transform="matrix(2.4,0,0,2.4,272.47106,3688.107)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan86754">Egy oszlop kereshetősége biztosítható egy </tspan><tspan
+       id="tspan125938">Egy oszlop kereshetősége biztosítható egy </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan86756">eleve rendezett értékkészletből kiindulva, </tspan><tspan
+       id="tspan125940">eleve rendezett értékkészletből kiindulva, </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan86758">ha az értékeket szétterítjük az oszlop </tspan><tspan
+       id="tspan125942">ha az értékeket szétterítjük az oszlop </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan86760">méretére, majd permutáljuk – feltéve, hogy </tspan><tspan
+       id="tspan125944">méretére, majd permutáljuk – feltéve, hogy </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan86762">mindkét művelet visszafejthető. Az egyes </tspan><tspan
+       id="tspan125946">mindkét művelet visszafejthető. Az egyes </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan86764">lépések külön-külön paraméterezhetők és </tspan><tspan
+       id="tspan125948">lépések külön-külön paraméterezhetők és </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan86766">skálázhatók, a kiinduló értékkészlet pedig </tspan><tspan
+       id="tspan125950">skálázhatók, a kiinduló értékkészlet pedig </tspan><tspan
        x="70.500626"
        y="218.05943"
-       id="tspan86768">maga is lehet virtuális, például egy adott </tspan><tspan
+       id="tspan125952">maga is lehet virtuális, például egy adott </tspan><tspan
        x="70.500626"
        y="237.50394"
-       id="tspan86770">reguláris kifejezésre illeszkedő szavak.</tspan></text>
+       id="tspan125954">reguláris kifejezésre illeszkedő szavak.</tspan></text>
   <text
      x="354.47198"
      y="3858.748"
@@ -617,7 +617,7 @@
      sodipodi:nodetypes="ssssssscssssscssss" />
   <path
      style="fill:none;fill-opacity:1;stroke:#4a6f9d;stroke-width:6.4252;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     d="m 1231.2986,2838.1073 c 56.5763,49.0787 84.7699,94.8296 97.8828,130.5894 23.4096,46.2413 43.3875,118.3977 48.9045,192.5999 5.517,74.2022 4.6994,269.2481 6.9389,333.893 12.8653,116.0827 97.1753,177.819 160.6652,205.7015 63.4899,27.8825 244.6169,133.8629 244.6169,133.8629"
+     d="m 1231.2986,2838.1073 c 56.5763,49.0787 84.7699,94.8296 97.8828,130.5894 23.4096,46.2413 43.3875,118.3977 48.9045,192.5999 5.517,74.2022 4.6994,269.2481 6.9389,333.893 12.8653,116.0827 97.1753,177.819 160.6652,205.7015 63.4899,27.8825 243.7146,142.3374 243.7146,142.3374"
      id="path33702"
      sodipodi:nodetypes="cczczc" />
   <text
@@ -631,57 +631,33 @@
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.72px;fill:#eaf2f3;stroke-width:2.4">Értékkészletektől az adatokkal feltöltött oszlopokig</text>
   <path
      id="rect6-9-9"
-     style="font-variation-settings:normal;vector-effect:none;fill:#134a6a;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+     style="font-variation-settings:normal;vector-effect:none;fill:#0f3b54;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
      d="m 296.7969,4379.4796 c -15.95496,0 -28.8,12.8448 -28.8,28.8 v 43.2 h 1828 v -43.2 c 0,-15.9552 -12.8448,-28.8 -28.8,-28.8 z"
      sodipodi:nodetypes="sccccss" />
   <path
      id="rect6-6-4-2"
-     style="vector-effect:none;fill:#0f2e45;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+     style="vector-effect:none;fill:#0d283c;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
      d="m 297.12508,4851.7071 c -15.95496,0 -28.8,-12.8448 -28.8,-28.8 v -371.2 H 2096.3251 v 371.2 c 0,15.9552 -12.8448,28.8 -28.8,28.8 z"
      sodipodi:nodetypes="sccccss" />
   <path
      id="rect6-6-9-1-66"
-     style="font-variation-settings:normal;vector-effect:none;fill:#174050;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+     style="font-variation-settings:normal;vector-effect:none;fill:#153b4a;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
      d="m 296.7969,4851.7071 c -15.95496,0 -28.8,-12.8448 -28.8,-28.8 v -371.2 h 77.26416 c 0,47.1787 -9.6e-4,374.7299 -9.6e-4,400 z"
      sodipodi:nodetypes="sccccs" />
-  <g
-     id="line10-9-4"
-     transform="matrix(2.4,0,0,2.4,-319.51086,359.05675)">
-    <path
-       style="color:#000000;fill:#000000;-inkscape-stroke:none"
-       d="M 244.79495,1705.176 H 624.79492"
-       id="path13681" />
-    <path
-       style="color:#000000;fill:#1ab3a6;-inkscape-stroke:none"
-       d="m 244.79492,1704.6758 v 1 h 761.66668 v -1 z"
-       id="path13683"
-       sodipodi:nodetypes="ccccc" />
-  </g>
-  <g
-     id="line10-2-5-9"
-     transform="translate(-100,-160)">
-    <path
-       style="color:#000000;fill:#000000;stroke-width:1.50749;-inkscape-stroke:none"
-       d="M 445.11243,4611.8467 V 4971.665"
-       id="path1539" />
-    <path
-       style="color:#000000;fill:#1ab3a6;-inkscape-stroke:none"
-       d="m 444.35937,4611.8477 v 399.8164 h 1.50586 v -399.8164 z"
-       id="path1541"
-       sodipodi:nodetypes="ccccc" />
-  </g>
-  <g
-     id="line10-2-2-7-5"
-     transform="translate(0,-160)">
-    <path
-       style="color:#000000;fill:#000000;stroke-width:0.698023;-inkscape-stroke:none"
-       d="M 345.17596,4669.9097 H 268.03027"
-       id="path41699" />
-    <path
-       style="color:#000000;fill:#1ab3a6;-inkscape-stroke:none"
-       d="m 268.03125,4669.5605 v 0.6973 h 77.14453 v -0.6973 z"
-       id="path41701" />
-  </g>
+  <path
+     style="color:#000000;fill:#16948a;stroke-width:2.4;-inkscape-stroke:none;fill-opacity:1"
+     d="m 267.99695,4450.2787 v 2.4 H 2095.997 v -2.4 z"
+     id="path13683"
+     sodipodi:nodetypes="ccccc" />
+  <path
+     style="color:#000000;fill:#16948a;-inkscape-stroke:none;fill-opacity:1"
+     d="m 344.35937,4451.8477 v 399.8164 h 1.50586 v -399.8164 z"
+     id="path1541"
+     sodipodi:nodetypes="ccccc" />
+  <path
+     style="color:#000000;fill:#16948a;-inkscape-stroke:none;fill-opacity:1"
+     d="m 268.03125,4509.5605 v 0.6973 h 77.14453 v -0.6973 z"
+     id="path41701" />
   <text
      x="70.500626"
      y="81.947914"
@@ -690,29 +666,31 @@
      fill="#eaf2f3"
      xml:space="preserve"
      id="text20-4-0"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.5556px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.2px;white-space:pre;inline-size:324.828;display:inline;fill:#cfd6e8;fill-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.5556px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.2px;white-space:pre;inline-size:328.801;display:inline;fill:#cfd6e8;fill-opacity:1"
      transform="matrix(2.4,0,0,2.4,590.3791,4320.5299)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan86772">A fejlesztés több mellékeredményt hozott, </tspan><tspan
+       id="tspan125956">A fejlesztés több mellékeredményt hozott, </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan86774">amelyek önállóan is értéket képviselnek. </tspan><tspan
+       id="tspan125960"><tspan
+         dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.20000248"
+         id="tspan125958">amelyek önállóan is figyelmet érdemelnek. </tspan></tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan86776">Ilyen a LargeInteger aritmetikai típus vagy </tspan><tspan
+       id="tspan125962">Ilyen a LargeInteger aritmetikai típus vagy </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan86778">a reguláris kifejezésekre illeszkedő szavak </tspan><tspan
+       id="tspan125964">a reguláris kifejezésekre illeszkedő szavak </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan86780">rendezett listáját adó MatchList – ezek </tspan><tspan
+       id="tspan125966">rendezett listáját adó MatchList – ezek </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan86782">nemcsak új funkcionalitást kínálnak, de </tspan><tspan
+       id="tspan125968">nemcsak új funkcionalitást kínálnak, de </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan86784">gyorsabbak is a meglévő alternatíváknál.</tspan></text>
+       id="tspan125970">gyorsabbak is a meglévő alternatíváknál.</tspan></text>
   <text
      x="296.38007"
      y="4491.1709"
@@ -729,7 +707,7 @@
      font-weight="700"
      fill="#eaf2f3"
      id="text8-6-1"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.72px;fill:#eaf2f3;stroke-width:2.4">Mellékeredmények</text>
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.72px;fill:#d7e6e8;stroke-width:2.4;fill-opacity:1">Mellékeredmények</text>
   <path
      id="rect6-9-0"
      style="font-variation-settings:normal;vector-effect:none;fill:#134a6a;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
@@ -752,24 +730,24 @@
      transform="matrix(2.4,0,0,2.4,314.37906,2885.5852)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan86786">A nem létező, virtuális adatokban is </tspan><tspan
+       id="tspan125972">A nem létező, virtuális adatokban is </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan86788">hatékonyan kell tudnunk keresni és </tspan><tspan
+       id="tspan125974">hatékonyan kell tudnunk keresni és </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan86792"><tspan
+       id="tspan125978"><tspan
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.19998722"
-         id="tspan86790">rendezni. Ez megoldható kriptográfiai </tspan></tspan><tspan
+         id="tspan125976">rendezni. Ez megoldható kriptográfiai </tspan></tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan86794">módszerek – például Feistel-hálózat – </tspan><tspan
+       id="tspan125980">módszerek – például Feistel-hálózat – </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan86796">bevetésével: a lekérés kódolásként, a </tspan><tspan
+       id="tspan125982">bevetésével: a lekérés kódolásként, a </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan86798">keresés dekódolásként működik.</tspan></text>
+       id="tspan125984">keresés dekódolásként működik.</tspan></text>
   <path
      id="rect6-6-9-1-6"
      style="font-variation-settings:normal;vector-effect:none;fill:#174050;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
@@ -901,8 +879,8 @@
      sodipodi:nodetypes="cccccc" />
   <path
      id="rect67687"
-     style="fill:#24655f;stroke-width:4.40203;stroke-linecap:round;stroke-opacity:0.429623;stop-color:#000000;fill-opacity:1"
-     d="M 1268.2636 2165.8906 L 1268.2636 2176.957 L 1307.4394 2176.957 L 1307.4394 2165.8906 L 1268.2636 2165.8906 z M 1268.2636 2205.8906 L 1268.2636 2216.957 L 1307.4394 2216.957 L 1307.4394 2205.8906 L 1268.2636 2205.8906 z M 1268.2636 2245.8906 L 1268.2636 2256.957 L 1307.4394 2256.957 L 1307.4394 2245.8906 L 1268.2636 2245.8906 z M 1268.2636 2285.8906 L 1268.2636 2296.957 L 1307.4394 2296.957 L 1307.4394 2285.8906 L 1268.2636 2285.8906 z " />
+     style="fill:#24655f;fill-opacity:1;stroke-width:4.40203;stroke-linecap:round;stroke-opacity:0.429623;stop-color:#000000"
+     d="m 1268.2636,2145.8906 v 11.0664 h 39.1758 v -11.0664 z m 0,40 v 11.0664 h 39.1758 v -11.0664 z m 0,40 v 11.0664 h 39.1758 v -11.0664 z m 0,40 v 11.0664 h 39.1758 v -11.0664 z" />
   <path
      style="font-variation-settings:normal;fill:none;fill-opacity:1;stroke:#69408f;stroke-width:10.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
      d="m 2586.8647,1857.0347 -35.3867,-5e-4 c -8.2343,0.01 -14.4,6.1821 -14.4,14.4 v 240.4111 c 0,7.8926 -5.6057,14.3998 -14.4,14.3998 h -1062.2 c -7.427,0 -14.4,5.2977 -14.4,14.4 l -5e-4,1249.6375 c 0,8.4022 -5.0899,14.3998 -14.4,14.3991 h -352.4836"
@@ -1078,24 +1056,24 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,3191.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan86800">A HoloDB az elterjedt MI </tspan><tspan
+       id="tspan125986">A HoloDB az elterjedt MI </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan86802">megoldásokkal ortogonálisnak </tspan><tspan
+       id="tspan125988">megoldásokkal ortogonálisnak </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan86804">tekinthető. Ugyanakkor </tspan><tspan
+       id="tspan125990">tekinthető. Ugyanakkor </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan86806">beilleszthető agent pipeline-okba, </tspan><tspan
+       id="tspan125992">beilleszthető agent pipeline-okba, </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan86810"><tspan
+       id="tspan125996"><tspan
          dx="0 0 0 0 0 0 -0.2 0.19999866"
-         id="tspan86808">a konfiguráció pedig hatékonyan </tspan></tspan><tspan
+         id="tspan125994">a konfiguráció pedig hatékonyan </tspan></tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan86812">generálható nyelvi modellel.</tspan></text>
+       id="tspan125998">generálható nyelvi modellel.</tspan></text>
   <text
      x="1723.1298"
      y="3362.2559"
@@ -1181,27 +1159,27 @@
      transform="matrix(2.4,0,0,2.4,2533.1193,3131.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan86814">A teljes projekt nyílt forráskóddal </tspan><tspan
+       id="tspan126000">A teljes projekt nyílt forráskóddal </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan86816">szabadon elérhető, ami a közösségi </tspan><tspan
+       id="tspan126002">szabadon elérhető, ami a közösségi </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan86820"><tspan
+       id="tspan126006"><tspan
          dx="0 -0.2 0.19999962 0 0 0 0 -0.2 0.19999866"
-         id="tspan86818">filozófia része. A tervezett bevételi </tspan></tspan><tspan
+         id="tspan126004">filozófia része. A tervezett bevételi </tspan></tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan86822">modell felhőalapú SaaS </tspan><tspan
+       id="tspan126008">modell felhőalapú SaaS </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan86824">szolgáltatás nyújtására és vállalati </tspan><tspan
+       id="tspan126010">szolgáltatás nyújtására és vállalati </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan86826">környezetekhez szabott egyedi </tspan><tspan
+       id="tspan126012">környezetekhez szabott egyedi </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan86828">integrációkra épül.</tspan></text>
+       id="tspan126014">integrációkra épül.</tspan></text>
   <text
      x="2615.1189"
      y="3302.2559"
@@ -1284,22 +1262,22 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,1573.7873)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan86830">Előgenerálással és adattárhely </tspan><tspan
+       id="tspan126016">Előgenerálással és adattárhely </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan86832">biztosításával egyáltalán nem kell </tspan><tspan
+       id="tspan126018">biztosításával egyáltalán nem kell </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan86834">foglalkozni, mégis egy teljesértékű </tspan><tspan
+       id="tspan126020">foglalkozni, mégis egy teljesértékű </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan86836">relációs adatbázist kapunk. A várt </tspan><tspan
+       id="tspan126022">relációs adatbázist kapunk. A várt </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan86838">adatok jellemzőit felskiccelve </tspan><tspan
+       id="tspan126024">adatok jellemzőit felskiccelve </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan86840">máris indulhatnak a lekérdezések.</tspan></text>
+       id="tspan126026">máris indulhatnak a lekérdezések.</tspan></text>
   <text
      x="1723.1298"
      y="1744.4282"
@@ -1394,27 +1372,27 @@
      transform="matrix(2.4,0,0,2.4,2533.1193,1573.7873)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan86842">Indítható szerverként vagy (Java </tspan><tspan
+       id="tspan126028">Indítható szerverként vagy (Java </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan86844">esetén) beágyazott adatbázisként. </tspan><tspan
+       id="tspan126030">esetén) beágyazott adatbázisként. </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan86848"><tspan
+       id="tspan126034"><tspan
          dx="0 0 0 0 0 0 -0.2 0.19999866"
-         id="tspan86846">A konfiguráció teljesen kiváltható </tspan></tspan><tspan
+         id="tspan126032">A konfiguráció teljesen kiváltható </tspan></tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan86850">JPA entitások annotálásával is. </tspan><tspan
+       id="tspan126036">JPA entitások annotálásával is. </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan86852">Számos adapter és kiegészítő </tspan><tspan
+       id="tspan126038">Számos adapter és kiegészítő </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan86854">eszköz segíti a könnyű használatot </tspan><tspan
+       id="tspan126040">eszköz segíti a könnyű használatot </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan86856">és a projektekbe való integrációt.</tspan></text>
+       id="tspan126042">és a projektekbe való integrációt.</tspan></text>
   <text
      x="2615.1189"
      y="1744.4282"
@@ -1498,7 +1476,7 @@
      transform="matrix(2.4,0,0,2.4,1601.1291,847.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan86858">Lorem ipsum.</tspan></text>
+       id="tspan126044">Lorem ipsum.</tspan></text>
   <text
      x="1683.1298"
      y="1018.2557"
@@ -1543,13 +1521,11 @@
      style="fill:#eadec5;stroke:none;stroke-width:9.6;stop-color:#000000;fill-opacity:1"
      d="m 2668.0359,2590.0483 h 643.9182 v 480.5039 h -643.9182 z"
      sodipodi:nodetypes="ccccc" />
-  <rect
-     style="fill:#b3ae9b;fill-opacity:1;stroke:none;stroke-width:0.302362;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+  <path
      id="rect81855"
-     width="132.21046"
-     height="60.741936"
-     x="2668.1238"
-     y="2590.2153" />
+     style="fill:#b3ae9b;stroke-width:0.302362;stop-color:#000000"
+     d="m 2668.1238,2590.2153 h 644.2104 v 60.742 h -644.2104 z"
+     sodipodi:nodetypes="ccccc" />
   <path
      id="rect24539"
      style="fill:#aa8f7e;fill-opacity:1;stroke:none;stroke-width:0.991047;stop-color:#000000"
@@ -1606,11 +1582,25 @@
      fill="#eaf2f3"
      xml:space="preserve"
      id="text20-8-4-1"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.5556px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.2px;white-space:pre;inline-size:625.949;display:inline;fill:#cfd6e8;fill-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.5556px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.2px;white-space:pre;inline-size:632.428;display:inline;fill:#cfd6e8;fill-opacity:1"
      transform="matrix(2.4,0,0,2.4,1641.1291,2131.5384)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan86860">Lorem ipsum.</tspan></text>
+       id="tspan126048"><tspan
+         dx="0 0 0 0 0 0 -0.2 0.19999866"
+         id="tspan126046">A konfigurálás legegyszerűbben egy átlátható, verziókezelhető, és akár gépileg is </tspan></tspan><tspan
+       x="70.500626"
+       y="101.39241"
+       id="tspan126050">generálható YAML fájlon keresztül történik. Tömör leírásban adhatjuk meg a séma, </tspan><tspan
+       x="70.500626"
+       y="120.83691"
+       id="tspan126052">az értékkészletek és az adateloszlás paramétereit és más beállításokat. A seed érték </tspan><tspan
+       x="70.500626"
+       y="140.28142"
+       id="tspan126054">változtatásával újrakevehetjük a teljes adathalmazt a fő jellemzők megtartása </tspan><tspan
+       x="70.500626"
+       y="159.72592"
+       id="tspan126056">mellett. A live mode-ban indított adatbázis a fájl mentésekor azonnal frissül.</tspan></text>
   <text
      x="1723.1301"
      y="2302.178"
@@ -2419,7 +2409,7 @@
      r="14.198341" />
   <path
      id="rect17567"
-     style="fill:#130e28;fill-opacity:1;stroke:#724b4b;stroke-width:6.4252;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+     style="fill:#130e28;fill-opacity:1;stroke:#3c1532;stroke-width:5.66929123;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
      d="m 1810.036,2590.0483 h 663.9181 v 480.5039 H 1810.036 Z"
      sodipodi:nodetypes="ccccc" />
   <text
@@ -2440,7 +2430,7 @@
      style="fill:#9feadd;fill-opacity:1;stroke-width:3.54958"
      r="14.198341" />
   <path
-     style="color:#000000;fill:#1ab3a6;-inkscape-stroke:none"
+     style="color:#000000;fill:#179d91;-inkscape-stroke:none;fill-opacity:1"
      d="m 296.79687,4377.0801 c -17.24326,0 -31.19921,13.9559 -31.19921,31.1992 v 414.4004 c 0,17.2433 13.95595,31.1992 31.19921,31.1992 H 2067.1973 c 17.2432,0 31.1992,-13.9559 31.1992,-31.1992 v -414.4004 c 0,-17.2433 -13.956,-31.1992 -31.1992,-31.1992 z m 0,4.7988 H 2067.1973 c 14.6671,0 26.4004,11.7333 26.4004,26.4004 v 414.4004 c 0,14.6671 -11.7333,26.4004 -26.4004,26.4004 H 296.79687 c -14.66709,0 -26.40039,-11.7333 -26.40039,-26.4004 v -414.4004 c 0,-14.6671 11.7333,-26.4004 26.40039,-26.4004 z"
      id="rect4-2-8"
      sodipodi:nodetypes="ssssssssssssssssss" />
@@ -2744,24 +2734,24 @@
      style="fill:#ffffff;fill-opacity:1" />
   <path
      id="rect44613-3"
-     style="fill:#86bcd2;stroke:#2f5975;stroke-width:9.6;stop-color:#000000;fill-opacity:1"
+     style="fill:#c6dbe4;stroke:#274356;stroke-width:9.6;stop-color:#000000;fill-opacity:1;stroke-opacity:1"
      d="m 2850.2991,4286.6709 h 480.8883 c 27.2202,0 49.1339,21.9137 49.1339,49.1339 v 466.5071 c 0,27.2202 -21.9137,49.1339 -49.1339,49.1339 h -480.8883 c -27.2201,0 -49.1338,-21.9137 -49.1338,-49.1339 v -466.5071 c 0,-27.2202 21.9137,-49.1339 49.1338,-49.1339 z" />
   <g
      id="path7712-5"
      transform="matrix(2.4,0,0,2.4,-2053.6536,81.71703)"
-     style="fill:#361a13;fill-opacity:1">
+     style="fill:#0f242b;fill-opacity:1">
     <path
-       style="color:#000000;fill:#361a13;fill-opacity:1;stroke-width:6.8418;-inkscape-stroke:none"
+       style="color:#000000;fill:#0f242b;fill-opacity:1;stroke-width:6.8418;-inkscape-stroke:none"
        d="m 2044.2923,1773.9398 h 47.8925 m 13.6836,0 h 13.6836 m 6.8418,0 h 6.8417 m 20.5254,0 h 34.209 m 6.8417,0 h 47.8926 m -198.4119,6.8418 h 6.8418 m 34.2089,0 h 6.8418 m 20.5254,0 h 6.8418 m 13.6835,0 h 6.8418 m 6.8418,0 h 6.8418 m 13.6836,0 h 6.8418 m 20.5253,0 h 6.8418 m 34.209,0 h 6.8418 m -198.4119,6.8418 h 6.8418 m 6.8417,0 h 20.5254 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m 20.5254,0 h 6.8417 m 13.6836,0 h 13.6836 m 13.6836,0 h 13.6836 m 6.8417,0 h 6.8418 m 6.8418,0 h 20.5254 m 6.8418,0 h 6.8418 m -198.4119,6.8418 h 6.8418 m 6.8417,0 h 20.5254 m 6.8418,0 h 6.8418 m 6.8418,0 h 34.2089 m 13.6836,0 h 6.8418 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m 13.6835,0 h 6.8418 m 6.8418,0 h 20.5254 m 6.8418,0 h 6.8418 m -198.4119,6.8418 h 6.8418 m 6.8417,0 h 20.5254 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m 13.6836,0 h 20.5253 m 13.6836,0 h 6.8418 m 6.8418,0 h 20.5254 m 6.8417,0 h 6.8418 m 6.8418,0 h 20.5254 m 6.8418,0 h 6.8418 m -198.4119,6.8418 h 6.8418 m 34.2089,0 h 6.8418 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m 13.6835,0 h 41.0508 m 6.8418,0 h 6.8418 m 6.8417,0 h 6.8418 m 34.209,0 h 6.8418 m -198.4119,6.8417 h 47.8925 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8417 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m 6.8417,0 h 47.8926 m -143.6776,6.8418 h 6.8418 m 6.8418,0 h 27.3671 m 13.6836,0 h 6.8418 m -116.3104,6.8418 h 6.8418 m 6.8417,0 h 34.209 m 13.6836,0 h 6.8418 m 13.6836,0 h 6.8417 m 6.8418,0 h 6.8418 m 13.6836,0 h 6.8418 m 6.8418,0 h 6.8418 m 13.6835,0 h 34.209 m -184.7283,6.8418 h 6.8418 m 6.8417,0 h 13.6836 m 6.8418,0 h 6.8418 m 6.8418,0 h 20.5254 m 41.0507,0 h 34.209 m 6.8417,0 h 20.5254 m 20.5254,0 h 6.8418 m -198.4119,6.8418 h 6.8418 m 34.2089,0 h 6.8418 m 20.5254,0 h 20.5253 m 13.6836,0 h 6.8418 m 6.8418,0 h 6.8418 m 13.6836,0 h 6.8418 m 20.5253,0 h 6.8418 m -171.0447,6.8418 h 6.8418 m 6.8417,0 h 20.5254 m 20.5254,0 h 13.6836 m 13.6836,0 h 6.8417 m 6.8418,0 h 20.5254 m 20.5254,0 h 6.8418 m 27.3671,0 h 6.8418 m 6.8418,0 h 6.8418 m -184.7283,6.8418 h 27.3671 m 6.8418,0 h 13.6836 m 6.8418,0 h 13.6836 m 6.8418,0 h 6.8417 m 27.3672,0 h 6.8418 m 6.8418,0 h 6.8418 m 34.2089,0 h 13.6836 m -184.7283,6.8418 h 6.8418 m 6.8417,0 h 27.3672 m 20.5254,0 h 6.8418 m 20.5253,0 h 13.6836 m 6.8418,0 h 61.5761 m 20.5254,0 h 6.8418 m -184.7284,6.8418 h 20.5254 m 6.8418,0 h 6.8418 m 13.6836,0 h 6.8418 m 20.5253,0 h 34.209 m 13.6836,0 h 13.6835 m 13.6836,0 h 20.5254 m -184.7283,6.8418 h 6.8418 m 6.8417,0 h 6.8418 m 27.3672,0 h 13.6836 m 13.6836,0 h 20.5253 m 13.6836,0 h 6.8418 m 6.8418,0 h 47.8925 m 13.6836,0 h 6.8418 m -191.5701,6.8417 h 6.8418 m 6.8417,0 h 6.8418 m 20.5254,0 h 6.8418 m 20.5254,0 h 6.8418 m 6.8418,0 h 6.8417 m 6.8418,0 h 6.8418 m 13.6836,0 h 6.8418 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8417 m 6.8418,0 h 6.8418 m 6.8418,0 h 13.6836 m -184.7283,6.8418 h 27.3671 m 6.8418,0 h 6.8418 m 27.3672,0 h 13.6836 m 27.3671,0 h 27.3672 m 6.8418,0 h 27.3671 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m -198.4119,6.8418 h 6.8418 m 27.3671,0 h 20.5254 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m 20.5253,0 h 6.8418 m 6.8418,0 h 6.8418 m 13.6836,0 h 6.8418 m 6.8417,0 h 20.5254 m 6.8418,0 h 6.8418 m -184.7283,6.8418 h 6.8418 m 6.8417,0 h 13.6836 m 20.5254,0 h 20.5254 m 6.8418,0 h 6.8418 m 13.6835,0 h 13.6836 m 13.6836,0 h 6.8418 m 6.8418,0 h 20.5253 m 27.3672,0 h 6.8418 m -191.5701,6.8418 h 6.8418 m 6.8417,0 h 34.209 m 13.6836,0 h 6.8418 m 13.6836,0 h 6.8417 m 27.3672,0 h 6.8418 m 6.8418,0 h 41.0507 m 6.8418,0 h 20.5254 m -143.6776,6.8418 h 13.6836 m 20.5253,0 h 13.6836 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m 20.5253,0 h 34.209 m -198.4119,6.8418 h 47.8925 m 20.5254,0 h 6.8418 m 13.6835,0 h 27.3672 m 13.6836,0 h 13.6836 m 6.8417,0 h 6.8418 m 6.8418,0 h 20.5254 m -184.7283,6.8418 h 6.8418 m 34.2089,0 h 6.8418 m 6.8418,0 h 6.8418 m 13.6836,0 h 20.5253 m 13.6836,0 h 6.8418 m 13.6836,0 h 13.6836 m 20.5253,0 h 6.8418 m -171.0447,6.8418 h 6.8418 m 6.8417,0 h 20.5254 m 6.8418,0 h 6.8418 m 6.8418,0 h 20.5254 m 6.8418,0 h 6.8417 m 6.8418,0 h 6.8418 m 13.6836,0 h 6.8418 m 13.6836,0 h 34.2089 m 6.8418,0 h 6.8418 m -184.7283,6.8418 h 6.8418 m 6.8417,0 h 20.5254 m 6.8418,0 h 6.8418 m 6.8418,0 h 13.6836 m 13.6836,0 h 6.8417 m 34.209,0 h 20.5254 m 27.3671,0 h 27.3672 m -198.4119,6.8418 h 6.8418 m 6.8417,0 h 20.5254 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m 6.8418,0 h 41.0507 m 6.8418,0 h 75.2597 m -191.5701,6.8417 h 6.8418 m 34.2089,0 h 6.8418 m 20.5254,0 h 6.8418 m 6.8418,0 h 6.8417 m 13.6836,0 h 13.6836 m 20.5254,0 h 13.6835 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m 6.8418,0 h 6.8418 m -191.5701,6.8418 h 47.8925 m 6.8418,0 h 6.8418 m 13.6836,0 h 6.8418 m 6.8417,0 h 34.209 m 6.8418,0 h 6.8418 m 13.6835,0 h 20.5254 m 6.8418,0 h 6.8418"
        id="path8891" />
     <path
-       style="color:#000000;fill:#361a13;fill-opacity:1;-inkscape-stroke:none"
+       style="color:#000000;fill:#0f242b;fill-opacity:1;-inkscape-stroke:none"
        d="m 2044.293,1770.5195 v 6.8418 6.8418 6.8418 6.8418 6.8418 6.8418 6.8418 h 47.8925 v -6.8418 -6.8418 -6.8418 -6.8418 -6.8418 -6.8418 -6.8418 z m 61.5761,0 v 6.8418 h 6.8418 v 6.8418 h 6.8418 v -6.8418 -6.8418 z m 20.5254,0 v 6.8418 h 6.8418 v -6.8418 z m 6.8418,6.8418 v 6.8418 h 6.8418 v -6.8418 z m 0,6.8418 h -6.8418 v 6.8418 h -20.5254 v -6.8418 h -6.8418 v 6.8418 6.8418 6.8418 6.8418 6.8418 6.8418 h 6.8418 v -6.8418 -6.8418 -6.8418 -6.8418 h 13.6836 v 6.8418 h 13.6836 v 6.8418 h 6.8418 v 6.8418 h 6.8418 v -6.8418 h 6.8418 v 6.8418 6.8418 h 6.8418 v -6.8418 -6.8418 h 6.8418 v 6.8418 h 6.8418 v -6.8418 -6.8418 h 6.8418 v 6.8418 6.8418 h 6.8418 v -6.8418 -6.8418 -6.8418 h -6.8418 v -6.8418 h 6.8418 v -6.8418 h -13.6836 v 6.8418 6.8418 h -6.8418 v 6.8418 h -6.8418 v -6.8418 h -6.8418 v 6.8418 h -13.6836 v -6.8418 h -6.8418 v -6.8418 z m 20.5254,13.6836 v -6.8418 h 6.8418 v -6.8418 h -6.8418 v -6.8418 h -6.8418 v 6.8418 6.8418 6.8418 z m 0,-20.5254 h 13.6836 v 6.8418 h 6.8418 v -6.8418 h 13.6836 v -6.8418 h -34.209 z m 6.8418,13.6836 v 6.8418 h 6.8418 v -6.8418 z m 0,34.209 v 6.8418 h -6.8418 v 6.8418 h 6.8418 v 6.8418 h 6.8418 v -6.8418 h 13.6836 v 6.8418 6.8418 h 6.8418 v -6.8418 -6.8418 -6.8418 h -6.8418 v -6.8418 h -6.8418 v 6.8418 h -6.8418 v -6.8418 z m 20.5254,27.3672 h -6.8418 v 6.8418 h -6.8418 v -6.8418 h -6.8418 v 6.8418 h -6.8418 v 6.8418 h -6.8418 v -6.8418 h -13.6836 v 6.8418 6.8418 h -13.6836 v 6.8418 h 6.8418 v 6.8418 h 6.8418 v -6.8418 h 6.8418 v -6.8418 h 13.6836 v 6.8418 h 6.8418 v -6.8418 h 6.8418 v -6.8418 h 13.6836 v 6.8418 h -13.6836 v 6.8418 h 6.8418 v 6.8418 h -6.8418 v -6.8418 h -6.8418 v 6.8418 h -6.8418 v 6.8418 h 6.8418 v 6.8418 h 6.8418 v -6.8418 h 13.6836 v -6.8418 -6.8418 h 6.8418 v 6.8418 6.8418 h 6.8418 v 6.8418 h -6.8418 v -6.8418 h -6.8418 v 6.8418 6.8418 h -6.8418 v 6.8418 h 6.8418 v 6.8418 h -6.8418 v 6.8418 6.8418 h 6.8418 v 6.8418 h -13.6836 v 6.8418 h -6.8418 v 6.8417 h 20.5254 v 6.8418 h 13.6836 v -6.8418 h 6.8418 v 6.8418 h -6.8418 v 6.8418 h 20.5254 v -6.8418 h -6.8418 v -6.8418 h 6.8418 v 6.8418 h 6.8418 v -6.8418 h 6.8418 v 6.8418 h 6.8418 v -6.8418 -6.8417 h 6.8418 v -6.8418 h -13.6836 v -6.8418 h -6.8418 v 6.8418 h -6.8418 v 6.8418 h -27.3672 v -6.8418 h 27.3672 v -6.8418 -6.8418 h 13.6836 v -6.8418 h 13.6836 v -6.8418 -6.8418 h -6.8418 v -6.8418 h -6.8418 v 6.8418 h -6.8418 v 6.8418 h -6.8418 v -6.8418 h -13.6836 v -6.8418 h 13.6836 v -6.8418 -6.8418 h -6.8418 v -6.8418 h 6.8418 v -6.8418 h 13.6836 v -6.8418 h -13.6836 v -6.8418 h -34.209 z m 34.209,6.8418 h 13.6836 v -6.8418 h -6.8418 v -6.8418 h -6.8418 v 6.8418 z m 0,-13.6836 v -6.8418 -6.8418 h 13.6836 v -6.8418 h -34.209 v 6.8418 6.8418 h 13.6836 v 6.8418 z m 13.6836,6.8418 h 6.8418 v -6.8418 h -6.8418 z m 0,20.5254 v 6.8418 h 6.8418 v -6.8418 z m 0,6.8418 h -13.6836 v 6.8418 h 6.8418 v 6.8418 6.8418 h 6.8418 v -6.8418 -6.8418 z m 0,82.1015 h -6.8418 v 6.8418 h 6.8418 z m -47.8926,0 h -6.8418 v 6.8418 h 6.8418 z m -20.5254,-6.8418 h -6.8418 v -6.8417 h -20.5254 v -6.8418 -6.8418 h 6.8418 v -6.8418 h 13.6836 v 6.8418 h 6.8418 v -6.8418 -6.8418 -6.8418 h -6.8418 v 6.8418 h -6.8418 v -6.8418 h -13.6836 v 6.8418 6.8418 h -13.6836 v 6.8418 h 6.8418 v 6.8418 6.8418 h -13.6836 v 6.8417 6.8418 h 6.8418 v -6.8418 h 6.8418 v 6.8418 h 6.8418 v -6.8418 h 13.6836 v 6.8418 h -13.6836 v 6.8418 h 34.209 v -6.8418 h -6.8418 z m -34.209,6.8418 h -6.8418 v 6.8418 h 6.8418 z m -13.6836,-13.6835 v -6.8418 h 6.8418 v -6.8418 h -13.6836 v -6.8418 h -6.8418 v 6.8418 6.8418 6.8418 6.8417 h 6.8418 v -6.8417 z m 6.8418,-20.5254 v -6.8418 h -6.8418 v 6.8418 z m -6.8418,-6.8418 v -6.8418 -6.8418 -6.8418 -6.8418 h -6.8418 v 6.8418 h -6.8418 v -6.8418 h -13.6835 v -6.8418 h -6.8418 v 6.8418 6.8418 h 13.6835 v 6.8418 h 13.6836 v 6.8418 h -6.8418 v 6.8418 z m -20.5254,-13.6836 h -20.5253 v -6.8418 h -13.6836 v 6.8418 6.8418 h 34.2089 z m -6.8417,-20.5254 h 6.8417 v -6.8418 h -6.8417 z m 6.8417,-6.8418 h 13.6836 v -6.8418 h -13.6836 z m 0,-6.8418 v -6.8418 h -6.8417 v 6.8418 z m -6.8417,-6.8418 v -6.8418 h -6.8418 v -6.8418 -6.8418 h -20.5254 v 6.8418 h -6.8418 v 6.8418 h 6.8418 v 6.8418 6.8418 6.8418 6.8418 h -6.8418 v -6.8418 -6.8418 h -6.8418 v 6.8418 6.8418 6.8418 6.8418 6.8418 6.8418 h 6.8418 v -6.8418 -6.8418 -6.8418 h 20.5254 v -6.8418 h -6.8418 v -6.8418 -6.8418 h 13.6836 v -6.8418 z m -34.209,-6.8418 h -6.8418 v 6.8418 h 6.8418 z m 0,-6.8418 v -6.8418 -6.8418 -6.8418 -6.8418 h -6.8418 v 6.8418 6.8418 6.8418 6.8418 z m 34.209,6.8418 h 13.6835 v -6.8418 h -13.6835 z m 13.6835,-6.8418 h 6.8418 v 6.8418 6.8418 6.8418 h 6.8418 v -6.8418 -6.8418 h 6.8418 v -6.8418 h -6.8418 v -6.8418 h -13.6836 z m 13.6836,-6.8418 h 13.6836 v 6.8418 6.8418 h 6.8418 v -6.8418 -6.8418 -6.8418 h -20.5254 z m 0,-6.8418 v -6.8418 -6.8418 h -6.8418 v 6.8418 h -13.6836 v 6.8418 z m -20.5254,0 h -6.8417 v 6.8418 h 6.8417 z m -6.8417,0 v -6.8418 h 6.8417 v -6.8418 h -34.2089 v 6.8418 6.8418 h 13.6836 v -6.8418 h 6.8418 v 6.8418 z m 27.3671,-13.6836 h 13.6836 v 6.8418 h 6.8418 v -6.8418 h 6.8418 v -6.8418 h -6.8418 v -6.8418 h -6.8418 v 6.8418 h -6.8418 v -6.8418 -6.8418 h -6.8418 v 6.8418 6.8418 z m 27.3672,0 v 6.8418 h 6.8418 v -6.8418 z m -27.3672,68.418 h 6.8418 v 6.8418 6.8418 h 6.8418 v -6.8418 -6.8418 -6.8418 h -6.8418 v -6.8418 h -6.8418 v 6.8418 z m 13.6836,13.6836 v 6.8418 h 6.8418 v -6.8418 z m 34.209,6.8418 h 6.8418 v -6.8418 h -6.8418 z m 6.8418,-6.8418 h 6.8418 v -6.8418 h -6.8418 z m 0,6.8418 v 6.8418 h 6.8418 v -6.8418 z m -6.8418,20.5254 v 6.8418 h 6.8418 v -6.8418 z m -20.5254,0 v 6.8418 h 6.8418 v -6.8418 z m 13.6836,-41.0508 h -6.8418 v 6.8418 h -6.8418 v 6.8418 h 13.6836 v -6.8418 z m -13.6836,-13.6836 v 6.8418 h 6.8418 v -6.8418 z m 20.5254,-27.3672 v -6.8418 h -6.8418 v -6.8418 h -6.8418 v 6.8418 h -6.8418 v 6.8418 z m 34.209,-82.1016 v 6.8418 6.8418 6.8418 6.8418 6.8418 6.8418 6.8418 h 47.8926 v -6.8418 -6.8418 -6.8418 -6.8418 -6.8418 -6.8418 -6.8418 z m -143.6777,6.8418 h 34.209 v 6.8418 6.8418 6.8418 6.8418 6.8418 h -34.209 v -6.8418 -6.8418 -6.8418 -6.8418 z m 150.5195,0 h 34.209 v 6.8418 6.8418 6.8418 6.8418 6.8418 h -34.209 v -6.8418 -6.8418 -6.8418 -6.8418 z m -143.6777,6.8418 v 6.8418 6.8418 6.8418 h 20.5254 v -6.8418 -6.8418 -6.8418 z m 150.5195,0 v 6.8418 6.8418 6.8418 h 20.5254 v -6.8418 -6.8418 -6.8418 z m 27.3672,47.8926 v 6.8418 h 6.8418 v -6.8418 z m 0,27.3672 v 6.8418 h 6.8418 v -6.8418 z m -41.0508,6.8418 h 13.6836 v 6.8418 h -13.6836 z m 0,13.6836 h 6.8418 v 6.8418 h -6.8418 z m 41.0508,6.8418 v 6.8418 h 6.8418 v -6.8418 z m -47.8926,27.3672 h 20.5254 v 6.8418 6.8418 6.8418 h -20.5254 v -6.8418 -6.8418 z m -143.6777,6.8418 v 6.8418 6.8418 6.8418 6.8418 6.8417 6.8418 6.8418 h 47.8925 v -6.8418 -6.8418 -6.8417 -6.8418 -6.8418 -6.8418 -6.8418 z m 150.5195,0 v 6.8418 h 6.8418 v -6.8418 z m -143.6777,6.8418 h 34.209 v 6.8418 6.8418 6.8418 6.8417 6.8418 h -34.209 v -6.8418 -6.8417 -6.8418 -6.8418 z m 6.8418,6.8418 v 6.8418 6.8418 6.8417 h 20.5254 v -6.8417 -6.8418 -6.8418 z m 41.0507,27.3671 v 6.8418 h 6.8418 v -6.8418 z"
        id="path8888" />
   </g>
   <path
      id="rect44613-4"
-     style="fill:#86bcd2;stroke:#333eb9;stroke-width:9.6;stop-color:#000000;fill-opacity:1"
+     style="fill:#b5bea9;stroke:#2d4c38;stroke-width:9.6;stop-color:#000000;fill-opacity:1;stroke-opacity:1"
      d="m 2124.5101,3745.688 h 1203.0992 c 27.2202,0 49.1339,21.9137 49.1339,49.1338 v 381.5624 c 0,27.2202 -21.9137,49.1339 -49.1339,49.1339 H 2124.5101 c -27.2202,0 -49.1339,-21.9137 -49.1339,-49.1339 v -381.5624 c 0,-27.2201 21.9137,-49.1338 49.1339,-49.1338 z"
      sodipodi:nodetypes="sssssssss" />
   <g
@@ -3010,47 +3000,47 @@
   <path
      id="path29238-3"
      style="color:#000000;fill:#ffffff;fill-opacity:1;stroke-width:3.41322;stroke-miterlimit:10;-inkscape-stroke:none"
-     d="m 1713.4629,4578.1413 8.153,15.6178 -7.6024,15.895 31.2453,-16.308 -3.0789,-1.4719 z"
+     d="m 1697.4629,4578.1413 8.153,15.6178 -7.6024,15.895 31.2453,-16.308 -3.0789,-1.4719 z"
      sodipodi:nodetypes="cccccc" />
   <path
      id="path29238-3-7"
      style="color:#000000;fill:#ffffff;fill-opacity:1;stroke-width:3.41322;stroke-miterlimit:10;-inkscape-stroke:none"
-     d="m 1721.4437,4680.344 7.8789,15.7578 -7.8789,15.7598 31.5254,-15.7598 -3.0528,-1.5254 z"
+     d="m 1705.4437,4680.344 7.8789,15.7578 -7.8789,15.7598 31.5254,-15.7598 -3.0528,-1.5254 z"
      sodipodi:nodetypes="cccccc" />
   <path
      id="path29238-3-4"
      style="color:#000000;fill:#ffffff;fill-opacity:1;stroke-width:3.41322;stroke-miterlimit:10;-inkscape-stroke:none"
-     d="m 1717.1155,4767.5335 7.4335,15.9727 -8.3181,15.5325 31.9553,-14.8688 -3.0088,-1.6104 z"
+     d="m 1701.1155,4767.5335 7.4335,15.9727 -8.3181,15.5325 31.9553,-14.8688 -3.0088,-1.6104 z"
      sodipodi:nodetypes="cccccc" />
   <path
      id="path29238-3-5"
      style="color:#000000;fill:#ffffff;fill-opacity:1;stroke-width:3.41322;stroke-miterlimit:10;-inkscape-stroke:none"
-     d="m 1847.2575,4700.3975 3.6445,17.2367 -11.6033,13.2595 34.4835,-7.2883 -2.5687,-2.2468 z"
+     d="m 1831.2575,4700.3975 3.6445,17.2367 -11.6033,13.2595 34.4835,-7.2883 -2.5687,-2.2468 z"
      sodipodi:nodetypes="cccccc" />
   <path
      id="path29238-3-2"
      style="color:#000000;fill:#ffffff;fill-opacity:1;stroke-width:3.41322;stroke-miterlimit:10;-inkscape-stroke:none"
-     d="m 1842.4352,4739.1455 10.1337,14.4115 -5.4486,16.756 28.8324,-20.271 -3.2456,-1.0546 z"
+     d="m 1826.4352,4739.1455 10.1337,14.4115 -5.4486,16.756 28.8324,-20.271 -3.2456,-1.0546 z"
      sodipodi:nodetypes="cccccc" />
   <path
      id="path29238-3-54"
      style="color:#000000;fill:#ffffff;fill-opacity:1;stroke-width:3.41322;stroke-miterlimit:10;-inkscape-stroke:none"
-     d="m 1839.7972,4650.3081 14.0955,10.569 v 17.6195 l 21.1458,-28.1971 h -3.4126 z"
+     d="m 1823.7972,4650.3081 14.0955,10.569 v 17.6195 l 21.1458,-28.1971 h -3.4126 z"
      sodipodi:nodetypes="cccccc" />
   <path
      id="path29238-3-74"
      style="color:#000000;fill:#ffffff;fill-opacity:1;stroke-width:3.41322;stroke-miterlimit:10;-inkscape-stroke:none"
-     d="m 1844.8646,4607.1865 5.4624,16.7495 -10.1224,14.4217 33.5091,-10.9255 -2.7936,-1.9599 z"
+     d="m 1828.8646,4607.1865 5.4624,16.7495 -10.1224,14.4217 33.5091,-10.9255 -2.7936,-1.9599 z"
      sodipodi:nodetypes="cccccc" />
   <path
      id="path29238-3-43"
      style="color:#000000;fill:#ffffff;fill-opacity:1;stroke-width:3.41322;stroke-miterlimit:10;-inkscape-stroke:none"
-     d="m 1943.5263,4722.5293 16.8646,5.0962 6.0432,16.5507 10.1976,-33.7377 -3.2053,1.1712 z"
+     d="m 1927.5263,4722.5293 16.8646,5.0962 6.0432,16.5507 10.1976,-33.7377 -3.2053,1.1712 z"
      sodipodi:nodetypes="cccccc" />
   <path
      id="path29238-3-0"
      style="color:#000000;fill:#ffffff;fill-opacity:1;stroke-width:3.41322;stroke-miterlimit:10;-inkscape-stroke:none"
-     d="m 1963.8871,4627.0494 -4.2717,17.092 -16.238,6.8394 34.1929,8.5483 -1.3254,-3.1448 z"
+     d="m 1947.8871,4627.0494 -4.2717,17.092 -16.238,6.8394 34.1929,8.5483 -1.3254,-3.1448 z"
      sodipodi:nodetypes="cccccc" />
   <rect
      x="1479.8618"
@@ -3242,7 +3232,7 @@
   <g
      data-cell-id="DKQcyYTNdZ15Uf8QAMDz-56"
      id="g16753-8"
-     transform="matrix(2.2527008,3.7487049,-3.7487049,2.2527008,1839.9354,3117.0644)"
+     transform="matrix(3.3132396,2.8548017,-2.8548017,3.3132396,1608.1962,3142.4956)"
      style="fill:#4a6f9d;fill-opacity:1">
     <g
        id="g16751-3"
@@ -3321,67 +3311,67 @@
      sodipodi:nodetypes="ccc" />
   <path
      style="fill:none;fill-opacity:1;stroke:#fdfbfc;stroke-width:3.40157;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     d="m 1666.9013,4712.6234 c 0,0 15.3246,13.0617 21.6757,22.2729 6.3511,9.2112 9.8731,25.0351 15.2081,32.6873 5.335,7.6522 9.1356,11.5165 14.0393,14.1295 4.9037,2.613 13.1774,2.5423 13.1774,2.5423"
+     d="m 1650.9013,4712.6234 c 0,0 15.3246,13.0617 21.6757,22.2729 6.3511,9.2112 9.8731,25.0351 15.2081,32.6873 5.335,7.6522 9.1356,11.5165 14.0393,14.1295 4.9037,2.613 13.1774,2.5423 13.1774,2.5423"
      id="path57688-6"
      inkscape:transform-center-x="12.03049"
      inkscape:transform-center-y="-30.789826"
      sodipodi:nodetypes="czzzc" />
   <path
      style="fill:none;fill-opacity:1;stroke:#fdfbfc;stroke-width:3.40157;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     d="m 1800.7808,4593.2426 c 0,0 11.7284,1.2633 17.0722,3.5498 4.7594,2.0365 8.8391,5.4657 12.7861,8.8154 6.0758,5.1563 9.7675,13.0956 16.5903,17.2129 2.6571,1.6034 8.9421,2.5918 8.9421,2.5918"
+     d="m 1784.7808,4593.2426 c 0,0 11.7284,1.2633 17.0722,3.5498 4.7594,2.0365 8.8391,5.4657 12.7861,8.8154 6.0758,5.1563 9.7675,13.0956 16.5903,17.2129 2.6571,1.6034 8.9421,2.5918 8.9421,2.5918"
      id="path57688-6-0"
      inkscape:transform-center-x="12.03049"
      inkscape:transform-center-y="-30.789826"
      sodipodi:nodetypes="caaac" />
   <path
      style="fill:none;fill-opacity:1;stroke:#fdfbfc;stroke-width:3.40157;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     d="m 1922.5772,4627.86 c 0,0 15.2946,1.2719 22.8771,5.0088 7.5825,3.7369 20.8766,17.5927 20.8766,17.5927"
+     d="m 1906.5772,4627.86 c 0,0 15.2946,1.2719 22.8771,5.0088 7.5825,3.7369 20.8766,17.5927 20.8766,17.5927"
      id="path57688-6-0-5"
      inkscape:transform-center-x="12.03049"
      inkscape:transform-center-y="-30.789826"
      sodipodi:nodetypes="czc" />
   <path
      id="path57688-6-0-5-7"
-     style="color:#000000;fill:#57cfa9;-inkscape-stroke:none;fill-opacity:1"
-     d="M 1988.1582 4505.8105 L 1984.7988 4520.5507 C 1984.7988 4520.5507 1991.4943 4522.0918 1998.75 4524.9452 C 2006.0057 4527.7986 2013.0633 4532.8699 2013.9121 4534.6483 C 2014.6532 4536.201 2014.2291 4544.5071 2011.9824 4551.6308 C 2011.9708 4551.6674 2011.9588 4551.7016 2011.9472 4551.7382 L 1994.082 4542.4452 L 1996.4121 4598.2011 L 2044.0039 4568.414 L 2025.5293 4558.8026 C 2025.8237 4557.9473 2026.117 4557.0782 2026.4004 4556.1796 C 2029.0424 4547.8021 2032.168 4537.8029 2027.5546 4528.1366 C 2022.8335 4518.2445 2012.7625 4514.2095 2004.2832 4510.8749 C 1995.8039 4507.5403 1988.1582 4505.8105 1988.1582 4505.8105 z " />
+     style="color:#000000;fill:#57cfa9;fill-opacity:1;-inkscape-stroke:none"
+     d="m 1982.1582,4505.8105 -3.3594,14.7402 c 0,0 6.6955,1.5411 13.9512,4.3945 7.2557,2.8534 14.3133,7.9247 15.1621,9.7031 0.7411,1.5527 0.317,9.8588 -1.9297,16.9825 -0.012,0.037 -0.024,0.071 -0.035,0.1074 l -17.8652,-9.293 2.3301,55.7559 47.5918,-29.7871 -18.4746,-9.6114 c 0.2944,-0.8553 0.5877,-1.7244 0.8711,-2.623 2.642,-8.3775 5.7676,-18.3767 1.1542,-28.043 -4.7211,-9.8921 -14.7921,-13.9271 -23.2714,-17.2617 -8.4793,-3.3346 -16.125,-5.0644 -16.125,-5.0644 z" />
   <path
      style="fill:none;fill-opacity:1;stroke:#fdfbfc;stroke-width:3.40157;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     d="m 1923.3541,4744.788 c 0,0 15.2946,-1.2719 22.8771,-5.0088 7.5825,-3.7369 20.8766,-17.5927 20.8766,-17.5927"
+     d="m 1907.3541,4744.788 c 0,0 15.2946,-1.2719 22.8771,-5.0088 7.5825,-3.7369 20.8766,-17.5927 20.8766,-17.5927"
      id="path57688-6-0-5-4"
      inkscape:transform-center-x="12.03049"
      inkscape:transform-center-y="30.789876"
      sodipodi:nodetypes="czc" />
   <path
      style="fill:none;fill-opacity:1;stroke:#fdfbfc;stroke-width:3.40157;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     d="m 1798.2352,4684.2347 c 0,0 10.1522,1.8521 15.5901,5.3376 5.4379,3.4855 11.6201,7.2203 17.5286,12.7301 5.9085,5.5098 11.8958,11.5021 17.6268,14.6633 5.731,3.1612 9.0956,3.2472 9.0956,3.2472"
+     d="m 1782.2352,4684.2347 c 0,0 10.1522,1.8521 15.5901,5.3376 5.4379,3.4855 11.6201,7.2203 17.5286,12.7301 5.9085,5.5098 11.8958,11.5021 17.6268,14.6633 5.731,3.1612 9.0956,3.2472 9.0956,3.2472"
      id="path57688-6-0-1"
      inkscape:transform-center-x="12.03049"
      inkscape:transform-center-y="-30.789826"
      sodipodi:nodetypes="czzzc" />
   <path
      style="fill:none;fill-opacity:1;stroke:#fdfbfc;stroke-width:3.40157;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     d="m 1803.9352,4781.0013 c 0,0 10.2572,-0.4702 15.0812,-2.0394 5.3617,-1.7441 10.519,-4.4644 14.8879,-8.0284 3.1568,-2.5752 5.0437,-6.4135 7.8434,-9.373 1.9055,-2.0143 3.7623,-4.1522 6.0736,-5.684 2.5825,-1.7115 8.4932,-3.7753 8.4932,-3.7753"
+     d="m 1787.9352,4781.0013 c 0,0 10.2572,-0.4702 15.0812,-2.0394 5.3617,-1.7441 10.519,-4.4644 14.8879,-8.0284 3.1568,-2.5752 5.0437,-6.4135 7.8434,-9.373 1.9055,-2.0143 3.7623,-4.1522 6.0736,-5.684 2.5825,-1.7115 8.4932,-3.7753 8.4932,-3.7753"
      id="path57688-6-0-6"
      inkscape:transform-center-x="12.03049"
      inkscape:transform-center-y="30.789876"
      sodipodi:nodetypes="caaaac" />
   <path
      style="fill:none;fill-opacity:1;stroke:#fdfbfc;stroke-width:3.40157;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     d="m 1798.6154,4757.4079 c 0,0 10.0598,-0.7822 18.5979,-11.7603 8.5381,-10.9781 11.1239,-39.5275 19.0415,-58.4153 2.9096,-6.941 5.569,-14.2701 10.4017,-20.0397 3.3548,-4.0052 12.4294,-9.5485 12.4294,-9.5485"
+     d="m 1782.6154,4757.4079 c 0,0 10.0598,-0.7822 18.5979,-11.7603 8.5381,-10.9781 11.1239,-39.5275 19.0415,-58.4153 2.9096,-6.941 5.569,-14.2701 10.4017,-20.0397 3.3548,-4.0052 12.4294,-9.5485 12.4294,-9.5485"
      id="path57688-6-0-6-5"
      inkscape:transform-center-x="12.03049"
      inkscape:transform-center-y="30.789876"
      sodipodi:nodetypes="czaac" />
   <path
      style="fill:none;fill-opacity:1;stroke:#fdfbfc;stroke-width:3.40157;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     d="m 1669.9095,4647.6216 c 0,0 7.9902,-7.0101 12.3962,-13.0122 4.406,-6.0021 7.5216,-16.6544 12.9255,-23.3655 5.4039,-6.7111 12.7548,-13.8867 18.7874,-16.4866 6.0326,-2.5999 14.3555,-1.3474 14.3555,-1.3474"
+     d="m 1653.9095,4647.6216 c 0,0 7.9902,-7.0101 12.3962,-13.0122 4.406,-6.0021 7.5216,-16.6544 12.9255,-23.3655 5.4039,-6.7111 12.7548,-13.8867 18.7874,-16.4866 6.0326,-2.5999 14.3555,-1.3474 14.3555,-1.3474"
      id="path57688-6-3"
      inkscape:transform-center-x="12.03049"
      inkscape:transform-center-y="30.789876"
      sodipodi:nodetypes="czzzc" />
   <path
      style="fill:none;fill-opacity:1;stroke:#fdfbfc;stroke-width:3.40157;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     d="m 1678.8714,4682.7793 c 0,0 19.4188,10.163 28.1254,11.3157 8.7066,1.1527 19.8214,2.1853 27.4319,2.6965"
+     d="m 1662.8714,4682.7793 c 0,0 19.4188,10.163 28.1254,11.3157 8.7066,1.1527 19.8214,2.1853 27.4319,2.6965"
      id="path57688-6-3-2"
      inkscape:transform-center-x="12.03049"
      inkscape:transform-center-y="30.789876"
@@ -3443,13 +3433,13 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#fffefe;fill-opacity:1;stroke:none;stroke-width:5.66929;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     x="375.73727"
-     y="4599.7046"
+     x="371.73727"
+     y="4613.7046"
      id="text57912-37"><tspan
        sodipodi:role="line"
        id="tspan57910-5"
-       x="375.73727"
-       y="4599.7046">ns</tspan></text>
+       x="371.73727"
+       y="4613.7046">ns</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#fffefe;fill-opacity:1;stroke:none;stroke-width:5.66929;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
@@ -3483,7 +3473,7 @@
   <path
      id="rect2430"
      style="fill:#c6a3c1;fill-opacity:1;stroke-width:2.4189;stop-color:#000000"
-     d="m 386.03767,4610.5022 v 71.877 h -7.98047 l 10.44726,32.4238 10.44727,-32.4238 h -7.98047 v -71.877 z" />
+     d="m 382.03767,4624.5022 v 71.877 h -7.98047 l 10.44726,32.4238 10.44727,-32.4238 h -7.98047 v -71.877 z" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:MathJax_Typewriter;-inkscape-font-specification:'MathJax_Typewriter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#07b0ba;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
@@ -3505,57 +3495,57 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;font-family:MathJax_Typewriter;-inkscape-font-specification:'MathJax_Typewriter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#90d301;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
-     x="1746.3615"
+     x="1730.3615"
      y="4614.6445"
      id="text9394"><tspan
        sodipodi:role="line"
        id="tspan9392"
-       x="1746.3615"
+       x="1730.3615"
        y="4614.6445">a</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;font-family:MathJax_Typewriter;-inkscape-font-specification:'MathJax_Typewriter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#90d301;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
-     x="1749.4015"
+     x="1733.4015"
      y="4713.9868"
      id="text9398"><tspan
        sodipodi:role="line"
        id="tspan9396"
-       x="1749.4015"
+       x="1733.4015"
        y="4713.9868">b</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;font-family:MathJax_Typewriter;-inkscape-font-specification:'MathJax_Typewriter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#90d301;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
-     x="1747.9614"
+     x="1731.9614"
      y="4799.6494"
      id="text9402"><tspan
        sodipodi:role="line"
        id="tspan9400"
-       x="1747.9614"
+       x="1731.9614"
        y="4799.6494">c</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;font-family:MathJax_Typewriter;-inkscape-font-specification:'MathJax_Typewriter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#90d301;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
-     x="1876.7583"
+     x="1860.7583"
      y="4649.5137"
      id="text9406"><tspan
        sodipodi:role="line"
        id="tspan9404"
-       x="1876.7583"
+       x="1860.7583"
        y="4649.5137">x</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;font-family:MathJax_Typewriter;-inkscape-font-specification:'MathJax_Typewriter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#90d301;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
-     x="1876.705"
+     x="1860.705"
      y="4752.1724"
      id="text9410"><tspan
        sodipodi:role="line"
        id="tspan9408"
-       x="1876.705"
+       x="1860.705"
        y="4752.1724">y</tspan></text>
   <circle
      style="fill:none;fill-opacity:1;stroke:#c6a3c1;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
      id="path9491"
-     cx="1643.5818"
+     cx="1627.5818"
      cy="4683.2812"
      r="20.661247" />
   <rect
@@ -3563,47 +3553,67 @@
      id="rect9545"
      width="51.154987"
      height="51.517426"
-     x="1988.382"
+     x="1972.382"
      y="4655.0298" />
   <rect
      style="fill:none;fill-opacity:1;stroke:#c6a3c1;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
      id="rect9545-4"
      width="31.62121"
      height="31.845692"
-     x="1998.1488"
+     x="1982.1488"
      y="4664.8657" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;white-space:pre;inline-size:1128.94;display:inline;fill:#040404;fill-opacity:1;stroke-width:2.4189;stop-color:#000000"
      x="2149.7786"
      y="3837.5896"
-     id="text964"><tspan
+     id="text964"
+     transform="translate(63.88637,140.94782)"><tspan
        x="2149.7786"
        y="3837.5896"
-       id="tspan86862">TDK-dolgozat: HoloDB: Relációs demóadatok konzisztens </tspan><tspan
+       id="tspan126058">Horváth Dávid, ELTE-IK
+</tspan><tspan
        x="2149.7786"
        y="3887.5897"
-       id="tspan86864">on-the-fly generálása deklaratív konfigurációból
+       id="tspan126060">horvathdown@student.elte.hu</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;white-space:pre;inline-size:1128.94;display:inline;fill:#040404;fill-opacity:1;stroke-width:2.4189;stop-color:#000000"
+     x="2149.7786"
+     y="3837.5896"
+     id="text964-2"
+     transform="translate(-27.999971,290)"><tspan
+       x="2149.7786"
+       y="3837.5896"
+       id="tspan126062">Témavezető: Dr. Vincellér Zoltán, ELTE
 </tspan><tspan
        x="2149.7786"
-       y="3937.5897"
-       id="tspan86866">Horváth Dávid
+       y="3887.5897"
+       id="tspan126064">InnOtdk mentor: Dr. Ruppert Tamás, Pannon Egyetem</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;white-space:pre;inline-size:1128.94;display:inline;fill:#040404;fill-opacity:1;stroke-width:2.4189;stop-color:#000000"
+     x="2149.7786"
+     y="3837.5896"
+     id="text964-9"
+     transform="translate(-27.999971,-9.9999546)"><tspan
+       x="2149.7786"
+       y="3837.5896"
+       id="tspan126066">TDK-dolgozat:</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;white-space:pre;inline-size:935.283;display:inline;fill:#040404;fill-opacity:1;stroke-width:2.4189;stop-color:#000000"
+     x="2149.7786"
+     y="3837.5896"
+     id="text964-0"
+     transform="translate(260,-9.9999546)"><tspan
+       x="2149.7786"
+       y="3837.5896"
+       id="tspan126068">HoloDB: Relációs demóadatok konzisztens
 </tspan><tspan
        x="2149.7786"
-       y="3987.5897"
-       id="tspan86868">ELTE-IK
-</tspan><tspan
-       x="2149.7786"
-       y="4037.5897"
-       id="tspan86870">horvathdown@student.elte.hu
-</tspan><tspan
-       x="2149.7786"
-       y="4087.5897"
-       id="tspan86872">Témavezető: Dr. Vincellér Zoltán, ELTE
-</tspan><tspan
-       x="2149.7786"
-       y="4137.5894"
-       id="tspan86874">InnOtdk mentor: Dr. Ruppert Tamás, Pannon Egyetem</tspan></text>
+       y="3887.5897"
+       id="tspan126070">on-the-fly generálása deklaratív konfigurációból</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
@@ -3947,11 +3957,11 @@
   <path
      id="rect67425"
      style="fill:#1ab3a6;fill-opacity:1;stroke:none;stroke-width:5.52044;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:0.429623;stop-color:#000000"
-     d="M 1302.4179 2143.5918 L 1302.4179 2318.3261 L 1333.6621 2318.3261 L 1333.6621 2291.4746 A 10.912098 10.912098 0 0 1 1322.7968 2280.5683 A 10.912098 10.912098 0 0 1 1333.6621 2269.6621 L 1333.6621 2241.4746 A 10.912098 10.912098 0 0 1 1322.7968 2230.5683 A 10.912098 10.912098 0 0 1 1333.6621 2219.6621 L 1333.6621 2191.4746 A 10.912098 10.912098 0 0 1 1322.7968 2180.5683 A 10.912098 10.912098 0 0 1 1333.6621 2169.6621 L 1333.6621 2143.5918 L 1302.4179 2143.5918 z " />
+     d="m 1302.4179,2123.5918 v 174.7343 h 31.2442 v -26.8515 a 10.912098,10.912098 0 0 1 -10.8653,-10.9063 10.912098,10.912098 0 0 1 10.8653,-10.9062 v -28.1875 a 10.912098,10.912098 0 0 1 -10.8653,-10.9063 10.912098,10.912098 0 0 1 10.8653,-10.9062 v -28.1875 a 10.912098,10.912098 0 0 1 -10.8653,-10.9063 10.912098,10.912098 0 0 1 10.8653,-10.9062 v -26.0703 z" />
   <path
      id="path67922-1"
      style="fill:none;fill-opacity:1;stroke:#b5fdf7;stroke-width:3.77953;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     d="M 1333.709 2169.6562 A 10.912098 10.912098 0 0 0 1322.7968 2180.5683 A 10.912098 10.912098 0 0 0 1333.709 2191.4804 A 10.912098 10.912098 0 0 0 1344.6211 2180.5683 A 10.912098 10.912098 0 0 0 1333.709 2169.6562 z M 1333.709 2219.6562 A 10.912098 10.912098 0 0 0 1322.7968 2230.5683 A 10.912098 10.912098 0 0 0 1333.709 2241.4804 A 10.912098 10.912098 0 0 0 1344.6211 2230.5683 A 10.912098 10.912098 0 0 0 1333.709 2219.6562 z M 1333.709 2269.6562 A 10.912098 10.912098 0 0 0 1322.7968 2280.5683 A 10.912098 10.912098 0 0 0 1333.709 2291.4804 A 10.912098 10.912098 0 0 0 1344.6211 2280.5683 A 10.912098 10.912098 0 0 0 1333.709 2269.6562 z " />
+     d="m 1333.709,2149.6562 a 10.912098,10.912098 0 0 0 -10.9122,10.9121 10.912098,10.912098 0 0 0 10.9122,10.9121 10.912098,10.912098 0 0 0 10.9121,-10.9121 10.912098,10.912098 0 0 0 -10.9121,-10.9121 z m 0,50 a 10.912098,10.912098 0 0 0 -10.9122,10.9121 10.912098,10.912098 0 0 0 10.9122,10.9121 10.912098,10.912098 0 0 0 10.9121,-10.9121 10.912098,10.912098 0 0 0 -10.9121,-10.9121 z m 0,50 a 10.912098,10.912098 0 0 0 -10.9122,10.9121 10.912098,10.912098 0 0 0 10.9122,10.9121 10.912098,10.912098 0 0 0 10.9121,-10.9121 10.912098,10.912098 0 0 0 -10.9121,-10.9121 z" />
   <path
      id="path70433"
      style="fill:url(#linearGradient72646);stroke-width:15.4312;stroke-linecap:round;stop-color:#000000;fill-opacity:1"
@@ -3990,13 +4000,13 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:30.6667px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.66929;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     x="1839.636"
-     y="2649.0125"
+     x="1837.054"
+     y="2645.0125"
      id="text75296"><tspan
        sodipodi:role="line"
        id="tspan75294"
-       x="1839.636"
-       y="2649.0125"><tspan
+       x="1837.054"
+       y="2645.0125"><tspan
    style="fill:#4396cf;fill-opacity:1"
    id="tspan11353">seed</tspan><tspan
    style="fill:#929562;fill-opacity:1"
@@ -4004,16 +4014,16 @@
    style="fill:#8c2f55;fill-opacity:1"
    id="tspan11561">132435</tspan></tspan><tspan
        sodipodi:role="line"
-       x="1839.636"
-       y="2687.3459"
+       x="1837.054"
+       y="2683.3459"
        id="tspan75556"><tspan
          style="fill:#4396cf;fill-opacity:1"
          id="tspan13844">schemas</tspan><tspan
          style="fill:#929562;fill-opacity:1"
          id="tspan14739">:</tspan></tspan><tspan
        sodipodi:role="line"
-       x="1839.636"
-       y="2725.6792"
+       x="1837.054"
+       y="2721.6792"
        id="tspan3355">  <tspan
    style="fill:#929562;fill-opacity:1"
    id="tspan15247">-</tspan> <tspan
@@ -4024,16 +4034,16 @@
    style="fill:#b08757;fill-opacity:1"
    id="tspan11773">example</tspan></tspan><tspan
        sodipodi:role="line"
-       x="1839.636"
-       y="2764.0127"
+       x="1837.054"
+       y="2760.0127"
        id="tspan3357">    <tspan
    style="fill:#4396cf;fill-opacity:1"
    id="tspan13848">tables</tspan><tspan
    style="fill:#929562;fill-opacity:1"
    id="tspan15225">:</tspan></tspan><tspan
        sodipodi:role="line"
-       x="1839.636"
-       y="2802.3459"
+       x="1837.054"
+       y="2798.3459"
        id="tspan3359">      <tspan
    style="fill:#929562;fill-opacity:1"
    id="tspan15245">-</tspan> <tspan
@@ -4044,8 +4054,8 @@
    style="fill:#b08757;fill-opacity:1"
    id="tspan14148">books</tspan></tspan><tspan
        sodipodi:role="line"
-       x="1839.636"
-       y="2840.6794"
+       x="1837.054"
+       y="2836.6794"
        id="tspan3361">        <tspan
    style="fill:#4396cf;fill-opacity:1"
    id="tspan13852">size</tspan><tspan
@@ -4054,16 +4064,16 @@
    style="fill:#9c1f66;fill-opacity:1"
    id="tspan14365">10</tspan></tspan><tspan
        sodipodi:role="line"
-       x="1839.636"
-       y="2879.0127"
+       x="1837.054"
+       y="2875.0127"
        id="tspan3363">        <tspan
    style="fill:#4396cf;fill-opacity:1"
    id="tspan13854">columns</tspan><tspan
    style="fill:#929562;fill-opacity:1"
    id="tspan15231">:</tspan></tspan><tspan
        sodipodi:role="line"
-       x="1839.636"
-       y="2917.3462"
+       x="1837.054"
+       y="2913.3462"
        id="tspan3365">          <tspan
    style="fill:#929562;fill-opacity:1"
    id="tspan15243">-</tspan> <tspan
@@ -4074,8 +4084,8 @@
    style="fill:#b08757;fill-opacity:1"
    id="tspan14150">id</tspan></tspan><tspan
        sodipodi:role="line"
-       x="1839.636"
-       y="2955.6794"
+       x="1837.054"
+       y="2951.6794"
        id="tspan3367">            <tspan
    style="fill:#4396cf;fill-opacity:1"
    id="tspan13858">mode</tspan><tspan
@@ -4084,8 +4094,8 @@
    style="fill:#b08757;fill-opacity:1"
    id="tspan14152">counter</tspan></tspan><tspan
        sodipodi:role="line"
-       x="1839.636"
-       y="2994.0129"
+       x="1837.054"
+       y="2990.0129"
        id="tspan3369">          <tspan
    style="fill:#929562;fill-opacity:1"
    id="tspan15241">-</tspan> <tspan
@@ -4096,8 +4106,8 @@
    style="fill:#b08757;fill-opacity:1"
    id="tspan14154">title</tspan></tspan><tspan
        sodipodi:role="line"
-       x="1839.636"
-       y="3032.3462"
+       x="1837.054"
+       y="3028.3462"
        id="tspan3371">            <tspan
    style="fill:#4396cf;fill-opacity:1"
    id="tspan13862">valuesTextKind</tspan><tspan
@@ -4120,7 +4130,7 @@
      sodipodi:nodetypes="ccccc" />
   <path
      id="rect17567-4-7"
-     style="fill:none;stroke:#421c3a;stroke-width:5.66929123;stop-color:#000000;stroke-opacity:1;stroke-dasharray:none"
+     style="fill:none;stroke:#725a4e;stroke-width:5.66929123;stop-color:#000000;stroke-opacity:1;stroke-dasharray:none"
      d="m 2668.0359,2590.0483 h 643.9182 v 480.5039 h -643.9182 z"
      sodipodi:nodetypes="ccccc" />
   <text
