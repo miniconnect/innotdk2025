@@ -14,6 +14,12 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs38">
+    <rect
+       x="1985.9463"
+       y="2678.5666"
+       width="95.293252"
+       height="56.526633"
+       id="rect14369" />
     <linearGradient
        inkscape:collect="always"
        id="linearGradient72644">
@@ -68,9 +74,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.67464361"
-     inkscape:cx="2220.4316"
-     inkscape:cy="2890.415"
+     inkscape:zoom="0.19307663"
+     inkscape:cx="1398.4085"
+     inkscape:cy="2366.9359"
      inkscape:window-width="1920"
      inkscape:window-height="1135"
      inkscape:window-x="0"
@@ -156,22 +162,22 @@
      transform="matrix(2.4,0,0,2.4,312.47106,1897.707)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan3083">A megoldás kiindulópontja, hogy a relációs </tspan><tspan
+       id="tspan69655">A megoldás kiindulópontja, hogy a relációs </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan3085">adatmodell adatelérési elemeit (táblák, </tspan><tspan
+       id="tspan69657">adatmodell adatelérési elemeit (táblák, </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan3087">oszlopok, mezők stb.) egy API képében </tspan><tspan
+       id="tspan69659">oszlopok, mezők stb.) egy API képében </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan3089">formalizáljuk. Mindössze ezt kell </tspan><tspan
+       id="tspan69661">formalizáljuk. Mindössze ezt kell </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan3091">megfelelően implementálni ahhoz, hogy </tspan><tspan
+       id="tspan69663">megfelelően implementálni ahhoz, hogy </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan3093">kívülről koherens adatbázisnak tűnjön.</tspan></text>
+       id="tspan69665">kívülről koherens adatbázisnak tűnjön.</tspan></text>
   <text
      x="394.47198"
      y="2068.3477"
@@ -259,34 +265,34 @@
      transform="matrix(2.4,0,0,2.4,292.77875,1217.2763)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan3095">Az adatbázisokra hagyományosan úgy gondolunk, </tspan><tspan
+       id="tspan69667">Az adatbázisokra hagyományosan úgy gondolunk, </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan3097">mint organikusan felgyülemlett adatok </tspan><tspan
+       id="tspan69669">mint organikusan felgyülemlett adatok </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan3099">rendszerére, melyek feldolgozásra, interakcióra </tspan><tspan
+       id="tspan69671">rendszerére, melyek feldolgozásra, interakcióra </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan3101">várnak. Fejlesztési környezetben azonban gyakran </tspan><tspan
+       id="tspan69673">várnak. Fejlesztési környezetben azonban gyakran </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan3103">fordított a helyzet: az adott feldolgozó rendszerhez </tspan><tspan
+       id="tspan69675">fordított a helyzet: az adott feldolgozó rendszerhez </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan3105">kell szintetikus adatokat biztosítani, például </tspan><tspan
+       id="tspan69677">kell szintetikus adatokat biztosítani, például </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan3107">teszteléshez, bemutatóhoz. De vajon tényleg </tspan><tspan
+       id="tspan69679">teszteléshez, bemutatóhoz. De vajon tényleg </tspan><tspan
        x="70.500626"
        y="218.05943"
-       id="tspan3109">szükséges ehhez egy teljes adathalmaz </tspan><tspan
+       id="tspan69681">szükséges ehhez egy teljes adathalmaz </tspan><tspan
        x="70.500626"
        y="237.50394"
-       id="tspan3111">legenerálása és egy hús-vér adatbázis </tspan><tspan
+       id="tspan69683">legenerálása és egy hús-vér adatbázis </tspan><tspan
        x="70.500626"
        y="256.94844"
-       id="tspan3113">működtetése?</tspan></text>
+       id="tspan69685">működtetése?</tspan></text>
   <text
      x="374.47198"
      y="1389.1481"
@@ -373,26 +379,21 @@
      transform="matrix(2.4,0,0,2.4,1114.3791,2390.1299)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan3115">Az előzetes legenerálás elkerülhető az </tspan><tspan
+       id="tspan69687">Az előzetes legenerálás elkerülhető az </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan3119"><tspan
+       id="tspan69691"><tspan
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.19999485"
-         id="tspan3117">adatok szabályalapú on-the-fly </tspan></tspan><tspan
+         id="tspan69689">adatok szabályalapú on-the-fly </tspan></tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan3121">generálásával, ha ez kellően gyors. Az így </tspan><tspan
+       id="tspan69693">generálásával, ha ez kellően gyors. Az így </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan3123">nyert, eredendően immutábilis </tspan><tspan
+       id="tspan69695">nyert, eredendően immutábilis </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan3125">adathalmaz ezután írhatóvá tehető a </tspan><tspan
-       x="70.500626"
-       y="179.17042"
-       id="tspan3129">módosításokat megjegyző plusz réteggel<tspan
-   dx="-294.45956"
-   id="tspan3127">.</tspan></tspan></text>
+       id="tspan69697">adathalmaz ezután írhatóvá tehető a</tspan></text>
   <text
      x="436.38007"
      y="2560.7708"
@@ -480,31 +481,31 @@
      transform="matrix(2.4,0,0,2.4,272.47106,3688.107)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan3131">Egy oszlop kereshetősége biztosítható egy </tspan><tspan
+       id="tspan69699">Egy oszlop kereshetősége biztosítható egy </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan3133">eleve rendezett értékkészletből kiindulva, </tspan><tspan
+       id="tspan69701">eleve rendezett értékkészletből kiindulva, </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan3135">ha az értékeket szétterítjük az oszlop </tspan><tspan
+       id="tspan69703">ha az értékeket szétterítjük az oszlop </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan3137">méretére, majd permutáljuk – feltéve, hogy </tspan><tspan
+       id="tspan69705">méretére, majd permutáljuk – feltéve, hogy </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan3139">mindkét művelet visszafejthető. Az egyes </tspan><tspan
+       id="tspan69707">mindkét művelet visszafejthető. Az egyes </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan3141">lépések külön-külön paraméterezhetők és </tspan><tspan
+       id="tspan69709">lépések külön-külön paraméterezhetők és </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan3143">skálázhatók, a kiinduló értékkészlet pedig </tspan><tspan
+       id="tspan69711">skálázhatók, a kiinduló értékkészlet pedig </tspan><tspan
        x="70.500626"
        y="218.05943"
-       id="tspan3145">maga is lehet virtuális, például egy adott </tspan><tspan
+       id="tspan69713">maga is lehet virtuális, például egy adott </tspan><tspan
        x="70.500626"
        y="237.50394"
-       id="tspan3147">reguláris kifejezésre illeszkedő szavak.</tspan></text>
+       id="tspan69715">reguláris kifejezésre illeszkedő szavak.</tspan></text>
   <text
      x="354.47198"
      y="3858.748"
@@ -532,6 +533,11 @@
      d="m 354.88867,3744.6563 c -17.24327,0 -31.19922,13.9579 -31.19922,31.2011 v 514.3985 c 0,17.2432 13.95595,31.2011 31.19922,31.2011 H 1965.5176 c 17.2432,0 31.1992,-13.9579 31.1992,-31.2011 v -514.3985 c 0,-17.2432 -13.956,-31.2012 -31.1992,-31.2011 z m 0,4.8007 H 1965.5176 c 14.6671,0 26.3984,11.7333 26.3984,26.4004 v 514.3985 c 0,14.6671 -11.7313,26.4004 -26.3984,26.4003 H 354.88867 c -14.6671,0 -26.40039,-11.7332 -26.40039,-26.4003 v -514.3985 c 0,-14.6671 11.73329,-26.4004 26.40039,-26.4004 z"
      id="rect4-9"
      sodipodi:nodetypes="ssssssscssssscssss" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#4a6f9d;stroke-width:6.4252;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+     d="m 1231.2986,2838.1073 c 56.5763,49.0787 84.7699,94.8296 97.8828,130.5894 23.4096,46.2413 43.3875,118.3977 48.9045,192.5999 5.517,74.2022 4.6994,269.2481 6.9389,333.893 12.8653,116.0827 97.1753,177.819 160.6652,205.7015 63.4899,27.8825 244.6169,133.8629 244.6169,133.8629"
+     id="path33702"
+     sodipodi:nodetypes="cczczc" />
   <text
      x="368.9917"
      y="3796.5593"
@@ -606,25 +612,25 @@
      transform="matrix(2.4,0,0,2.4,590.3791,4320.5299)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan3149">A fejlesztés több mellékeredményt hozott, </tspan><tspan
+       id="tspan69717">A fejlesztés több mellékeredményt hozott, </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan3151">amelyek önállóan is értéket képviselnek. </tspan><tspan
+       id="tspan69719">amelyek önállóan is értéket képviselnek. </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan3153">Ilyen a LargeInteger aritmetikai típus vagy </tspan><tspan
+       id="tspan69721">Ilyen a LargeInteger aritmetikai típus vagy </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan3155">a reguláris kifejezésekre illeszkedő szavak </tspan><tspan
+       id="tspan69723">a reguláris kifejezésekre illeszkedő szavak </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan3157">rendezett listáját adó MatchList – ezek </tspan><tspan
+       id="tspan69725">rendezett listáját adó MatchList – ezek </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan3159">nemcsak új funkcionalitást kínálnak, de </tspan><tspan
+       id="tspan69727">nemcsak új funkcionalitást kínálnak, de </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan3161">gyorsabbak is a meglévő alternatíváknál.</tspan></text>
+       id="tspan69729">gyorsabbak is a meglévő alternatíváknál.</tspan></text>
   <text
      x="296.38007"
      y="4491.1709"
@@ -664,29 +670,33 @@
      transform="matrix(2.4,0,0,2.4,314.37906,2885.5852)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan3163">A nem létező, virtuális adatokban is </tspan><tspan
+       id="tspan69731">A nem létező, virtuális adatokban is </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan3165">hatékonyan kell tudnunk keresni és </tspan><tspan
+       id="tspan69733">hatékonyan kell tudnunk keresni és </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan3169"><tspan
+       id="tspan69737"><tspan
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.19998722"
-         id="tspan3167">rendezni. Ez megoldható kriptográfiai </tspan></tspan><tspan
+         id="tspan69735">rendezni. Ez megoldható kriptográfiai </tspan></tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan3171">módszerek – például Feistel-hálózat – </tspan><tspan
+       id="tspan69739">módszerek – például Feistel-hálózat – </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan3173">bevetésével: a lekérés kódolásként, a </tspan><tspan
+       id="tspan69741">bevetésével: a lekérés kódolásként, a </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan3175">keresés dekódolásként működik.</tspan></text>
+       id="tspan69743">keresés dekódolásként működik.</tspan></text>
   <path
      id="rect6-6-9-1-6"
      style="font-variation-settings:normal;vector-effect:none;fill:#174050;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
      d="m 396.7969,3680.072 c -15.95496,0 -28.8,-12.8448 -28.8,-28.8 v -635.5649 h 77.26416 c 0,47.1787 -9.6e-4,639.0948 -9.6e-4,664.3649 z"
      sodipodi:nodetypes="sccccs" />
+  <path
+     style="color:#000000;fill:#1ab3a6;-inkscape-stroke:none"
+     d="m 396.79687,2941.0801 c -17.24326,0 -31.19921,13.9559 -31.19921,31.1992 v 679.2363 c 0,17.2433 13.95595,31.1992 31.19921,31.1992 h 854.40043 c 17.2432,0 31.1992,-13.9559 31.1992,-31.1992 v -679.2363 c 0,-17.2433 -13.956,-31.1992 -31.1992,-31.1992 z m 0,4.7988 h 854.40043 c 14.6671,0 26.4004,11.7333 26.4004,26.4004 v 679.2363 c 0,14.6671 -11.7333,26.4004 -26.4004,26.4004 H 396.79687 c -14.66709,0 -26.40039,-11.7333 -26.40039,-26.4004 v -679.2363 c 0,-14.6671 11.7333,-26.4004 26.40039,-26.4004 z"
+     id="path21423" />
   <g
      id="line10-9-0"
      transform="translate(0,-280)">
@@ -986,24 +996,24 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,3191.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan3177">A HoloDB az elterjedt MI </tspan><tspan
+       id="tspan69745">A HoloDB az elterjedt MI </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan3179">megoldásokkal ortogonálisnak </tspan><tspan
+       id="tspan69747">megoldásokkal ortogonálisnak </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan3181">tekinthető. Ugyanakkor </tspan><tspan
+       id="tspan69749">tekinthető. Ugyanakkor </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan3183">beilleszthető agent pipeline-okba, </tspan><tspan
+       id="tspan69751">beilleszthető agent pipeline-okba, </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan3187"><tspan
+       id="tspan69755"><tspan
          dx="0 0 0 0 0 0 -0.2 0.19999866"
-         id="tspan3185">a konfiguráció pedig hatékonyan </tspan></tspan><tspan
+         id="tspan69753">a konfiguráció pedig hatékonyan </tspan></tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan3189">generálható nyelvi modellel.</tspan></text>
+       id="tspan69757">generálható nyelvi modellel.</tspan></text>
   <text
      x="1723.1298"
      y="3362.2559"
@@ -1089,27 +1099,27 @@
      transform="matrix(2.4,0,0,2.4,2533.1193,3131.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan3191">A teljes projekt nyílt forráskóddal </tspan><tspan
+       id="tspan69759">A teljes projekt nyílt forráskóddal </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan3193">szabadon elérhető, ami a közösségi </tspan><tspan
+       id="tspan69761">szabadon elérhető, ami a közösségi </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan3197"><tspan
+       id="tspan69765"><tspan
          dx="0 -0.2 0.19999962 0 0 0 0 -0.2 0.19999866"
-         id="tspan3195">filozófia része. A tervezett bevételi </tspan></tspan><tspan
+         id="tspan69763">filozófia része. A tervezett bevételi </tspan></tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan3199">modell a felhőalapú SaaS </tspan><tspan
+       id="tspan69767">modell felhőalapú SaaS </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan3201">szolgáltatás nyújtására és vállalati </tspan><tspan
+       id="tspan69769">szolgáltatás nyújtására és vállalati </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan3203">környezetekhez szabott egyedi </tspan><tspan
+       id="tspan69771">környezetekhez szabott egyedi </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan3205">integrációkra épül.</tspan></text>
+       id="tspan69773">integrációkra épül.</tspan></text>
   <text
      x="2615.1189"
      y="3302.2559"
@@ -1192,22 +1202,22 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,1573.7873)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan3207">Előgenerálással és adattárhely </tspan><tspan
+       id="tspan69775">Előgenerálással és adattárhely </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan3209">biztosításával egyáltalán nem kell </tspan><tspan
+       id="tspan69777">biztosításával egyáltalán nem kell </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan3211">foglalkozni, mégis egy teljesértékű </tspan><tspan
+       id="tspan69779">foglalkozni, mégis egy teljesértékű </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan3213">relációs adatbázist kapunk. A várt </tspan><tspan
+       id="tspan69781">relációs adatbázist kapunk. A várt </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan3215">adatok jellemzőit felskiccelve </tspan><tspan
+       id="tspan69783">adatok jellemzőit felskiccelve </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan3217">máris indulhatnak a lekérdezések.</tspan></text>
+       id="tspan69785">máris indulhatnak a lekérdezések.</tspan></text>
   <text
      x="1723.1298"
      y="1744.4282"
@@ -1302,27 +1312,27 @@
      transform="matrix(2.4,0,0,2.4,2533.1193,1573.7873)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan3219">Indítható szerverként vagy (Java </tspan><tspan
+       id="tspan69787">Indítható szerverként vagy (Java </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan3221">esetén) beágyazott adatbázisként. </tspan><tspan
+       id="tspan69789">esetén) beágyazott adatbázisként. </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan3225"><tspan
+       id="tspan69793"><tspan
          dx="0 0 0 0 0 0 -0.2 0.19999866"
-         id="tspan3223">A konfiguráció teljesen kiváltható </tspan></tspan><tspan
+         id="tspan69791">A konfiguráció teljesen kiváltható </tspan></tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan3227">JPA entitások annotálásával is. </tspan><tspan
+       id="tspan69795">JPA entitások annotálásával is. </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan3229">Számos adapter és kiegészítő </tspan><tspan
+       id="tspan69797">Számos adapter és kiegészítő </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan3231">eszköz segíti a könnyű használatot </tspan><tspan
+       id="tspan69799">eszköz segíti a könnyű használatot </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan3233">és a projektekbe való integrációt.</tspan></text>
+       id="tspan69801">és a projektekbe való integrációt.</tspan></text>
   <text
      x="2615.1189"
      y="1744.4282"
@@ -1406,7 +1416,7 @@
      transform="matrix(2.4,0,0,2.4,1601.1291,847.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan3235">Lorem ipsum.</tspan></text>
+       id="tspan69803">Lorem ipsum.</tspan></text>
   <text
      x="1683.1298"
      y="1018.2557"
@@ -1446,6 +1456,11 @@
      style="font-variation-settings:normal;vector-effect:none;fill:#291e57;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
      d="m 1723.5471,3122.7156 c -15.9552,0 -28.8,-12.8448 -28.8,-28.8 v -831.2 h 1688 v 831.2 c 0,15.9552 -12.8448,28.8 -28.8,28.8 z"
      sodipodi:nodetypes="sccccss" />
+  <path
+     id="rect17567-4"
+     style="fill:#ecddbf;stroke:none;stroke-width:9.6;stop-color:#000000;fill-opacity:1"
+     d="m 2668.0359,2590.0483 h 643.9182 v 480.5039 h -643.9182 z"
+     sodipodi:nodetypes="ccccc" />
   <path
      id="rect6-6-9-8-0-8"
      style="font-variation-settings:normal;vector-effect:none;fill:#241243;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
@@ -1502,7 +1517,7 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,2131.5384)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan3237">Lorem ipsum.</tspan></text>
+       id="tspan69805">Lorem ipsum.</tspan></text>
   <text
      x="1723.1301"
      y="2302.178"
@@ -2269,8 +2284,8 @@
      sodipodi:nodetypes="ccccc" />
   <path
      id="rect68541"
-     style="fill:#317980;stroke-width:0.240359;stop-color:#000000"
-     d="m 2588.4367,2779.3463 -0.2243,25.9263 h -111.8198 v 32.3631 h 111.5407 l -0.1709,19.8428 68.0011,-38.4837 z" />
+     style="fill:#317980;stroke-width:0.202775;stop-color:#000000"
+     d="m 2587.8458,2779.3463 -0.1597,25.9263 h -79.5842 v 32.3631 h 79.3856 l -0.1216,19.8428 48.3976,-38.4837 z" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.3333px;font-family:MathJax_Typewriter;-inkscape-font-specification:'MathJax_Typewriter, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;fill:#e9c4ee;fill-opacity:1;stroke:none;stroke-width:0.291;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
@@ -2317,12 +2332,9 @@
      r="14.198341" />
   <path
      id="rect17567"
-     style="fill:#a3bcc2;stroke:#16415a;stroke-width:9.6;stop-color:#000000"
-     d="m 1816.036,2590.0483 h 595.9181 v 480.5039 H 1816.036 Z" />
-  <path
-     id="rect17567-4"
-     style="fill:#bdaaa5;stroke:#16415a;stroke-width:9.6;stop-color:#000000"
-     d="m 2696.0359,2590.0483 h 595.9182 v 480.5039 h -595.9182 z" />
+     style="fill:#130e28;fill-opacity:1;stroke:#724b4b;stroke-width:6.4252;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+     d="m 1810.036,2590.0483 h 663.9181 v 480.5039 H 1810.036 Z"
+     sodipodi:nodetypes="ccccc" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#9a4e2d;fill-opacity:1;stroke:#69408f;stroke-width:9.6;stroke-opacity:1;stop-color:#000000"
@@ -2333,10 +2345,6 @@
        id="tspan20350"
        x="1006.0245"
        y="1887.7704" /></text>
-  <path
-     style="color:#000000;fill:#1ab3a6;-inkscape-stroke:none"
-     d="m 396.79687,2941.0801 c -17.24326,0 -31.19921,13.9559 -31.19921,31.1992 v 679.2363 c 0,17.2433 13.95595,31.1992 31.19921,31.1992 h 854.40043 c 17.2432,0 31.1992,-13.9559 31.1992,-31.1992 v -679.2363 c 0,-17.2433 -13.956,-31.1992 -31.1992,-31.1992 z m 0,4.7988 h 854.40043 c 14.6671,0 26.4004,11.7333 26.4004,26.4004 v 679.2363 c 0,14.6671 -11.7333,26.4004 -26.4004,26.4004 H 396.79687 c -14.66709,0 -26.40039,-11.7333 -26.40039,-26.4004 v -679.2363 c 0,-14.6671 11.7333,-26.4004 26.40039,-26.4004 z"
-     id="path21423" />
   <circle
      cx="368.25323"
      cy="3048.2712"
@@ -3086,10 +3094,10 @@
      stroke="#000000"
      pointer-events="all"
      id="rect16595"
-     style="stroke-width:2.26771649;fill:#518744;fill-opacity:1;stroke:#fdfdfd;stroke-opacity:1;stroke-dasharray:none" />
+     style="fill:#518744;fill-opacity:1;stroke:#fdfdfd;stroke-width:2.26772;stroke-dasharray:none;stroke-opacity:1" />
   <rect
      x="1821.1838"
-     y="3880.5588"
+     y="3860.5588"
      width="102.39658"
      height="68.264389"
      fill="#e6ffcc"
@@ -3144,6 +3152,24 @@
          sodipodi:nodetypes="cccc" />
     </g>
   </g>
+  <g
+     data-cell-id="DKQcyYTNdZ15Uf8QAMDz-56"
+     id="g16753-8"
+     transform="matrix(2.2527008,3.7487049,-3.7487049,2.2527008,1839.9354,3117.0644)"
+     style="fill:#4a6f9d;fill-opacity:1">
+    <g
+       id="g16751-3"
+       style="fill:#4a6f9d;fill-opacity:1">
+      <path
+         d="m 133.60005,90.278408 8.46892,4.153598 -8.46892,4.153604 z"
+         fill="#3333ff"
+         stroke="none"
+         pointer-events="all"
+         id="path16749-1"
+         style="fill:#4a6f9d;fill-opacity:1;stroke-width:0.969321"
+         sodipodi:nodetypes="cccc" />
+    </g>
+  </g>
   <text
      x="1771.1138"
      y="4055.2874"
@@ -3155,7 +3181,7 @@
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:54.6115px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#aa0000;fill-opacity:1;stroke-width:3.41322">×</text>
   <text
      x="1800.8809"
-     y="3993.3796"
+     y="3973.3796"
      fill="#3333ff"
      font-family="Helvetica"
      font-size="10px"
@@ -3164,7 +3190,7 @@
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:54.6115px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#1aa900;fill-opacity:1;stroke-width:3.41322">+</text>
   <text
      x="1800.8809"
-     y="3925.1152"
+     y="3905.1152"
      fill="#3333ff"
      font-family="Helvetica"
      font-size="10px"
@@ -3467,30 +3493,30 @@
      id="text964"><tspan
        x="2149.7786"
        y="3837.5896"
-       id="tspan3239">TDK-dolgozat: HoloDB: Relációs demóadatok konzisztens </tspan><tspan
+       id="tspan69807">TDK-dolgozat: HoloDB: Relációs demóadatok konzisztens </tspan><tspan
        x="2149.7786"
        y="3887.5897"
-       id="tspan3241">on-the-fly generálása deklaratív konfigurációból
+       id="tspan69809">on-the-fly generálása deklaratív konfigurációból
 </tspan><tspan
        x="2149.7786"
        y="3937.5897"
-       id="tspan3243">Horváth Dávid
+       id="tspan69811">Horváth Dávid
 </tspan><tspan
        x="2149.7786"
        y="3987.5897"
-       id="tspan3245">ELTE-IK
+       id="tspan69813">ELTE-IK
 </tspan><tspan
        x="2149.7786"
        y="4037.5897"
-       id="tspan3247">horvathdown@student.elte.hu
+       id="tspan69815">horvathdown@student.elte.hu
 </tspan><tspan
        x="2149.7786"
        y="4087.5897"
-       id="tspan3249">Témavezető: Dr. Vincellér Zoltán, ELTE
+       id="tspan69817">Témavezető: Dr. Vincellér Zoltán, ELTE
 </tspan><tspan
        x="2149.7786"
        y="4137.5894"
-       id="tspan3251">InnOtdk mentor: Dr. Ruppert Tamás, Pannon Egyetem</tspan></text>
+       id="tspan69819">InnOtdk mentor: Dr. Ruppert Tamás, Pannon Egyetem</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
@@ -3585,12 +3611,12 @@
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
      x="1687.2078"
-     y="3999.2888"
+     y="3979.2888"
      id="text11040-4-0-8-6-8"><tspan
        sodipodi:role="line"
        id="tspan11038-3-6-9-4-7"
        x="1687.2078"
-       y="3999.2888">C</tspan></text>
+       y="3979.2888">C</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
@@ -3675,22 +3701,22 @@
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
      x="1855.9554"
-     y="3999.2888"
+     y="3979.2888"
      id="text11040-3-2-1"><tspan
        sodipodi:role="line"
        id="tspan11038-1-6-0"
        x="1855.9554"
-       y="3999.2888">N</tspan></text>
+       y="3979.2888">N</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
      x="1853.4354"
-     y="3931.0244"
+     y="3911.0244"
      id="text11040-3-2-6"><tspan
        sodipodi:role="line"
        id="tspan11038-1-6-1"
        x="1853.4354"
-       y="3931.0244">M</tspan></text>
+       y="3911.0244">M</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
@@ -3770,7 +3796,7 @@
      d="m 3104.4823,1040.811 c -6.94,0 -13.7604,0.1444 -20.4976,0.3731 v 16.815 c 6.7337,-0.2389 13.5512,-0.3957 20.4976,-0.3957 10.0044,0 19.7485,0.3134 29.2895,0.8018 v -16.8185 c -9.5579,-0.4694 -19.2955,-0.774 -29.2912,-0.774 z m -55.3355,2.6223 c -17.9477,1.7408 -34.6469,4.335 -49.7854,7.6153 v 17.2227 c 14.833,-3.378 31.5834,-6.089 49.7854,-7.9224 z m 119.4628,0.9702 v 16.9173 c 18.4314,2.1947 35.2325,5.2824 49.7855,9.0695 v -17.353 c -14.9214,-3.6605 -31.7106,-6.559 -49.7855,-8.6338 z m -204.086,16.3949 c -11.3888,4.1433 -21.0404,8.868 -28.6839,14.3194 -10.171,7.2538 -17.4866,16.5421 -17.4866,27.705 0,14.9475 9e-4,30.0106 0,45.0424 h 16.7942 v -17.8702 c 0.2372,0.1738 0.4537,0.3613 0.6941,0.5328 10.1711,7.2541 23.8936,13.2232 40.5406,18.245 2.285,0.6893 4.7568,1.3105 7.1502,1.9612 v -17.4085 c -0.7445,-0.2167 -1.5708,-0.4097 -2.3013,-0.63 -15.5163,-4.6807 -27.8229,-10.2649 -35.6396,-15.8397 -7.8165,-5.5748 -10.4475,-10.3907 -10.4475,-14.033 0,-3.6423 2.631,-8.4599 10.4475,-14.0348 4.7148,-3.3625 11.2313,-6.704 18.9323,-9.873 z m 288.7094,3.5351 v 18.5731 c 3.8464,1.9394 7.3687,3.9035 10.142,5.8814 7.8167,5.5749 10.4475,10.3925 10.4475,14.0348 0,3.6423 -2.6308,8.4582 -10.4475,14.033 -7.6479,5.4545 -19.6431,10.9064 -34.6885,15.5238 v 17.464 c 1.2793,-0.3646 2.6545,-0.6946 3.9013,-1.0708 16.6471,-5.0218 30.3679,-10.9909 40.5388,-18.245 0.2415,-0.1721 0.4596,-0.3598 0.6977,-0.5344 v 17.8718 h 16.8236 c -0.026,-12.9792 0.013,-37.3678 -0.036,-45.0407 0,-11.163 -7.3173,-20.4511 -17.4884,-27.705 -5.5694,-3.9721 -12.2944,-7.5289 -19.8901,-10.786 z m -59.3844,76.2358 c -20.9128,3.76 -44.7275,6.3031 -70.3195,7.1449 v 16.8133 c 25.3389,-0.7968 49.0701,-3.2001 70.3195,-6.8656 z m -175.4786,0.5952 v 17.0927 c 21.3079,3.4975 45.0936,5.6816 70.3212,6.338 v -16.796 c -25.4741,-0.6932 -49.3109,-3.0422 -70.3212,-6.6347 z m -100.0169,31.681 c 0,10.4391 0,20.8614 0,31.2732 v 0.021 53.9071 h 16.7942 v -26.7557 c 0.2372,0.1738 0.4537,0.3613 0.6941,0.5328 10.1711,7.254 23.8936,13.2232 40.5406,18.245 2.285,0.6892 4.7568,1.3104 7.1502,1.9611 v -17.4085 c -0.7439,-0.2165 -1.5697,-0.4098 -2.2995,-0.63 -15.5165,-4.6807 -27.823,-10.2648 -35.6397,-15.8397 -7.8034,-5.5654 -10.4368,-10.3737 -10.4457,-14.0139 v -31.2923 z m 355.4712,0 v 31.2732 c 0,3.6423 -2.6309,8.4582 -10.4475,14.033 -7.6483,5.4547 -19.6442,10.9063 -34.6903,15.5238 v 17.4641 c 1.2793,-0.3647 2.6545,-0.6947 3.9013,-1.0708 16.6471,-5.0218 30.3679,-10.991 40.5388,-18.245 0.2415,-0.1722 0.4596,-0.3599 0.6977,-0.5345 v 26.7574 h 16.9104 c 0.02,-34.1402 -0.04,-56.6125 -0.068,-85.2012 z m -79.9757,69.0197 c -20.9128,3.7599 -44.728,6.3032 -70.3195,7.1449 v 16.8133 c 25.3389,-0.7968 49.0701,-3.2002 70.3195,-6.8656 z m -175.4786,0.5936 v 17.0944 c 21.3079,3.4974 45.0936,5.6815 70.3212,6.3379 v -16.7959 c -25.4743,-0.6934 -49.3108,-3.0439 -70.3212,-6.6364 z m -100.0169,40.5683 v 22.3875 0.023 62.791 h 16.7942 v -35.6413 c 0.2372,0.1738 0.4537,0.3613 0.6941,0.5328 10.1711,7.254 23.8936,13.2232 40.5406,18.245 2.285,0.6892 4.7568,1.3104 7.1502,1.9611 v -17.4085 c -0.7439,-0.2164 -1.5697,-0.4098 -2.2995,-0.63 -15.5165,-4.6806 -27.823,-10.2648 -35.6397,-15.8396 -7.8034,-5.5654 -10.4368,-10.3738 -10.4457,-14.014 v -22.4066 z m 355.4712,0 v 22.3875 c 0,3.6423 -2.6309,8.4582 -10.4475,14.0331 -7.6483,5.4547 -19.6442,10.9063 -34.6903,15.5238 v 17.464 c 1.2793,-0.3647 2.6545,-0.6947 3.9013,-1.0708 16.6471,-5.0218 30.3679,-10.991 40.5388,-18.245 0.2415,-0.1721 0.4596,-0.3599 0.6977,-0.5345 v 35.643 h 16.8202 c 0.028,-21.1048 0.057,-42.6476 0.092,-85.2011 z m -79.9757,60.134 c -20.9128,3.7599 -44.728,6.3032 -70.3195,7.145 v 16.8132 c 25.3389,-0.7968 49.0701,-3.2001 70.3195,-6.8655 z m -175.4786,0.5936 v 17.0944 c 21.3079,3.4975 45.0936,5.6815 70.3212,6.3379 v -16.7959 c -25.4743,-0.6934 -49.3108,-3.0439 -70.3212,-6.6364 z m -100.0169,49.4539 v 13.5662 c 0.028,11.1347 7.3297,20.4024 17.4814,27.6426 10.1711,7.254 23.8936,13.2232 40.5406,18.245 2.2872,0.69 4.7612,1.3132 7.1571,1.9645 v -17.4136 c -0.7439,-0.2165 -1.5697,-0.4098 -2.2995,-0.63 -15.5165,-4.6807 -27.823,-10.2649 -35.6397,-15.8397 -7.8034,-5.5654 -10.4368,-10.3738 -10.4457,-14.0139 v -13.5211 z m 355.4712,0 v 13.502 c 0,3.6423 -2.6309,8.4582 -10.4475,14.033 -7.6483,5.4547 -19.6442,10.9063 -34.6903,15.5238 v 17.464 c 1.277,-0.364 2.6497,-0.6936 3.8943,-1.069 16.6471,-5.0218 30.3678,-10.991 40.5389,-18.245 10.1517,-7.2402 17.4553,-16.5079 17.4831,-27.6426 0,-0.4171 0.012,-12.0139 0.014,-13.5662 z m -79.9757,51.2485 c -20.9128,3.7598 -44.728,6.3032 -70.3195,7.1449 v 16.8149 c 25.3391,-0.797 49.0702,-3.2015 70.3195,-6.8672 z m -175.4786,0.5935 v 17.0979 c 21.3079,3.4971 45.0938,5.6801 70.3212,6.3361 v -16.7976 c -25.4743,-0.6933 -49.3108,-3.0438 -70.3212,-6.6364 z" />
   <path
      style="fill:none;fill-opacity:1;stroke:#12749a;stroke-width:11.3386;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     d="m 3164.5096,1475.3701 c 9.785,38.58 18.5147,77.7238 37.6414,114.0021 19.1267,36.2783 60.808,36.5591 48.7895,113.6998"
+     d="m 3164.5096,1475.3701 c 5.7374,38.58 14.1909,71.1616 37.6414,114.0021 23.4505,42.8405 60.808,36.5591 48.7895,113.6998"
      id="path47125"
      sodipodi:nodetypes="czc" />
   <circle
@@ -3876,16 +3902,265 @@
      sodipodi:nodetypes="cc" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:33.3333px;font-family:'Clear Sans';-inkscape-font-specification:'Clear Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#131a1c;fill-opacity:1;stroke:none;stroke-width:5.66929;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     x="1844.8824"
-     y="2627.7285"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:30.6667px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.66929;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+     x="1839.636"
+     y="2649.0125"
      id="text75296"><tspan
        sodipodi:role="line"
        id="tspan75294"
-       x="1844.8824"
-       y="2627.7285">seed: 132435</tspan><tspan
+       x="1839.636"
+       y="2649.0125"><tspan
+   style="fill:#4396cf;fill-opacity:1"
+   id="tspan11353">seed</tspan><tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan11665">:</tspan> <tspan
+   style="fill:#8c2f55;fill-opacity:1"
+   id="tspan11561">132435</tspan></tspan><tspan
        sodipodi:role="line"
-       x="1844.8824"
-       y="2669.3953"
-       id="tspan75556" /></text>
+       x="1839.636"
+       y="2687.3459"
+       id="tspan75556"><tspan
+         style="fill:#4396cf;fill-opacity:1"
+         id="tspan13844">schemas</tspan><tspan
+         style="fill:#929562;fill-opacity:1"
+         id="tspan14739">:</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="1839.636"
+       y="2725.6792"
+       id="tspan3355">  <tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan15247">-</tspan> <tspan
+   style="fill:#4396cf;fill-opacity:1"
+   id="tspan13846">name</tspan><tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan14741">:</tspan> <tspan
+   style="fill:#b08757;fill-opacity:1"
+   id="tspan11773">example</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="1839.636"
+       y="2764.0127"
+       id="tspan3357">    <tspan
+   style="fill:#4396cf;fill-opacity:1"
+   id="tspan13848">tables</tspan><tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan15225">:</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="1839.636"
+       y="2802.3459"
+       id="tspan3359">      <tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan15245">-</tspan> <tspan
+   style="fill:#4396cf;fill-opacity:1"
+   id="tspan13850">name</tspan><tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan15227">:</tspan> <tspan
+   style="fill:#b08757;fill-opacity:1"
+   id="tspan14148">books</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="1839.636"
+       y="2840.6794"
+       id="tspan3361">        <tspan
+   style="fill:#4396cf;fill-opacity:1"
+   id="tspan13852">size</tspan><tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan15229">:</tspan> <tspan
+   style="fill:#9c1f66;fill-opacity:1"
+   id="tspan14365">10</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="1839.636"
+       y="2879.0127"
+       id="tspan3363">        <tspan
+   style="fill:#4396cf;fill-opacity:1"
+   id="tspan13854">columns</tspan><tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan15231">:</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="1839.636"
+       y="2917.3462"
+       id="tspan3365">          <tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan15243">-</tspan> <tspan
+   style="fill:#4396cf;fill-opacity:1"
+   id="tspan13856">name</tspan><tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan15233">:</tspan> <tspan
+   style="fill:#b08757;fill-opacity:1"
+   id="tspan14150">id</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="1839.636"
+       y="2955.6794"
+       id="tspan3367">            <tspan
+   style="fill:#4396cf;fill-opacity:1"
+   id="tspan13858">mode</tspan><tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan15235">:</tspan> <tspan
+   style="fill:#b08757;fill-opacity:1"
+   id="tspan14152">counter</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="1839.636"
+       y="2994.0129"
+       id="tspan3369">          <tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan15241">-</tspan> <tspan
+   style="fill:#4396cf;fill-opacity:1"
+   id="tspan13860">name</tspan><tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan15237">:</tspan> <tspan
+   style="fill:#b08757;fill-opacity:1"
+   id="tspan14154">title</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="1839.636"
+       y="3032.3462"
+       id="tspan3371">            <tspan
+   style="fill:#4396cf;fill-opacity:1"
+   id="tspan13862">valuesTextKind</tspan><tspan
+   style="fill:#929562;fill-opacity:1"
+   id="tspan15239">:</tspan> <tspan
+   style="fill:#b08757;fill-opacity:1"
+   id="tspan14156">title</tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     id="text14367"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:30.6667px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14369);display:inline;fill:#d73a61;fill-opacity:1;stroke:#462911;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000" />
+  <path
+     id="rect24539"
+     style="fill:#6c613b;fill-opacity:1;stroke:none;stroke-width:2.77349;stop-color:#000000"
+     d="m 2781.8322,2589.4038 h 2.648 v 481.2548 h -2.648 z" />
+  <path
+     id="rect24539-1"
+     style="fill:#6c613b;stroke:none;stroke-width:3.00018;stop-color:#000000;fill-opacity:1"
+     d="m 3311.7025,2649.9901 v 2.6457 h -643.6237 v -2.6457 z"
+     sodipodi:nodetypes="ccccc" />
+  <path
+     id="rect17567-4-7"
+     style="fill:none;stroke:#16415a;stroke-width:9.6;stop-color:#000000"
+     d="m 2668.0359,2590.0483 h 643.9182 v 480.5039 h -643.9182 z"
+     sodipodi:nodetypes="ccccc" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:30.6667px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:6.4252;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+     x="2706.917"
+     y="2632.2344"
+     id="text24692"><tspan
+       sodipodi:role="line"
+       id="tspan24690"
+       x="2706.917"
+       y="2632.2344">id</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:30.6667px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:6.4252;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+     x="3000.8369"
+     y="2632.2036"
+     id="text24692-5"><tspan
+       sodipodi:role="line"
+       id="tspan24690-9"
+       x="3000.8369"
+       y="2632.2036">title</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.6667px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:6.4252;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+     x="2799.219"
+     y="2697.0254"
+     id="text25707"><tspan
+       sodipodi:role="line"
+       id="tspan25705"
+       x="2799.219"
+       y="2697.0254">The Cupidatat Anim Pariatu Qui</tspan><tspan
+       sodipodi:role="line"
+       x="2799.219"
+       y="2735.3589"
+       id="tspan25709">The Culpa Qui</tspan><tspan
+       sodipodi:role="line"
+       x="2799.219"
+       y="2773.6921"
+       id="tspan25711">An Amet the Nisi Pariatu</tspan><tspan
+       sodipodi:role="line"
+       x="2799.219"
+       y="2812.0256"
+       id="tspan25713">Sed Quis the Fugiat</tspan><tspan
+       sodipodi:role="line"
+       x="2799.219"
+       y="2850.3589"
+       id="tspan25715">A Consectetur Tempor</tspan><tspan
+       sodipodi:role="line"
+       x="2799.219"
+       y="2888.6924"
+       id="tspan25717">More Aliquip an Excepteur Excepteur</tspan><tspan
+       sodipodi:role="line"
+       x="2799.219"
+       y="2927.0256"
+       id="tspan25719">Some Reprehenderit Excepteur</tspan><tspan
+       sodipodi:role="line"
+       x="2799.219"
+       y="2965.3591"
+       id="tspan25721">Culpa a Laboris Laborum</tspan><tspan
+       sodipodi:role="line"
+       x="2799.219"
+       y="3003.6924"
+       id="tspan25723">No Voluptate the Quis</tspan><tspan
+       sodipodi:role="line"
+       x="2799.219"
+       y="3042.0259"
+       id="tspan25725">No Duis Anim Laborum Dolor</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.6667px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:rtl;fill:#000000;fill-opacity:1;stroke:none;stroke-width:6.4252;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+     x="2757.219"
+     y="2697.0254"
+     id="text25707-8"><tspan
+       sodipodi:role="line"
+       x="2757.219"
+       y="2697.0254"
+       id="tspan25725-3">1</tspan><tspan
+       sodipodi:role="line"
+       x="2757.219"
+       y="2735.3589"
+       id="tspan26087">2</tspan><tspan
+       sodipodi:role="line"
+       x="2757.219"
+       y="2773.6921"
+       id="tspan26089">3</tspan><tspan
+       sodipodi:role="line"
+       x="2757.219"
+       y="2812.0256"
+       id="tspan26091">4</tspan><tspan
+       sodipodi:role="line"
+       x="2757.219"
+       y="2850.3589"
+       id="tspan26093">5</tspan><tspan
+       sodipodi:role="line"
+       x="2757.219"
+       y="2888.6924"
+       id="tspan26095">6</tspan><tspan
+       sodipodi:role="line"
+       x="2757.219"
+       y="2927.0256"
+       id="tspan26097">7</tspan><tspan
+       sodipodi:role="line"
+       x="2757.219"
+       y="2965.3591"
+       id="tspan26099">8</tspan><tspan
+       sodipodi:role="line"
+       x="2757.219"
+       y="3003.6924"
+       id="tspan26101">9</tspan><tspan
+       sodipodi:role="line"
+       x="2757.219"
+       y="3042.0259"
+       id="tspan26103">10</tspan></text>
+  <path
+     id="rect38526"
+     style="fill:#4a6f9d;fill-opacity:1;stroke:none;stroke-width:6.4252;stop-color:#000000"
+     d="m 1026.8576,2831.3413 254.0367,0 v 11.099 l -254.0367,0 z"
+     sodipodi:nodetypes="ccccc" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#cfd6e8;fill-opacity:1;stroke:none;stroke-width:6.4252;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+     x="563.38116"
+     y="2820.1218"
+     id="text55185-7"><tspan
+       sodipodi:role="line"
+       id="tspan55183-6"
+       x="563.38116"
+       y="2820.1218">módosításokat megjegyző plusz réteggel.</tspan></text>
 </svg>
