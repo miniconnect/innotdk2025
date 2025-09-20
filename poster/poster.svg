@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.65586632"
-     inkscape:cx="2264.1809"
-     inkscape:cy="4226.4711"
+     inkscape:zoom="0.55259982"
+     inkscape:cx="2057.5468"
+     inkscape:cy="1445.8926"
      inkscape:window-width="1920"
      inkscape:window-height="1135"
      inkscape:window-x="0"
@@ -37,8 +37,8 @@
      inkscape:connector-spacing="9"
      inkscape:document-units="cm" />
   <rect
-     x="-2"
-     y="4.0000005"
+     x="0"
+     y="-8.8817842e-16"
      width="3590.5513"
      height="5102.3623"
      fill="#0f2233"
@@ -112,22 +112,22 @@
      transform="matrix(2.4,0,0,2.4,312.47106,1897.707)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10110">A megoldás kiindulópontja, hogy a </tspan><tspan
+       id="tspan10920">A megoldás kiindulópontja, hogy a </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan10112">relációs adatmodell adatelérési elemeit </tspan><tspan
+       id="tspan10922">relációs adatmodell adatelérési elemeit </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan10114">(táblák, oszlopok, mezők stb.) egy API </tspan><tspan
+       id="tspan10924">(táblák, oszlopok, mezők stb.) egy API </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan10116">képében formalizáljuk. Mindössze ezt kell </tspan><tspan
+       id="tspan10926">képében formalizáljuk. Mindössze ezt kell </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan10118">megfelelően implementálni ahhoz, hogy </tspan><tspan
+       id="tspan10928">megfelelően implementálni ahhoz, hogy </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan10120">kívülről koherens adatbázisnak tűnjön.</tspan></text>
+       id="tspan10930">kívülről koherens adatbázisnak tűnjön.</tspan></text>
   <text
      x="394.47198"
      y="2068.3477"
@@ -215,34 +215,34 @@
      transform="matrix(2.4,0,0,2.4,292.77875,1217.2763)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10122">Az adatbázisokra hagyományosan úgy gondolunk, </tspan><tspan
+       id="tspan10932">Az adatbázisokra hagyományosan úgy gondolunk, </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan10124">mint organikusan felgyülemlett adatok </tspan><tspan
+       id="tspan10934">mint organikusan felgyülemlett adatok </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan10126">rendszerére, melyek feldolgozásra, interakcióra </tspan><tspan
+       id="tspan10936">rendszerére, melyek feldolgozásra, interakcióra </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan10128">várnak. Fejlesztési környezetben azonban gyakran </tspan><tspan
+       id="tspan10938">várnak. Fejlesztési környezetben azonban gyakran </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan10130">fordított a helyzet: az adott feldolgozó rendszerhez </tspan><tspan
+       id="tspan10940">fordított a helyzet: az adott feldolgozó rendszerhez </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan10132">kell szintetikus adatokat biztosítani, például </tspan><tspan
+       id="tspan10942">kell szintetikus adatokat biztosítani, például </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan10134">teszteléshez, bemutatóhoz. De vajon tényleg </tspan><tspan
+       id="tspan10944">teszteléshez, bemutatóhoz. De vajon tényleg </tspan><tspan
        x="70.500626"
        y="218.05943"
-       id="tspan10136">szükséges ehhez egy teljes adathalmaz </tspan><tspan
+       id="tspan10946">szükséges ehhez egy teljes adathalmaz </tspan><tspan
        x="70.500626"
        y="237.50394"
-       id="tspan10138">legenerálása és egy hús-vér adatbázis </tspan><tspan
+       id="tspan10948">legenerálása és egy hús-vér adatbázis </tspan><tspan
        x="70.500626"
        y="256.94844"
-       id="tspan10140">működtetése?</tspan></text>
+       id="tspan10950">működtetése?</tspan></text>
   <text
      x="374.47198"
      y="1389.1481"
@@ -329,24 +329,24 @@
      transform="matrix(2.4,0,0,2.4,354.37906,2390.1299)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10142">Az előzetes legenerálás elkerülhető az </tspan><tspan
+       id="tspan10952">Az előzetes legenerálás elkerülhető az </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan10146"><tspan
+       id="tspan10956"><tspan
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.19999485"
-         id="tspan10144">adatok szabályalapú on-the-fly </tspan></tspan><tspan
+         id="tspan10954">adatok szabályalapú on-the-fly </tspan></tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan10148">generálásával, ha ez kellően gyors. Az így </tspan><tspan
+       id="tspan10958">generálásával, ha ez kellően gyors. Az így </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan10150">nyert, eredendően immutábilis </tspan><tspan
+       id="tspan10960">nyert, eredendően immutábilis </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan10152">adathalmaz ezután írhatóvá tehető a </tspan><tspan
+       id="tspan10962">adathalmaz ezután írhatóvá tehető a </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan10154">módosításokat megjegyző plusz réteggel.</tspan></text>
+       id="tspan10964">módosításokat megjegyző plusz réteggel.</tspan></text>
   <text
      x="436.38007"
      y="2560.7708"
@@ -434,31 +434,31 @@
      transform="matrix(2.4,0,0,2.4,272.47106,3688.107)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10156">Egy oszlop kereshetősége biztosítható egy </tspan><tspan
+       id="tspan10966">Egy oszlop kereshetősége biztosítható egy </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan10158">eleve rendezett értékkészletből kiindulva, </tspan><tspan
+       id="tspan10968">eleve rendezett értékkészletből kiindulva, </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan10160">ha az értékeket szétterítjük az oszlop </tspan><tspan
+       id="tspan10970">ha az értékeket szétterítjük az oszlop </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan10162">méretére, majd permutáljuk – feltéve, hogy </tspan><tspan
+       id="tspan10972">méretére, majd permutáljuk – feltéve, hogy </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan10164">mindkét művelet visszafejthető. Az egyes </tspan><tspan
+       id="tspan10974">mindkét művelet visszafejthető. Az egyes </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan10166">lépések külön-külön paraméterezhetők és </tspan><tspan
+       id="tspan10976">lépések külön-külön paraméterezhetők és </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan10168">skálázhatók, a kiinduló értékkészlet pedig </tspan><tspan
+       id="tspan10978">skálázhatók, a kiinduló értékkészlet pedig </tspan><tspan
        x="70.500626"
        y="218.05943"
-       id="tspan10170">maga is lehet virtuális, például egy adott </tspan><tspan
+       id="tspan10980">maga is lehet virtuális, például egy adott </tspan><tspan
        x="70.500626"
        y="237.50394"
-       id="tspan10172">reguláris kifejezésre illeszkedő szavak.</tspan></text>
+       id="tspan10982">reguláris kifejezésre illeszkedő szavak.</tspan></text>
   <text
      x="354.47198"
      y="3858.748"
@@ -560,25 +560,25 @@
      transform="matrix(2.4,0,0,2.4,590.3791,4320.5299)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10174">A fejlesztés több mellékeredményt hozott, </tspan><tspan
+       id="tspan10984">A fejlesztés több mellékeredményt hozott, </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan10176">amelyek önállóan is értéket képviselnek. </tspan><tspan
+       id="tspan10986">amelyek önállóan is értéket képviselnek. </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan10178">Ilyen a LargeInteger aritmetikai típus vagy </tspan><tspan
+       id="tspan10988">Ilyen a LargeInteger aritmetikai típus vagy </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan10180">a reguláris kifejezésekre illeszkedő szavak </tspan><tspan
+       id="tspan10990">a reguláris kifejezésekre illeszkedő szavak </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan10182">rendezett listáját adó MatchList – ezek </tspan><tspan
+       id="tspan10992">rendezett listáját adó MatchList – ezek </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan10184">nemcsak új funkcionalitást kínálnak, de </tspan><tspan
+       id="tspan10994">nemcsak új funkcionalitást kínálnak, de </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan10186">gyorsabbak is a meglévő megoldásoknál.</tspan></text>
+       id="tspan10996">gyorsabbak is a meglévő megoldásoknál.</tspan></text>
   <text
      x="296.38007"
      y="4491.1709"
@@ -618,24 +618,24 @@
      transform="matrix(2.4,0,0,2.4,314.37906,2885.5852)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10188">A nem létező, virtuális adatokban is </tspan><tspan
+       id="tspan10998">A nem létező, virtuális adatokban is </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan10190">hatékonyan kell tudnunk keresni és </tspan><tspan
+       id="tspan11000">hatékonyan kell tudnunk keresni és </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan10194"><tspan
+       id="tspan11004"><tspan
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.19998722"
-         id="tspan10192">rendezni. Ez megoldható kriptográfiai </tspan></tspan><tspan
+         id="tspan11002">rendezni. Ez megoldható kriptográfiai </tspan></tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan10196">módszerek – például Feistel-hálózat – </tspan><tspan
+       id="tspan11006">módszerek – például Feistel-hálózat – </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan10198">bevetésével: a lekérés kódolásként, a </tspan><tspan
+       id="tspan11008">bevetésével: a lekérés kódolásként, a </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan10200">keresés dekódolásként működik.</tspan></text>
+       id="tspan11010">keresés dekódolásként működik.</tspan></text>
   <path
      id="rect6-6-9-1-6"
      style="font-variation-settings:normal;vector-effect:none;fill:#174050;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
@@ -952,7 +952,7 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,2131.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10202">Lorem ipsum.</tspan></text>
+       id="tspan11012">Lorem ipsum.</tspan></text>
   <text
      x="1723.1298"
      y="2302.2559"
@@ -1047,7 +1047,7 @@
      transform="matrix(2.4,0,0,2.4,2533.1193,2131.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10204">Lorem ipsum.</tspan></text>
+       id="tspan11014">Lorem ipsum.</tspan></text>
   <text
      x="2615.1189"
      y="2302.2559"
@@ -1130,7 +1130,7 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,1573.7873)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10206">Lorem ipsum.</tspan></text>
+       id="tspan11016">Lorem ipsum.</tspan></text>
   <text
      x="1723.1298"
      y="1744.4282"
@@ -1225,7 +1225,7 @@
      transform="matrix(2.4,0,0,2.4,2533.1193,1573.7873)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10208">Lorem ipsum.</tspan></text>
+       id="tspan11018">Lorem ipsum.</tspan></text>
   <text
      x="2615.1189"
      y="1744.4282"
@@ -1309,7 +1309,7 @@
      transform="matrix(2.4,0,0,2.4,1601.1291,847.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10210">Lorem ipsum.</tspan></text>
+       id="tspan11020">Lorem ipsum.</tspan></text>
   <text
      x="1683.1298"
      y="1018.2557"
@@ -1405,7 +1405,7 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,2691.5384)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan10212">Lorem ipsum.</tspan></text>
+       id="tspan11022">Lorem ipsum.</tspan></text>
   <text
      x="1723.1301"
      y="2862.178"
@@ -4082,30 +4082,30 @@
      id="text964"><tspan
        x="2149.7786"
        y="3837.5896"
-       id="tspan10214">TDK-dolgozat: HoloDB: Relációs demóadatok konzisztens </tspan><tspan
+       id="tspan11024">TDK-dolgozat: HoloDB: Relációs demóadatok konzisztens </tspan><tspan
        x="2149.7786"
        y="3887.5897"
-       id="tspan10216">on-the-fly generálása deklaratív konfigurációból
+       id="tspan11026">on-the-fly generálása deklaratív konfigurációból
 </tspan><tspan
        x="2149.7786"
        y="3937.5897"
-       id="tspan10218">Horváth Dávid
+       id="tspan11028">Horváth Dávid
 </tspan><tspan
        x="2149.7786"
        y="3987.5897"
-       id="tspan10220">ELTE-IK
+       id="tspan11030">ELTE-IK
 </tspan><tspan
        x="2149.7786"
        y="4037.5897"
-       id="tspan10222">horvathdown@student.elte.hu
+       id="tspan11032">horvathdown@student.elte.hu
 </tspan><tspan
        x="2149.7786"
        y="4087.5897"
-       id="tspan10224">Témavezető: Dr. Vincellér Zoltán, ELTE
+       id="tspan11034">Témavezető: Dr. Vincellér Zoltán, ELTE
 </tspan><tspan
        x="2149.7786"
        y="4137.5894"
-       id="tspan10226">InnOtdk mentor: Dr. Ruppert Tamás, Pannon Egyetem</tspan></text>
+       id="tspan11036">InnOtdk mentor: Dr. Ruppert Tamás, Pannon Egyetem</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
