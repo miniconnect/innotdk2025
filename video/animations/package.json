@@ -1,0 +1,36 @@
+{
+  "name": "animations",
+  "version": "1.0.0",
+  "description": "HoloDB Video Animations (InnOtdk 2025)",
+  "repository": {},
+  "license": "CC0-1.0",
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.352",
+    "@remotion/google-fonts": "^4.0.352",
+    "@remotion/tailwind-v4": "4.0.352",
+    "@remotion/zod-types": "4.0.352",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.352",
+    "tailwindcss": "4.0.0",
+    "zod": "3.22.3"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.352",
+    "@types/react": "19.0.0",
+    "@types/web": "0.0.166",
+    "eslint": "9.19.0",
+    "prettier": "3.6.0",
+    "typescript": "5.8.2"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}

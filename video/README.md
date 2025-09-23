@@ -86,8 +86,8 @@ A nyílt forrású HoloDB barátságos deklaratív konfigurációból indítva h
 
 - Nincs demó adatok nélkül, de adatokat (*odateremteni*) nem egyszerű.
 - Szia, én Horváth Dávid vagyok, a HoloDB szoftverprojekt kitalálója - és fejlesztője.
-- Ez a kis eszköz leegyszerűsíti a szintetikus adathalmazok kérdését, egyfajta mockolással.
-- (Tudod, az adatbázisokét, amiket fejlesztés közbeni kipróbáláshoz, demókhoz, és egyéb okokból szoktál generálni, seedelni, populálni - nevezd, ahogy gondolod.)
+- Ez a kis eszköz leegyszerűsíti a demó adathalmazok kezelését, egyfajta mockolással.
+- Ha már generáltál, seedeltél, populáltál adatokat fejlesztés közbeni kipróbáláshoz, bemutatáshoz, vagy bármi egyéb okból, tudod, mire gondolok.
 - Ssss... épp adatokat generál a holnapi demóhoz... mindjárt kész... hopsz! rájött, hogy a (*...*) elgépelte...
 
 - A HoloDB egy általános célú, nyílt forráskódú relációs adatbázis-szimulátor.
@@ -97,8 +97,9 @@ A nyílt forrású HoloDB barátságos deklaratív konfigurációból indítva h
 - Ahhoz, hogy ez hatékonyan működjön, rengeteg speciális alkatrésznek kell együttműködnie, a (*...*)-tól a (*...*)-n át a (*...*)-ig (*én már megalapoztam neked*).
 - a deklaratív konfiguráció tömör, intuitív, és a YAML formátum ember és gép számára is barátságos; egy AI segédpilóta is könnyen (*beleszól*).
 - Számos integráció és kiegészítő tool segíti az elindulást és a könnyű használatot.
-- Válaszd a zöldebb alernatívát, gyorsabban, és adattárhellyel való bajlódás nélkül.
+- Válaszd a zöldebb alernatívát, szintetizálj gyorsabban, egyszerűbben és takarékosabban.
 
-- Látogass el a projekt github oldalára, próbáld ki működés közben.
-- Ha van kedved, a fejlesztésbe is bekapcsolódhatsz.
+- További infókért látogass el a projekt github oldalára, próbáld ki működés közben.
+- Ha van kedved, akár a fejlesztésbe is bekapcsolódhatsz.
 - Ha arra érdemesnek találod, kérlek, támogass az InnOtdk-n szavazatoddal, illetve egy megosztással.
+- Köszönöm hogy meghallgattál.
