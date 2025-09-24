@@ -3,9 +3,6 @@ import { z } from "zod";
 import { zColor } from "@remotion/zod-types";
 import { loadFont as loadRobotoSlabFont } from '@remotion/google-fonts/RobotoSlab';
 
-export const outroSchema = z.object({
-});
-
 const ROBOTO_SLAB_FONT = loadRobotoSlabFont();
 
 const KF_QR_IN_START = 0;
@@ -23,7 +20,7 @@ const ic = (t, ts, vs, ps) => {
   return interpolateColors(t, [-1, ...ts, 1000], [vs[0], ...vs, vs[vs.length - 1]], ps);
 }
 
-export const Outro: React.FC<z.infer<typeof outroSchema>> = () => {
+export const Outro: React.FC = () => {
   const frame = useCurrentFrame();
   
   const qrOpacity = i(frame, [KF_QR_IN_START, KF_QR_IN_END, KF_QR_OUT_START, KF_QR_OUT_END], [0, 1, 1, 0]);

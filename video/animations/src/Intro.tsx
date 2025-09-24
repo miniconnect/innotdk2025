@@ -3,9 +3,6 @@ import { z } from "zod";
 import { zColor } from "@remotion/zod-types";
 import { loadFont } from '@remotion/google-fonts/Inter';
 
-export const introSchema = z.object({
-});
-
 const FONT = loadFont();
 
 const KF_ZOOM_START = 0;
@@ -40,7 +37,7 @@ const ic = (t, ts, vs, ps) => {
   return interpolateColors(t, [-1, ...ts, 1000], [vs[0], ...vs, vs[vs.length - 1]], ps);
 }
 
-export const Intro: React.FC<z.infer<typeof introSchema>> = () => {
+export const Intro: React.FC = () => {
   const frame = useCurrentFrame();
 
   const backgroundColor = ic(frame, [KF_LIGHTON_START, KF_LIGHTON_END], ["#164e51", "#111900"], EASE_IN);

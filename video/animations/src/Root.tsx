@@ -1,9 +1,12 @@
 import "./index.css";
 import { Composition } from "remotion";
-import { Intro, introSchema } from "./Intro";
-import { Outro, outroSchema } from "./Outro";
+import { Intro } from "./Intro";
+import { BigSmall } from "./BigSmall";
+import { Outro } from "./Outro";
 
 const FPS = 60;
+const WIDTH = 1080;
+const HEIGHT = 1920
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -13,15 +16,17 @@ export const RemotionRoot: React.FC = () => {
         component={Intro}
         durationInFrames={6 * FPS}
         fps={FPS}
-        width={1080}
-        height={1920}
-        schema={introSchema}
-        defaultProps={{
-          titleText: "Intro",
-          titleColor: "#000000",
-          logoColor1: "#91EAE4",
-          logoColor2: "#86A8E7",
-        }}
+        width={WIDTH}
+        height={HEIGHT}
+      />
+      
+      <Composition
+        id="BigSmall"
+        component={BigSmall}
+        durationInFrames={6 * FPS}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
       />
       
       <Composition
@@ -29,15 +34,8 @@ export const RemotionRoot: React.FC = () => {
         component={Outro}
         durationInFrames={5 * FPS}
         fps={FPS}
-        width={1080}
-        height={1920}
-        schema={outroSchema}
-        defaultProps={{
-          titleText: "Intro",
-          titleColor: "#000000",
-          logoColor1: "#91EAE4",
-          logoColor2: "#86A8E7",
-        }}
+        width={WIDTH}
+        height={HEIGHT}
       />
     </>
   );
