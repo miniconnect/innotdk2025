@@ -23,7 +23,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BigSmall"
         component={BigSmall}
-        durationInFrames={6 * FPS}
+        durationInFrames={4 * FPS}
         fps={FPS}
         width={WIDTH}
         height={HEIGHT}

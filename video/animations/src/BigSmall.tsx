@@ -5,12 +5,13 @@ import { loadFont as loadRobotoSlabFont } from '@remotion/google-fonts/RobotoSla
 
 const ROBOTO_SLAB_FONT = loadRobotoSlabFont();
 
-const KF_QR_IN_START = 0;
-const KF_QR_IN_END = 30;
-const KF_QR_OUT_START = 100;
-const KF_QR_OUT_END = 130;
-const KF_FINAL_IN_START = 130;
-const KF_FINAL_IN_END = 160;
+const SCALE_START = 12;
+const SCALE_END = 180;
+
+const EASE_IN_OUT =  {
+  easing: Easing.inOut(Easing.ease),
+    extrapolateRight: 'clamp',
+};
 
 const i = (t, ts, vs, ps) => {
   return interpolate(t, [-1, ...ts, 1000], [vs[0], ...vs, vs[vs.length - 1]], ps);
@@ -23,12 +24,16 @@ const ic = (t, ts, vs, ps) => {
 export const BigSmall: React.FC = () => {
   const frame = useCurrentFrame();
   
-  const qrOpacity = i(frame, [KF_QR_IN_START, KF_QR_IN_END, KF_QR_OUT_START, KF_QR_OUT_END], [0, 1, 1, 0]);
-  const finalOpacity = i(frame, [KF_FINAL_IN_START, KF_FINAL_IN_END], [0, 1]);
+   const scale = i(frame, [SCALE_START, SCALE_END], [1, 4.4], EASE_IN_OUT);
   
   return (
-    <AbsoluteFill style={{backgroundColor: 'white'}}>
-      <p style={{fontSize:'100px'}}>Hello!</p>
+    <AbsoluteFill style={{backgroundColor: '#DDEEFF'}}>
+      <div style={{
+        transform: 'scale(' + scale + ')',
+        transformOrigin: '1000px 1750px',
+      }}>
+        <Img src={staticFile("img/big-small.svg")} width="1080" />
+      </div>
     </AbsoluteFill>
   );
 };
