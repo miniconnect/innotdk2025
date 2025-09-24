@@ -1,12 +1,12 @@
 import {AbsoluteFill, Sequence, useCurrentFrame, interpolate, interpolateColors, Easing, Img, staticFile} from 'remotion';
 import { z } from "zod";
 import { zColor } from "@remotion/zod-types";
-import { loadFont } from '@remotion/google-fonts/Inter'; // pick any family
+import { loadFont as loadRobotoSlabFont } from '@remotion/google-fonts/RobotoSlab';
 
 export const outroSchema = z.object({
 });
 
-const FONT = loadFont();
+const ROBOTO_SLAB_FONT = loadRobotoSlabFont();
 
 const KF_QR_IN_START = 0;
 const KF_QR_IN_END = 30;
@@ -53,8 +53,9 @@ export const Outro: React.FC<z.infer<typeof outroSchema>> = () => {
             fontSize: '87px',
             color: 'white',
             textAlign: 'center',
+            fontFamily: ROBOTO_SLAB_FONT.fontFamily,
           }}>
-              https://github.com/<br />miniconnect/holodb
+              <span style={{color:'#D9D9D9',fontSize:'94%'}}>https://github.com/</span><br />miniconnect/holodb
           </div>
         </AbsoluteFill>
       </Sequence>
