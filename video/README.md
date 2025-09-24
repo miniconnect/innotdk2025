@@ -49,19 +49,18 @@
 ### Szövegterv
 
 - Nincs demó adatok nélkül, de adatokat (*odateremteni*) nem egyszerű.
-- Szia, én Horváth Dávid vagyok, a HoloDB szoftverprojekt kitalálója - és fejlesztője.
+- ÉLŐ Szia, én Horváth Dávid vagyok, a HoloDB szoftverprojekt kitalálója - és fejlesztője.
 - Ez a kis eszköz leegyszerűsíti a demó adathalmazok kezelését, egyfajta mockolással.
 - Ha már generáltál, seedeltél, populáltál adatokat fejlesztés közbeni kipróbáláshoz, bemutatáshoz, vagy bármi egyéb okból, tudod, mire gondolok.
-- Ssss... épp adatokat generál a holnapi demóhoz... mindjárt kész... hopsz! rájött, hogy a (*...*) elgépelte...
+- ÉLŐ Ssss... épp adatokat generál a holnapi demóhoz... mindjárt kész... hopsz! rájött, hogy a (*...*) elgépelte...
 
 - A HoloDB egy általános célú, nyílt forráskódú relációs adatbázis-szimulátor.
-- Nem csak egy újabb fejlesztői eszköz, hanem egy új megközelítés.
+- ÉLŐ Nem csak egy újabb fejlesztői eszköz, hanem egy új megközelítés.
 - Nem tárol adatokat, nem foglal adattárhelyet, a lekéréseket on-the-fly szolgálja ki...
-- ... tulajdonképpen olyan, mint egy hologram.
-- Ahhoz, hogy ez hatékonyan működjön, rengeteg speciális alkatrésznek kell együttműködnie, a (*...*)-tól a (*...*)-n át a (*...*)-ig (*én már megalapoztam neked*).
-- a deklaratív konfiguráció tömör, intuitív, és a YAML formátum ember és gép számára is barátságos; egy AI segédpilóta is könnyen (*beleszól*).
+- ÉLŐ ... tulajdonképpen olyan, mint egy hologram.
+- A deklaratív konfiguráció tömör, intuitív, és a YAML formátum ember és gép számára is barátságos; egy AI segédpilóta is könnyen (*beleszól*).
 - Számos integráció és kiegészítő tool segíti az elindulást és a könnyű használatot.
-- Válaszd a zöldebb alernatívát, szintetizálj gyorsabban, egyszerűbben és takarékosabban.
+- ÉLŐ Válaszd a zöldebb alernatívát, szintetizálj gyorsabban, egyszerűbben és takarékosabban.
 
 - További infókért látogass el a projekt github oldalára, próbáld ki működés közben.
 - Ha van kedved, akár a fejlesztésbe is bekapcsolódhatsz.

@@ -33,7 +33,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="AiEdit"
         component={AiEdit}
-        durationInFrames={3 * FPS}
+        durationInFrames={4 * FPS}
         fps={FPS}
         width={WIDTH}
         height={HEIGHT}
@@ -42,7 +42,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Outro"
         component={Outro}
-        durationInFrames={5 * FPS}
+        durationInFrames={10 * FPS}
         fps={FPS}
         width={WIDTH}
         height={HEIGHT}

@@ -24,7 +24,7 @@ const ic = (t, ts, vs, ps) => {
 export const BigSmall: React.FC = () => {
   const frame = useCurrentFrame();
   
-   const scale = i(frame, [SCALE_START, SCALE_END], [1, 4.4], EASE_IN_OUT);
+  const scale = i(frame, [SCALE_START, SCALE_END], [1, 4.4], EASE_IN_OUT);
   
   return (
     <AbsoluteFill style={{backgroundColor: '#DDEEFF'}}>
