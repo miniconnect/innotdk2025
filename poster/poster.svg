@@ -13,319 +13,281 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs38"><linearGradient
-   inkscape:collect="always"
-   id="linearGradient190457">
-  <stop
-     style="stop-color:#12749a;stop-opacity:1;"
-     offset="0"
-     id="stop190453" />
-  <stop
-     style="stop-color:#d84be4;stop-opacity:1;"
-     offset="1"
-     id="stop190455" />
-</linearGradient>
-<linearGradient
-   inkscape:collect="always"
-   id="linearGradient183006">
-  <stop
-     style="stop-color:#84cce2;stop-opacity:0.70755804;"
-     offset="0"
-     id="stop183002" />
-  <stop
-     style="stop-color:#8267d3;stop-opacity:0.90196078;"
-     offset="0.35775965"
-     id="stop189180" />
-  <stop
-     style="stop-color:#8238cc;stop-opacity:1;"
-     offset="1"
-     id="stop183004" />
-</linearGradient>
-<linearGradient
-   inkscape:collect="always"
-   id="linearGradient172614">
-  <stop
-     style="stop-color:#6b2aa8;stop-opacity:1;"
-     offset="0"
-     id="stop172610" />
-  <stop
-     style="stop-color:#371455;stop-opacity:1;"
-     offset="1"
-     id="stop172612" />
-</linearGradient>
-<linearGradient
-   inkscape:collect="always"
-   id="linearGradient172606">
-  <stop
-     style="stop-color:#0e070b;stop-opacity:1;"
-     offset="0"
-     id="stop172602" />
-  <stop
-     style="stop-color:#6d3557;stop-opacity:1;"
-     offset="1"
-     id="stop172604" />
-</linearGradient>
-<linearGradient
-   inkscape:collect="always"
-   id="linearGradient171471">
-  <stop
-     style="stop-color:#91ffe6;stop-opacity:1;"
-     offset="0"
-     id="stop171467" />
-  <stop
-     style="stop-color:#d0e9ff;stop-opacity:1;"
-     offset="1"
-     id="stop171469" />
-</linearGradient>
-<linearGradient
-   inkscape:collect="always"
-   id="linearGradient159471">
-  <stop
-     style="stop-color:#7feaff;stop-opacity:1;"
-     offset="0"
-     id="stop159467" />
-  <stop
-     style="stop-color:#00edbf;stop-opacity:0.59255868;"
-     offset="1"
-     id="stop159469" />
-</linearGradient>
-<linearGradient
-   inkscape:collect="always"
-   id="linearGradient148273">
-  <stop
-     style="stop-color:#cb91ac;stop-opacity:1;"
-     offset="0"
-     id="stop148269" />
-  <stop
-     style="stop-color:#ae2437;stop-opacity:1;"
-     offset="1"
-     id="stop148271" />
-</linearGradient>
-<linearGradient
-   inkscape:collect="always"
-   id="linearGradient73463">
-  <stop
-     style="stop-color:#7feaff;stop-opacity:1;"
-     offset="0"
-     id="stop73461" />
-  <stop
-     style="stop-color:#00edbf;stop-opacity:0.51764709;"
-     offset="1"
-     id="stop73459" />
-</linearGradient>
-<linearGradient
-   inkscape:collect="always"
-   id="linearGradient70833">
-  <stop
-     style="stop-color:#7968f7;stop-opacity:1;"
-     offset="0"
-     id="stop70829" />
-  <stop
-     style="stop-color:#68b6f7;stop-opacity:0;"
-     offset="1"
-     id="stop70831" />
-</linearGradient>
-<rect
-   x="1985.9463"
-   y="2678.5666"
-   width="95.293252"
-   height="56.526633"
-   id="rect14369" />
-<linearGradient
-   inkscape:collect="always"
-   id="linearGradient72644">
-  <stop
-     style="stop-color:#99ea07;stop-opacity:1;"
-     offset="0"
-     id="stop72640" />
-  <stop
-     style="stop-color:#04828f;stop-opacity:1;"
-     offset="1"
-     id="stop72642" />
-</linearGradient>
-<linearGradient
-   inkscape:collect="always"
-   id="linearGradient45328">
-  <stop
-     style="stop-color:#66feb1;stop-opacity:1;"
-     offset="0"
-     id="stop45324" />
-  <stop
-     style="stop-color:#12749a;stop-opacity:1;"
-     offset="1"
-     id="stop45326" />
-</linearGradient>
-<linearGradient
-   inkscape:collect="always"
-   xlink:href="#linearGradient45328"
-   id="linearGradient45330"
-   x1="2973.0767"
-   y1="1183.9255"
-   x2="3253.5454"
-   y2="1409.6639"
-   gradientUnits="userSpaceOnUse"
-   gradientTransform="matrix(0.8885608,0,0,0.8885608,338.37003,147.28547)" />
-<linearGradient
-   inkscape:collect="always"
-   xlink:href="#linearGradient72644"
-   id="linearGradient72646"
-   x1="1347.4639"
-   y1="1718.5375"
-   x2="1346.6442"
-   y2="1851.1101"
-   gradientUnits="userSpaceOnUse"
-   gradientTransform="translate(0,20)" />
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-<linearGradient
-   inkscape:collect="always"
-   xlink:href="#linearGradient73463"
-   id="linearGradient73465"
-   x1="735.51099"
-   y1="925.21588"
-   x2="983.07788"
-   y2="314.52869"
-   gradientUnits="userSpaceOnUse"
-   gradientTransform="matrix(0.94558565,0,0,0.94558565,41.02738,38.170058)" />
-<radialGradient
-   inkscape:collect="always"
-   xlink:href="#linearGradient70833"
-   id="radialGradient83528"
-   cx="735.95233"
-   cy="1242.9652"
-   fx="735.95233"
-   fy="1242.9652"
-   r="614.88007"
-   gradientTransform="matrix(-0.64688,-1.1534376,-1.1816106,0.66268018,2563.05,1221.1525)"
-   gradientUnits="userSpaceOnUse" />
-<clipPath
-   clipPathUnits="userSpaceOnUse"
-   id="clipPath138463">
-  <path
-     d="M 0,926.453 H 934.092 V 0 H 0 Z"
-     id="path138461" />
-</clipPath>
-<linearGradient
-   inkscape:collect="always"
-   xlink:href="#linearGradient148273"
-   id="linearGradient148275"
-   x1="131.73503"
-   y1="58.159065"
-   x2="149.59363"
-   y2="66.917755"
-   gradientUnits="userSpaceOnUse" />
-<linearGradient
-   inkscape:collect="always"
-   xlink:href="#linearGradient159471"
-   id="linearGradient159473"
-   x1="2519.2776"
-   y1="606.99371"
-   x2="2519.2776"
-   y2="217.67009"
-   gradientUnits="userSpaceOnUse"
-   gradientTransform="translate(-6.153297,16)" />
-<linearGradient
-   inkscape:collect="always"
-   xlink:href="#linearGradient148273"
-   id="linearGradient161553"
-   gradientUnits="userSpaceOnUse"
-   x1="131.73503"
-   y1="58.159065"
-   x2="149.59363"
-   y2="66.917755" />
-<linearGradient
-   inkscape:collect="always"
-   xlink:href="#linearGradient148273"
-   id="linearGradient161555"
-   gradientUnits="userSpaceOnUse"
-   x1="131.73503"
-   y1="58.159065"
-   x2="149.59363"
-   y2="66.917755" />
-<linearGradient
-   inkscape:collect="always"
-   xlink:href="#linearGradient171471"
-   id="linearGradient171473"
-   x1="709.61182"
-   y1="884.57947"
-   x2="1107.4586"
-   y2="884.57947"
-   gradientUnits="userSpaceOnUse" />
-<linearGradient
-   inkscape:collect="always"
-   xlink:href="#linearGradient172614"
-   id="linearGradient172616"
-   x1="907.42358"
-   y1="890.565"
-   x2="909.46985"
-   y2="1041.941"
-   gradientUnits="userSpaceOnUse" />
-<linearGradient
-   inkscape:collect="always"
-   xlink:href="#linearGradient172606"
-   id="linearGradient172618"
-   x1="637.3299"
-   y1="1201.064"
-   x2="596.41217"
-   y2="1337.632"
-   gradientUnits="userSpaceOnUse" />
-<linearGradient
-   inkscape:collect="always"
-   xlink:href="#linearGradient183006"
-   id="linearGradient183008"
-   x1="2460.4238"
-   y1="694.26337"
-   x2="2460.4238"
-   y2="881.54871"
-   gradientUnits="userSpaceOnUse"
-   gradientTransform="translate(35.855119,-2)" />
-<linearGradient
-   inkscape:collect="always"
-   xlink:href="#linearGradient190457"
-   id="linearGradient190459"
-   x1="3320.918"
-   y1="1378.0815"
-   x2="3317.0024"
-   y2="1628.5931"
-   gradientUnits="userSpaceOnUse" />
-</defs>
+     id="defs38">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient190457">
+      <stop
+         style="stop-color:#12749a;stop-opacity:1;"
+         offset="0"
+         id="stop190453" />
+      <stop
+         style="stop-color:#d84be4;stop-opacity:1;"
+         offset="1"
+         id="stop190455" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient183006">
+      <stop
+         style="stop-color:#84cce2;stop-opacity:0.70755804;"
+         offset="0"
+         id="stop183002" />
+      <stop
+         style="stop-color:#8267d3;stop-opacity:0.90196078;"
+         offset="0.35775965"
+         id="stop189180" />
+      <stop
+         style="stop-color:#8238cc;stop-opacity:1;"
+         offset="1"
+         id="stop183004" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient172614">
+      <stop
+         style="stop-color:#6b2aa8;stop-opacity:1;"
+         offset="0"
+         id="stop172610" />
+      <stop
+         style="stop-color:#371455;stop-opacity:1;"
+         offset="1"
+         id="stop172612" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient172606">
+      <stop
+         style="stop-color:#0e070b;stop-opacity:1;"
+         offset="0"
+         id="stop172602" />
+      <stop
+         style="stop-color:#6d3557;stop-opacity:1;"
+         offset="1"
+         id="stop172604" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient171471">
+      <stop
+         style="stop-color:#91ffe6;stop-opacity:1;"
+         offset="0"
+         id="stop171467" />
+      <stop
+         style="stop-color:#d0e9ff;stop-opacity:1;"
+         offset="1"
+         id="stop171469" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient159471">
+      <stop
+         style="stop-color:#7feaff;stop-opacity:1;"
+         offset="0"
+         id="stop159467" />
+      <stop
+         style="stop-color:#00edbf;stop-opacity:0.59255868;"
+         offset="1"
+         id="stop159469" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient148273">
+      <stop
+         style="stop-color:#cb91ac;stop-opacity:1;"
+         offset="0"
+         id="stop148269" />
+      <stop
+         style="stop-color:#ae2437;stop-opacity:1;"
+         offset="1"
+         id="stop148271" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient73463">
+      <stop
+         style="stop-color:#7feaff;stop-opacity:1;"
+         offset="0"
+         id="stop73461" />
+      <stop
+         style="stop-color:#00edbf;stop-opacity:0.51764709;"
+         offset="1"
+         id="stop73459" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient70833">
+      <stop
+         style="stop-color:#7968f7;stop-opacity:1;"
+         offset="0"
+         id="stop70829" />
+      <stop
+         style="stop-color:#68b6f7;stop-opacity:0;"
+         offset="1"
+         id="stop70831" />
+    </linearGradient>
+    <rect
+       x="1985.9463"
+       y="2678.5666"
+       width="95.293252"
+       height="56.526633"
+       id="rect14369" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient72644">
+      <stop
+         style="stop-color:#99ea07;stop-opacity:1;"
+         offset="0"
+         id="stop72640" />
+      <stop
+         style="stop-color:#04828f;stop-opacity:1;"
+         offset="1"
+         id="stop72642" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient45328">
+      <stop
+         style="stop-color:#66feb1;stop-opacity:1;"
+         offset="0"
+         id="stop45324" />
+      <stop
+         style="stop-color:#12749a;stop-opacity:1;"
+         offset="1"
+         id="stop45326" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient45328"
+       id="linearGradient45330"
+       x1="2973.0767"
+       y1="1183.9255"
+       x2="3253.5454"
+       y2="1409.6639"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.8885608,0,0,0.8885608,338.37003,147.28547)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient72644"
+       id="linearGradient72646"
+       x1="1347.4639"
+       y1="1718.5375"
+       x2="1346.6442"
+       y2="1851.1101"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,20)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient73463"
+       id="linearGradient73465"
+       x1="735.51099"
+       y1="925.21588"
+       x2="983.07788"
+       y2="314.52869"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.94558565,0,0,0.94558565,41.02738,38.170058)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient70833"
+       id="radialGradient83528"
+       cx="735.95233"
+       cy="1242.9652"
+       fx="735.95233"
+       fy="1242.9652"
+       r="614.88007"
+       gradientTransform="matrix(-0.64688,-1.1534376,-1.1816106,0.66268018,2563.05,1221.1525)"
+       gradientUnits="userSpaceOnUse" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath138463">
+      <path
+         d="M 0,926.453 H 934.092 V 0 H 0 Z"
+         id="path138461" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient148273"
+       id="linearGradient148275"
+       x1="131.73503"
+       y1="58.159065"
+       x2="149.59363"
+       y2="66.917755"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient159471"
+       id="linearGradient159473"
+       x1="2519.2776"
+       y1="606.99371"
+       x2="2519.2776"
+       y2="217.67009"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-6.153297,16)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient148273"
+       id="linearGradient161553"
+       gradientUnits="userSpaceOnUse"
+       x1="131.73503"
+       y1="58.159065"
+       x2="149.59363"
+       y2="66.917755" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient148273"
+       id="linearGradient161555"
+       gradientUnits="userSpaceOnUse"
+       x1="131.73503"
+       y1="58.159065"
+       x2="149.59363"
+       y2="66.917755" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient171471"
+       id="linearGradient171473"
+       x1="709.61182"
+       y1="884.57947"
+       x2="1107.4586"
+       y2="884.57947"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient172614"
+       id="linearGradient172616"
+       x1="907.42358"
+       y1="890.565"
+       x2="909.46985"
+       y2="1041.941"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient172606"
+       id="linearGradient172618"
+       x1="637.3299"
+       y1="1201.064"
+       x2="596.41217"
+       y2="1337.632"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient183006"
+       id="linearGradient183008"
+       x1="2460.4238"
+       y1="694.26337"
+       x2="2460.4238"
+       y2="881.54871"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(35.855119,-2)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient190457"
+       id="linearGradient190459"
+       x1="3320.918"
+       y1="1378.0815"
+       x2="3317.0024"
+       y2="1628.5931"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      id="namedview36"
      pagecolor="#ffffff"
@@ -336,9 +298,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.37645998"
-     inkscape:cx="669.39386"
-     inkscape:cy="2921.9573"
+     inkscape:zoom="0.94947234"
+     inkscape:cx="2346.5665"
+     inkscape:cy="1344.9576"
      inkscape:window-width="1920"
      inkscape:window-height="1135"
      inkscape:window-x="0"
@@ -430,22 +392,22 @@
      transform="matrix(2.4,0,0,2.4,312.47106,1917.707)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan207309">A megoldás kiindulópontja, hogy a relációs </tspan><tspan
+       id="tspan8850">A megoldás kiindulópontja, hogy a relációs </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan207311">adatmodell adatelérési elemeit (táblák, </tspan><tspan
+       id="tspan8852">adatmodell adatelérési elemeit (táblák, </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan207313">oszlopok, mezők, indexek stb.) egy API </tspan><tspan
+       id="tspan8854">oszlopok, mezők, indexek stb.) egy API </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan207315">képében formalizáljuk. Mindössze ezt kell </tspan><tspan
+       id="tspan8856">képében formalizáljuk. Mindössze ezt kell </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan207317">megfelelően implementálni ahhoz, hogy </tspan><tspan
+       id="tspan8858">megfelelően implementálni ahhoz, hogy </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan207319">kívülről koherens adatbázisnak tűnjön.</tspan></text>
+       id="tspan8860">kívülről koherens adatbázisnak tűnjön.</tspan></text>
   <text
      x="394.47198"
      y="2088.3477"
@@ -546,34 +508,34 @@
      transform="matrix(2.4,0,0,2.4,292.77875,1237.2763)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan207321">Az adatbázisokra hagyományosan úgy gondolunk, </tspan><tspan
+       id="tspan8862">Az adatbázisokra hagyományosan úgy gondolunk, </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan207323">mint organikusan felgyülemlett adatok </tspan><tspan
+       id="tspan8864">mint organikusan felgyülemlett adatok </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan207325">rendszerére, melyek feldolgozásra, interakcióra </tspan><tspan
+       id="tspan8866">rendszerére, melyek feldolgozásra, interakcióra </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan207327">várnak. Fejlesztési környezetben azonban gyakran </tspan><tspan
+       id="tspan8868">várnak. Fejlesztési környezetben azonban gyakran </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan207329">fordított a helyzet: az adott feldolgozó rendszerhez </tspan><tspan
+       id="tspan8870">fordított a helyzet: az adott feldolgozó rendszerhez </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan207331">kell szintetikus adatokat biztosítani, például </tspan><tspan
+       id="tspan8872">kell szintetikus adatokat biztosítani, például </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan207333">teszteléshez, bemutatóhoz. De vajon tényleg </tspan><tspan
+       id="tspan8874">teszteléshez, bemutatóhoz. De vajon tényleg </tspan><tspan
        x="70.500626"
        y="218.05943"
-       id="tspan207335">szükséges ehhez egy teljes adathalmaz </tspan><tspan
+       id="tspan8876">szükséges ehhez egy teljes adathalmaz </tspan><tspan
        x="70.500626"
        y="237.50394"
-       id="tspan207337">legenerálása és egy hús-vér adatbázis </tspan><tspan
+       id="tspan8878">legenerálása és egy hús-vér adatbázis </tspan><tspan
        x="70.500626"
        y="256.94844"
-       id="tspan207339">működtetése?</tspan></text>
+       id="tspan8880">működtetése?</tspan></text>
   <text
      x="376.78235"
      y="1410.4586"
@@ -660,21 +622,21 @@
      transform="matrix(2.4,0,0,2.4,1114.3791,2410.1299)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan207341">Az előzetes legenerálás elkerülhető az </tspan><tspan
+       id="tspan8882">Az előzetes legenerálás elkerülhető az </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan207345"><tspan
+       id="tspan8886"><tspan
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.19999485"
-         id="tspan207343">adatok szabályalapú on-the-fly </tspan></tspan><tspan
+         id="tspan8884">adatok szabályalapú on-the-fly </tspan></tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan207347">generálásával, ha ez kellően gyors. Az így </tspan><tspan
+       id="tspan8888">generálásával, ha ez kellően gyors. Az így </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan207349">nyert, eredendően immutábilis </tspan><tspan
+       id="tspan8890">nyert, eredendően immutábilis </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan207351">adathalmaz ezután írhatóvá tehető a</tspan></text>
+       id="tspan8892">adathalmaz ezután írhatóvá tehető a</tspan></text>
   <text
      x="436.38007"
      y="2580.7708"
@@ -762,31 +724,31 @@
      transform="matrix(2.4,0,0,2.4,272.47106,3708.107)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan207353">Egy oszlop kereshetősége biztosítható egy </tspan><tspan
+       id="tspan8894">Egy oszlop kereshetősége biztosítható egy </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan207355">eleve rendezett értékkészletből kiindulva, </tspan><tspan
+       id="tspan8896">eleve rendezett értékkészletből kiindulva, </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan207357">ha az értékeket szétterítjük az oszlop </tspan><tspan
+       id="tspan8898">ha az értékeket szétterítjük az oszlop </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan207359">méretére, majd permutáljuk – feltéve, hogy </tspan><tspan
+       id="tspan8900">méretére, majd permutáljuk – feltéve, hogy </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan207361">mindkét művelet visszafejthető. Az egyes </tspan><tspan
+       id="tspan8902">mindkét művelet visszafejthető. Az egyes </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan207363">lépések külön-külön paraméterezhetők és </tspan><tspan
+       id="tspan8904">lépések külön-külön paraméterezhetők és </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan207365">skálázhatók, a kiinduló értékkészlet pedig </tspan><tspan
+       id="tspan8906">skálázhatók, a kiinduló értékkészlet pedig </tspan><tspan
        x="70.500626"
        y="218.05943"
-       id="tspan207367">maga is lehet virtuális, például egy adott </tspan><tspan
+       id="tspan8908">maga is lehet virtuális, például egy adott </tspan><tspan
        x="70.500626"
        y="237.50394"
-       id="tspan207369">reguláris kifejezésre illeszkedő szavak.</tspan></text>
+       id="tspan8910">reguláris kifejezésre illeszkedő szavak.</tspan></text>
   <text
      x="354.47198"
      y="3878.748"
@@ -869,27 +831,27 @@
      transform="matrix(2.4,0,0,2.4,590.3791,4340.5299)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan207371">A fejlesztés több mellékeredményt hozott, </tspan><tspan
+       id="tspan8912">A fejlesztés több mellékeredményt hozott, </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan207375"><tspan
+       id="tspan8916"><tspan
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.20000248"
-         id="tspan207373">amelyek önállóan is figyelmet érdemelnek. </tspan></tspan><tspan
+         id="tspan8914">amelyek önállóan is figyelmet érdemelnek. </tspan></tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan207377">Ilyen a LargeInteger aritmetikai típus vagy </tspan><tspan
+       id="tspan8918">Ilyen a LargeInteger aritmetikai típus vagy </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan207379">a reguláris kifejezésekre illeszkedő szavak </tspan><tspan
+       id="tspan8920">a reguláris kifejezésekre illeszkedő szavak </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan207381">rendezett listáját adó MatchList – ezek </tspan><tspan
+       id="tspan8922">rendezett listáját adó MatchList – ezek </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan207383">nemcsak új funkcionalitást kínálnak, de </tspan><tspan
+       id="tspan8924">nemcsak új funkcionalitást kínálnak, de </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan207385">gyorsabbak is a meglévő alternatíváknál.</tspan></text>
+       id="tspan8926">gyorsabbak is a meglévő alternatíváknál.</tspan></text>
   <text
      x="296.38007"
      y="4511.1709"
@@ -929,24 +891,24 @@
      transform="matrix(2.4,0,0,2.4,314.37906,2905.5852)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan207387">A nem létező, virtuális adatokban is </tspan><tspan
+       id="tspan8928">A nem létező, virtuális adatokban is </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan207389">hatékonyan kell tudnunk keresni és </tspan><tspan
+       id="tspan8930">hatékonyan kell tudnunk keresni és </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan207393"><tspan
+       id="tspan8934"><tspan
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.19998722"
-         id="tspan207391">rendezni. Ez megoldható kriptográfiai </tspan></tspan><tspan
+         id="tspan8932">rendezni. Ez megoldható kriptográfiai </tspan></tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan207395">módszerek – például Feistel-hálózat – </tspan><tspan
+       id="tspan8936">módszerek – például Feistel-hálózat – </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan207397">bevetésével: a lekérés kódolásként, a </tspan><tspan
+       id="tspan8938">bevetésével: a lekérés kódolásként, a </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan207399">keresés dekódolásként működik.</tspan></text>
+       id="tspan8940">keresés dekódolásként működik.</tspan></text>
   <path
      id="rect6-6-9-1-6"
      style="font-variation-settings:normal;vector-effect:none;fill:#174050;fill-opacity:1;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
@@ -1255,24 +1217,24 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,3211.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan207401">A HoloDB az elterjedt MI </tspan><tspan
+       id="tspan8942">A HoloDB az elterjedt MI </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan207403">megoldásokkal ortogonálisnak </tspan><tspan
+       id="tspan8944">megoldásokkal ortogonálisnak </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan207405">tekinthető. Ugyanakkor </tspan><tspan
+       id="tspan8946">tekinthető. Ugyanakkor </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan207407">beilleszthető agent pipeline-okba, </tspan><tspan
+       id="tspan8948">beilleszthető agent pipeline-okba, </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan207411"><tspan
+       id="tspan8952"><tspan
          dx="0 0 0 0 0 0 -0.2 0.19999866"
-         id="tspan207409">a konfiguráció pedig hatékonyan </tspan></tspan><tspan
+         id="tspan8950">a konfiguráció pedig hatékonyan </tspan></tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan207413">generálható nyelvi modellel.</tspan></text>
+       id="tspan8954">generálható nyelvi modellel.</tspan></text>
   <text
      x="1723.1298"
      y="3382.2559"
@@ -1358,25 +1320,25 @@
      transform="matrix(2.4,0,0,2.4,2533.1193,3151.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan207415">A transzparencia jegyében a teljes </tspan><tspan
+       id="tspan8956">A transzparencia jegyében a teljes </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan207417">projekt nyílt forráskóddal </tspan><tspan
+       id="tspan8958">projekt nyílt forráskóddal </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan207419">szabadon elérhető. A tervezett </tspan><tspan
+       id="tspan8960">szabadon elérhető. A tervezett </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan207421">bevételi modell felhőalapú SaaS </tspan><tspan
+       id="tspan8962">bevételi modell felhőalapú SaaS </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan207423">szolgáltatás nyújtására és vállalati </tspan><tspan
+       id="tspan8964">szolgáltatás nyújtására és vállalati </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan207425">környezetekhez szabott egyedi </tspan><tspan
+       id="tspan8966">környezetekhez szabott egyedi </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan207427">integrációkra épül.</tspan></text>
+       id="tspan8968">integrációkra épül.</tspan></text>
   <text
      x="2615.1189"
      y="3322.2559"
@@ -1459,22 +1421,22 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,1593.7873)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan207429">Előgenerálással és adattárhely </tspan><tspan
+       id="tspan8970">Előgenerálással és adattárhely </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan207431">biztosításával egyáltalán nem kell </tspan><tspan
+       id="tspan8972">biztosításával egyáltalán nem kell </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan207433">foglalkozni, mégis egy teljesértékű </tspan><tspan
+       id="tspan8974">foglalkozni, mégis egy teljesértékű </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan207435">relációs adatbázist kapunk. A várt </tspan><tspan
+       id="tspan8976">relációs adatbázist kapunk. A várt </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan207437">adatok jellemzőit felskiccelve </tspan><tspan
+       id="tspan8978">adatok jellemzőit felskiccelve </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan207439">máris indulhatnak a lekérdezések.</tspan></text>
+       id="tspan8980">máris indulhatnak a lekérdezések.</tspan></text>
   <text
      x="1723.1298"
      y="1764.4282"
@@ -1569,27 +1531,27 @@
      transform="matrix(2.4,0,0,2.4,2533.1193,1593.7873)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan207441">Indítható szerverként vagy (Java </tspan><tspan
+       id="tspan8982">Indítható szerverként vagy (Java </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan207443">esetén) beágyazott adatbázisként. </tspan><tspan
+       id="tspan8984">esetén) beágyazott adatbázisként. </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan207447"><tspan
+       id="tspan8988"><tspan
          dx="0 0 0 0 0 0 -0.2 0.19999866"
-         id="tspan207445">A konfiguráció teljesen kiváltható </tspan></tspan><tspan
+         id="tspan8986">A konfiguráció teljesen kiváltható </tspan></tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan207449">JPA entitások annotálásával is. </tspan><tspan
+       id="tspan8990">JPA entitások annotálásával is. </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan207451">Számos adapter és kiegészítő </tspan><tspan
+       id="tspan8992">Számos adapter és kiegészítő </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan207453">eszköz segíti a könnyű használatot </tspan><tspan
+       id="tspan8994">eszköz segíti a könnyű használatot </tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan207455">és a projektekbe való integrációt.</tspan></text>
+       id="tspan8996">és a projektekbe való integrációt.</tspan></text>
   <text
      x="2615.1189"
      y="1764.4282"
@@ -1770,21 +1732,21 @@
      transform="matrix(2.4,0,0,2.4,1641.1291,2151.5384)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan207459"><tspan
+       id="tspan9000"><tspan
          dx="0 0 0 0 0 0 -0.2 0.19999866"
-         id="tspan207457">A konfigurálás legegyszerűbben egy átlátható, verziókezelhető, és akár gépileg is </tspan></tspan><tspan
+         id="tspan8998">A konfigurálás legegyszerűbben egy átlátható, verziókezelhető, és akár gépileg is </tspan></tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan207461">generálható YAML fájlon keresztül történik. Tömör leírásban adhatjuk meg a séma, </tspan><tspan
+       id="tspan9002">generálható YAML fájlon keresztül történik. Tömör leírásban adhatjuk meg a séma, </tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan207463">az értékkészletek és az adateloszlás paramétereit és más beállításokat. A seed érték </tspan><tspan
+       id="tspan9004">az értékkészletek és az adateloszlás paramétereit és más beállításokat. A seed érték </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan207465">változtatásával újrakevehetjük a teljes adathalmazt a fő jellemzők megtartása </tspan><tspan
+       id="tspan9006">változtatásával újrakevehetjük a teljes adathalmazt a fő jellemzők megtartása </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan207467">mellett. A live mode-ban indított adatbázis a fájl mentésekor azonnal frissül.</tspan></text>
+       id="tspan9008">mellett. A live mode-ban indított adatbázis a fájl mentésekor azonnal frissül.</tspan></text>
   <text
      x="1723.1301"
      y="2322.178"
@@ -3741,13 +3703,13 @@
      transform="translate(-7.1882254,4.9478209)"><tspan
        x="2149.7786"
        y="3837.5896"
-       id="tspan207471"><tspan
+       id="tspan9012"><tspan
    style="font-weight:bold"
-   id="tspan207469">Horváth Dávid</tspan>, ELTE-IK
+   id="tspan9010">Horváth Dávid</tspan>, ELTE-IK
 </tspan><tspan
        x="2149.7786"
        y="3889.2561"
-       id="tspan207473">horvathdown@student.elte.hu</tspan></text>
+       id="tspan9014">horvathdown@student.elte.hu</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:Cabin;-inkscape-font-specification:'Cabin, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;white-space:pre;inline-size:1128.94;display:inline;fill:#d2c6ab;fill-opacity:1;stroke-width:2.4189;stop-color:#000000"
@@ -3757,11 +3719,11 @@
      transform="translate(-7.9999714,322)"><tspan
        x="2149.7786"
        y="3837.5896"
-       id="tspan207475">Témavezető: Dr. Vincellér Zoltán, ELTE
+       id="tspan9016">Témavezető: Dr. Vincellér Zoltán, ELTE
 </tspan><tspan
        x="2149.7786"
        y="3884.6058"
-       id="tspan207477">InnOtdk mentor: Dr. Ruppert Tamás, Pannon Egyetem</tspan></text>
+       id="tspan9018">InnOtdk mentor: Dr. Ruppert Tamás, Pannon Egyetem</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:41.3333px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;white-space:pre;inline-size:1128.94;display:inline;fill:#503223;fill-opacity:1;stroke-width:2.4189;stop-color:#000000"
@@ -3771,7 +3733,7 @@
      transform="translate(42.000029,127.00152)"><tspan
        x="2149.7786"
        y="3837.5896"
-       id="tspan207479">Dolgozat:</tspan></text>
+       id="tspan9020">Dolgozat:</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.6667px;font-family:'TeX Gyre Pagella';-inkscape-font-specification:'TeX Gyre Pagella, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;white-space:pre;inline-size:935.283;display:inline;fill:#6e4733;fill-opacity:1;stroke-width:2.4189;stop-color:#000000"
@@ -3781,15 +3743,15 @@
      transform="translate(244,127.00152)"><tspan
        x="2149.7786"
        y="3837.5896"
-       id="tspan207481">HoloDB: Relációs demóadatok
+       id="tspan9022">HoloDB: Relációs demóadatok
 </tspan><tspan
        x="2149.7786"
        y="3885.9231"
-       id="tspan207483">konzisztens on-the-fly generálása
+       id="tspan9024">konzisztens on-the-fly generálása
 </tspan><tspan
        x="2149.7786"
        y="3934.2566"
-       id="tspan207485">deklaratív konfigurációból</tspan></text>
+       id="tspan9026">deklaratív konfigurációból</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.6667px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.4189;stroke-opacity:1;stop-color:#000000"
@@ -4738,42 +4700,41 @@
      transform="matrix(2.4,0,0,2.4,1599.1291,867.6149)"><tspan
        x="70.500626"
        y="81.947914"
-       id="tspan207487">A HoloDB egy általános célú adatbázis-szimuláló és </tspan><tspan
+       id="tspan9028">A HoloDB egy általános célú adatbázis-szimuláló és </tspan><tspan
        x="70.500626"
        y="101.39241"
-       id="tspan207491"><tspan
+       id="tspan9032"><tspan
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.20001774"
-         id="tspan207489">adatmockoló eszköz, amely tömör konfigurációból egy </tspan></tspan><tspan
+         id="tspan9030">adatmockoló eszköz, amely tömör konfigurációból egy </tspan></tspan><tspan
        x="70.500626"
        y="120.83691"
-       id="tspan207493">pillanat alatt képes valószerű, kereshető relációs adatbázis </tspan><tspan
+       id="tspan9034">pillanat alatt képes valószerű, kereshető relációs adatbázis </tspan><tspan
        x="70.500626"
        y="140.28142"
-       id="tspan207495">látszatát kelteni. Akár óriás virtuális adathalmaz is </tspan><tspan
+       id="tspan9036">látszatát kelteni. Akár óriás virtuális adathalmaz is </tspan><tspan
        x="70.500626"
        y="159.72592"
-       id="tspan207497">működtethető vele minimális erőforrás-igénnyel, hiszen a </tspan><tspan
+       id="tspan9038">működtethető vele minimális erőforrás-igénnyel, hiszen a </tspan><tspan
        x="70.500626"
        y="179.17042"
-       id="tspan207501"><tspan
+       id="tspan9042"><tspan
          dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.2 0.19999485"
-         id="tspan207499">lekérdezési eredmények on-the-fly generálódnak.
-</tspan></tspan><tspan
+         id="tspan9040">lekérdezési eredmények on-the-fly generálódnak. Egy közel </tspan></tspan><tspan
        x="70.500626"
        y="198.61493"
-       id="tspan207503">Docker-konténerként is indítható, és hálózati protokollon </tspan><tspan
+       id="tspan9044">produkcióképes termék, mely Docker-konténerként is </tspan><tspan
        x="70.500626"
        y="218.05943"
-       id="tspan207505">keresztül lényegileg bármilyen rendszerhez </tspan><tspan
+       id="tspan9046">indítható, és hálózati protokollon keresztül bármilyen </tspan><tspan
        x="70.500626"
        y="237.50394"
-       id="tspan207507">csatlakoztatható. A HoloDB nem csak egy újabb fejlesztői </tspan><tspan
+       id="tspan9048">rendszerrel összekapcsolható. A HoloDB nem csak egy újabb </tspan><tspan
        x="70.500626"
        y="256.94844"
-       id="tspan207509">eszköz: radikálisan új megközelítése egyszerűbb és zöldebb </tspan><tspan
+       id="tspan9050">fejlesztői eszköz: radikálisan új megközelítése egyszerűbb és </tspan><tspan
        x="70.500626"
        y="276.39293"
-       id="tspan207511">alternatívát kínál a szintetikus adatok terén.</tspan></text>
+       id="tspan9052">zöldebb alternatívát kínál a szintetikus adatok terén.</tspan></text>
   <path
      style="fill:none;fill-opacity:1;stroke:url(#linearGradient190459);stroke-width:9.44882;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
      d="m 3295.9677,1345.2422 c 0,0 27.952,-0.2896 39.5781,13.903 16.2678,19.8591 7.8422,67.0655 8.7545,129.7122 1.2568,86.3096 1.4376,189.4631 1.4376,189.4631"
