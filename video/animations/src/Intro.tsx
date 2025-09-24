@@ -1,94 +1,21 @@
-/*import { spring } from "remotion";
-import {
-  AbsoluteFill,
-  interpolate,
-  Sequence,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
-import { z } from "zod";
-import { zColor } from "@remotion/zod-types";
-
-export const introSchema = z.object({
-  titleText: z.string(),
-  titleColor: zColor(),
-  logoColor1: zColor(),
-  logoColor2: zColor(),
-});
-
-export const Intro: React.FC<z.infer<typeof introSchema>> = ({
-  titleText: propOne,
-  titleColor: propTwo,
-  logoColor1,
-  logoColor2,
-}) => {
-  const frame = useCurrentFrame();
-  const { durationInFrames, fps } = useVideoConfig();
-
-  const logoTranslationProgress = spring({
-    frame: frame - 25,
-    fps,
-    config: {
-      damping: 100,
-    },
-  });
-
-  const logoTranslation = interpolate(
-    logoTranslationProgress,
-    [0, 1],
-    [0, -150],
-  );
-
-  const opacity = interpolate(
-    frame,
-    [durationInFrames - 25, durationInFrames - 15],
-    [1, 0],
-    {
-      extrapolateLeft: "clamp",
-      extrapolateRight: "clamp",
-    },
-  );
-
-  return (
-    <AbsoluteFill style={{ backgroundColor: "white" }}>
-      <AbsoluteFill style={{ opacity }}>
-        <AbsoluteFill style={{ transform: `translateY(${logoTranslation}px)` }}>
-          <>
-        </AbsoluteFill>
-        <Sequence from={35}>
-          <p>Hello</p>
-        </Sequence>
-        <Sequence from={75}>
-          <p>Hello</p>
-        </Sequence>
-      </AbsoluteFill>
-    </AbsoluteFill>
-  );
-};
-*/
-
 import {AbsoluteFill, useCurrentFrame, interpolate, interpolateColors, Easing} from 'remotion';
 import { z } from "zod";
 import { zColor } from "@remotion/zod-types";
-import {loadFont} from '@remotion/google-fonts/Inter'; // pick any family
+import { loadFont } from '@remotion/google-fonts/Inter';
 
 export const introSchema = z.object({
-  titleText: z.string(),
-  titleColor: zColor(),
-  logoColor1: zColor(),
-  logoColor2: zColor(),
 });
 
 const FONT = loadFont();
 
 const KF_ZOOM_START = 0;
-const KF_ZOOM_END = 30;
-const KF_LIGHTON_START = 5;
-const KF_LIGHTON_END = 50;
-const KF_LEFT_TEXT_START = 25;
-const KF_LEFT_TEXT_END = 50;
-const KF_BOTH_TEXT_START = 90;
-const KF_BOTH_TEXT_END = 95;
+const KF_ZOOM_END = 60;
+const KF_LIGHTON_START = 10;
+const KF_LIGHTON_END = 100;
+const KF_LEFT_TEXT_START = 50;
+const KF_LEFT_TEXT_END = 100;
+const KF_BOTH_TEXT_START = 180;
+const KF_BOTH_TEXT_END = 190;
 
 const EASE_IN =  {
   easing: Easing.in(Easing.ease),
