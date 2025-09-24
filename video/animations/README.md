@@ -1,4 +1,4 @@
-# Remotion video
+# HoloDB videó animációk (InnOtdk 2025)
 
 <p align="center">
   <a href="https://github.com/remotion-dev/logo">
@@ -9,46 +9,13 @@
   </a>
 </p>
 
-Welcome to your Remotion project!
+Ez egy Remotion keretrendszerben készült animáció-gyűjtemény a videóhoz.
 
-## Commands
+A könyvtárban ezeket a parancsokat kiadva előjön a videóelőnézetet lejátszani képes webes felület (NPM és Node megléte szükséges):
 
-**Install Dependencies**
-
-```console
-npm i
 ```
-
-**Start Preview**
-
-```console
+npm install
 npm run dev
 ```
 
-**Render video**
-
-```console
-npx remotion render
-```
-
-**Upgrade Remotion**
-
-```console
-npx remotion upgrade
-```
-
-## Docs
-
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
-
-## Help
-
-We provide help on our [Discord server](https://discord.gg/6VzzNDwUwV).
-
-## Issues
-
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
-
-## License
-
-Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+A felületen a bal oldali sávban lehet váltani az animációk között. Space billentyűvel indítható/leállítható a lejátszás.
