@@ -7,10 +7,10 @@ const ROBOTO_SLAB_FONT = loadRobotoSlabFont();
 
 const KF_QR_IN_START = 0;
 const KF_QR_IN_END = 30;
-const KF_QR_OUT_START = 230;
-const KF_QR_OUT_END = 260;
-const KF_FINAL_IN_START = 260;
-const KF_FINAL_IN_END = 290;
+const KF_QR_OUT_START = 390;
+const KF_QR_OUT_END = 420;
+const KF_FINAL_IN_START = 420;
+const KF_FINAL_IN_END = 450;
 
 const i = (t, ts, vs, ps) => {
   return interpolate(t, [-1, ...ts, 1000], [vs[0], ...vs, vs[vs.length - 1]], ps);

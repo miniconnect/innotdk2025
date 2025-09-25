@@ -1,6 +1,7 @@
 import "./index.css";
 import { Composition } from "remotion";
 import { Intro } from "./Intro";
+import { GenLogos } from "./GenLogos";
 import { BigSmall } from "./BigSmall";
 import { AiEdit } from "./AiEdit";
 import { Outro } from "./Outro";
@@ -15,6 +16,15 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Intro"
         component={Intro}
+        durationInFrames={6 * FPS}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+      />
+      
+      <Composition
+        id="GenLogos"
+        component={GenLogos}
         durationInFrames={6 * FPS}
         fps={FPS}
         width={WIDTH}
@@ -42,7 +52,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Outro"
         component={Outro}
-        durationInFrames={10 * FPS}
+        durationInFrames={15 * FPS}
         fps={FPS}
         width={WIDTH}
         height={HEIGHT}
