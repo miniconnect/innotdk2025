@@ -1,36 +1,60 @@
-# REST API Demo Project
+# HoloDB REST API Mocking Demo
 
-A small REST API written in Java with Micronaut, demonstrating HoloDB's automatic mocking on top of plain JPA entities.
+This demo shows how embedded HoloDB can automatically mock an entire REST API directly from plain JPA entities.
+It is a regular Micronaut Java application and can also serve as a starting template for similar projects.
 
-The `demo` Micronaut environment configures:
+## :arrow_forward: Run it
 
-- JDBC URL: `jdbc:holodb:jpa:///demo`
-- Driver: `hu.webarticum.holodb.jpa.JpaMetamodelDriver`
-
-This setup automatically configures and launches an embedded HoloDB instance, based on the JPA entities.
-So in this demo mode, the app runs **entirely on mock data derived from your JPA entities**.
-To fine-tune this, you can find some additional annotations on the entities, such as `@HoloTable`, `@HoloColumn`, etc.
-
-> [!IMPORTANT]
-> Currently, the little listener logic implemented in the `HoloInit` class is necessary for passing the JPA `Metamodel` to the HoloDB initializer.
->
-> The need for this explicit initialization is planned to be eliminated in future versions.
-
-To run the application in demo mode, simply use the `demo` Gradle task:
+Start the application using the `demo` task:
 
 ```
 ./gradlew demo
 ```
 
-The available endpoints are:
+## :arrows_counterclockwise: Test the endpoints
+
+Then the following endpoints will be available:
 
 - `http://localhost:8080/categories/**`
 - `http://localhost:8080/authors/**`
 - `http://localhost:8080/posts/**`
 - `http://localhost:8080/posts/{id}/comments/**`
 
-For easier testing, you can use the Swagger web interface here:
+For example, retrieving an author's data:
+
+```bash
+curl -s http://localhost:8080/authors/21 | jq
+```
+
+Output:
+
+```json
+{
+  "id": 21,
+  "firstname": "Eric",
+  "lastname": "Martin"
+}
+```
+
+Explore the bundled Swagger UI for a friendlier testing experience:
 
 ```
 http://localhost:8080/swagger-ui
 ```
+
+## :gear: How it works
+
+The `demo` Micronaut environment configures:
+
+- JDBC URL: `jdbc:holodb:jpa:///demo`
+- Driver: `hu.webarticum.holodb.jpa.JpaMetamodelDriver`
+
+This automatically configures and launches an embedded HoloDB instance based on your JPA entities.
+You can fine-tune the configuration with your specific settings using annotations such as `@HoloTable`, `@HoloColumn`, etc.
+
+## :memo: Notes
+
+> [!NOTE]
+> Currently, the explicit startup listener (`HoloInit`) is necessary for scanning the JPA metamodel.
+>
+> This requirement is planned to be eliminated in the future.
