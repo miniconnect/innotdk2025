@@ -14,14 +14,14 @@ This is a monorepo containing the following materials:
 
 | Part | Description |
 | --- | --- |
-| :scroll: [Abstract](abstract/) | Abstract text |
-| :placard: [Poster](poster/) | Conference poster |
-| :movie_camera: [Video](video/) | Video animations and speech text |
-| :blue_book: [Brochure](brochure/) | Brochure for printing |
-| :stars: [HoloSky](holosky/) | Simple planetarium app using synthetic data provided by HoloDB |
-| :loop: [Local REPL Setup](local-repl-setup/) | Local live demo of YAML editing and REPL |
-| :link: [REST API Demo](rest-demo/) | Java-based REST API project with data mocked by HoloDB |
-| :computer: [Screen Switcher](screen-switcher/) | Starter screen for choosing a demo app |
+| :scroll: &nbps; [Abstract](abstract/) | Abstract text |
+| :placard: &nbps; [Poster](poster/) | Conference poster |
+| :movie_camera: &nbps; [Video](video/) | Video animations and speech text |
+| :blue_book: &nbps; [Brochure](brochure/) | Brochure for printing |
+| :stars: &nbps; [HoloSky](holosky/) | Simple planetarium app using synthetic data provided by HoloDB |
+| :loop: &nbps; [Local REPL Setup](local-repl-setup/) | Local live demo of YAML editing and REPL |
+| :link: &nbps; [REST API Demo](rest-demo/) | Java-based REST API project with data mocked by HoloDB |
+| :computer: &nbps; [Screen Switcher](screen-switcher/) | Starter screen for choosing a demo app |
 
 Here is a brief summary of the offical informations and requirements (in Hungarian):
 
