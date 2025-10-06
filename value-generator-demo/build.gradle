@@ -1,0 +1,23 @@
+plugins {
+    id 'java-library'
+    id 'application'
+}
+
+description = "Value Generator Demo"
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+application {
+    mainClass = "hu.webarticum.inno.valuegeneratordemo.Main"
+}
