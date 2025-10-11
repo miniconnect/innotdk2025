@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="131mm"
+   height="182mm"
+   viewBox="0 0 131 182"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="07-ertekkeszletek2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.2177609"
+     inkscape:cx="410.58965"
+     inkscape:cy="354.74946"
+     inkscape:window-width="1126"
+     inkscape:window-height="1125"
+     inkscape:window-x="784"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showguides="false" />
+  <defs
+     id="defs2">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-5.8702902 : 70.615034 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="-67.982908 : 72.530832 : 1"
+       inkscape:persp3d-origin="65.5 : 60.666667 : 1"
+       id="perspective390928" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath138463">
+      <path
+         d="M 0,926.453 H 934.092 V 0 H 0 Z"
+         id="path138461" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Réteg 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       x="0"
+       y="-182"
+       width="131"
+       height="182"
+       fill="#0f2233"
+       id="rect2"
+       style="fill:#d7cfba;fill-opacity:1;stroke-width:3.75901"
+       transform="scale(1,-1)" />
+    <path
+       id="rect298560"
+       style="fill:#e1d9c9;fill-opacity:1;stroke:#64443d;stroke-width:0.364989;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       d="m 104.87563,94.655206 9.73956,0.511052 3.96056,3.123517 0.28217,16.161455 -13.64915,-0.71621 z"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#64443d;stroke-width:0.365213;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       d="m 114.631,95.294281 0.5773,3.42046 3.34643,-0.367753"
+       id="path298678"
+       sodipodi:nodetypes="ccc" />
+    <path
+       id="rect37207"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.3;stop-color:#000000"
+       d="M 3.3333334e-8,0 H 4 L 3.3333334e-8,4 Z"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#49910a;fill-opacity:0.996993;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       d="M 0.30000003,3 H 2"
+       id="path36696"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#49910a;fill-opacity:0.996993;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       d="M 3,0.3 V 2"
+       id="path36696-6"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="rect37207-3"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.3;stop-color:#000000"
+       d="m 131,0 h -4 l 4,4 z"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#49910a;fill-opacity:0.996993;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       d="M 130.7,3 H 129"
+       id="path36696-5"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#49910a;fill-opacity:0.996993;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       d="M 128,0.3 V 2"
+       id="path36696-6-6"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="rect37207-2"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.3;stop-color:#000000"
+       d="M 3.3333334e-8,182 H 4 L 3.3333334e-8,178 Z"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#49910a;fill-opacity:0.996993;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       d="M 0.3,179 H 1.9999999"
+       id="path36696-9"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#49910a;fill-opacity:0.996993;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       d="M 3,181.7 V 180"
+       id="path36696-6-1"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="rect37207-3-2"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.3;stop-color:#000000"
+       d="m 131,182 h -4 l 4,-4 z"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#49910a;fill-opacity:0.996993;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       d="M 130.7,179 H 129"
+       id="path36696-5-7"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#49910a;fill-opacity:0.996993;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       d="M 128,181.7 V 180"
+       id="path36696-6-6-0"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#f5f5f1;fill-opacity:1;stroke:none;stroke-width:0.874002;stroke-linecap:round;paint-order:markers fill stroke;stop-color:#000000"
+       id="rect288873"
+       width="107.18911"
+       height="62.96928"
+       x="11.417931"
+       y="10.400926"
+       ry="3" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:71.3556;display:inline;fill:#5c573d;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;paint-order:markers stroke fill;stop-color:#000000"
+       x="10.716839"
+       y="34.724209"
+       id="text19082-9-2"
+       transform="translate(6.2081571,-15.433568)"><tspan
+         x="10.716839"
+         y="34.724209"
+         id="tspan399991">A lehetséges értékek megkötésének egyik </tspan><tspan
+         x="10.716839"
+         y="39.133934"
+         id="tspan399993">legspecifikusabb módja, ha reguláris </tspan><tspan
+         x="10.716839"
+         y="43.543659"
+         id="tspan399995">kifejezést adsz meg. Ez a betöltéskor </tspan><tspan
+         x="10.716839"
+         y="47.953385"
+         id="tspan399997">automatikusan normalizálásra kerül, </tspan><tspan
+         x="10.716839"
+         y="52.36311"
+         id="tspan399999">biztosítva a konzisztens de gyors keresést </tspan><tspan
+         x="10.716839"
+         y="56.772835"
+         id="tspan400001">és rendezést.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;line-height:normal;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-decoration-color:#000000;fill:#5c573d;fill-opacity:1;stroke:none;stroke-width:0.851;stroke-linecap:round;paint-order:markers fill stroke;stop-color:#000000"
+       x="94.391327"
+       y="43.492336"
+       id="text264774-3-5"><tspan
+         sodipodi:role="line"
+         id="tspan264772-1-8"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5c573d;fill-opacity:1;stroke:none;stroke-width:0.851"
+         x="94.391327"
+         y="43.492336">pattern</tspan></text>
+    <rect
+       style="fill:#f2f0e1;fill-opacity:1;stroke:#907e41;stroke-width:0.851;stroke-linecap:round;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       id="rect288839"
+       width="28.522623"
+       height="28.62055"
+       x="92.345749"
+       y="9.4963226"
+       ry="3" />
+    <path
+       id="rect17567"
+       style="fill:#554f6f;fill-opacity:1;stroke:#592074;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       d="M 18.950243,49.0315 H 111.36112 V 68.344901 H 18.950243 Z"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.834571;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       x="22.312973"
+       y="54.646938"
+       id="text75296"><tspan
+         sodipodi:role="line"
+         x="22.312973"
+         y="54.646938"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.834571"
+         id="tspan179723"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#bdbfa1;fill-opacity:1"
+   id="tspan184811">-</tspan> <tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#82b7dc;fill-opacity:1"
+   id="tspan186589">name</tspan><tspan
+   id="tspan333742"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#bdbfa1;fill-opacity:1">:</tspan><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#929562;fill-opacity:1"
+   id="tspan184819"> </tspan><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#b89575;fill-opacity:1"
+   id="tspan189633">phone_number</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="22.312973"
+         y="59.056664"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.834571"
+         id="tspan181181">  <tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#82b7dc;fill-opacity:1"
+   id="tspan186583">valuesPattern</tspan><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#bdbfa1;fill-opacity:1"
+   id="tspan184827">:</tspan> <tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#b89575;fill-opacity:1"
+   id="tspan189745">'\+1 \d{3}-\d{3}-\d{4}'</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="22.312973"
+         y="63.466389"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.834571"
+         id="tspan340260">  <tspan
+   style="fill:#82b7dc;fill-opacity:1"
+   id="tspan340469">defaultValue</tspan><tspan
+   style="fill:#bdbfa1;fill-opacity:1"
+   id="tspan340540">:</tspan> <tspan
+   style="fill:#b89575;fill-opacity:1"
+   id="tspan340542">''</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5b4b3e;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;paint-order:markers stroke fill;stop-color:#000000"
+       x="12.888458"
+       y="87.493629"
+       id="text18434"><tspan
+         sodipodi:role="line"
+         id="tspan18432"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.29167px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5b4b3e;fill-opacity:1;stroke:none;stroke-width:0.5"
+         x="12.888458"
+         y="87.493629">Egyedi értékkészletek és adatforrások</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.81944px;line-height:normal;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-decoration-color:#000000;fill:#5b4b3e;fill-opacity:1;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       x="82.88353"
+       y="-43.927891"
+       id="text343741"
+       transform="rotate(37.40984)"><tspan
+         sodipodi:role="line"
+         id="tspan343739"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.81944px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.4"
+         x="82.88353"
+         y="-43.927891">[a-z]+</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.81944px;line-height:normal;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-decoration-color:#000000;fill:#6e5d4b;fill-opacity:1;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       x="98.461166"
+       y="-55.106297"
+       id="text343741-8"
+       transform="rotate(37.40984)"><tspan
+         sodipodi:role="line"
+         id="tspan343739-1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.81944px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#6e5d4b;fill-opacity:1;stroke:none;stroke-width:0.4"
+         x="98.461166"
+         y="-55.106297">^</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.81944px;line-height:normal;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-decoration-color:#000000;fill:#6e5d4b;fill-opacity:1;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       x="95.227806"
+       y="-31.506014"
+       id="text343741-8-6"
+       transform="rotate(37.40984)"><tspan
+         sodipodi:role="line"
+         id="tspan343739-1-4"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.81944px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#6e5d4b;fill-opacity:1;stroke:none;stroke-width:0.4"
+         x="95.227806"
+         y="-31.506014">$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.81944px;line-height:normal;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-decoration-color:#000000;fill:#f5f5f1;fill-opacity:1;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       x="14.54664"
+       y="97.176865"
+       id="text344639"><tspan
+         sodipodi:role="line"
+         id="tspan344637"
+         style="stroke-width:0.4"></tspan></text>
+    <path
+       id="rect375364"
+       style="fill:#ad7d9a;fill-opacity:0.0067846;stroke-width:0.4;stroke-linecap:round;paint-order:markers fill stroke;stop-color:#000000"
+       d="M 12.957279,94.210671 H 93.16637 l -4.38742,18.486679 -6.183789,2.16022 -23.696416,3.83424 -4.343349,7.8343 -41.598117,-0.0709 z"
+       sodipodi:nodetypes="cccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect375364);inline-size:60.9293;display:inline;fill:#3c3229;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;paint-order:markers stroke fill;stop-color:#000000"
+       x="10.716839"
+       y="34.724209"
+       id="text19082"><tspan
+         x="10.716839"
+         y="97.454804"
+         id="tspan400003">Előre felsorolt értékkészleteket magad is </tspan><tspan
+         x="10.716839"
+         y="101.86453"
+         id="tspan400005">betölthetsz, ha behivatkozod az értékek listáját </tspan><tspan
+         x="10.716839"
+         y="106.27426"
+         id="tspan400007">tartalmazó fájlt vagy egyéb erőforrást.
+</tspan><tspan
+         x="10.716839"
+         y="110.68399"
+         id="tspan400009">A legegyszerűbb esetben: egy sor – egy érték. </tspan><tspan
+         x="10.716839"
+         y="115.09372"
+         id="tspan400011">Az eloszlást és a keveredést ezután </tspan><tspan
+         x="10.716839"
+         y="119.50345"
+         id="tspan400013">külön paraméterezheted.</tspan></text>
+    <path
+       id="rect390650"
+       style="fill:#98563e;fill-opacity:0;stroke-width:0.799999;stroke-linecap:round;paint-order:markers fill stroke;stop-color:#000000"
+       d="m 41.606668,133.48736 80.584782,0.28216 v 43.55683 H 77.902467 l -0.481283,-20.51267 -6.012146,-1.51063 -5.66587,-3.53358 -16.237094,-0.83849 z"
+       sodipodi:nodetypes="ccccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect390650);inline-size:89.9116;display:inline;fill:#3c3229;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;paint-order:markers stroke fill;stop-color:#000000"
+       x="10.716839"
+       y="34.724209"
+       id="text19082-8"
+       transform="translate(0,-1.6601016)"><tspan
+         x="10.716839"
+         y="136.73215"
+         id="tspan400015">Ha nem egy adott értékkészletből indulnál ki, </tspan><tspan
+         x="10.716839"
+         y="141.14188"
+         id="tspan400017">hanem teljesen egyedi értékkiosztási logikát </tspan><tspan
+         x="10.716839"
+         y="145.55161"
+         id="tspan400019">szeretnél használni, betölthetsz egy egyedi </tspan><tspan
+         x="10.716839"
+         y="149.96133"
+         id="tspan400021">adatforrást egy Java programkönyvtárból </tspan><tspan
+         x="10.716839"
+         y="154.37106"
+         id="tspan400023">(paramétereket is átadhatsz). </tspan><tspan
+         x="10.716839"
+         y="158.78079"
+         id="tspan400025">Ekkor teljes kontrollod </tspan><tspan
+         x="10.716839"
+         y="163.19052"
+         id="tspan400027">van az adatok és a </tspan><tspan
+         x="10.716839"
+         y="167.60025"
+         id="tspan400029">kapcsolódó indexek </tspan><tspan
+         x="10.716839"
+         y="172.00998"
+         id="tspan400031">előállítása fölött..</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;line-height:normal;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-decoration-color:#000000;fill:#6c194c;fill-opacity:1;stroke:none;stroke-width:0.4;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       x="60.599735"
+       y="123.65758"
+       id="text373806"><tspan
+         sodipodi:role="line"
+         id="tspan373804"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#6c194c;fill-opacity:1;stroke-width:0.4"
+         x="60.599735"
+         y="123.65758"><tspan
+   style="fill:#98563e;fill-opacity:1"
+   id="tspan385291">valuesResource</tspan>: <tspan
+   style="fill:#9f2cb5;fill-opacity:1"
+   id="tspan385033">myValues.txt</tspan></tspan></text>
+    <path
+       style="fill:none;fill-opacity:0.0094501;stroke:#8d594e;stroke-width:0.8;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       d="m 98.887183,119.04127 c 0,0 1.738387,-3.74678 1.947847,-7.66142 0.20462,-3.8242 -0.12877,-5.51607 1.17147,-8.58041 1.5671,-3.693223 5.52229,-4.072139 5.52229,-4.072139"
+       id="path382095"
+       sodipodi:nodetypes="cssc" />
+    <circle
+       style="fill:#7d3353;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       id="path382401"
+       cx="108.39535"
+       cy="98.717476"
+       r="1.4930929" />
+    <path
+       id="rect392007"
+       style="fill:#5461cc;fill-opacity:0.714865;stroke:#765825;stroke-width:0.544765;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       d="m 18.898578,133.51378 9.063198,2.05101 v 10.14807 l -9.063198,-2.051 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="rect392033"
+       style="fill:#e4a187;fill-opacity:0.997024;stroke:#765825;stroke-width:0.544764;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       d="m 26.190639,130.3077 9.123744,2.15226 -7.29143,3.07871 -9.123743,-2.15225 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="rect392007-7"
+       style="fill:#dd8ec9;fill-opacity:1;stroke:#765825;stroke-width:0.544764;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       d="m 35.310387,132.49598 -7.2615,3.07599 v 10.14808 l 7.2615,-3.07599 z"
+       sodipodi:nodetypes="ccccc" />
+    <circle
+       style="fill:#7d3353;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       id="path382401-2"
+       cx="-32.157513"
+       cy="139.04736"
+       r="1.4930929"
+       transform="scale(-1,1)" />
+    <path
+       style="fill:none;fill-opacity:0.0094501;stroke:#86534a;stroke-width:0.8;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       d="m 50.661512,156.35449 c 0,0 -5.609661,-1.56929 -8.771136,-5.17949 -2.111208,-2.41086 -1.764422,-5.05245 -3.549897,-8.32841 -1.328212,-2.43698 -5.38346,-3.62956 -5.38346,-3.62956"
+       id="path382095-0"
+       sodipodi:nodetypes="cssc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;line-height:normal;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-decoration-color:#000000;fill:#98563e;fill-opacity:1;stroke:none;stroke-width:0.799999;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+       x="12.521124"
+       y="150.76097"
+       id="text389136"><tspan
+         sodipodi:role="line"
+         id="tspan389134"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.8"
+         x="12.521124"
+         y="150.76097" /><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.8"
+         x="12.521124"
+         y="155.1707"
+         id="tspan389138">- name: code</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.8"
+         x="12.521124"
+         y="159.58041"
+         id="tspan389140">  sourceFactory: <tspan
+   style="fill:#9f2cb5;fill-opacity:1"
+   id="tspan392530">my.Factory</tspan></tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.8"
+         x="12.521124"
+         y="163.99014"
+         id="tspan389142">  sourceFactoryData:</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52778px;font-family:FreeMono;-inkscape-font-specification:'FreeMono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.8"
+         x="12.521124"
+         y="168.39987"
+         id="tspan389144">    length: 10</tspan></text>
+  </g>
+</svg>
