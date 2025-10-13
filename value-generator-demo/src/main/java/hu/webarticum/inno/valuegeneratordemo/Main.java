@@ -13,6 +13,10 @@ import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.Insets;
 import java.awt.LayoutManager;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 import javax.swing.BoxLayout;
@@ -22,6 +26,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
@@ -35,6 +40,8 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 public class Main {
     
@@ -48,6 +55,8 @@ public class Main {
     
     private static final Font CONTROL_MONO_FONT = new Font(Font.MONOSPACED, Font.PLAIN, 14);
     
+    
+    private static final JFrame MAIN_FRAME = new JFrame();
     
     private static final JComboBox<ComboItem> SIZE_COMBO = new JComboBox<>();
 
@@ -111,7 +120,7 @@ public class Main {
     
     private static final JTextField SEARCH_VALUE_FIELD = new JTextField();
     
-    private static final String SEARCH_INPUT_RANGE_CARD_NAME = "rage";
+    private static final String SEARCH_INPUT_RANGE_CARD_NAME = "rarge";
 
     private static final JTextField SEARCH_RANGE_FROM_FIELD = new JTextField();
 
@@ -137,15 +146,15 @@ public class Main {
     }
 
     private static void buildAndShowFrame() {
-        JFrame frame = new JFrame("Value Generator Demo");
-        buildFrameContent(frame.getContentPane());
+        MAIN_FRAME.setTitle("Value Generator Demo");
+        buildFrameContent(MAIN_FRAME.getContentPane());
         addListeners();
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setExtendedState(Frame.MAXIMIZED_BOTH); 
-        frame.setUndecorated(true);
-        frame.setVisible(true);
+        MAIN_FRAME.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        MAIN_FRAME.setExtendedState(Frame.MAXIMIZED_BOTH); 
+        MAIN_FRAME.setUndecorated(true);
+        MAIN_FRAME.setVisible(true);
         GraphicsDevice device = GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices()[0];
-        device.setFullScreenWindow(frame);
+        device.setFullScreenWindow(MAIN_FRAME);
     }
     
     private static void buildFrameContent(Container contentPane) {
@@ -501,9 +510,62 @@ public class Main {
     private static void addListeners() {
         SEARCH_VALUE_RADIO.addActionListener(e -> SEARCH_INPUT_CARD_LAYOUT.show(SEARCH_INPUT_CARD_PANEL, SEARCH_INPUT_VALUE_CARD_NAME));
         SEARCH_RANGE_RADIO.addActionListener(e -> SEARCH_INPUT_CARD_LAYOUT.show(SEARCH_INPUT_CARD_PANEL, SEARCH_INPUT_RANGE_CARD_NAME));
-        VALUE_TYPE_COMBO.addItemListener(e -> VALUES_TYPE_PROPS_CARD_LAYOUT.show(
+        VALUE_TYPE_COMBO.addItemListener(new SelectListener(e -> VALUES_TYPE_PROPS_CARD_LAYOUT.show(
                 VALUES_TYPE_PROPS_CARD_PANEL,
-                ((ComboItem) VALUE_TYPE_COMBO.getSelectedItem()).value()));
+                ((ComboItem) VALUE_TYPE_COMBO.getSelectedItem()).value())));
+        
+        List.of(SIZE_COMBO, VALUE_TYPE_COMBO, VALUE_PROPS_BUNDLE_COMBO, VALUE_PROPS_DUMMYTEXT_COMBO, DISTRIBUTION_COMBO, SHUFFLE_COMBO).forEach(
+                c -> c.addItemListener(new SelectListener(e -> onValuesPropsChanged())));
+        List.of(SEED_SPINNER, VALUE_PROPS_FROM_SPINNER, VALUE_PROPS_TO_SPINNER, NULLS_RATIO_SPINNER).forEach(
+                s -> s.addChangeListener(e -> onValuesPropsChanged()));
+        List.of(VALUE_PROPS_LIST_TEXTAREA, VALUE_PROPS_PATTERN_FIELD).forEach(
+                t-> t.getDocument().addDocumentListener(new DocumentUpdateListener(e -> onValuesPropsChanged())));
+    }
+    
+    private static void onValuesPropsChanged() {
+        JOptionPane.showMessageDialog(MAIN_FRAME, "Hello Change!");
+    }
+
+    private static class SelectListener implements ItemListener {
+
+        final Consumer<ItemEvent> selectCallback;
+
+        private SelectListener(Consumer<ItemEvent> selectCallback) {
+            this.selectCallback = selectCallback;
+        }
+        
+        @Override
+        public void itemStateChanged(ItemEvent e) {
+            if (e.getStateChange() == ItemEvent.SELECTED) {
+                selectCallback.accept(e);
+            }
+        }
+        
+    }
+        
+    private static class DocumentUpdateListener implements DocumentListener {
+        
+        final Consumer<DocumentEvent> updateCallback;
+
+        private DocumentUpdateListener(Consumer<DocumentEvent> updateCallback) {
+            this.updateCallback = updateCallback;
+        }
+        
+        @Override
+        public void insertUpdate(DocumentEvent e) {
+            updateCallback.accept(e);
+        }
+
+        @Override
+        public void removeUpdate(DocumentEvent e) {
+            updateCallback.accept(e);
+        }
+
+        @Override
+        public void changedUpdate(DocumentEvent e) {
+            updateCallback.accept(e);
+        }
+        
     }
 
     private static class ComboItem {
