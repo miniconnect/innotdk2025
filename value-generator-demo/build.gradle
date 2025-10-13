@@ -11,6 +11,10 @@ repositories {
 }
 
 dependencies {
+    implementation 'hu.webarticum.holodb:core:0.7.1-SNAPSHOT'
+    implementation 'hu.webarticum.holodb:regex:0.7.1-SNAPSHOT'
+    implementation 'hu.webarticum.holodb:values:0.7.1-SNAPSHOT'
+    implementation 'hu.webarticum.holodb:bootstrap:0.7.1-SNAPSHOT'
 }
 
 java {
