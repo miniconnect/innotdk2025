@@ -1,7 +1,253 @@
-body {
-    background-color: #FFFFCC;
+@font-face {
+    font-family: "Nimbus Sans";
+    font-weight: normal;
+    src: url("fonts/NimbusSans-Regular.otf") format("opentype");
 }
 
-button {
-    font-size: 45pt;
+@font-face {
+    font-family: "Nimbus Sans";
+    font-weight: bold;
+    src: url("fonts/NimbusSans-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "Roboto Slab";
+    font-weight: normal;
+    src: url("fonts/RobotoSlab-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    src: url("fonts/RobotoSlab-Bold.otf") format("opentype");
+}
+
+body {
+    background-color: #0F2233;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Nimbus Sans", sans-serif;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vw 2vw;
+    margin-bottom: 0.3vw;
+}
+
+.header-logo {
+    width: 7vw;
+    height: 7vw;
+    margin: 0.5vw;
+    background-image: url("img/holodb-logo.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.header-title-outer {
+    flex: 1;
+    overflow: hidden;
+    margin: 0.6vw 0 0 1.5vw;
+}
+
+.header-title {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 4vw;
+    font-weight: bold;
+    color: #7FEAFF;
+}
+
+.header-subtitle {
+    display: block;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #55CCCC;
+}
+
+.header-innotdk2025 {
+    padding: 2.7vw;
+    font-size: 2.3vw;
+    font-weight: bold;
+    color: #9988BB;
+}
+
+.main {
+    flex: 1;
+    margin: 1vw 3vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 3vw;
+}
+
+.side-title {
+    margin: 0 0 1vw 1.3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #CCEEEE;
+}
+
+.left-side {
+    flex: 1;
+}
+
+.right-side {
+    flex: 1;
+}
+
+.item-box {
+    overflow: hidden;
+    margin: 0.5vw;
+    padding: 1vw;;
+    border-radius: 1vw;
+    margin-bottom: 0.5vw;
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out;
+}
+
+.item-box:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
+}
+
+.item-box-1 {
+    background-color: #94FFDD;
+}
+
+.item-box-1 .item-box-image {
+    background-image: url("img/item-brochure.png");
+}
+
+.item-box-2 {
+    background-color: #74D5D2;
+}
+
+.item-box-2 .item-box-image {
+    background-image: url("img/item-presentation.png");
+}
+
+.item-box-3 {
+    background-color: #BBF2FF;
+}
+
+.item-box-4 {
+    background-color: #A7B3FF;
+}
+
+.item-box-5 {
+    background-color: #B5AAFF;
+}
+
+.item-box-5 .item-box-image {
+    background-image: url("img/item-repl.png");
+}
+
+.item-box-6 {
+    background-color: #CFBBEB;
+}
+
+.item-box-6 .item-box-image {
+    background-image: url("img/item-rest.png");
+}
+
+.item-box-image {
+    float: left;
+    width: 12vw;
+    height: 9vw;
+    border: 0.1vw solid #112233;
+    border-radius: 0.5vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0.15vw 0.15vw 0.6vw rgba(0, 0, 0, 0.3);
+}
+
+.item-box-title {
+    margin: 0 0 0.7vw 14vw;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.item-box-content {
+    margin: 0 0 0 14vw;
+    font-size: 1.1vw;
+    font-weight: normal;
+    font-family: "Gentium Book Plus";
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2vw 2vw 2vw;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.footer-info-otdk37 {
+    display: flex;
+    flex-direction: row;
+    background-color: #F04F25;
+    border: 0.2vw solid #4F1704;
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+    font-family: "Roboto Slab";
+}
+
+.footer-info-otdk37-logo {
+    width: 12vw;
+    height: 7vw;
+    background-image: url("img/otdk37.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.footer-info-otdk37-rank {
+    margin: 0.5vw 0.8vw 0 1.5vw;
+    text-align:center;
+    color: #FFFFFF;
+}
+
+.footer-info-otdk37-rank-top {
+    font-size: 3.2vw;
+    font-weight: bold;
+}
+
+.footer-info-otdk37-rank-bottom {
+    font-size: 0.7vw;
+    font-weight: normal;
+}
+
+.footer-info-paper {
+    width: 30vw;
+    background-color: #EEDD99;
+    border: 0.2vw solid #000000;
+    border-radius: 0.5vw;
+}
+
+.footer-qr {
+    width: 7.5vw;
+    height: 7.5vw;
+    margin: 0.5vw;
+    border-radius: 0.5vw;
+    background-color: #FFFFFF;
+    background-image: url("img/holodb-qr.svg");
+    background-position: center;
+    background-size: 85%;
+    background-repeat: no-repeat;
 }
