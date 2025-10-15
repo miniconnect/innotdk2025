@@ -43,6 +43,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
+import hu.webarticum.miniconnect.lang.LargeInteger;
+
 public class Main {
     
     private static final Font TITLE_FONT = new Font(Font.SANS_SERIF, Font.BOLD, 32);
@@ -528,7 +530,8 @@ public class Main {
     }
     
     private static void onValuesPropsChanged() {
-        JOptionPane.showMessageDialog(MAIN_FRAME, "Hello Change!");
+        LargeInteger seed = LargeInteger.of((int) SEED_SPINNER.getValue());
+        JOptionPane.showMessageDialog(MAIN_FRAME, "seed: " + seed);
     }
 
     private static class SelectListener implements ItemListener {

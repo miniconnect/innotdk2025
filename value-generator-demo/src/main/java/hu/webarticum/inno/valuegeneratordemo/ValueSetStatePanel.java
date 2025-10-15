@@ -22,6 +22,8 @@ public class ValueSetStatePanel extends JPanel {
     private static final String ERROR_CARD_NAME = "error";
     
     private final CardLayout cardLayout = new CardLayout();
+
+    private final JLabel errorLabel = new JLabel();
     
     private ValueSetState state = ValueSetState.empty();
     
@@ -64,7 +66,6 @@ public class ValueSetStatePanel extends JPanel {
         errorPanel.setOpaque(false);
         JPanel errorContentPanel = new JPanel(new BorderLayout());
         errorContentPanel.setOpaque(false);
-        JLabel errorLabel = new JLabel("ERROR");
         errorLabel.setOpaque(false);
         errorLabel.setFont(DEFAULT_FONT);
         errorLabel.setForeground(Color.RED);
@@ -79,6 +80,14 @@ public class ValueSetStatePanel extends JPanel {
         }
         SwingUtilities.invokeLater(() -> {
             switch (state.status()) {
+                case SOURCE:
+                    
+                    // TODO
+                    cardLayout.show(this, SOURCE_CARD_NAME);
+                    
+                case ERROR:
+                    errorLabel.setText(state.errorMessage());
+                    cardLayout.show(this, ERROR_CARD_NAME);
                 case EMPTY:
                 default:
                     cardLayout.show(this, EMPTY_CARD_NAME);
