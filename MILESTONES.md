@@ -21,7 +21,7 @@
 | ~~Competition poster~~ | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![DONE](https://img.shields.io/badge/DONE-green) |
 | ~~Competition video~~ | ![HIGH](https://img.shields.io/badge/HIGH-red) | ![DONE](https://img.shields.io/badge/DONE-green) |
 | ~~HoloDB T-shirt~~ | ![LOW](https://img.shields.io/badge/LOW-lightgray) | ![DONE](https://img.shields.io/badge/DONE-green) |
-| Exhibition design | ![MEDIUM](https://img.shields.io/badge/MEDIUM-yellow) | ![IN PROGRESS](https://img.shields.io/badge/IN_PROGRESS-blue) |
+| ~~Exhibition design~~ | ![MEDIUM](https://img.shields.io/badge/MEDIUM-yellow) | ![DONE](https://img.shields.io/badge/DONE-green) |
 
 ---
 
