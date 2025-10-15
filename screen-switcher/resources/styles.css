@@ -39,7 +39,11 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
+    overflow: hidden;
     font-family: "Nimbus Sans", sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .page {
@@ -53,12 +57,11 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding: 1vw 2vw;
-    margin-bottom: 0.3vw;
 }
 
 .header-logo {
-    width: 7vw;
-    height: 7vw;
+    width: 5vw;
+    height: 5vw;
     margin: 0.5vw;
     background-image: url("img/holodb-logo.svg");
     background-position: center;
@@ -76,28 +79,28 @@ body {
     display: block;
     margin: 0;
     padding: 0;
-    font-size: 4vw;
+    font-size: 3vw;
     font-weight: bold;
     color: #7FEAFF;
 }
 
 .header-subtitle {
     display: block;
-    font-size: 1.5vw;
+    font-size: 1vw;
     font-weight: bold;
     color: #55CCCC;
 }
 
 .header-innotdk2025 {
-    padding: 2.7vw;
-    font-size: 2.3vw;
+    padding: 2.2vw 1.3vw 0 0;
+    font-size: 2vw;
     font-weight: bold;
     color: #9988BB;
 }
 
 .main {
     flex: 1;
-    margin: 1vw 3vw;
+    margin: 0 3vw 1vw 3vw;
     display: flex;
     justify-content: space-between;
     gap: 3vw;
@@ -105,7 +108,8 @@ body {
 
 .side-title {
     margin: 0 0 1vw 1.3vw;
-    font-size: 1.5vw;
+    text-align: center;
+    font-size: 1.2vw;
     font-weight: bold;
     color: #CCEEEE;
 }
