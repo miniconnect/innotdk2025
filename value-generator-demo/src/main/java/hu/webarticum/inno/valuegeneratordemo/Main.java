@@ -108,6 +108,9 @@ public class Main {
     private static final String VALUE_INFO_INFO_CARD_NAME = "info";
     
     
+    private static final ValueSetStatePanel VALUE_SET_STATE_PANEL = new ValueSetStatePanel();
+    
+    
     private static final JRadioButton SEARCH_VALUE_RADIO = new JRadioButton();
     
     private static final JRadioButton SEARCH_RANGE_RADIO = new JRadioButton();
@@ -161,7 +164,7 @@ public class Main {
         contentPane.setLayout(new BorderLayout());
         contentPane.add(buildTopPanel(), BorderLayout.PAGE_START);
         contentPane.add(buildLeftPanel(), BorderLayout.LINE_START);
-        contentPane.add(buildCenterPanel(), BorderLayout.LINE_END);
+        contentPane.add(buildCenterPanel(), BorderLayout.CENTER);
         contentPane.add(buildRightPanel(), BorderLayout.LINE_END);
     }
 
@@ -366,8 +369,7 @@ public class Main {
         
         centerPanel.setPreferredSize(new Dimension(650, 650));
         centerPanel.setBorder(new EmptyBorder(100, 10, 10, 10));
-        centerPanel.setBackground(new Color(0xCCBBFF));
-        centerPanel.add(new JLabel("Value properties"));
+        centerPanel.add(VALUE_SET_STATE_PANEL);
         
         return centerPanel;
     }
