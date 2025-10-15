@@ -365,11 +365,12 @@ public class Main {
     }
 
     private static JPanel buildCenterPanel() {
-        JPanel centerPanel = new JPanel();
+        JPanel centerPanel = new JPanel(new BorderLayout());
+        centerPanel.setBackground(Color.GREEN);
         
         centerPanel.setPreferredSize(new Dimension(650, 650));
-        centerPanel.setBorder(new EmptyBorder(100, 10, 10, 10));
-        centerPanel.add(VALUE_SET_STATE_PANEL);
+        centerPanel.setBorder(new EmptyBorder(60, 10, 10, 10));
+        centerPanel.add(VALUE_SET_STATE_PANEL, BorderLayout.PAGE_START);
         
         return centerPanel;
     }
@@ -522,6 +523,8 @@ public class Main {
                 s -> s.addChangeListener(e -> onValuesPropsChanged()));
         List.of(VALUE_PROPS_LIST_TEXTAREA, VALUE_PROPS_PATTERN_FIELD).forEach(
                 t-> t.getDocument().addDocumentListener(new DocumentUpdateListener(e -> onValuesPropsChanged())));
+        
+        VALUE_SET_STATE_PANEL.setState(ValueSetState.ofError("JAJJ!"));
     }
     
     private static void onValuesPropsChanged() {
