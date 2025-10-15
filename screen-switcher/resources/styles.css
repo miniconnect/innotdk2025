@@ -9,6 +9,7 @@
     font-weight: bold;
     src: url("fonts/NimbusSans-Bold.otf") format("opentype");
 }
+
 @font-face {
     font-family: "Roboto Slab";
     font-weight: normal;
@@ -19,6 +20,18 @@
     font-family: "Roboto Slab";
     font-weight: bold;
     src: url("fonts/RobotoSlab-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "TeX Gyre Pagella";
+    font-weight: normal;
+    src: url("fonts/texgyrepagella-regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "TeX Gyre Pagella";
+    font-weight: bold;
+    src: url("fonts/texgyrepagella-bold.otf") format("opentype");
 }
 
 body {
@@ -234,10 +247,87 @@ body {
 }
 
 .footer-info-paper {
+    display: flex;
+    flex-direction: row;
     width: 30vw;
-    background-color: #EEDD99;
-    border: 0.2vw solid #000000;
+    background-color: #D2C6AB;
+    border: 0.2vw solid #2B4735;
     border-radius: 0.5vw;
+}
+
+.footer-info-paper-text {
+    flex: 1;
+    margin: 1vw 1.2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "TeX Gyre Pagella";
+}
+
+.footer-info-paper-text-author {
+    color: #012850;
+    font-size: 1.1vw;
+}
+
+.footer-info-paper-text-author-basic {
+    font-weight: bold;
+}
+
+.footer-info-paper-text-author-email {
+    
+}
+
+.footer-info-paper-text-paper {
+    font-size: 0.9vw;
+}
+
+.footer-info-paper-text-paper-pre {
+    color: #503223;
+    font-weight: bold;
+}
+
+.footer-info-paper-text-paper-title {
+    margin: 0.1vw 0 0 0.7vw;
+    color: #6E4733;
+}
+
+.footer-info-paper-elteik-logo {
+    width: 6vw;
+    margin: 0.5vw 1.2vw;
+    background-image: url("img/elteik-logo.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.footer-info-navback {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 8vw;
+    padding: 0.7vw;
+    text-align: center;
+}
+
+.footer-info-navback-pre {
+    font-size: 1vw;
+    color: #FAFEFF;
+}
+
+.footer-info-navback-main {
+    font-size: 2vw;
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    color: #F7F78F;
+}
+
+.footer-info-navback-main-mark {
+    color: #569E9C;
+}
+
+.footer-info-navback-post {
+    font-size: 1vw;
+    color: #FAFEFF;
 }
 
 .footer-qr {
