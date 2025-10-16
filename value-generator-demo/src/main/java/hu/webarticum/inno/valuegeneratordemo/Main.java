@@ -38,6 +38,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingUtilities;
@@ -48,6 +49,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableColumn;
 
 import hu.webarticum.holodb.bootstrap.factory.MonotonicFactory;
 import hu.webarticum.holodb.bootstrap.factory.PermutationFactory;
@@ -527,12 +529,27 @@ public class Main {
         SEARCH_HITS_CARD_PANEL.add(searchHitsResultPanel, SEARCH_HITS_RESULT_CARD_NAME);
 
         JTable searchHitsResultTable = new JTable(SEARCH_HITS_RESULT_TABLE_MODEL);
-        searchHitsResultPanel.add(searchHitsResultTable, BorderLayout.CENTER);
+        setColumnWidth(searchHitsResultTable, 0, 70);
+        searchHitsResultTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        searchHitsResultTable.getColumnModel().getColumn(0).setCellRenderer(SimpleCellRenderer.instance());
+        searchHitsResultTable.getColumnModel().getColumn(1).setCellRenderer(SimpleCellRenderer.instance());
+        searchHitsResultTable.getTableHeader().setReorderingAllowed(false);
+        searchHitsResultTable.getTableHeader().setResizingAllowed(false);
+        JScrollPane searchHitsResultTableScrollPane = new JScrollPane(searchHitsResultTable);
+        searchHitsResultTableScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        searchHitsResultTableScrollPane.setPreferredSize(new Dimension(360, 360));
+        searchHitsResultPanel.add(searchHitsResultTableScrollPane, BorderLayout.CENTER);
         searchHitsResultPanel.add(new JLabel("(up to the first " + SEARCH_HITS_MAX_RESULTS + " hits)"), BorderLayout.PAGE_END);
-        
         return rightPanel;
     }
 
+    private static void setColumnWidth(JTable table, int i, int width) {
+        TableColumn column = table.getColumnModel().getColumn(i);
+        column.setMinWidth(width);
+        column.setMaxWidth(width);
+        column.setPreferredWidth(width);
+    }
+    
     private static JPanel createPanel(Function<JPanel, LayoutManager> layoutFactory) {
         return createPanel(layoutFactory, null);
     }
