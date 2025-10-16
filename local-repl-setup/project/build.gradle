@@ -7,11 +7,11 @@ plugins {
 description = "Local REPL Setup"
 
 // XXX
-def miniConnectApiVersion = '0.3.1-SNAPSHOT'
-def miniConnectVersion = '0.6.1-SNAPSHOT'
-def miniBaseVersion = '0.3.1-SNAPSHOT'
-def miniConnectClientVersion = '0.3.1-SNAPSHOT'
-def holodbVersion = '0.6.1-SNAPSHOT'
+def miniConnectApiVersion = '0.4.0'
+def miniConnectVersion = '0.7.0'
+def miniBaseVersion = '0.4.0'
+def miniConnectClientVersion = '0.4.0'
+def holodbVersion = '0.7.1'
 def calciteIntegrationVersion = '0.1.0-SNAPSHOT'
 
 repositories {

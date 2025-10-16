@@ -22,8 +22,8 @@ def lwjglModules = [ 'lwjgl', 'lwjgl-opengl', 'lwjgl-glfw', 'lwjgl-stb' ]
 def lwjglnativeVariants = [ 'natives-linux', 'natives-windows', 'natives-macos' ]
 
 dependencies {
-    implementation 'hu.webarticum.holodb:regex:0.6.1-SNAPSHOT'
-    implementation 'hu.webarticum.holodb:jpa:0.6.1-SNAPSHOT'
+    implementation 'hu.webarticum.holodb:regex:0.7.1'
+    implementation 'hu.webarticum.holodb:jpa:0.7.1'
     
     implementation 'io.micronaut:micronaut-http-client'
     implementation 'io.micronaut:micronaut-jackson-databind'
