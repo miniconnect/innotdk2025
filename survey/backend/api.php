@@ -1,8 +1,13 @@
 <?php
 
-$dataDir = __DIR__ . '/../data';
+$dataDir = getenv('DATA_DIR');
+if (empty($dataDir)) {
+    echo "No data dir given!";
+    exit(1);
+}
+
 if (!is_dir($dataDir)) {
-  mkdir($dataDir, 0777, true);
+    mkdir($dataDir, 0777, true);
 }
 
 $payload = file_get_contents('php://input');
