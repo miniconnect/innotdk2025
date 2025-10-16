@@ -32,19 +32,16 @@
   },
   "modes": {
     "window": {
-      "title": "screen-switcher",
-      "width": 800,
-      "height": 500,
-      "minWidth": 400,
-      "minHeight": 200,
-      "center": true,
-      "fullScreen": true,
-      "alwaysOnTop": true,
-      "enableInspector": false,
+      "title": "back-button",
+      "width": 100,
+      "height": 50,
+      "resizable": false,
       "borderless": true,
-      "maximize": true,
+      "alwaysOnTop": true,
+      "fullscreen": false,
+      "maximizable": false,
+      "maximize": false,
       "hidden": false,
-      "resizable": true,
       "exitProcessOnClose": false
     },
     "browser": {
