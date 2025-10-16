@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
 import { useCallback, useEffect, useRef } from 'react';
 
@@ -13,14 +12,12 @@ const ThanksPage = () => {
     timerRef.current = window.setTimeout(() => {
       timerRef.current = null;
       navigate("/");
-    }, 30000);
-    console.log("STARTED: " + timerRef.current)
+    }, 1500000);
   }, []);
     
   const backNow = useCallback(() => {
     console.log(timerRef)
     if (timerRef.current !== null) {
-      console.log("CLEAR")
       clearTimeout(timerRef.current);
       timerRef.current = null;
     }
@@ -28,8 +25,14 @@ const ThanksPage = () => {
   }, []);
 
   return <div>
-    <p>THANKS</p>
-    <p><button onClick={backNow}>BACK TO HOME</button></p>
+    <div className="thanks-page">
+      <p className="thanks-page-text">Köszönöm a kitöltést!</p>
+      <div className="thanks-page-link-outer">
+        <button className="thanks-page-link" type="button" onClick={backNow}>
+          Újra
+        </button>
+      </div>
+    </div>
   </div>
 }
 export default ThanksPage;
