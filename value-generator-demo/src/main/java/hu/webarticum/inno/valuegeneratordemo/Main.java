@@ -15,6 +15,11 @@ import java.awt.Insets;
 import java.awt.LayoutManager;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UncheckedIOException;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -26,7 +31,6 @@ import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
@@ -43,101 +47,74 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
+import hu.webarticum.holodb.bootstrap.factory.MonotonicFactory;
+import hu.webarticum.holodb.bootstrap.factory.PermutationFactory;
+import hu.webarticum.holodb.bootstrap.factory.StorageAccessFactory;
+import hu.webarticum.holodb.bootstrap.misc.DummyTextSource;
+import hu.webarticum.holodb.bootstrap.misc.MatchListSource;
+import hu.webarticum.holodb.config.HoloConfigColumn.DistributionQuality;
+import hu.webarticum.holodb.config.HoloConfigColumn.DummyTextKind;
+import hu.webarticum.holodb.config.HoloConfigColumn.ShuffleQuality;
+import hu.webarticum.holodb.core.data.binrel.monotonic.Monotonic;
+import hu.webarticum.holodb.core.data.binrel.permutation.Permutation;
+import hu.webarticum.holodb.core.data.random.HasherTreeRandom;
+import hu.webarticum.holodb.core.data.random.TreeRandom;
+import hu.webarticum.holodb.core.data.source.IndexedSource;
+import hu.webarticum.holodb.core.data.source.RangeSource;
+import hu.webarticum.holodb.core.data.source.Source;
+import hu.webarticum.holodb.core.data.source.UniqueSource;
+import hu.webarticum.holodb.regex.facade.MatchList;
 import hu.webarticum.miniconnect.lang.LargeInteger;
 
 public class Main {
     
     private static final Font TITLE_FONT = new Font(Font.SANS_SERIF, Font.BOLD, 32);
-    
     private static final Font SUBTITLE_FONT = new Font(Font.SANS_SERIF, Font.BOLD, 18);
-    
     private static final Font DEFAULT_FONT = new Font(Font.SANS_SERIF, Font.BOLD, 15);
-    
     private static final Font CONTROL_FONT = new Font(Font.SANS_SERIF, Font.PLAIN, 14);
-    
     private static final Font CONTROL_MONO_FONT = new Font(Font.MONOSPACED, Font.PLAIN, 14);
-    
-    
-    private static final JFrame MAIN_FRAME = new JFrame();
-    
-    private static final JComboBox<ComboItem> SIZE_COMBO = new JComboBox<>();
-
-    private static final JSpinner SEED_SPINNER = new JSpinner();
-
-    private static final JComboBox<ComboItem> VALUE_TYPE_COMBO = new JComboBox<>();
-    
-    private static final JPanel VALUES_TYPE_PROPS_CARD_PANEL = new JPanel();
-    
-    private static final CardLayout VALUES_TYPE_PROPS_CARD_LAYOUT = new CardLayout();
-    
     private static final String VALUE_TYPE_BUNDLE_CARD_NAME = "bundle";
-    
     private static final String VALUE_TYPE_LIST_CARD_NAME = "list";
-    
     private static final String VALUE_TYPE_RANGE_CARD_NAME = "range";
-    
     private static final String VALUE_TYPE_PATTERN_CARD_NAME = "pattern";
-    
     private static final String VALUE_TYPE_DUMMYTEXT_CARD_NAME = "dummytext";
-    
-    private static final JComboBox<ComboItem> VALUE_PROPS_BUNDLE_COMBO = new JComboBox<>();
-
-    private static final JTextArea VALUE_PROPS_LIST_TEXTAREA = new JTextArea();
-    
-    private static final JSpinner VALUE_PROPS_FROM_SPINNER = new JSpinner();
-    
-    private static final JSpinner VALUE_PROPS_TO_SPINNER = new JSpinner();
-    
-    private static final JTextField VALUE_PROPS_PATTERN_FIELD = new JTextField();
-    
-    private static final JComboBox<ComboItem> VALUE_PROPS_DUMMYTEXT_COMBO = new JComboBox<>();
-    
-    private static final JComboBox<ComboItem> DISTRIBUTION_COMBO = new JComboBox<>();
-    
-    private static final JComboBox<ComboItem> SHUFFLE_COMBO = new JComboBox<>();
-
-    private static final JSpinner NULLS_RATIO_SPINNER = new JSpinner();
-
-    
-    private static final JTextArea VALUE_TEXTAREA = new JTextArea();
-
-    private static final CardLayout VALUE_INFO_CARD_LAYOUT = new CardLayout();
-    
-    private static final JPanel VALUE_INFO_CARD_PANEL = new JPanel();
-    
     private static final String VALUE_INFO_NONE_CARD_NAME = "none";
-    
     private static final String VALUE_INFO_INFO_CARD_NAME = "info";
-    
-    
-    private static final ValueSetStatePanel VALUE_SET_STATE_PANEL = new ValueSetStatePanel();
-    
-    
-    private static final JRadioButton SEARCH_VALUE_RADIO = new JRadioButton();
-    
-    private static final JRadioButton SEARCH_RANGE_RADIO = new JRadioButton();
-    
-    private static final JPanel SEARCH_INPUT_CARD_PANEL = new JPanel();
-    
-    private static final CardLayout SEARCH_INPUT_CARD_LAYOUT = new CardLayout();
-    
     private static final String SEARCH_INPUT_VALUE_CARD_NAME = "value";
-    
-    private static final JTextField SEARCH_VALUE_FIELD = new JTextField();
-    
     private static final String SEARCH_INPUT_RANGE_CARD_NAME = "rarge";
-
-    private static final JTextField SEARCH_RANGE_FROM_FIELD = new JTextField();
-
-    private static final JCheckBox SEARCH_RANGE_FROM_INCLUSIVE_CHECKBOX = new JCheckBox();
-
-    private static final JTextField SEARCH_RANGE_TO_FIELD = new JTextField();
-
-    private static final JCheckBox SEARCH_RANGE_TO_INCLUSIVE_CHECKBOX = new JCheckBox();
     
+    private static JFrame MAIN_FRAME;
+    private static JComboBox<ComboItem> SIZE_COMBO;
+    private static JSpinner SEED_SPINNER = new JSpinner();
+    private static JComboBox<ComboItem> VALUE_TYPE_COMBO;
+    private static JPanel VALUES_TYPE_PROPS_CARD_PANEL;
+    private static CardLayout VALUES_TYPE_PROPS_CARD_LAYOUT;
+    private static JComboBox<ComboItem> VALUE_PROPS_BUNDLE_COMBO;
+    private static JTextArea VALUE_PROPS_LIST_TEXTAREA;
+    private static JSpinner VALUE_PROPS_FROM_SPINNER;
+    private static JSpinner VALUE_PROPS_TO_SPINNER;
+    private static JTextField VALUE_PROPS_PATTERN_FIELD;
+    private static JComboBox<ComboItem> VALUE_PROPS_DUMMYTEXT_COMBO;
+    private static JComboBox<ComboItem> DISTRIBUTION_COMBO;
+    private static JComboBox<ComboItem> SHUFFLE_COMBO;
+    private static JSpinner NULLS_RATIO_SPINNER; 
+    private static JTextArea VALUE_TEXTAREA;
+    private static CardLayout VALUE_INFO_CARD_LAYOUT;
+    private static JPanel VALUE_INFO_CARD_PANEL;
+    private static ValueSetStatePanel VALUE_SET_STATE_PANEL;
+    private static JRadioButton SEARCH_VALUE_RADIO;
+    private static JRadioButton SEARCH_RANGE_RADIO;
+    private static JPanel SEARCH_INPUT_CARD_PANEL;
+    private static CardLayout SEARCH_INPUT_CARD_LAYOUT;
+    private static JTextField SEARCH_VALUE_FIELD;
+    private static JTextField SEARCH_RANGE_FROM_FIELD;
+    private static JCheckBox SEARCH_RANGE_FROM_INCLUSIVE_CHECKBOX;
+    private static JTextField SEARCH_RANGE_TO_FIELD;
+    private static JCheckBox SEARCH_RANGE_TO_INCLUSIVE_CHECKBOX;
     
     public static void main(String[] args) throws ReflectiveOperationException, InterruptedException, UnsupportedLookAndFeelException {
         setNimbus();
+        SwingUtilities.invokeAndWait(Main::initSharedComponents);
         SwingUtilities.invokeAndWait(Main::buildAndShowFrame);
     }
 
@@ -150,10 +127,42 @@ public class Main {
         }
     }
 
+    private static void initSharedComponents() {
+        MAIN_FRAME = new JFrame();
+        SIZE_COMBO = new JComboBox<>();
+        SEED_SPINNER = new JSpinner();
+        VALUE_TYPE_COMBO = new JComboBox<>();
+        VALUES_TYPE_PROPS_CARD_PANEL = new JPanel();
+        VALUES_TYPE_PROPS_CARD_LAYOUT = new CardLayout();
+        VALUE_PROPS_BUNDLE_COMBO = new JComboBox<>();
+        VALUE_PROPS_LIST_TEXTAREA = new JTextArea();
+        VALUE_PROPS_FROM_SPINNER = new JSpinner();
+        VALUE_PROPS_TO_SPINNER = new JSpinner();
+        VALUE_PROPS_PATTERN_FIELD = new JTextField();
+        VALUE_PROPS_DUMMYTEXT_COMBO = new JComboBox<>();
+        DISTRIBUTION_COMBO = new JComboBox<>();
+        SHUFFLE_COMBO = new JComboBox<>();
+        NULLS_RATIO_SPINNER = new JSpinner();    
+        VALUE_TEXTAREA = new JTextArea();
+        VALUE_INFO_CARD_LAYOUT = new CardLayout();
+        VALUE_INFO_CARD_PANEL = new JPanel();
+        VALUE_SET_STATE_PANEL = new ValueSetStatePanel();
+        SEARCH_VALUE_RADIO = new JRadioButton();
+        SEARCH_RANGE_RADIO = new JRadioButton();
+        SEARCH_INPUT_CARD_PANEL = new JPanel();
+        SEARCH_INPUT_CARD_LAYOUT = new CardLayout();
+        SEARCH_VALUE_FIELD = new JTextField();
+        SEARCH_RANGE_FROM_FIELD = new JTextField();
+        SEARCH_RANGE_FROM_INCLUSIVE_CHECKBOX = new JCheckBox();
+        SEARCH_RANGE_TO_FIELD = new JTextField();
+        SEARCH_RANGE_TO_INCLUSIVE_CHECKBOX = new JCheckBox();
+    }
+    
     private static void buildAndShowFrame() {
         MAIN_FRAME.setTitle("Value Generator Demo");
         buildFrameContent(MAIN_FRAME.getContentPane());
         addListeners();
+        refreshValues();
         MAIN_FRAME.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         MAIN_FRAME.setExtendedState(Frame.MAXIMIZED_BOTH); 
         MAIN_FRAME.setUndecorated(true);
@@ -172,14 +181,13 @@ public class Main {
 
     private static JPanel buildTopPanel() {
         JPanel topPanel = new JPanel(new BorderLayout());
-        
         topPanel.setPreferredSize(new Dimension(500, 100));
         topPanel.setBorder(new EmptyBorder(20, 100, 20, 20));
-        topPanel.setBackground(new Color(0x99DD77));
+        topPanel.setBackground(new Color(0x424156));
         JLabel titleLabel = new JLabel("Value Generator Demo");
         titleLabel.setFont(TITLE_FONT);
+        titleLabel.setForeground(Color.WHITE);
         topPanel.add(titleLabel, BorderLayout.CENTER);
-        
         return topPanel;
     }
 
@@ -187,7 +195,7 @@ public class Main {
         JPanel leftPanel = new JPanel(new BorderLayout());
         leftPanel.setPreferredSize(new Dimension(650, 650));
         leftPanel.setBorder(new EmptyBorder(25, 25, 25, 25));
-        leftPanel.setBackground(Color.YELLOW);
+        leftPanel.setBackground(new Color(0xA29FB3));
 
         JPanel leftInnerPanel = createPanel(p -> new BoxLayout(p, BoxLayout.PAGE_AXIS));
         leftPanel.add(leftInnerPanel, BorderLayout.PAGE_START);
@@ -220,10 +228,10 @@ public class Main {
         sizeAndSeedPanel.add(seedPanel);
         seedPanel.add(createLabel("Seed: "), BorderLayout.LINE_START);
         SEED_SPINNER.setFont(CONTROL_FONT);
-        SEED_SPINNER.setModel(new SpinnerNumberModel(98765, 0, Integer.MAX_VALUE, 1));
+        SEED_SPINNER.setModel(new SpinnerNumberModel(726923, 0, Integer.MAX_VALUE, 1));
         seedPanel.add(withWidth(SEED_SPINNER, 220), BorderLayout.CENTER);
         
-        JPanel baseValuesPanel = createPanel(p -> new BorderLayout(), Color.RED);
+        JPanel baseValuesPanel = createPanel(p -> new BorderLayout(), new Color(0x66727D));
         leftInnerPanel.add(baseValuesPanel);
 
         JPanel baseValuesTypePanel = createPanel(p -> new BorderLayout());
@@ -275,7 +283,6 @@ public class Main {
         VALUE_PROPS_LIST_TEXTAREA.setFont(CONTROL_FONT);
         VALUE_PROPS_LIST_TEXTAREA.setRows(7);
         VALUE_PROPS_LIST_TEXTAREA.setColumns(30);
-        VALUE_PROPS_LIST_TEXTAREA.setMargin(new Insets(7, 7, 7, 7));
         VALUE_PROPS_LIST_TEXTAREA.setLineWrap(true);
         VALUE_PROPS_LIST_TEXTAREA.setText(
                 "Hydrogen\nHelium\nLithium\nBeryllium\nBoron\nCarbon\nNitrogen\nOxygen\nFluorine\nNeon\n" +
@@ -337,7 +344,7 @@ public class Main {
         distributionComboModel.addElement(new ComboItem("MEDIUM", "MEDIUM (linear interpolation)"));
         distributionComboModel.addElement(new ComboItem("HIGH", "HIGH (binomial monotonic)"));
         DISTRIBUTION_COMBO.setModel(distributionComboModel);
-        DISTRIBUTION_COMBO.setSelectedIndex(1);
+        DISTRIBUTION_COMBO.setSelectedIndex(2);
         distributionQualityPanel.add(withWidth(DISTRIBUTION_COMBO, 350));
 
         JPanel shuffleQualityPanel = createPanel(p -> new FlowLayout(FlowLayout.LEFT));
@@ -368,7 +375,7 @@ public class Main {
 
     private static JPanel buildCenterPanel() {
         JPanel centerPanel = new JPanel(new BorderLayout());
-        centerPanel.setBackground(Color.GREEN);
+        centerPanel.setBackground(new Color(0xCCCFDF));
         
         centerPanel.setPreferredSize(new Dimension(650, 650));
         centerPanel.setBorder(new EmptyBorder(60, 10, 10, 10));
@@ -381,7 +388,7 @@ public class Main {
         JPanel rightPanel = new JPanel(new BorderLayout());
         rightPanel.setPreferredSize(new Dimension(650, 650));
         rightPanel.setBorder(new EmptyBorder(25, 25, 25, 25));
-        rightPanel.setBackground(new Color(0xAA99FF));
+        rightPanel.setBackground(new Color(0xA29FB3));
 
         JPanel rightInnerPanel = createPanel(p -> new BoxLayout(p, BoxLayout.PAGE_AXIS));
         rightPanel.add(rightInnerPanel, BorderLayout.PAGE_START);
@@ -525,15 +532,108 @@ public class Main {
                 s -> s.addChangeListener(e -> onValuesPropsChanged()));
         List.of(VALUE_PROPS_LIST_TEXTAREA, VALUE_PROPS_PATTERN_FIELD).forEach(
                 t-> t.getDocument().addDocumentListener(new DocumentUpdateListener(e -> onValuesPropsChanged())));
-        
-        VALUE_SET_STATE_PANEL.setState(ValueSetState.ofError("JAJJ!"));
     }
     
     private static void onValuesPropsChanged() {
-        LargeInteger seed = LargeInteger.of((int) SEED_SPINNER.getValue());
-        JOptionPane.showMessageDialog(MAIN_FRAME, "seed: " + seed);
+        refreshValues();
+    }
+    
+    private static void refreshValues() {
+        VALUE_SET_STATE_PANEL.setState(createValueSetState());
     }
 
+    private static ValueSetState createValueSetState() {
+        try {
+            return createValueSetStateThrowing();
+        } catch (Exception e) {
+            return ValueSetState.ofError(e.getMessage());
+        }
+    }
+    
+    private static ValueSetState createValueSetStateThrowing() {
+        LargeInteger size = LargeInteger.of(getComboBoxValue(SIZE_COMBO));
+        double nullRatio = ((int) NULLS_RATIO_SPINNER.getValue()) / 100d;
+        LargeInteger nullCount = size.multiply(nullRatio);
+        LargeInteger nonNullCount = size.subtract(nullCount);
+        LargeInteger seed = LargeInteger.of((int) SEED_SPINNER.getValue());
+        TreeRandom treeRandom = new HasherTreeRandom(seed);
+        String valueType = getComboBoxValue(VALUE_TYPE_COMBO);
+        Source<?> baseSource = createBaseSource(valueType, size, treeRandom);
+        LargeInteger baseSize = baseSource.size();
+        String distributionQualityName = getComboBoxValue(DISTRIBUTION_COMBO);
+        Monotonic monotonic = MonotonicFactory.createMonotonic(treeRandom, nonNullCount, baseSize, DistributionQuality.valueOf(distributionQualityName));
+        String shuffleQualityName = getComboBoxValue(SHUFFLE_COMBO);
+        Permutation permutation = PermutationFactory.createPermutation(treeRandom, size, ShuffleQuality.valueOf(shuffleQualityName));
+        return ValueSetState.ofSource(baseSource, monotonic, permutation);
+    }
+    
+    private static Source<?> createBaseSource(String valueType, LargeInteger size, TreeRandom treeRandom) {
+        if (valueType.equals(VALUE_TYPE_BUNDLE_CARD_NAME)) {
+            return createBundleSource();
+        } else if (valueType.equals(VALUE_TYPE_LIST_CARD_NAME)) {
+            return createListSource();
+        } else if (valueType.equals(VALUE_TYPE_RANGE_CARD_NAME)) {
+            return createRangeSource();
+        } else if (valueType.equals(VALUE_TYPE_PATTERN_CARD_NAME)) {
+            return createPatternSource();
+        } else if (valueType.equals(VALUE_TYPE_DUMMYTEXT_CARD_NAME)) {
+            return createDummyTextSource(treeRandom, size);
+        } else {
+            throw new IllegalArgumentException("Unknown value type: " + valueType);
+        }
+    }
+    
+    private static Source<?> createBundleSource() {
+        String bundleName = getComboBoxValue(VALUE_PROPS_BUNDLE_COMBO);
+        String resource = "hu/webarticum/holodb/values/" + bundleName + ".txt";
+        ClassLoader classLoader = StorageAccessFactory.class.getClassLoader();
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(
+                classLoader.getResourceAsStream(resource)))) {
+            List<Object> values = new LinkedList<>();
+            String value;
+            while ((value = reader.readLine()) != null) {
+                if (!value.isEmpty()) {
+                    values.add(value);
+                }
+            }
+            return new UniqueSource<>(values.toArray(new String[0]));
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
+    }
+
+    
+    
+    
+    private static Source<?> createListSource() {
+        String[] values = VALUE_PROPS_LIST_TEXTAREA.getText().split("\n");
+        return new UniqueSource<>(values);
+    }
+
+    private static Source<?> createRangeSource() {
+        LargeInteger from = LargeInteger.of((int) VALUE_PROPS_FROM_SPINNER.getValue());
+        LargeInteger to = LargeInteger.of((int) VALUE_PROPS_TO_SPINNER.getValue());
+        LargeInteger size = to.subtract(from).add(LargeInteger.ONE);
+        return new RangeSource(from, size);
+    }
+
+    private static IndexedSource<?> createPatternSource() {
+        return new MatchListSource(MatchList.of(VALUE_PROPS_PATTERN_FIELD.getText()));
+    }
+
+    private static Source<?> createDummyTextSource(TreeRandom treeRandom, LargeInteger size) {
+        String dummyTextKindName = getComboBoxValue(VALUE_PROPS_DUMMYTEXT_COMBO);
+        return new DummyTextSource(DummyTextKind.valueOf(dummyTextKindName), treeRandom, size);
+    }
+
+    private static String getComboBoxValue(JComboBox<ComboItem> comboBox) {
+        ComboItem comboItem = (ComboItem) comboBox.getSelectedItem();
+        if (comboItem == null) {
+            return "";
+        }
+        return comboItem.value();
+    }
+    
     private static class SelectListener implements ItemListener {
 
         final Consumer<ItemEvent> selectCallback;

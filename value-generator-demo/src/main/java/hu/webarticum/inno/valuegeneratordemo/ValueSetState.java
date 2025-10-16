@@ -1,14 +1,13 @@
 package hu.webarticum.inno.valuegeneratordemo;
 
-import java.util.function.BiFunction;
-import java.util.function.Function;
-
 import hu.webarticum.holodb.core.data.binrel.monotonic.Monotonic;
 import hu.webarticum.holodb.core.data.binrel.permutation.Permutation;
-import hu.webarticum.holodb.core.data.source.IndexedSource;
 import hu.webarticum.holodb.core.data.source.MonotonicSource;
+import hu.webarticum.holodb.core.data.source.NullPaddedSortedSource;
+import hu.webarticum.holodb.core.data.source.NullPaddedSource;
 import hu.webarticum.holodb.core.data.source.PermutatedIndexedSource;
 import hu.webarticum.holodb.core.data.source.SortedSource;
+import hu.webarticum.holodb.core.data.source.Source;
 import hu.webarticum.miniconnect.lang.LargeInteger;
 
 public class ValueSetState {
@@ -23,7 +22,7 @@ public class ValueSetState {
     
     private final Status status;
     
-    private final IndexedSource<?> finalSource;
+    private final Source<?> finalSource;
     
     private final Monotonic monotonic;
     
@@ -32,7 +31,7 @@ public class ValueSetState {
     private final String errorMessage;
     
     private ValueSetState(
-            Status status, IndexedSource<?> finalSource, Monotonic monotonic, Permutation permutation, String errorMessage) {
+            Status status, Source<?> finalSource, Monotonic monotonic, Permutation permutation, String errorMessage) {
         this.status = status;
         this.finalSource = finalSource;
         this.monotonic = monotonic;
@@ -44,15 +43,21 @@ public class ValueSetState {
         return EMPTY;
     }
 
-    public static ValueSetState ofSource(
-            LargeInteger targetSize,
-            SortedSource<?> baseSource,
-            BiFunction<LargeInteger, LargeInteger, Monotonic> monotonicFactory,
-            Function<LargeInteger, Permutation> permutationFactory) {
-        Monotonic monotonic = monotonicFactory.apply(targetSize, baseSource.size());
-        SortedSource<?> resizedSource = new MonotonicSource<>(baseSource, monotonic);
-        Permutation permutation = permutationFactory.apply(targetSize);
-        IndexedSource<?> finalSource = new PermutatedIndexedSource<>(resizedSource, permutation);
+    public static ValueSetState ofSource(Source<?> baseSource, Monotonic monotonic, Permutation permutation) {
+        LargeInteger targetSize = permutation.size();
+        Source<?> finalSource;
+        if (baseSource instanceof SortedSource) {
+            SortedSource<?> resizedSource = new MonotonicSource<>((SortedSource<?>) baseSource, monotonic);
+            if (resizedSource.size().isLessThan(targetSize)) {
+                resizedSource = new NullPaddedSortedSource<>(resizedSource, targetSize);
+            }
+            finalSource = new PermutatedIndexedSource<>(resizedSource, permutation);
+        } else {
+            finalSource = baseSource;
+            if (finalSource.size().isLessThan(targetSize)) {
+                finalSource = new NullPaddedSource<>(finalSource, targetSize);
+            }
+        }
         return new ValueSetState(Status.SOURCE, finalSource, monotonic, permutation, null);
     }
 
@@ -68,7 +73,7 @@ public class ValueSetState {
         return status;
     }
 
-    public IndexedSource<?> fFinalSource() {
+    public Source<?> finalSource() {
         return finalSource;
     }
 
