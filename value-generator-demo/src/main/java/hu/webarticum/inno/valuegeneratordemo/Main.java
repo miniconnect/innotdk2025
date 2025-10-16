@@ -35,6 +35,7 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
+import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
@@ -46,6 +47,7 @@ import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import javax.swing.table.AbstractTableModel;
 
 import hu.webarticum.holodb.bootstrap.factory.MonotonicFactory;
 import hu.webarticum.holodb.bootstrap.factory.PermutationFactory;
@@ -59,6 +61,8 @@ import hu.webarticum.holodb.core.data.binrel.monotonic.Monotonic;
 import hu.webarticum.holodb.core.data.binrel.permutation.Permutation;
 import hu.webarticum.holodb.core.data.random.HasherTreeRandom;
 import hu.webarticum.holodb.core.data.random.TreeRandom;
+import hu.webarticum.holodb.core.data.selection.EmptySelection;
+import hu.webarticum.holodb.core.data.selection.Selection;
 import hu.webarticum.holodb.core.data.source.IndexedSource;
 import hu.webarticum.holodb.core.data.source.RangeSource;
 import hu.webarticum.holodb.core.data.source.Source;
@@ -81,11 +85,14 @@ public class Main {
     private static final String VALUE_INFO_NONE_CARD_NAME = "none";
     private static final String VALUE_INFO_INFO_CARD_NAME = "info";
     private static final String SEARCH_INPUT_VALUE_CARD_NAME = "value";
-    private static final String SEARCH_INPUT_RANGE_CARD_NAME = "rarge";
+    private static final String SEARCH_INPUT_RANGE_CARD_NAME = "range";
+    private static final String SEARCH_HITS_NONE_CARD_NAME = "none";
+    private static final String SEARCH_HITS_RESULT_CARD_NAME = "result";
+    private static final int SEARCH_HITS_MAX_RESULTS = 20;
     
     private static JFrame MAIN_FRAME;
     private static JComboBox<ComboItem> SIZE_COMBO;
-    private static JSpinner SEED_SPINNER = new JSpinner();
+    private static JSpinner SEED_SPINNER;
     private static JComboBox<ComboItem> VALUE_TYPE_COMBO;
     private static JPanel VALUES_TYPE_PROPS_CARD_PANEL;
     private static CardLayout VALUES_TYPE_PROPS_CARD_LAYOUT;
@@ -97,11 +104,15 @@ public class Main {
     private static JComboBox<ComboItem> VALUE_PROPS_DUMMYTEXT_COMBO;
     private static JComboBox<ComboItem> DISTRIBUTION_COMBO;
     private static JComboBox<ComboItem> SHUFFLE_COMBO;
-    private static JSpinner NULLS_RATIO_SPINNER; 
+    private static JSpinner NULLS_RATIO_SPINNER;
+    private static ValueSetStatePanel VALUE_SET_STATE_PANEL;
     private static JTextArea VALUE_TEXTAREA;
     private static CardLayout VALUE_INFO_CARD_LAYOUT;
     private static JPanel VALUE_INFO_CARD_PANEL;
-    private static ValueSetStatePanel VALUE_SET_STATE_PANEL;
+    private static JLabel VALUE_INFO_TYPE_LABEL;
+    private static JLabel VALUE_INFO_INDEX_LABEL;
+    private static JLabel VALUE_INFO_ORDERED_INDEX_LABEL;
+    private static JLabel VALUE_INFO_ORIGINAL_INDEX_LABEL;
     private static JRadioButton SEARCH_VALUE_RADIO;
     private static JRadioButton SEARCH_RANGE_RADIO;
     private static JPanel SEARCH_INPUT_CARD_PANEL;
@@ -111,6 +122,9 @@ public class Main {
     private static JCheckBox SEARCH_RANGE_FROM_INCLUSIVE_CHECKBOX;
     private static JTextField SEARCH_RANGE_TO_FIELD;
     private static JCheckBox SEARCH_RANGE_TO_INCLUSIVE_CHECKBOX;
+    private static JPanel SEARCH_HITS_CARD_PANEL;
+    private static CardLayout SEARCH_HITS_CARD_LAYOUT;
+    private static SearchHitsTableModel SEARCH_HITS_RESULT_TABLE_MODEL;
     
     public static void main(String[] args) throws ReflectiveOperationException, InterruptedException, UnsupportedLookAndFeelException {
         setNimbus();
@@ -143,10 +157,14 @@ public class Main {
         DISTRIBUTION_COMBO = new JComboBox<>();
         SHUFFLE_COMBO = new JComboBox<>();
         NULLS_RATIO_SPINNER = new JSpinner();    
+        VALUE_SET_STATE_PANEL = new ValueSetStatePanel();
         VALUE_TEXTAREA = new JTextArea();
         VALUE_INFO_CARD_LAYOUT = new CardLayout();
         VALUE_INFO_CARD_PANEL = new JPanel();
-        VALUE_SET_STATE_PANEL = new ValueSetStatePanel();
+        VALUE_INFO_TYPE_LABEL = new JLabel();
+        VALUE_INFO_INDEX_LABEL = new JLabel();
+        VALUE_INFO_ORDERED_INDEX_LABEL = new JLabel();
+        VALUE_INFO_ORIGINAL_INDEX_LABEL = new JLabel();
         SEARCH_VALUE_RADIO = new JRadioButton();
         SEARCH_RANGE_RADIO = new JRadioButton();
         SEARCH_INPUT_CARD_PANEL = new JPanel();
@@ -156,6 +174,9 @@ public class Main {
         SEARCH_RANGE_FROM_INCLUSIVE_CHECKBOX = new JCheckBox();
         SEARCH_RANGE_TO_FIELD = new JTextField();
         SEARCH_RANGE_TO_INCLUSIVE_CHECKBOX = new JCheckBox();
+        SEARCH_HITS_CARD_PANEL = new JPanel();
+        SEARCH_HITS_CARD_LAYOUT = new CardLayout();
+        SEARCH_HITS_RESULT_TABLE_MODEL = new SearchHitsTableModel();
     }
     
     private static void buildAndShowFrame() {
@@ -217,11 +238,12 @@ public class Main {
         DefaultComboBoxModel<ComboItem> sizeComboModel = new DefaultComboBoxModel<>();
         sizeComboModel.addElement(new ComboItem("5", "5"));
         sizeComboModel.addElement(new ComboItem("20", "20"));
+        sizeComboModel.addElement(new ComboItem("200", "200"));
         sizeComboModel.addElement(new ComboItem("1500", "1500"));
         sizeComboModel.addElement(new ComboItem("431378", "431 378"));
         sizeComboModel.addElement(new ComboItem("270000000", "270 000 000"));
         SIZE_COMBO.setModel(sizeComboModel);
-        SIZE_COMBO.setSelectedIndex(1);
+        SIZE_COMBO.setSelectedIndex(2);
         sizePanel.add(withWidth(SIZE_COMBO, 220), BorderLayout.CENTER);
         
         JPanel seedPanel = createPanel(p -> new BorderLayout());
@@ -414,13 +436,28 @@ public class Main {
         VALUE_INFO_CARD_PANEL.setOpaque(false);
         rightInnerPanel.add(VALUE_INFO_CARD_PANEL, BorderLayout.CENTER);
         
-        JPanel card1 = createPanel(p -> new BorderLayout());
-        VALUE_INFO_CARD_PANEL.add(card1, VALUE_INFO_NONE_CARD_NAME);
-        card1.add(createLabel("No value selected"));
+        JPanel noValueInfoCard = createPanel(p -> new BorderLayout());
+        VALUE_INFO_CARD_PANEL.add(noValueInfoCard, VALUE_INFO_NONE_CARD_NAME);
+        noValueInfoCard.add(createLabel("No value selected"));
 
-        JPanel card2 = createPanel(p -> new BorderLayout());
-        VALUE_INFO_CARD_PANEL.add(card2, VALUE_INFO_INFO_CARD_NAME);
-        card2.add(createLabel("VALUE INFO..."));
+        JPanel valueInfoCard = createPanel(p -> new BoxLayout(p, BoxLayout.PAGE_AXIS));
+        VALUE_INFO_CARD_PANEL.add(valueInfoCard, VALUE_INFO_INFO_CARD_NAME);
+        JPanel valueInfoTypePanel = createPanel(p -> new BorderLayout());
+        valueInfoCard.add(valueInfoTypePanel);
+        valueInfoTypePanel.add(createLabel("Type:", 150), BorderLayout.LINE_START);
+        valueInfoTypePanel.add(VALUE_INFO_TYPE_LABEL, BorderLayout.CENTER);
+        JPanel valueInfoIndexPanel = createPanel(p -> new BorderLayout());
+        valueInfoCard.add(valueInfoIndexPanel);
+        valueInfoIndexPanel.add(createLabel("Index:", 150), BorderLayout.LINE_START);
+        valueInfoIndexPanel.add(VALUE_INFO_INDEX_LABEL, BorderLayout.CENTER);
+        JPanel valueInfoOrderedIndexPanel = createPanel(p -> new BorderLayout());
+        valueInfoCard.add(valueInfoOrderedIndexPanel);
+        valueInfoOrderedIndexPanel.add(createLabel("Ordered index:", 150), BorderLayout.LINE_START);
+        valueInfoOrderedIndexPanel.add(VALUE_INFO_ORDERED_INDEX_LABEL, BorderLayout.CENTER);
+        JPanel valueInfoOriginalIndexPanel = createPanel(p -> new BorderLayout());
+        valueInfoCard.add(valueInfoOriginalIndexPanel);
+        valueInfoOriginalIndexPanel.add(createLabel("Base set index:", 150), BorderLayout.LINE_START);
+        valueInfoOriginalIndexPanel.add(VALUE_INFO_ORIGINAL_INDEX_LABEL, BorderLayout.CENTER);
 
         JPanel rightSearchTitlePanel = createPanel(p -> new BorderLayout());
         rightInnerPanel.add(rightSearchTitlePanel);
@@ -479,10 +516,20 @@ public class Main {
         searchRangeToPanel.add(SEARCH_RANGE_TO_INCLUSIVE_CHECKBOX, BorderLayout.PAGE_END);
         SEARCH_RANGE_TO_INCLUSIVE_CHECKBOX.setSelected(true);
         
-        JPanel hitsPlaceholder = createPanel(p -> new BorderLayout(), Color.ORANGE);
-        rightInnerPanel.add(hitsPlaceholder);
-        hitsPlaceholder.setPreferredSize(new Dimension(300, 300));
+        SEARCH_HITS_CARD_PANEL.setLayout(SEARCH_HITS_CARD_LAYOUT);
+        SEARCH_HITS_CARD_PANEL.setOpaque(false);
+        rightInnerPanel.add(SEARCH_HITS_CARD_PANEL);
 
+        JPanel searchHitsNonePanel = createPanel(p -> new BorderLayout());
+        SEARCH_HITS_CARD_PANEL.add(searchHitsNonePanel, SEARCH_HITS_NONE_CARD_NAME);
+
+        JPanel searchHitsResultPanel = createPanel(p -> new BorderLayout());
+        SEARCH_HITS_CARD_PANEL.add(searchHitsResultPanel, SEARCH_HITS_RESULT_CARD_NAME);
+
+        JTable searchHitsResultTable = new JTable(SEARCH_HITS_RESULT_TABLE_MODEL);
+        searchHitsResultPanel.add(searchHitsResultTable, BorderLayout.CENTER);
+        searchHitsResultPanel.add(new JLabel("(up to the first " + SEARCH_HITS_MAX_RESULTS + " hits)"), BorderLayout.PAGE_END);
+        
         return rightPanel;
     }
 
@@ -532,10 +579,22 @@ public class Main {
                 s -> s.addChangeListener(e -> onValuesPropsChanged()));
         List.of(VALUE_PROPS_LIST_TEXTAREA, VALUE_PROPS_PATTERN_FIELD).forEach(
                 t-> t.getDocument().addDocumentListener(new DocumentUpdateListener(e -> onValuesPropsChanged())));
+        
+        VALUE_SET_STATE_PANEL.addSelectListener(Main::inspectValue);
+
+        SEARCH_VALUE_RADIO.addItemListener(e -> refreshSearch());
+        SEARCH_RANGE_RADIO.addItemListener(e -> refreshSearch());
+        SEARCH_VALUE_FIELD.getDocument().addDocumentListener(new DocumentUpdateListener(e -> refreshSearch()));
+        SEARCH_RANGE_FROM_FIELD.getDocument().addDocumentListener(new DocumentUpdateListener(e -> refreshSearch()));
+        SEARCH_RANGE_FROM_INCLUSIVE_CHECKBOX.addItemListener(e -> refreshSearch());
+        SEARCH_RANGE_TO_FIELD.getDocument().addDocumentListener(new DocumentUpdateListener(e -> refreshSearch()));
+        SEARCH_RANGE_TO_INCLUSIVE_CHECKBOX.addItemListener(e -> refreshSearch());
     }
     
     private static void onValuesPropsChanged() {
         refreshValues();
+        resetInspect();
+        resetSearch(!getComboBoxValue(VALUE_TYPE_COMBO).equals(VALUE_TYPE_DUMMYTEXT_CARD_NAME));
     }
     
     private static void refreshValues() {
@@ -602,9 +661,6 @@ public class Main {
         }
     }
 
-    
-    
-    
     private static Source<?> createListSource() {
         String[] values = VALUE_PROPS_LIST_TEXTAREA.getText().split("\n");
         return new UniqueSource<>(values);
@@ -632,6 +688,113 @@ public class Main {
             return "";
         }
         return comboItem.value();
+    }
+
+    private static void inspectValue(ValueSetStatePanel.ValueInfo valueInfo) {
+        if (valueInfo == null) {
+            resetInspect();
+            return;
+        }
+        VALUE_INFO_CARD_LAYOUT.show(VALUE_INFO_CARD_PANEL, VALUE_INFO_INFO_CARD_NAME);
+        Object value = valueInfo.value();
+        String stringValue = coalesceString(value, "");
+        VALUE_TEXTAREA.setText(stringValue);
+        VALUE_INFO_TYPE_LABEL.setText(value == null ? "NULL" : value.getClass().getSimpleName());
+        VALUE_INFO_INDEX_LABEL.setText(coalesceString(valueInfo.index(), ""));
+        VALUE_INFO_ORDERED_INDEX_LABEL.setText(coalesceString(valueInfo.orderedIndex(), ""));
+        VALUE_INFO_ORIGINAL_INDEX_LABEL.setText(coalesceString(valueInfo.originalIndex(), ""));
+    }
+
+    private static String coalesceString(Object value, String fallback) {
+        return value != null ? value.toString() : fallback;
+    }
+    
+    private static void resetInspect() {
+        VALUE_TEXTAREA.setText("");
+        VALUE_INFO_CARD_LAYOUT.show(VALUE_INFO_CARD_PANEL, VALUE_INFO_NONE_CARD_NAME);
+    }
+
+    private static void refreshSearch() {
+        if (SEARCH_VALUE_RADIO.isSelected()) {
+            refreshSearchValue();
+        } else  {
+            refreshSearchRange();
+        }
+    }
+
+    private static void refreshSearchValue() {
+        String valueString = SEARCH_VALUE_FIELD.getText();
+        IndexedSource<?> indexedSource = getIndexedSource();
+        if (valueString.isEmpty() || indexedSource == null) {
+            SEARCH_HITS_CARD_LAYOUT.show(SEARCH_HITS_CARD_PANEL, SEARCH_HITS_NONE_CARD_NAME);
+            return;
+        }
+        SEARCH_HITS_CARD_LAYOUT.show(SEARCH_HITS_CARD_PANEL, SEARCH_HITS_RESULT_CARD_NAME);
+        Object value = searchValueOf(valueString);
+        Selection selection = indexedSource.find(value);
+        displaySearchSelection(indexedSource, selection);
+    }
+
+    private static void refreshSearchRange() {
+        String fromString = SEARCH_RANGE_FROM_FIELD.getText();
+        String toString = SEARCH_RANGE_TO_FIELD.getText();
+        IndexedSource<?> indexedSource = getIndexedSource();
+        if ((fromString.isEmpty() && toString.isEmpty()) || indexedSource == null) {
+            SEARCH_HITS_CARD_LAYOUT.show(SEARCH_HITS_CARD_PANEL, SEARCH_HITS_NONE_CARD_NAME);
+            return;
+        }
+        SEARCH_HITS_CARD_LAYOUT.show(SEARCH_HITS_CARD_PANEL, SEARCH_HITS_RESULT_CARD_NAME);
+        Object fromValue = searchValueOf(fromString);
+        boolean fromInclusive = SEARCH_RANGE_FROM_INCLUSIVE_CHECKBOX.isSelected();
+        Object toValue = searchValueOf(toString);
+        boolean toInclusive = SEARCH_RANGE_TO_INCLUSIVE_CHECKBOX.isSelected();
+        Selection selection = indexedSource.findBetween(fromValue, fromInclusive, toValue, toInclusive);
+        displaySearchSelection(indexedSource, selection);
+    }
+    
+    private static Object searchValueOf(String valueString) {
+        if (valueString.isEmpty()) {
+            return null;
+        }
+        if (getComboBoxValue(VALUE_TYPE_COMBO).equals(VALUE_TYPE_RANGE_CARD_NAME)) {
+            try {
+                return LargeInteger.of(valueString);
+            } catch (NumberFormatException e) {
+                return LargeInteger.ZERO;
+            }
+        } else {
+            return valueString;
+        }
+    }
+
+    private static void displaySearchSelection(IndexedSource<?> indexedSource, Selection selection) {
+        SEARCH_HITS_RESULT_TABLE_MODEL.update(indexedSource, selection);
+    }
+
+    private static IndexedSource<?> getIndexedSource() {
+        ValueSetState valueSetState = VALUE_SET_STATE_PANEL.getState();
+        if (valueSetState.status() != ValueSetState.Status.SOURCE) {
+            return null;
+        }
+        Source<?> finalSource = valueSetState.finalSource();
+        if (!(finalSource instanceof IndexedSource)) {
+            return null;
+        }
+        return (IndexedSource<?>) finalSource;
+    }
+    
+    private static void resetSearch(boolean enable) {
+        SEARCH_VALUE_FIELD.setText("");
+        SEARCH_RANGE_FROM_FIELD.setText("");
+        SEARCH_RANGE_TO_FIELD .setText("");
+        
+        SEARCH_VALUE_RADIO.setEnabled(enable);
+        SEARCH_RANGE_RADIO.setEnabled(enable);
+        SEARCH_VALUE_FIELD.setEnabled(enable);
+        SEARCH_RANGE_FROM_FIELD.setEnabled(enable);
+        SEARCH_RANGE_FROM_INCLUSIVE_CHECKBOX.setEnabled(enable);
+        SEARCH_RANGE_TO_FIELD .setEnabled(enable);
+        SEARCH_RANGE_TO_INCLUSIVE_CHECKBOX.setEnabled(enable);
     }
     
     private static class SelectListener implements ItemListener {
@@ -696,6 +859,51 @@ public class Main {
             return label;
         }
         
+    }
+
+    private static class SearchHitsTableModel extends AbstractTableModel {
+        
+        private static final long serialVersionUID = 1L;
+        
+        private IndexedSource<?> indexedSource = new RangeSource(LargeInteger.ZERO);
+        private Selection selection = EmptySelection.instance();
+        
+        public void update(IndexedSource<?> indexedSource, Selection selection) {
+            this.indexedSource = indexedSource;
+            this.selection = selection;
+            fireTableDataChanged();
+        }
+        
+        @Override
+        public int getColumnCount() {
+            return 2;
+        }
+
+        @Override
+        public int getRowCount() {
+            return selection.size().min(LargeInteger.of(SEARCH_HITS_MAX_RESULTS)).intValue();
+        }
+    
+        @Override
+        public Object getValueAt(int row, int col) {
+            LargeInteger index = selection.at(LargeInteger.of(row));
+            if (col == 0) {
+                return index;
+            } else if (col == 1) {
+                return indexedSource.get(index);
+            } else {
+                return "";
+            }
+        }
+        
+        @Override
+        public String getColumnName(int column) {
+            return switch (column) {
+                case 0 -> "Index";
+                case 1 -> "Value";
+                default -> "";
+            };
+        }
     }
     
 }
